@@ -34,7 +34,7 @@ Clone the Repository:
 
 ## bash
 # Copy code
- `git clone https://github.com/yourusername/liver-cancer-detection.git`
+ `git clone https://github.com/Naydhurve3/LIVER-CT-SCAN-DATASET.git`
 
 `cd liver-cancer-detection `
 
