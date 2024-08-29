@@ -84,4 +84,5 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 For any inquiries or questions, feel free to reach out:
 
 Email: nayandhurve44@gmail.com
+
 LinkedIn: Nayan Dhurve
