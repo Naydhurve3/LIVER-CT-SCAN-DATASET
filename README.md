@@ -32,33 +32,42 @@ Evaluation Metrics: The model's performance is evaluated using accuracy, precisi
 How to Run the Project
 Clone the Repository:
 
-# bash
-Copy code
-git clone https://github.com/yourusername/liver-cancer-detection.git
-cd liver-cancer-detection
+## bash
+# Copy code
+ `git clone https://github.com/yourusername/liver-cancer-detection.git`
+
+`cd liver-cancer-detection `
+
 Install Dependencies: Ensure that you have Python installed. Install the required libraries:
 
-bash
+# bash
 Copy code
-pip install -r requirements.txt
+`pip install -r requirements.txt`
+
 Prepare the Dataset: Place the dataset in the appropriate directory as specified in the project code.
 
 Train the Model: Run the training script to train the model on the dataset:
 
-bash
+# bash
+
 Copy code
-python train_model.py
+`python train_model.py`
+
 Evaluate the Model: Evaluate the trained model using the test dataset:
 
-bash
+# bash
+
 Copy code
-python evaluate_model.py
+`python evaluate_model.py`
+
 Visualize Results: View the performance metrics and visualizations:
 
-bash
+# bash
+
 Copy code
-python visualize_results.py
-Results
+`python visualize_results.py`
+
+# Results
 The project demonstrates promising results in the detection and classification of liver cancer from CT scan images. The trained model achieves high accuracy and robustness, making it a valuable tool for medical imaging applications.
 
 # Future Work
