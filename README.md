@@ -35,8 +35,9 @@ Evaluation Metrics: The model's performance is evaluated using accuracy, precisi
 How to Run the Project
 Clone the Repository:
 
+`Copy code`
 ```bash
-Copy code
+
 
 git clone https://github.com/Naydhurve3/LIVER-CT-SCAN-DATASET.git
 
@@ -45,17 +46,20 @@ cd liver-cancer-detection
 Install Dependencies: Ensure that you have Python installed.
  ## Install the required libraries:
 
+`Copy code`
 ```bash
-Copy code
+
 pip install -r requirements.txt
 ```
 Prepare the Dataset: Place the dataset in the appropriate directory as specified in the project code.
 
 Train the Model: Run the training script to train the model on the dataset:
 
-bash
-Copy code
+`Copy code`
+```bash
+
 python train_model.py
+```
 Evaluate the Model: Evaluate the trained model using the test dataset:
 
 ```bash
@@ -65,8 +69,9 @@ python evaluate_model.py
 ```
 Visualize Results: View the performance metrics and visualizations:
 
+`Copy code`
 ```bash
-Copy code
+
 
 python visualize_results.py
 ```
