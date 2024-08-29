@@ -24,6 +24,8 @@ liver_mask_empty: Boolean indicating whether the liver mask is empty.
 tumor_mask_empty: Boolean indicating whether the tumor mask is empty.
 Images: There are 58,638 CT scan images in total, divided into training and testing sets with a 70:30 ratio.
 
+dataset link : `https://www.kaggle.com/datasets/andrewmvd/lits-png`
+
 # Model Training Details
 Data Split: Only 13% of the total training data and 23% of the total testing data are used to minimize training time.
 Epochs: The model is trained for 10 epochs.
