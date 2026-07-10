@@ -1,0 +1,10 @@
+inherits:
+  - research_baseline
+  - ../models/faupnet
+
+experiment:
+  name: research-faupnet-focal-dice
+
+outputs:
+  run_dir: experiments/research_validation/faupnet_focal_dice
+  model_dir: models/research_validation/faupnet_focal_dice

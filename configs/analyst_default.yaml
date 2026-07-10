@@ -1,0 +1,32 @@
+# Default configuration for Data Analyst tools
+# Use: python scripts/analyze.py --config configs/analyst_default.yaml
+
+analysis:
+  tumor_burden:
+    voxel_spacing: [1.0, 1.0, 1.0]
+    output_dir: outputs/analysis/tumor_burden
+
+  patient_profile:
+    output_dir: outputs/analysis/patient_profiles
+
+  cohort:
+    output_dir: outputs/analysis/cohort
+
+  clinical_insights:
+    output_dir: outputs/analysis/insights
+
+quality:
+  checks:
+    - image_integrity
+    - mask_integrity
+    - split_balance
+    - intensity_drift
+  output_dir: outputs/analysis/quality
+
+reporting:
+  output_dir: outputs/reports
+  default_format: txt
+
+data:
+  splits_dir: data/splits
+  metadata_dir: data/metadata

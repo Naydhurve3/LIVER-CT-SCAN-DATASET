@@ -1,0 +1,8 @@
+# Attention U-Net model configuration (stub — not yet implemented)
+model:
+  name: attention_unet
+  in_channels: 1
+  out_channels: 1
+  params_count: 35000000
+  description: "Attention-gated U-Net — not yet implemented"
+  status: not_implemented

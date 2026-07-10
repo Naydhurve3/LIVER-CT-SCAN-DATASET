@@ -1,0 +1,123 @@
+======================================================================
+LITS DATASET — EXPLORATORY DATA ANALYSIS
+======================================================================
+
+
+## DATA OVERVIEW
+Images dir:     D:\DATA SCIENCE AND ANALYTICS\Dataset\Liver Img Dataset
+Masks dir:      D:\DATA SCIENCE AND ANALYTICS\Dataset\LiTS_masks
+Total images:   58,638
+Total masks:    58,638
+Match:          True
+
+Sample image shape: (512, 512) dtype=uint8  min=0 max=255
+Sample mask shape:  (512, 512) dtype=uint8  unique values: [0]
+
+Number of volumes: 131
+Volume ID range: 0 – 130
+
+Slices per volume:
+  Mean:   447.6
+  Std:    274.2
+  Min:    74
+  Max:    987
+  Median: 432
+
+## CLASS DISTRIBUTION
+
+Sampled 5,000 slices (estimation):
+  Tumor-positive slices: 629 / 5000 (12.58%)
+  BG pixels: 1,309,128,188
+  FG pixels: 1,591,812
+  Pixel imbalance BG:FG = 822 : 1
+
+## Per-Volume Tumor Burden
+  Volumes with zero tumor pixels: 13 / 131 (9.9%)
+  Mean tumor % per volume:  0.1211%
+  Median:                  0.0165%
+  Max:                     2.1192%
+  Std:                     0.2671%
+
+## INTENSITY ANALYSIS
+  Sampled 1,000 slices
+  All pixels — mean=44.5 std=84.1  range=[0, 255]
+  BG pixels  — mean=44.4 std=84.1  range=[0, 255]
+  Tumor px   — mean=109.1 std=102.1  range=[0, 255]
+
+## TUMOR MORPHOLOGY
+  Tumor-positive mask slices: 7,114
+  Tumor pixel count per slice:
+    Mean:   631.0 px
+    Median: 234 px
+    Std:    816.7 px
+    Min:    1 px
+    Max:    3,764 px
+
+## Tumor Location Heatmap
+  Peak occupancy: 0.1151
+
+## SPLIT ANALYSIS
+  TRAIN: 104 vols,  40667 slices ( 4887 tumor, 12.0%)
+  VAL  :  13 vols,  10685 slices ( 1035 tumor, 9.7%)
+  TEST :  14 vols,   7286 slices ( 1192 tumor, 16.4%)
+
+## Split Tumor Burden Comparison
+  train: mean=0.100%  median=0.016%  range=[0.000, 1.191]
+  val: mean=0.087%  median=0.003%  range=[0.000, 0.621]
+  test: mean=0.307%  median=0.067%  range=[0.000, 2.119]
+
+## SAMPLE VISUALIZATIONS
+  Displaying 8 sample slices
+
+## PREPROCESSING PIPELINE
+
+## DATA AUGMENTATION
+
+## CORRELATION ANALYSIS
+  Correlation matrix:
+                         n_slices  mean_intensity    tumor_pixels       tumor_pct
+        n_slices:         1.0000         -0.0533          0.2405         -0.0263
+  mean_intensity:        -0.0533          1.0000          0.1130          0.1799
+    tumor_pixels:         0.2405          0.1130          1.0000          0.8318
+       tumor_pct:        -0.0263          0.1799          0.8318          1.0000
+
+## DATA QUALITY
+  Corrupted images: 0 / 58638
+  Images missing mask: 0 / 58638
+  Sampled 2000 slices: 0 all-black, 2000 non-black
+  Data quality — no issues found.
+
+## VOLUME SLICE PROGRESSION (Volume 4)
+  Total slices: 841
+
+======================================================================
+EDA COMPLETE — CONSOLIDATED SUMMARY
+======================================================================
+
+DATABASE OVERVIEW
+  Total volumes:        131
+  Total slices:         58,638
+  Image format:         PNG, 512x512, 8-bit grayscale
+  Mask format:          PNG, 256x256 RGB on disk; converted to 1-channel binary
+
+CLASS BALANCE
+  Tumor-positive slices: ~12.6% (est.)
+  Pixel imbalance BG:FG: 822:1
+  Volumes w/ zero tumor: 13/131 (10%)
+
+SPLITS
+  TRAIN: 104 vols, 40,667 slices (12.0% tumor)
+  VAL  : 13 vols, 10,685 slices (9.7% tumor)
+  TEST : 14 vols, 7,286 slices (16.4% tumor)
+
+PREPROCESSING
+  HU window:            [-100, 400]
+  Resize:               256x256
+  CLAHE:                clip=2.0, grid=8x8 (optional)
+  Augmentation:         horiz flip (p=0.5), intensity shift (+-0.1, p=0.5)
+
+TUMOR MORPHOLOGY
+  Mean tumor size:      631 px per slice
+  Median tumor size:    234 px per slice
+  Tumor size range:     [1, 3,764] px
+

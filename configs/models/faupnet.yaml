@@ -1,0 +1,7 @@
+# FAUP-Net model configuration
+model:
+  name: faupnet
+  in_channels: 1
+  out_channels: 1
+  gate_levels: [3, 4]
+  pretrained: true

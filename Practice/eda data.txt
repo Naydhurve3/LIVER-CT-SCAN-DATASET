@@ -1,0 +1,47 @@
+======================================================================
+LITS DATASET — EXPLORATORY DATA ANALYSIS
+======================================================================
+
+
+## DATA OVERVIEW
+Images dir:     D:\DATA SCIENCE AND ANALYTICS\Dataset\Liver Img Dataset
+Masks dir:      D:\DATA SCIENCE AND ANALYTICS\Dataset\LiTS_masks
+Total images:   58,638
+Total masks:    58,638
+Match:          True
+
+Sample image shape: (512, 512) dtype=uint8  min=0 max=255
+Sample mask shape:  (256, 256, 3) dtype=uint8  unique values: [0]
+
+Number of volumes: 131
+Volume ID range: 0 – 130
+
+Slices per volume:
+  Mean:   447.6
+  Std:    274.2
+  Min:    74
+  Max:    987
+  Median: 432
+
+## CLASS DISTRIBUTION
+
+Sampled 5,000 slices (estimation):
+  Tumor-positive slices: 629 / 5000 (12.58%)
+  BG pixels: 981,846,141
+  FG pixels: 1,193,859
+  Pixel imbalance BG:FG = 822 : 1
+
+## Per-Volume Tumor Burden
+  Volumes with zero tumor pixels: 13 / 131 (9.9%)
+  Mean tumor % per volume:  0.1211%
+  Median:                  0.0165%
+  Max:                     2.1192%
+  Std:                     0.2671%
+
+## INTENSITY ANALYSIS
+
+## INTENSITY ANALYSIS
+
+## INTENSITY ANALYSIS
+
+## INTENSITY ANALYSIS

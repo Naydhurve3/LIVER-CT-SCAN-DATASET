@@ -1,0 +1,41 @@
+# FAUP-Net (scoped) experiment — uncertainty-gated skip connections
+inherits:
+  - ../defaults/training
+  - ../defaults/optimizer
+  - ../defaults/augmentation
+  - ../defaults/preprocessing
+  - ../defaults/evaluation
+  - ../datasets/lits
+  - ../models/faupnet
+
+experiment:
+  name: faupnet-scoped
+  seed: 42
+  tracking:
+    enabled: false
+    mlflow_uri: ""
+    experiment_name: medsegx-faupnet
+
+model:
+  gate_levels: [3, 4]
+
+training:
+  stage1:
+    epochs: 25
+    patience: 10
+    pos_weight: 10.0
+    dice_weight: 0.5
+    bce_weight: 0.5
+  stage2:
+    epochs: 25
+    patience: 10
+    beta: 5.0
+    tau: 0.1
+    tau_schedule: linear_decay
+    tau_min: 0.01
+    edge_weight: 0.1
+
+outputs:
+  model_dir: models/faupnet
+  log_dir: experiments/logs
+  report_dir: reports/faupnet

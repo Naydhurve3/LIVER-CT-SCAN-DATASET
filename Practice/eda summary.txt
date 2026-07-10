@@ -1,0 +1,63 @@
+======================================================================
+LITS DATASET — EXPLORATORY DATA ANALYSIS SUMMARY
+======================================================================
+
+DATABASE OVERVIEW
+  Total volumes:        131
+  Total slices:         58,638
+  Image format:         PNG, 512x512, 8-bit grayscale
+  Masks format:         PNG, 256x256 RGB on disk; converted to 1-channel binary
+  Slices per volume:    mean=447.6, std=274.2, range=[74, 987], median=432
+  Volume IDs:           0 – 130
+
+CLASS BALANCE
+  Tumor-positive slices:   ~12.6% (est. from 5,000 sample)
+  Pixel imbalance BG:FG:   822:1
+  Volumes w/ zero tumor:   13/131 (10%)
+
+SPLIT COMPOSITION
+  TRAIN:  104 vols, 40,667 slices (12.0% tumor-positive)
+  VAL:     13 vols, 10,685 slices (9.7% tumor-positive)
+  TEST:    14 vols,  7,286 slices (16.4% tumor-positive) — highest tumor burden
+
+INTENSITY (0–255 range)
+  All pixels:     mean=44.5, std=84.1
+  Background:     mean=44.4, std=84.1
+  Tumor pixels:   mean=109.1, std=102.1 — brighter than background
+
+TUMOR MORPHOLOGY (7,114 tumor-positive slices)
+  Mean tumor size:       631 px per slice
+  Median tumor size:     234 px per slice (distribution heavily right-skewed)
+  Std:                   816.7 px
+  Range:                 [1, 3,764] px
+  Peak heatmap occupancy: 0.1151
+
+TUMOR BURDEN PER VOLUME
+  Mean:      0.12%
+  Median:    0.02%
+  Max:       2.12%
+  Train:     0.10% mean, median=0.02%
+  Val:       0.09% mean, median=0.00%
+  Test:      0.31% mean, median=0.07%
+
+CORRELATION (volume-level)
+  tumor_pixels vs tumor_pct:  0.83 (expected — strong)
+  n_slices vs tumor_pixels:   0.24 (weak)
+  mean_intensity vs others:   <-0.05 to 0.18> (negligible)
+
+DATA QUALITY
+  Corrupted images:   0 / 58,638
+  Missing masks:      0 / 58,638
+  All-black slices:   0 / 2,000 sampled
+  Status:             CLEAN — no issues found
+
+PREPROCESSING PIPELINE
+  HU window:            [-100, 400]
+  Resize:               256x256
+  CLAHE:                clip=2.0, grid=8x8 (optional)
+  Augmentation:         horizontal flip (p=0.5), intensity shift (±0.1, p=0.5)
+
+======================================================================
+EDA plots saved to:   Practice/eda_plots/ (13 files)
+EDA notebook:         Practice/lits_eda.ipynb
+======================================================================

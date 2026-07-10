@@ -1,0 +1,16 @@
+# Default preprocessing configuration
+preprocessing:
+  # LiTS PNG inputs are already-windowed 8-bit images, not calibrated HU.
+  input_format: png_8bit_windowed
+  apply_hu_window: false
+  hu_window: [-100, 400]
+  target_size: [256, 256]
+  clahe:
+    enabled: true
+    clip: 2.0
+    grid: [8, 8]
+  normalization:
+    mean: 0.0
+    std: 1.0
+    clip_min: -200
+    clip_max: 250

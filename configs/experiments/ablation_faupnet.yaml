@@ -1,0 +1,25 @@
+inherits:
+  - ../defaults/training
+  - ../defaults/optimizer
+  - ../defaults/augmentation
+  - ../defaults/preprocessing
+  - ../defaults/evaluation
+  - ../datasets/lits
+  - ../models/faupnet
+
+experiment:
+  name: ablation-faupnet
+  seed: 42
+
+model:
+  gate_levels: [3, 4]
+
+training:
+  loss: combined
+  dice_weight: 0.5
+  bce_weight: 0.5
+  pos_weight: 10.0
+  epochs: 5
+
+outputs:
+  model_dir: models/ablation/faupnet

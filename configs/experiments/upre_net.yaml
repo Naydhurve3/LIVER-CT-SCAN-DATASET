@@ -1,0 +1,40 @@
+# UP³RE-Net experiment — Uncertainty-Propagated Ensemble
+inherits:
+  - ../defaults/training
+  - ../defaults/optimizer
+  - ../defaults/augmentation
+  - ../defaults/preprocessing
+  - ../defaults/evaluation
+  - ../datasets/lits
+  - ../models/mobilenetv2_unet
+
+experiment:
+  name: upre-net
+  seed: 42
+  tracking:
+    enabled: false
+    mlflow_uri: ""
+    experiment_name: medsegx-uprenet
+
+model:
+  ensemble_size: 3
+
+training:
+  stage1:
+    epochs: 25
+    patience: 10
+    pos_weight: 10.0
+    dice_weight: 0.5
+    bce_weight: 0.5
+  stage2:
+    epochs: 25
+    patience: 10
+    beta: 5.0
+    tau: 0.1
+    tau_schedule: linear_decay
+    tau_min: 0.01
+
+outputs:
+  model_dir: models/upre
+  log_dir: experiments/logs
+  report_dir: reports/uprenet

@@ -1,0 +1,22 @@
+inherits:
+  - ../defaults/training
+  - ../defaults/optimizer
+  - ../defaults/augmentation
+  - ../defaults/preprocessing
+  - ../defaults/evaluation
+  - ../datasets/lits
+  - ../models/mobilenetv2_unet
+
+experiment:
+  name: ablation-baseline
+  seed: 42
+
+training:
+  loss: combined
+  dice_weight: 0.5
+  bce_weight: 0.5
+  pos_weight: 10.0
+  epochs: 5
+
+outputs:
+  model_dir: models/ablation/baseline

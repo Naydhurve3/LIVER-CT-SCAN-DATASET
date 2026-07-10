@@ -1,0 +1,13 @@
+# Default evaluation configuration
+evaluation:
+  metrics:
+    - dice
+    - iou
+    - hd95
+    - nsd
+    - asd
+    - ece
+  cv_folds: 5
+  bootstrap_resamples: 1000
+  significance_test: wilcoxon
+  confidence_interval: 95

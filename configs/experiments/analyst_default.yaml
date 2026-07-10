@@ -1,0 +1,31 @@
+# Default configuration for Data Analyst tools
+inherits:
+  - defaults/evaluation
+  - datasets/lits
+
+experiment:
+  name: analyst-default
+  seed: 42
+
+analysis:
+  tumor_burden:
+    voxel_spacing: [1.0, 1.0, 1.0]
+    output_dir: reports/analysis/tumor_burden
+  patient_profile:
+    output_dir: reports/analysis/patient_profiles
+  cohort:
+    output_dir: reports/analysis/cohort
+  clinical_insights:
+    output_dir: reports/analysis/insights
+
+quality:
+  checks:
+    - image_integrity
+    - mask_integrity
+    - split_balance
+    - intensity_drift
+  output_dir: reports/analysis/quality
+
+reporting:
+  output_dir: reports
+  default_format: txt

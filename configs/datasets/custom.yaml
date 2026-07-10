@@ -1,0 +1,8 @@
+# Custom dataset configuration (template)
+dataset:
+  name: custom
+  images_dir: ${env:MEDSEGX_CUSTOM_IMAGES_DIR}
+  masks_dir: ${env:MEDSEGX_CUSTOM_MASKS_DIR}
+  image_size: [256, 256]
+  description: "Custom dataset — update env vars and implement loader in datasets/custom/"
+  status: template

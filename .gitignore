@@ -1,0 +1,65 @@
+# Jupyter auto-save & checkpoints
+.ipynb_checkpoints/
+.virtual_documents/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Anaconda project metadata
+anaconda_projects/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Scratch/temp files
+Untitled-*.ipynb
+Untitled-*.py
+notebook_source.txt
+
+# Dataset archives (large)
+*.zip
+*.gz
+*.tar
+
+# Trained model weights
+*.pth
+*.pt
+*.h5
+*.onnx
+models/**
+!models/.gitkeep
+!models/LEGACY_ARTIFACTS.md
+results/
+output/
+figures/
+experiments/**/*.json
+experiments/**/*.csv
+experiments/**/*.png
+research/ablation/**/*.json
+notebooks/outputs/
+tracking/progress.json
+data/file_list.json
+data/splits_stratified/
+
+# Generated outputs (keep structure, ignore generated content)
+outputs/**
+!outputs/**/.gitkeep
+!outputs/README.md
+
+# Test caches
+.pytest_cache/
+
+# Environment files
+.env
+.venv/
+.uv-cache/
+.uv-python/
+.pytest-tmp/
+
+# Research runtime artifacts
+experiments/research_validation/
+models/research_validation/

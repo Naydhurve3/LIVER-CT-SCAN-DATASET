@@ -1,0 +1,15 @@
+# LiTS dataset configuration
+dataset:
+  name: lits
+  images_dir: ${env:MEDSEGX_LITS_IMAGES_DIR}
+  masks_dir: ${env:MEDSEGX_LITS_MASKS_DIR}
+  image_size: [256, 256]
+  native_image_size: [512, 512]
+  native_mask_size: [256, 256]
+  mask_channels_on_disk: 3
+  cv_folds: 5
+  split:
+    n_train: 104
+    n_val: 13
+    n_test: 14
+  description: "LiTS 2017 — 131 volumes, 58,638 slices, binary liver+tumor segmentation"

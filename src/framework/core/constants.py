@@ -1,0 +1,30 @@
+import os
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+
+DEFAULT_SEED = 42
+N_CLASSES = 3
+CLASS_NAMES = ["background", "liver", "tumor"]
+
+LITS_IMAGES_DIR = os.getenv("MEDSEGX_LITS_IMAGES_DIR")
+LITS_MASKS_DIR = os.getenv("MEDSEGX_LITS_MASKS_DIR")
+MLFLOW_URI = os.getenv("MEDSEGX_MLFLOW_URI", "")
+DETERMINISTIC = os.getenv("MEDSEGX_DETERMINISTIC", "1") == "1"
+
+N_TRAIN_VOLUMES = 104
+N_VAL_VOLUMES = 13
+N_TEST_VOLUMES = 14
+
+HU_WINDOW = (-100, 400)
+TARGET_SIZE = (256, 256)
+
+ENSEMBLE_SIZE = 3
+EARLY_STOPPING_PATIENCE = 10
+NUM_EPOCHS = 50
+BATCH_SIZE = 8
+LEARNING_RATE = 1e-3
+WEIGHT_DECAY = 1e-4
+
+WANDB_PROJECT = "medsegx"
+CONDA_ENV = "medsegx"

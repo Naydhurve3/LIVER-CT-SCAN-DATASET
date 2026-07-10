@@ -1,0 +1,8 @@
+# BtCV dataset configuration (stub — not yet implemented)
+dataset:
+  name: btcv
+  images_dir: ${env:MEDSEGX_BTCV_IMAGES_DIR}
+  masks_dir: ${env:MEDSEGX_BTCV_MASKS_DIR}
+  image_size: [256, 256]
+  description: "Beyond the Cranial Vault — requires download and preprocessing"
+  status: not_implemented

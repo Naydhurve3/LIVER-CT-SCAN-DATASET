@@ -1,0 +1,19 @@
+inherits:
+  - research_faup_focal
+
+experiment:
+  name: research-faupnet-uwacl-v2
+
+loss:
+  name: uwacl_v2_multi
+  beta: 5.0
+  tau: 0.1
+  tau_min: 0.01
+  dice_weight: 0.5
+  bce_weight: 0.5
+  pos_weight: 10.0
+  edge_weight: 0.1
+
+outputs:
+  run_dir: experiments/research_validation/faupnet_uwacl_v2
+  model_dir: models/research_validation/faupnet_uwacl_v2

@@ -1,0 +1,8 @@
+# 3D-IRCADb dataset configuration (stub — not yet implemented)
+dataset:
+  name: ircad
+  images_dir: ${env:MEDSEGX_IRCAD_IMAGES_DIR}
+  masks_dir: ${env:MEDSEGX_IRCAD_MASKS_DIR}
+  image_size: [256, 256]
+  description: "3D-IRCADb — requires download and preprocessing"
+  status: not_implemented

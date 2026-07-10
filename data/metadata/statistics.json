@@ -1,0 +1,10 @@
+{
+  "n_total_slices": 58638,
+  "n_volumes": 131,
+  "mean_intensity": 45.100704193115234,
+  "std_intensity": 84.35357666015625,
+  "tumor_slice_pct": 11.95,
+  "imbalance_ratio": 810.6868238368601,
+  "total_bg_pixels": 392731557,
+  "total_fg_pixels": 484443
+}

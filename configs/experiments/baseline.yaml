@@ -1,0 +1,22 @@
+# Baseline experiment — MobileNetV2U-Net
+inherits:
+  - ../defaults/training
+  - ../defaults/optimizer
+  - ../defaults/augmentation
+  - ../defaults/preprocessing
+  - ../defaults/evaluation
+  - ../datasets/lits
+  - ../models/mobilenetv2_unet
+
+experiment:
+  name: baseline-mobilenetv2
+  seed: 42
+  tracking:
+    enabled: false
+    mlflow_uri: ""
+    experiment_name: medsegx-baseline
+
+outputs:
+  model_dir: models/baseline
+  log_dir: experiments/logs
+  report_dir: reports/baseline

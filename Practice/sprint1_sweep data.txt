@@ -1,0 +1,101 @@
+========================================================================
+SPRINT 1 — TUMOR WEIGHT SWEEP (1 epoch)
+========================================================================
+
+--- CONFIGURATION ---
+  Swept parameter:    tumor_weight ∈ [2.0, 3.0, 5.0]
+  Fixed:             epochs=1, batch_size=4, seed=42
+  Loss:              FocalDiceLoss (focal_alpha=0.75, focal_gamma=2.0)
+  Sampler:           stratified (tumor_weight varies)
+  Model:             mobilenetv2_unet (pretrained)
+
+--- RESULTS TABLE ---
+   Weight     Loss     Dice   T Dice    AUPRC  Raw AUPRC    AUROC     FG%     Prec   Recall
+  ------------------------------------------------------------------------------------
+      2x    0.9882   0.1773   0.0393   0.0984     0.0985   0.5223   1.60%   0.1925   0.9107
+      3x    0.9808   0.1152   0.0735   0.1646     0.1646   0.6734   1.83%   0.1210   0.9220
+      5x    0.9635   0.0943   0.0318   0.1749     0.1750   0.5870   1.57%   0.1018   0.9120
+
+--- BEST PER METRIC ---
+  Highest AUPRC:           w=5  (AUPRC=0.1749)
+  Highest Tumor Dice:      w=3  (T Dice=0.0735)
+  Highest Overall Dice:    w=2  (Dice=0.1773)
+
+--- RAW vs THRESHOLDED AUPRC ---
+  w=2: raw=0.0985 vs val=0.0984 (diff=+0.0001)
+  w=3: raw=0.1646 vs val=0.1646 (diff=+0.0000)
+  w=5: raw=0.1750 vs val=0.1749 (diff=+0.0000)
+
+  Interpretation: raw AUPRC approximates val AUPRC (diff < 0.01 for all)
+  → AUPRC reflects true ranking ability, not threshold miscalibration
+
+--- COLLAPSE DIAGNOSIS ---
+  AUPRC range:        [0.0984, 0.1749]  LOW (<0.25)
+  FG% range:          [1.57%, 1.83%]
+  Mean Recall:        0.9149  (High — model finds most tumor)
+  Mean Precision:     0.1384  (Low — many false positives)
+  DIAGNOSIS: This is NOT "distribution collapse" (which implies recall≈0).
+             It is early-stage foreground OVER-prediction — same direction
+             as the v2 failure (Prec→0, Rec→1.0), just less severe.
+             Precision drops monotonically with weight (0.193→0.121→0.102)
+             while recall is pinned at 0.91–0.92. w=5 continues this trajectory
+             toward the v2 cliff.
+
+--- PRECISION/RECALL TRAJECTORY ANALYSIS ---
+  Weight  Precision  Recall   Direction
+  ------  ---------  ------   ---------
+      2x      0.193   0.911   Conservative — fewest FPs
+      3x      0.121   0.922   Balanced — best T Dice
+      5x      0.102   0.912   Aggressive — lowest precision, closest to v2
+
+  The three configs are NOT independent — they sample one continuous
+  trajectory. Precision falls monotonically as weight rises; w=5 is
+  measurably closer to v2's (Prec≈0, Rec=1.0) failure mode.
+
+--- RECOMMENDATION ---
+  Override w=5. Carry w=3 into the 5-epoch pilot.
+  - Best T Dice (0.074 — more than 2x w=5's 0.032)
+  - Second-best AUPRC (0.165 — only 0.01 below w=5's 0.175)
+  - Farthest from the v2 collapse trajectory
+  - Optionally: run w=1.5 for 1 epoch to check if precision keeps improving
+    as weight decreases, confirming that 2–5 already sampled the
+    "too aggressive" side of the curve.
+
+--- PER-WEIGHT DETAIL ---
+
+  tumor_weight = 2:
+    Train loss:        0.9882
+    Val Dice:          0.1773
+    Val Tumor Dice:    0.0393
+    Val AUPRC:         0.0984
+    Raw logit AUPRC:   0.0985
+    Val AUROC:         0.5223
+    Pred FG fraction:  1.60%
+    Precision:         0.1925
+    Recall:            0.9107
+
+  tumor_weight = 3:
+    Train loss:        0.9808
+    Val Dice:          0.1152
+    Val Tumor Dice:    0.0735
+    Val AUPRC:         0.1646
+    Raw logit AUPRC:   0.1646
+    Val AUROC:         0.6734
+    Pred FG fraction:  1.83%
+    Precision:         0.1210
+    Recall:            0.9220
+
+  tumor_weight = 5:
+    Train loss:        0.9635
+    Val Dice:          0.0943
+    Val Tumor Dice:    0.0318
+    Val AUPRC:         0.1749
+    Raw logit AUPRC:   0.1750
+    Val AUROC:         0.5870
+    Pred FG fraction:  1.57%
+    Precision:         0.1018
+    Recall:            0.9120
+
+========================================================================
+END OF SWEEP REPORT
+========================================================================

@@ -1,0 +1,85 @@
+========================================================================
+SPRINT 1 — SPLIT TUMOR AUDIT
+========================================================================
+
+--- DATASET OVERVIEW ---
+  Total volumes:           131
+  Total slices:            58,638
+  Total tumor-positive slices: 7,114
+  Total tumor pixels:      4,489,160
+  Zero-tumor volumes:      13 / 131 (9.9%)
+  Low-burden (<0.05%) volumes: 96 / 131 (73.3%)
+
+--- PER-SPLIT COMPOSITION ---
+   Split  Vols   Slices  Tumor+  Zero   Low  Med Bur% Mean Bur%  Max Bur%
+  ------------------------------------------------------------------
+   train   104   40,667   4,887     8    80    0.0041    0.0251    0.2979
+     val    13   10,685   1,035     4     7    0.0008    0.0219    0.1552
+    test    14    7,286   1,192     1     9    0.0168    0.0768    0.5298
+
+--- ZERO-TUMOR VOLUME DISTRIBUTION ---
+  TRAIN:  8 / 13 (62%)  volumes: [32, 34, 38, 41, 47, 87, 89, 91]
+  VAL  :  4 / 13 (31%)  volumes: [105, 106, 114, 115]
+  TEST :  1 / 13 (8%)  volumes: [119]
+
+--- LOW-BURDEN (<0.05%) VOLUME DISTRIBUTION ---
+  TRAIN: 80 / 96 (83%)  volumes: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 29, 30, 31, 35, 36, 37, 42, 43, 45, 46, 48, 49, 50, 52, 53, 54, 55, 57, 58, 59, 60, 61, 62, 63, 65, 66, 67, 68, 69, 70, 72, 73, 74, 75, 77, 78, 79, 80, 81, 82, 83, 85, 86, 88, 90, 92, 93, 94, 95, 96, 99, 102, 103]
+  VAL  :  7 / 96 (7%)  volumes: [104, 107, 109, 110, 111, 112, 113]
+  TEST :  9 / 96 (9%)  volumes: [120, 121, 122, 123, 124, 125, 126, 127, 128]
+
+--- BURDEN STATISTICS ---
+  TRAIN: mean=0.0251%  median=0.0041%  std=0.0501%  range=[0.0000, 0.2979]
+  VAL  : mean=0.0219%  median=0.0008%  std=0.0441%  range=[0.0000, 0.1552]
+  TEST : mean=0.0768%  median=0.0168%  std=0.1436%  range=[0.0000, 0.5298]
+
+--- TOP-10 HIGHEST BURDEN VOLUMES ---
+  Vol 129 ( test): 0.5298% burden, 226 tumor slices / 338 total
+  Vol  33 (train): 0.2979% burden, 78 tumor slices / 135 total
+  Vol 100 (train): 0.2155% burden, 235 tumor slices / 685 total
+  Vol 130 ( test): 0.2082% burden, 198 tumor slices / 624 total
+  Vol   4 (train): 0.1684% burden, 244 tumor slices / 841 total
+  Vol  28 (train): 0.1553% burden, 74 tumor slices / 129 total
+  Vol 108 (  val): 0.1552% burden, 201 tumor slices / 856 total
+  Vol  44 (train): 0.1463% burden, 36 tumor slices / 119 total
+  Vol  71 (train): 0.1429% burden, 20 tumor slices / 94 total
+  Vol  39 (train): 0.1261% burden, 76 tumor slices / 260 total
+
+--- COMBINED ZERO + LOW-BURDEN (<0.05%) ANALYSIS ---
+  Zero-tumor alone is misleading because 0.01%-burden volumes behave identically
+  to zero-tumor volumes under a slice-level sampler. The relevant category is
+  (is_zero_tumor OR tumor_burden_pct < 0.05).
+
+  Split  Zero  Low-burden  Combined  Share of split
+  -----  ----  ----------  --------  ---------------
+  train     8          80        88       88/104 = 84.6%
+    val     4           7        11        11/13 = 84.6%
+   test     1           9        10        10/14 = 71.4%
+
+  Train and val are IDENTICAL at 84.6%. Test is the outlier (71.4% — proportionally
+  fewer near-zero-burden volumes), consistent with test having the highest tumor
+  burden from EDA.
+
+  → The "val is skewed vs train" framing is backwards. Val is a faithful proxy
+    for train's burden distribution. Train-vs-test mismatch is the real issue,
+    but it's not a blocker — document as a limitation.
+
+--- DECISION GATE ---
+  Zero-tumor split: train=8 (8%), val=4 (31%), test=1
+  Zero+Low split:   train=88 (84.6%), val=11 (84.6%), test=10 (71.4%)
+  STATUS: VAL/RAIL MATCH — no resplit needed. Proceed with sweep.
+
+========================================================================
+END OF SPLIT TUMOR AUDIT
+========================================================================
+CORRECTION (2026-07-10)
+  This historical audit used a 512x512 denominator although masks are stored
+  at 256x256. Its burden percentages are 4x too small, so its 0.05% low-burden
+  classification and "identical" conclusion are not valid as printed.
+
+  Correct native-mask means: train=0.1003%, val=0.0874%, test=0.3071%.
+  Correct zero+low counts: train=74/104 (71.2%), val=9/13 (69.2%),
+  test=6/14 (42.9%). Train and validation are broadly similar; test is the
+  material distribution shift. See docs/DATA_REFERENCE.md.
+
+  Historical output is retained above for provenance.
+========================================================================
