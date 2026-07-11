@@ -49,6 +49,9 @@ uv pip install --python .venv/Scripts/python.exe -r requirements.txt
 .venv/Scripts/python.exe tools/evaluate.py --config configs/experiments/research_baseline.yaml --checkpoint models/research_validation/baseline_focal_dice/best_checkpoint.pth
 ```
 
+For staged, temperature-monitored runs and interruption/resume commands, see
+[`docs/MANUAL_RESEARCH_VALIDATION.md`](docs/MANUAL_RESEARCH_VALIDATION.md).
+
 ### Engineer: Train a model
 ```bash
 python scripts/train.py --model mobilenetv2unet --epochs 50 --batch-size 8
