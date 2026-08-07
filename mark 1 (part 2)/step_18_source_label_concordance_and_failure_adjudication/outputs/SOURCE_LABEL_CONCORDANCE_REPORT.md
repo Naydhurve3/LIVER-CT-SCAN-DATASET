@@ -1,0 +1,17 @@
+# Step 18 source-label concordance report
+
+Result: `SOURCE_LABEL_CONCORDANCE_COMPLETE_EXPERT_REVIEW_REQUIRED`.
+
+```csv
+internal_patient_id,frozen_truth_status,prediction_pixels,top_source_label,top_source_category,top_prediction_explained_fraction,excluded_annotation_labels_present,maximum_single_excluded_overlap_fraction,adjudication_status,frozen_metrics_changed
+ircadb_05,negative_control,140,rightkidney,other_structure,0.05714285714285714,leftsurretumor;rightsurretumor,0.0,source_overlap_measured_expert_review_required,False
+ircadb_07,negative_control,6174,tumor,generic_tumour_excluded,0.8639455782312925,tumor,0.8639455782312925,source_overlap_measured_expert_review_required,False
+ircadb_11,negative_control,1,artery,other_structure,0.0,,0.0,source_overlap_measured_expert_review_required,False
+ircadb_14,negative_control,7527,metastasectomie,metastasectomy_excluded,0.8893317390726717,metastasectomie,0.8893317390726717,source_overlap_measured_expert_review_required,False
+ircadb_18,positive,1328,livertumor,accepted_hepatic_tumour,0.012048192771084338,,0.0,source_overlap_measured_expert_review_required,False
+ircadb_20,negative_control,621,gallbladder,other_structure,0.71658615136876,,0.0,source_overlap_measured_expert_review_required,False
+```
+
+## Interpretation boundary
+
+The source masks document annotation overlap only. They do not authorize retrospective relabeling, metric changes, threshold tuning, or biological claims. Expert review remains required.
