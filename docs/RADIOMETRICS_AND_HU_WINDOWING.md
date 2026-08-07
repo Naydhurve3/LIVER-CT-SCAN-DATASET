@@ -3,6 +3,11 @@
 [![Window](https://img.shields.io/badge/HU%20Window-[-160,%20+240]-blue.svg)]()
 [![Modality](https://img.shields.io/badge/Radiometrics-Abdominal%20CT-green.svg)]()
 
+> **Executable Notebook**: [`notebooks/01_LiTS_Exploratory_Data_Analysis.ipynb`](../notebooks/01_LiTS_Exploratory_Data_Analysis.ipynb)  
+> **Source Script Reference**: [`Practice/organ_normalized_intensity_robustness_ablation.ipynb`](../Practice/organ_normalized_intensity_robustness_ablation.ipynb)
+
+---
+
 ## 1. Principles of Hounsfield Unit (HU) Windowing
 
 Computed Tomography (CT) measurements represent linear attenuation coefficients relative to distilled water ($0\text{ HU}$) and air ($-1000\text{ HU}$):
@@ -43,6 +48,14 @@ Comparing pixel intensity distributions post-windowing demonstrates hyper-intens
 | **Tumor Lesions** | **`109.1`** | **`102.1`** | `+67 HU` (Train) | Brighter attenuation post-windowing |
 | **Tumor-minus-Liver Contrast** | — | — | **`-34 HU`** (Train) | Hypodense parenchymal lesions |
 | **Robust Contrast-to-Noise (CNR)** | — | — | **`-1.518`** (Train) | Signal clarity index |
+
+---
+
+## 4. Associated Notebooks & Technical Documents
+
+- 📓 **[01_LiTS_Exploratory_Data_Analysis.ipynb](../notebooks/01_LiTS_Exploratory_Data_Analysis.ipynb)**
+- 📓 **[Practice/organ_normalized_intensity_robustness_ablation.ipynb](../Practice/organ_normalized_intensity_robustness_ablation.ipynb)**
+- 📄 **[mark 1 (part 2)/step_01_pretraining_dataset_characterization/README.md](../mark%201%20(part%202)/step_01_pretraining_dataset_characterization/README.md)**
 
 ---
 

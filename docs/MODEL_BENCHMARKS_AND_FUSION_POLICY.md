@@ -3,6 +3,11 @@
 [![Benchmark](https://img.shields.io/badge/Mark%204E-PASS-success.svg)]()
 [![Policy](https://img.shields.io/badge/Fusion-Max%20Probability-blue.svg)]()
 
+> **Executable Notebook**: [`notebooks/04_Model_Benchmarks_and_Checkpoint_Fusion.ipynb`](../notebooks/04_Model_Benchmarks_and_Checkpoint_Fusion.ipynb)  
+> **Phase Notebook Reference**: [`mark 1/mark_4e_checkpoint_fusion_validation.ipynb`](../mark%201/mark_4e_checkpoint_fusion_validation.ipynb)
+
+---
+
 ## 1. Multi-Stage Experimental Progression (Mark 1 → Mark 4E)
 
 ```
@@ -44,6 +49,14 @@ $$P_{\text{fused}}(x, y) = \max\left(P_{\text{control}}(x, y), P_{\text{recall\_
 | **Empty-Slice False Positive Rate** | $\le 20.0\%$ | **`5.55%`** | **PASS** |
 
 ![Augmentation Examples](../figures/augmentation_examples.png)
+
+---
+
+## 4. Associated Notebooks & Technical Documents
+
+- 📓 **[04_Model_Benchmarks_and_Checkpoint_Fusion.ipynb](../notebooks/04_Model_Benchmarks_and_Checkpoint_Fusion.ipynb)**
+- 📓 **[mark 1/mark_4e_checkpoint_fusion_validation.ipynb](../mark%201/mark_4e_checkpoint_fusion_validation.ipynb)**
+- 📄 **[mark 1 (part 2)/02_COMPLETED_WORK_AND_VERIFIED_RESULTS.md](../mark%201%20(part%202)/02_COMPLETED_WORK_AND_VERIFIED_RESULTS.md)**
 
 ---
 

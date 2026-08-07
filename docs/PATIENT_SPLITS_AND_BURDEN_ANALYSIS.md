@@ -3,6 +3,11 @@
 [![Splits](https://img.shields.io/badge/Splits-Patient--Disjoint-blue.svg)]()
 [![Partition](https://img.shields.io/badge/Train%2FVal%2FTest-104%2F13%2F14-orange.svg)]()
 
+> **Executable Notebook**: [`notebooks/03_Patient_Aware_Splits_and_Pretraining_Characterization.ipynb`](../notebooks/03_Patient_Aware_Splits_and_Pretraining_Characterization.ipynb)  
+> **Source Script Reference**: [`notebooks/split_tumor_audit.ipynb`](../notebooks/split_tumor_audit.ipynb)
+
+---
+
 ## 1. Patient-Disjoint Split Composition
 
 To guarantee zero data leakage between adjacent 2D axial slices of the same patient scan, dataset splits are partitioned strictly at the **volume level**.
@@ -32,6 +37,14 @@ $$\text{Tumor Burden } (\%) = \frac{\sum \text{Tumor Pixels across Volume}}{\sum
 - **Test Shift**: The sealed test set contains higher average tumor burden (`0.3071%`), serving as a challenging held-out out-of-distribution evaluation.
 
 ![Split Tumor Burden](../figures/split_tumor_burden.png)
+
+---
+
+## 3. Associated Notebooks & Technical Documents
+
+- 📓 **[03_Patient_Aware_Splits_and_Pretraining_Characterization.ipynb](../notebooks/03_Patient_Aware_Splits_and_Pretraining_Characterization.ipynb)**
+- 📓 **[notebooks/split_tumor_audit.ipynb](../notebooks/split_tumor_audit.ipynb)**
+- 📄 **[configs/splits/train_slices.csv](../configs/splits/)**
 
 ---
 

@@ -3,6 +3,11 @@
 [![Lesions](https://img.shields.io/badge/3D%20Lesions-845%20Components-purple.svg)]()
 [![Quartiles](https://img.shields.io/badge/Strata-Q1--Q4-green.svg)]()
 
+> **Executable Notebook**: [`notebooks/03_Patient_Aware_Splits_and_Pretraining_Characterization.ipynb`](../notebooks/03_Patient_Aware_Splits_and_Pretraining_Characterization.ipynb)  
+> **Source Script Reference**: [`mark 1 (part 2)/step_01_pretraining_dataset_characterization/step_01_pretraining_dataset_characterization.ipynb`](../mark%201%20(part%202)/step_01_pretraining_dataset_characterization/)
+
+---
+
 ## 1. 3D Connected Component Extraction
 
 Across the 131 CT volumes, **845 3D connected lesion components** were extracted using 6-connectivity:
@@ -33,6 +38,13 @@ To prevent validation data leakage, lesion size quartiles were fit strictly on t
 Lesions exhibit preferential localization within the central hepatic parenchyma rather than peripheral borders.
 
 ![Tumor Heatmap](../figures/tumor_heatmap.png)
+
+---
+
+## 4. Associated Notebooks & Technical Documents
+
+- 📓 **[03_Patient_Aware_Splits_and_Pretraining_Characterization.ipynb](../notebooks/03_Patient_Aware_Splits_and_Pretraining_Characterization.ipynb)**
+- 📄 **[mark 1 (part 2)/03_PRETRAINING_DATASET_AUDIT_CONTRACT.md](../mark%201%20(part%202)/03_PRETRAINING_DATASET_AUDIT_CONTRACT.md)**
 
 ---
 
