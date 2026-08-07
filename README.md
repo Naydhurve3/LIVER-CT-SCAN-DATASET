@@ -13,9 +13,29 @@
 
 ---
 
-## Interactive Documentation Hub
+## 1. Complete Project Navigation Tree
 
-Click on any hyperlinked topic below to navigate directly to its dedicated, in-depth Markdown specification:
+Click on any folder below to navigate directly to its dedicated documentation, process workflow, notebook index, and output directories:
+
+```
+Liver CT Platform Root/
+├── 📁 [mark 1/](mark%201/README.md)                           <- Phase 1 Research (Mark 1 -> Mark 4E Checkpoint Fusion)
+├── 📁 [mark 1 (part 2)/](mark%201%20(part%202)/README.md)       <- Phase 2 Pretraining Characterization & Step 00-21 Roadmap
+├── 📁 [Practice/](Practice/README.md)                         <- Historical EDA, 47-Volume Flip Forensics & 2.5D Ablations
+├── 📁 [notebooks/](notebooks/README.md)                       <- Master Consolidated Executable Notebooks (01 to 04)
+├── 📁 [docs/](docs/README.md)                                 <- Interactive Documentation Hub (7 Detailed Topics)
+├── 📁 [understanding the project/](understanding%20the%20project/README.md) <- Core Design Docs & Architecture Knowledge Base
+├── 📁 [scripts/](scripts/README.md)                           <- Dataset Arrangement & Document Generation Scripts
+├── 📁 [src/](src/README.md)                                   <- Framework Source Code (Loaders, Samplers, UNets, Losses)
+├── 📁 [configs/](configs/README.md)                           <- YAML Dataset Configurations & Split Definitions
+└── 📁 [app/](app/README.md)                                   <- Interactive Clinical Streamlit Analytics Dashboard
+```
+
+---
+
+## 2. Interactive Documentation Hub
+
+Click on any hyperlinked topic below to open its in-depth Markdown specification:
 
 | Focus Area | Direct Interactive Document Link | Key Content & Embedded Visualizations |
 | :--- | :--- | :--- |
@@ -29,7 +49,7 @@ Click on any hyperlinked topic below to navigate directly to its dedicated, in-d
 
 ---
 
-## Executive Summary
+## 3. Executive Summary
 
 Medical image segmentation models often suffer from performance degradation due to hidden dataset artifacts, incorrect slice orientations, spatial denominator mismatches, and extreme class imbalance. 
 
@@ -43,7 +63,7 @@ This repository presents a **comprehensive data engineering, spatial forensics, 
 
 ---
 
-## 1. Dataset Overview & Key Metrics
+## 4. Dataset Overview & Key Metrics
 
 The dataset comprises **131 annotated primary abdominal CT volumes** ($58,638$ axial slices) covering the liver and abdominal cavity.
 
@@ -61,7 +81,7 @@ The dataset comprises **131 annotated primary abdominal CT volumes** ($58,638$ a
 
 ---
 
-## 2. Radiometric Hounsfield Unit (HU) Windowing
+## 5. Radiometric Hounsfield Unit (HU) Windowing
 
 Abdominal CT scans express tissue density in **Hounsfield Units (HU)**. To isolate soft-tissue contrast within the liver parenchyma, attenuation values are clipped and scaled.
 
@@ -81,7 +101,7 @@ Abdominal CT scans express tissue density in **Hounsfield Units (HU)**. To isola
 
 ---
 
-## 3. Patient-Aware Split Partitioning
+## 6. Patient-Aware Split Partitioning
 
 To avoid data leakage across adjacent axial slices of the same patient scan, partitioning is enforced strictly at the **volume/patient level**.
 
@@ -92,29 +112,11 @@ To avoid data leakage across adjacent axial slices of the same patient scan, par
 | **Test (Locked)** | `117 – 130` | `14` | `7,286` | `1,197` | `16.43%` | `0.3071%` |
 | **Total Cohort** | **`0 – 130`** | **131** | **58,638** | **7,169** | **12.23%** | **0.1218%** |
 
-> [!NOTE]  
-> The internal Test set (`14` volumes) is a **sealed, un-opened holdout** used strictly for one-time final evaluation to prevent dataset over-fitting. For details, see [Patient Splits & Burden Analysis](docs/PATIENT_SPLITS_AND_BURDEN_ANALYSIS.md).
-
 ---
 
-## 4. 3D Lesion Morphology & Size Quartiles
+## 7. Model Architecture & Benchmark Milestones
 
-Across the cohort, **845 distinct 3D connected lesion components** were extracted and categorized into train-derived volume quartiles. For full details, see [Lesion Morphology & Size Quartiles](docs/LESION_MORPHOLOGY_AND_3D_QUARTILES.md).
-
-```
-Distribution of 3D Lesion Volumes (Median: 0.383 mL, Max: 968.6 mL):
-
-  Q1 (Small):       < 0.173 mL   | Diameter <= 6.92 mm  (Requires high-res feature maps)
-  Q2 (Med-Small): 0.173 - 0.673 mL| Diameter 6.92 - 10.87 mm
-  Q3 (Med-Large): 0.673 - 3.944 mL| Diameter 10.87 - 19.60 mm
-  Q4 (Massive):     > 3.944 mL   | Diameter > 19.60 mm  (Up to 266.35 mL in Volume 116)
-```
-
----
-
-## 5. Model Architecture & Benchmark Milestones
-
-The project followed a multi-stage experimental roadmap (`Mark 1` $\to$ `Mark 4E`). For full details, see [Architecture & Checkpoint Fusion Policy](docs/MODEL_BENCHMARKS_AND_FUSION_POLICY.md).
+The project followed a multi-stage experimental roadmap (`Mark 1` $\to$ `Mark 4E`). For full details, see [Mark 1 README](mark%201/README.md) and [Mark 1 Part 2 README](mark%201%20(part%202)/README.md).
 
 ```mermaid
 flowchart LR
@@ -141,41 +143,18 @@ $$\text{Fused Probability} = \max(P_{\text{control}}, P_{\text{recall\_loss}})$$
 
 ---
 
-## 6. Consolidated Jupyter Notebooks
+## 8. Master Consolidated Jupyter Notebooks
 
-This repository includes **4 consolidated, fully documented Jupyter Notebooks** located in [`notebooks/`](notebooks/):
+This repository includes **4 consolidated, fully documented Jupyter Notebooks** located in [`notebooks/`](notebooks/README.md):
 
-1. **[`01_LiTS_Exploratory_Data_Analysis.ipynb`](notebooks/01_LiTS_Exploratory_Data_Analysis.ipynb)**:  
+1. **[`notebooks/01_LiTS_Exploratory_Data_Analysis.ipynb`](notebooks/01_LiTS_Exploratory_Data_Analysis.ipynb)**:  
    Complete EDA pipeline, slice depth distributions, radiometric HU intensity histograms, and tumor burden profiling.
-2. **[`02_Spatial_Orientation_Forensics_and_Quality_Audit.ipynb`](notebooks/02_Spatial_Orientation_Forensics_and_Quality_Audit.ipynb)**:  
+2. **[`notebooks/02_Spatial_Orientation_Forensics_and_Quality_Audit.ipynb`](notebooks/02_Spatial_Orientation_Forensics_and_Quality_Audit.ipynb)**:  
    Spatial rotation matrix forensics ($180^\circ$ orientation fixes for 47 volumes), denominator reconciliation ($512\times 512 \to 256\times 256$), and 3D ROI bounding box containment verification.
-3. **[`03_Patient_Aware_Splits_and_Pretraining_Characterization.ipynb`](notebooks/03_Patient_Aware_Splits_and_Pretraining_Characterization.ipynb)**:  
+3. **[`notebooks/03_Patient_Aware_Splits_and_Pretraining_Characterization.ipynb`](notebooks/03_Patient_Aware_Splits_and_Pretraining_Characterization.ipynb)**:  
    Patient-disjoint split manifests, 3D connected component extraction, lesion size stratification (Q1–Q4), and 3D IRCADb-01 external evaluation protocol.
-4. **[`04_Model_Benchmarks_and_Checkpoint_Fusion.ipynb`](notebooks/04_Model_Benchmarks_and_Checkpoint_Fusion.ipynb)**:  
+4. **[`notebooks/04_Model_Benchmarks_and_Checkpoint_Fusion.ipynb`](notebooks/04_Model_Benchmarks_and_Checkpoint_Fusion.ipynb)**:  
    Benchmark progression tracking, 2-stage predicted-liver segmentation architecture, loss ablations, and Mark 4E checkpoint fusion policy verification.
-
----
-
-## 7. Project Directory Structure
-
-```
-├── README.md                              <- Primary repository documentation (this file)
-├── dataset.md                             <- Master dataset technical reference manual
-├── LITS_DATASET_EDA_GITHUB_CARD.md        <- Formatted GitHub Dataset Card
-├── docs/                                  <- MODULAR DOCUMENTATION HUB
-│   ├── DATA_PROVENANCE_AND_ACQUISITION.md <- Cohort origin & download logs
-│   ├── SPATIAL_ORIENTATION_AND_FORENSICS.md<- 180-deg flip repairs & 4x denominator fix
-│   ├── RADIOMETRICS_AND_HU_WINDOWING.md   <- Radiometric HU statistics & windowing
-│   ├── PATIENT_SPLITS_AND_BURDEN_ANALYSIS.md<- Train/Val/Test volume split composition
-│   ├── LESION_MORPHOLOGY_AND_3D_QUARTILES.md<- 845 3D connected component quartiles
-│   ├── MODEL_BENCHMARKS_AND_FUSION_POLICY.md<- Mark 1 to 4E model benchmark gates
-│   └── EXTERNAL_VAL_3D_IRCADB.md          <- 3D IRCADb-01 external evaluation protocol
-├── figures/                               <- Visual charts, histograms & heatmaps
-├── notebooks/                             <- Consolidated executable Jupyter notebooks
-├── mark 1/                                <- Phase 1 experimental notebooks & outputs (Mark 1-4E)
-├── mark 1 (part 2)/                       <- Phase 2 dataset characterization & step 00-21 roadmap
-└── Practice/                              <- Historical EDA notebooks, audit logs & script evidence
-```
 
 ---
 
