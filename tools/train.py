@@ -116,7 +116,9 @@ def main() -> int:
     print(f"experiment={cfg['experiment']['name']} device={'cuda' if torch.cuda.is_available() else 'cpu'}")
     try:
         loaders, index, splits, split_dir = build_experiment_loaders(
-            cfg, include_sampler=True, limit_volumes=1 if args.dry_run else None
+            cfg, include_sampler=True,
+            limit_volumes=1 if args.dry_run else None,
+            limit_slices=1 if args.dry_run else None,
         )
         train_loader, val_loader, _ = loaders
         _update_manifest(manifest_path, manifest, split_hashes=split_hashes(split_dir))
@@ -154,6 +156,8 @@ def main() -> int:
             return 130
 
         checkpoint = Path(result["best_checkpoint"])
+        if not checkpoint.exists():
+            checkpoint = Path(result.get("last_checkpoint") or checkpoint)
         threshold_result = select_threshold(
             model, val_loader, trainer.device, cfg["evaluation"]["thresholds"]
         )

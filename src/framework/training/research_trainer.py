@@ -267,6 +267,7 @@ class ResearchTrainer:
             load_checkpoint_into_model(self.model, best_path, self.device)
         return {
             "status": "completed", "best_checkpoint": str(best_path),
+            "last_checkpoint": str(self.output_dir / "last_checkpoint.pth"),
             "best_epoch": self.best_epoch,
             "best_positive_volume_dice": self.best_score,
             "completed_epochs": len(self.history),

@@ -8,7 +8,7 @@ from typing import Dict, Iterable, List, Optional, Sequence
 import numpy as np
 import torch
 from PIL import Image
-from torch.utils.data import Dataset
+from torch.utils.data import DataLoader, Dataset, WeightedRandomSampler
 
 
 REQUIRED_COLUMNS = {
@@ -223,3 +223,96 @@ def manifest_sample_weights(
         for flag in dataset.tumor_positive_flags
     )
     return torch.as_tensor(list(weights), dtype=torch.double)
+
+
+def create_manifest_dataloaders(
+    manifest_path: str | Path,
+    *,
+    root_dir: str | Path,
+    batch_size: int = 8,
+    num_workers: int = 0,
+    pin_memory: bool = True,
+    transform_train=None,
+    transform_val=None,
+    tumor_sampler_weight: float | None = 3.0,
+    seed: int = 42,
+    limit_slices: int | None = None,
+    allow_test: bool = False,
+) -> tuple[DataLoader, DataLoader, DataLoader | None]:
+    """Build train/val (and locked test) DataLoaders from the verified manifest.
+
+    Every batch exposes ``image`` (1xHxW) and ``mask`` (1xHxW) tensors plus
+    ``sample_id``/``volume_id`` metadata, matching ``ResearchTrainer`` and the
+    legacy ``Trainer``. Test access is opt-in via ``allow_test``; otherwise the
+    third loader is ``None`` and any accidental test split change fails fast
+    inside ``VerifiedManifestDataset``.
+    """
+    train_dataset = VerifiedManifestDataset(
+        manifest_path, "train", root_dir=root_dir, transform=transform_train
+    )
+    val_dataset = VerifiedManifestDataset(
+        manifest_path, "val", root_dir=root_dir, transform=transform_val
+    )
+    if allow_test:
+        test_dataset = VerifiedManifestDataset(
+            manifest_path, "test", root_dir=root_dir,
+            transform=transform_val, allow_test=True,
+        )
+    else:
+        test_dataset = None
+
+    if limit_slices is not None:
+        if limit_slices <= 0:
+            raise ValueError("limit_slices must be positive")
+        train_dataset = VerifiedManifestDataset(
+            manifest_path, "train", root_dir=root_dir, transform=transform_train,
+            sample_ids=train_dataset.sample_ids[:limit_slices],
+        )
+        val_dataset = VerifiedManifestDataset(
+            manifest_path, "val", root_dir=root_dir, transform=transform_val,
+            sample_ids=val_dataset.sample_ids[:limit_slices],
+        )
+
+    train_loader = DataLoader(
+        train_dataset,
+        batch_size=batch_size,
+        shuffle=True,
+        num_workers=num_workers,
+        pin_memory=pin_memory,
+        persistent_workers=(num_workers > 0),
+        drop_last=False,
+    )
+    if tumor_sampler_weight is not None:
+        weights = manifest_sample_weights(train_dataset, tumor_sampler_weight)
+        generator = torch.Generator().manual_seed(seed)
+        sampler = WeightedRandomSampler(
+            weights, num_samples=len(weights), replacement=True, generator=generator
+        )
+        train_loader = DataLoader(
+            train_dataset,
+            batch_size=batch_size,
+            sampler=sampler,
+            num_workers=num_workers,
+            pin_memory=pin_memory,
+            persistent_workers=(num_workers > 0),
+            drop_last=False,
+        )
+    val_loader = DataLoader(
+        val_dataset,
+        batch_size=batch_size,
+        shuffle=False,
+        num_workers=num_workers,
+        pin_memory=pin_memory,
+        persistent_workers=(num_workers > 0),
+    )
+    test_loader = None
+    if test_dataset is not None:
+        test_loader = DataLoader(
+            test_dataset,
+            batch_size=batch_size,
+            shuffle=False,
+            num_workers=num_workers,
+            pin_memory=pin_memory,
+            persistent_workers=(num_workers > 0),
+        )
+    return train_loader, val_loader, test_loader
