@@ -1,0 +1,7 @@
+priority,review_comment,evidence,status
+major,Preserve the failed formal model-acceptance conclusion,The V121 catastrophic-patient floor failed despite strong aggregate Dice.,resolved/preserved
+major,Do not claim external or clinical generalization,Only one small held-out LiTS subset was evaluated; no external institutional cohort exists.,language narrowed
+major,Complete ethics/applicability and dataset-terms statements,These are owner/institutional facts and cannot be inferred.,open owner blocker
+moderate,Expand related-work comparison before submission,Four foundational references are insufficient for venue review or novelty positioning.,open literature task
+moderate,Explain the lack of external validation prominently,This materially limits transportability and clinical interpretation.,present in limitations; retain
+minor,Repair encoding artifacts,En dash and multiplication-sign mojibake appeared in the draft.,resolved in revised copy

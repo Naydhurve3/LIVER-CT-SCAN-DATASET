@@ -1,0 +1,6 @@
+target,location,action,status
+Step 19 manuscript,first external cohort mention,insert [Soler2010IRCADb],applied_to_new_copy_only
+reference list,verified external dataset reference,add IRCAD technical report citation,applied_to_new_copy_only
+references.bib,new addendum,add @techreport entry,created
+dataset terms declaration,owner submission fields,owner reviews advisory draft,owner_required
+data availability declaration,owner submission fields,owner reviews advisory draft,owner_required

@@ -1,0 +1,2 @@
+metric,estimate,ci_lower_2_5,ci_upper_97_5,iterations,resampling_unit,seed
+mean_positive_patient_dice,0.37706060,0.19792987,0.55420929,10000,tumour_positive_validation_patient,42

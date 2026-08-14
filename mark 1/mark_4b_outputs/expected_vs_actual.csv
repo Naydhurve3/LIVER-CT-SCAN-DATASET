@@ -1,0 +1,7 @@
+metric,actual,continuation_target,final_target
+mean_patient_dice,0.3645500967728056,0.3329,0.406915
+volume_104_dice,0.06455658243962056,0.05,0.5
+volume_116_dice,0.010424480722403422,0.01,0.05
+q1_detected_pct,42.585551330798474,35.0,45.0
+positive_predicted_empty_pct,37.04414587332054,35.0,20.0
+empty_slice_false_positive_pct,3.401431089909779,20.0,15.0

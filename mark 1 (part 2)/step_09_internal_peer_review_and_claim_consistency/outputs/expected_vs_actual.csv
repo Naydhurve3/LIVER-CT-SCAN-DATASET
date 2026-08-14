@@ -1,0 +1,12 @@
+requirement,expected,actual,passed
+sealed_inputs_verified,True,True,True
+numerical_claims_reconciled,True,True,True
+step04_step05_crosscheck_passed,True,True,True
+method_claims_reconciled,True,True,True
+structure_complete,True,True,True
+citation_keys_verified,True,True,True
+revised_manuscript_saved,True,True,True
+formal_failure_preserved,True,True,True
+submission_gate_fail_closed,True,True,True
+test_inference_rerun_false,True,True,True
+test_source_files_reopened_false,True,True,True

@@ -1,0 +1,20 @@
+blocker,required_action
+Authorship and affiliations,"Complete ordered authors, affiliations and corresponding-author details"
+Ethics/applicability,Obtain owner/institutional determination; do not infer from public-dataset status
+Dataset terms,Verify terms applying to the exact acquired LiTS copy
+Data/code availability,State access and redistribution boundaries
+Conflicts and funding,"Provide explicit declarations, including none if applicable"
+Author contributions,Complete contribution roles
+External validation,Report as absent limitation; do not manufacture or reuse test split
+selected_venue,Complete in OWNER_INPUTS and rerun
+open_access_required,Complete in OWNER_INPUTS and rerun
+maximum_publication_budget_usd,Complete in OWNER_INPUTS and rerun
+corresponding_author_name,Complete in OWNER_INPUTS and rerun
+corresponding_author_email,Complete in OWNER_INPUTS and rerun
+authors_and_affiliations_confirmed,Complete in OWNER_INPUTS and rerun
+ethics_or_applicability_confirmed,Complete in OWNER_INPUTS and rerun
+dataset_terms_confirmed,Complete in OWNER_INPUTS and rerun
+author_contributions_confirmed,Complete in OWNER_INPUTS and rerun
+conflicts_confirmed,Complete in OWNER_INPUTS and rerun
+funding_confirmed,Complete in OWNER_INPUTS and rerun
+code_and_data_availability_confirmed,Complete in OWNER_INPUTS and rerun

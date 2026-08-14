@@ -1,0 +1,30 @@
+{
+  "all_mandatory_targets_passed": true,
+  "decision": "PROCEED_TO_STEP_1_SMOKE_GATE",
+  "decoder": {
+    "step_1_all_candidates_gate": "min hard micro-Dice >= 0.80 on 16-slice overfit",
+    "step_2_train": "batch 4 + grade, AdamW, cosine, LR 3e-4 (C3: 1e-4), epochs 5-10",
+    "step_3_select": "per-candidate validation on 9-positive-patient def; selector passes each of the 6 temporary targets",
+    "step_4_holdout": "single frozen run on EVAL_VOLUMES; sealed one-time ledger"
+  },
+  "dev_train_volumes": 96,
+  "external_dataset_accessed": false,
+  "holdout_size": 8,
+  "holdout_volumes": [
+    4,
+    25,
+    44,
+    64,
+    83,
+    84,
+    90,
+    100
+  ],
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "next_step": "step_1_smoke_overfit_candidates",
+  "result_level": "DIAGNOSTIC_COMPLETE",
+  "status": "STEP_0_CONTRACT_AND_HOLDOUT_SEALED",
+  "test_images_accessed": false,
+  "test_locked_raise": true,
+  "validation_volumes": 13
+}

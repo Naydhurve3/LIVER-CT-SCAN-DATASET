@@ -1,0 +1,49 @@
+{
+  "all_mandatory_targets_passed": true,
+  "archive_file_count": 160,
+  "decision": "COMPLETE_REFERENCES_DECLARATIONS_AND_VENUE_FORMATTING",
+  "formal_model_acceptance_failure": "minimum_positive_patient_dice",
+  "formal_model_acceptance_passed": false,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "next_step": "manual_manuscript_completion_and_external_reference_review",
+  "remaining_submission_items": [
+    "Literature citations and reference list",
+    "Authors and affiliations",
+    "Ethics or applicability statement",
+    "Dataset license and terms statement",
+    "Author contributions",
+    "Conflicts of interest",
+    "Funding statement",
+    "Code and data availability",
+    "Target venue selected",
+    "Venue formatting applied",
+    "Reporting-guideline mapping"
+  ],
+  "result_level": "DIAGNOSTIC_COMPLETE",
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "status": "submission_readiness_audit_complete",
+  "submission_ready": false,
+  "target_passes": {
+    "archive_inventory_complete": true,
+    "claims_traceable": true,
+    "completion_actions_saved": true,
+    "readiness_report_saved": true,
+    "scientific_content_complete": true,
+    "sealed_package_verified": true,
+    "test_inference_rerun_false": true,
+    "test_source_files_reopened_false": true
+  },
+  "targets": {
+    "archive_inventory_complete": true,
+    "claims_traceable": true,
+    "completion_actions_saved": true,
+    "readiness_report_saved": true,
+    "scientific_content_complete": true,
+    "sealed_package_verified": true,
+    "test_inference_rerun_false": true,
+    "test_source_files_reopened_false": true
+  },
+  "test_images_accessed": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

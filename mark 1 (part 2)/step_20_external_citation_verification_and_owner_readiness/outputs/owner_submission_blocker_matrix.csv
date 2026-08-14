@@ -1,0 +1,15 @@
+field,value,validation_rule,complete,responsibility,safe_assistance_available,assistant_status
+selected_venue,,must exactly match a venue in the verified Step 08 matrix,False,owner,False,cannot infer owner-specific value
+open_access_required,,must be explicitly True or False,False,owner,False,cannot infer owner-specific value
+maximum_publication_budget_usd,,must be a non-negative number,False,owner,False,cannot infer owner-specific value
+corresponding_author_name,,must contain verified non-placeholder text,False,owner,False,cannot infer owner-specific value
+corresponding_author_email,,must be a syntactically valid email address,False,owner,False,cannot infer owner-specific value
+authors_and_affiliations,,must contain a verified non-placeholder statement of at least 10 characters,False,owner,False,cannot infer owner-specific value
+ethics_or_applicability_statement,,must contain a verified non-placeholder statement of at least 10 characters,False,owner,False,cannot infer owner-specific value
+dataset_terms_and_availability_statement,,must contain a verified non-placeholder statement of at least 10 characters,False,owner,True,advisory draft created; owner verification required
+author_contributions_statement,,must contain a verified non-placeholder statement of at least 10 characters,False,owner,False,cannot infer owner-specific value
+conflicts_of_interest_statement,,must contain a verified non-placeholder statement of at least 10 characters,False,owner,False,cannot infer owner-specific value
+funding_statement,,must contain a verified non-placeholder statement of at least 10 characters,False,owner,False,cannot infer owner-specific value
+code_availability_statement,,must contain a verified non-placeholder statement of at least 10 characters,False,owner,False,cannot infer owner-specific value
+data_availability_statement,,must contain a verified non-placeholder statement of at least 10 characters,False,owner,True,advisory draft created; owner verification required
+owner_certifies_accuracy,,must be explicitly True after owner review,False,owner,False,cannot infer owner-specific value

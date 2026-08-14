@@ -1,0 +1,14 @@
+field,value,responsible_party,readiness_status
+corresponding_author_name,[OWNER REQUIRED],owner,blocker
+author_list_ordered,[OWNER REQUIRED],owner,blocker
+affiliations,[OWNER REQUIRED],owner,blocker
+orcid_ids,[OWNER OPTIONAL / VENUE DEPENDENT],owner,pending
+ethics_applicability_statement,[OWNER/INSTITUTION REQUIRED],owner_or_institution,blocker
+dataset_acquisition_source,[OWNER REQUIRED],owner,blocker
+dataset_terms_verified,false,owner,blocker
+author_contributions,[OWNER REQUIRED],owner,blocker
+conflicts_of_interest,[OWNER REQUIRED],owner,blocker
+funding,[OWNER REQUIRED],owner,blocker
+code_repository_or_archive,[OWNER DECISION REQUIRED],owner,blocker
+target_venue,[OWNER REQUIRED],owner,blocker
+article_type,[VENUE DEPENDENT],owner_and_venue,blocker

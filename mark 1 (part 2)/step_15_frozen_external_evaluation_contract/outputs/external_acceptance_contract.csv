@@ -1,0 +1,12 @@
+category,metric,operator,threshold,mandatory,derivation
+integrity,sample_coverage_fraction,>=,1.0,True,Step15 integrity
+integrity,unique_patient_id_fraction,>=,1.0,True,Step15 integrity
+integrity,finite_probability_fraction,>=,1.0,True,Step15 integrity
+integrity,checkpoint_hashes_match,>=,1.0,True,Step15 integrity
+performance,mean_positive_patient_dice,>=,0.3329,True,frozen validation floor
+performance,minimum_positive_patient_dice,>=,0.01,True,robustness floor
+performance,q1_positive_slice_detection_pct,>=,35.0,True,frozen validation floor using train-only edge
+performance,positive_predicted_empty_pct,<=,35.0,True,frozen validation ceiling
+performance,empty_slice_false_positive_pct,<=,20.0,True,frozen validation ceiling
+reporting,all_20_patient_rows_saved,>=,1.0,True,Step15 reporting
+reporting,burden_and_negative_subgroups_saved,>=,1.0,True,Step15 reporting

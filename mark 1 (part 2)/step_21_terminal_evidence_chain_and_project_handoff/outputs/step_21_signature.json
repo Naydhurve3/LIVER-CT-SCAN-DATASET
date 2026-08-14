@@ -1,0 +1,22 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "980669a07052035505b4239fe6a7c5e78958c9eb6fbf15381add78f924688282",
+  "created_utc": "2026-08-06T03:38:05.733366+00:00",
+  "result_level": "PROJECT_EVIDENCE_CHAIN_VERIFIED_OWNER_ACTIONS_PENDING",
+  "signed_artifacts": {
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\TERMINAL_HANDOFF.md": "488a9bead36dfb462a62260d816552f9729db2a96a5f2803722c931c38b02166",
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\TERMINAL_PROJECT_DATA_CARD.md": "533c7a4494f5a2a248088969390cac7d2969afd11eaa861baf40b545b0d01410",
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\chart_map.csv": "1356530a02306eac991f02e0cabbac8223a593301fcaff6f4fd642404522afc9",
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\expected_vs_actual.csv": "17314d573de6b5ad4a6f167bfcf941e6df4664ddf743eeaee6669ee229b1de55",
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\gate_result.json": "90a903055ae47530597b5d8e74bc288a5bb9a77222b6cb9733d3c73f9d38659f",
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\phase_artifact_index.csv": "fc4f7d2b3dfab3be9ae1bc8203b236fecd5980181f446cf42f7efe9252600b76",
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\phase_evidence_chain.png": "e25017febd8a4fe1ed4e168bd7d97f6fec7947d07fbf2917953786735375826e",
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\phase_gate_chain.csv": "797a615ea206c30b733a3489e515bf8b22674369cc39b38e3d4179482d8585e1",
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\provenance.json": "a82598a41263c989ae336c0a78b46cfba2dbc70e86c064d09e7414e7cb66d0ef",
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\signature_file_inventory.csv": "fbf49a0e2d0665c2df71749e88e1053a61feaeae791f706005321e53d04d85c2",
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\signed_artifact_verification.csv": "4621fc2caaeda2fdfd1ee1609a3f45d14f24e38affce3f68c2faac79ba3d92a4",
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\terminal_scientific_summary.csv": "388a9b5dc7b00ef510ceca74721f4686b7256aa07cfd7826d421e228ec9ec939",
+    "step_21_terminal_evidence_chain_and_project_handoff\\outputs\\unresolved_actions.csv": "6c30fd799e715cae31fde81735870a463ffcbd35531e29a260f80f01ea54b479"
+  },
+  "submission_action_performed": false
+}

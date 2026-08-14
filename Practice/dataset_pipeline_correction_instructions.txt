@@ -1,0 +1,595 @@
+LiTS DATASET PIPELINE - NOTEBOOK CORRECTION INSTRUCTIONS
+========================================================
+
+Target notebook
+---------------
+D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\Practice\dataset_pipeline.ipynb
+
+Dataset build under review
+--------------------------
+D:\DATA SCIENCE AND ANALYTICS\Dataset\Liver
+
+Decision from the 2026-07-13 re-audit
+------------------------------------
+STATUS: NOT READY FOR TRAINING
+
+Do not run training, threshold selection, FAUP-Net, or UWACL experiments against
+this folder. Do not rerun the present notebook as-is. Preserve the current folder
+as an unverified build artifact until a clean replacement passes every gate below.
+
+
+1. CURRENT EVIDENCE THAT THE NOTEBOOK MUST DISPLAY
+==================================================
+
+The corrected notebook must begin with a status cell that reports these current
+facts and clearly prints TRAINING_BLOCKED=True:
+
+1. Official source files:
+   - 131 segmentation NIfTI files exist, IDs 0 through 130.
+   - Only 52 extracted volume NIfTI files currently exist: IDs 0 through 50 and 53.
+   - Valid ZIP archives currently exist for volumes 51, 52, 54, 55, 56, 57, 58,
+     60, and 61.
+   - volume-59.nii.zip, volume-62.nii.zip, and volume-63.nii.zip are incomplete or
+     corrupt and fail ZIP validation.
+   - Volumes 64 through 130 have not yet been obtained in the authoritative volume
+     directory.
+
+2. Current derived folder:
+   - Images: 58,638 files across 131 volumes.
+   - Tumor masks: 58,638 files across 131 volumes.
+   - Liver masks: 32,716 files across 73 volumes.
+   - Volumes 0 through 50 were regenerated from official NIfTI.
+   - Most remaining files are older PNG-derived artifacts.
+   - Therefore the derived folder is a mixed-source build and cannot be treated as
+     one reproducible dataset version.
+
+3. Current manifest disagreement:
+   - slice_manifest.csv has only 18,479 rows for volumes 0 through 50.
+   - It labels every row source=nifti_official and
+     verification_status=pending_spatial_review.
+   - The derived folder contains 58,638 image/tumor pairs, so 40,159 derived pairs
+     are outside the current manifest.
+   - Five rows say has_tumor=True even though the final 256x256 tumor mask is empty.
+   - Four rows say has_liver=True even though the final 256x256 liver mask is empty.
+   - Flags must be calculated from final saved masks, not from full-resolution
+     source flags.
+
+4. Current split disagreement:
+   - train_slices.csv, val_slices.csv, and test_slices.csv still contain the older
+     58,638-row lits-png manifest schema.
+   - The split union is complete and volume-disjoint, but it is not derived from the
+     current 18,479-row manifest.
+   - Against the files currently on disk, the training CSV has 27 tumor label
+     mismatches. Validation and test happen to have zero because those volumes were
+     not regenerated yet.
+   - The split CSVs and current manifest therefore describe different dataset
+     states.
+
+5. Current audit/provenance gaps:
+   - 06_audits contains no audit output files.
+   - No split hashes are recorded.
+   - No complete checksum inventory is recorded.
+   - dataset_version.json and volume_manifest.csv are stale relative to the latest
+     partial NIfTI conversion.
+   - conversion_stats.json covers only volumes 0 through 50.
+
+6. NIfTI header issue requiring explicit review:
+   - For volumes 0 through 50, image/segmentation array shapes match.
+   - Volume and segmentation affine/orientation metadata disagree for volumes 48,
+     49, and 50.
+   - These three volumes must receive saved overlay review and an explicit decision.
+     Do not silently resample one file from the other's affine. If voxel-index
+     pairing is intentionally used because the arrays are known to be index-aligned,
+     record that policy and the visual evidence.
+
+7. Current notebook state:
+   - The notebook has 23 executed code cells and saved outputs, but those outputs
+     describe the older PNG-copy build, not the current disk state.
+   - One cell is missing a stable notebook cell ID.
+   - It hardcodes DRY_RUN=False.
+   - Rerunning it will rewrite manifests and splits using the old source logic while
+     safe_copy skips files already present. This will preserve the hybrid files but
+     replace metadata again, making the inconsistency worse.
+
+
+2. NON-NEGOTIABLE SAFETY RULES
+==============================
+
+The corrected notebook must follow all of these rules:
+
+1. Default mode is AUDIT_ONLY=True and ALLOW_WRITE=False.
+2. Never write directly into the existing 03_derived_256 directory.
+3. Never delete or overwrite a source file, old derived file, manifest, split, or
+   audit artifact automatically.
+4. Build into a new unique directory, for example:
+   02_staging\build_YYYYMMDD_HHMMSS\
+5. Promotion to a canonical directory happens only after every automated and
+   manual acceptance gate passes.
+6. Use atomic writes: write to a temporary file, flush/close it, then rename it.
+7. If a destination file already exists with a different hash, stop with an error.
+8. Never use `except: pass`. Log the path, exception type, and message, then stop or
+   quarantine the sample according to a documented rule.
+9. Do not read test labels or calculate test metrics during dataset construction,
+   training, threshold selection, or model selection.
+10. Do not call the build v1.0.0 while any row is pending, excluded without review,
+    mixed-source, missing, corrupt, or spatially unresolved.
+
+
+3. REQUIRED TOP-TO-BOTTOM NOTEBOOK DESIGN
+=========================================
+
+Replace the notebook's current copy-first flow with the following cells. Each cell
+must have a stable ID, a short markdown explanation, bounded output, and an assert
+or explicit status result.
+
+CELL 0 - PURPOSE, DATA GRAIN, AND STOP RULE
+------------------------------------------
+
+State:
+ - Task: tumor/lesion-mask segmentation.
+ - Grain: one axial slice identified by (volume_id, slice_index).
+ - Authoritative source: paired official LiTS volume-NIfTI and segmentation-NIfTI
+   files with the same numeric ID.
+ - Segmentation labels: 0=background, 1=liver, 2=tumor.
+ - TRAINING_BLOCKED remains true until the final promotion gate passes.
+ - Existing PNG and checkpoint results are legacy evidence only.
+
+CELL 1 - IMPORTS AND EXPLICIT PARAMETERS
+----------------------------------------
+
+Include at least:
+ - pathlib, csv, json, hashlib, zipfile, shutil, tempfile, datetime
+ - numpy, pandas, nibabel, PIL, matplotlib
+ - scipy or skimage only if already installed and required for connected components
+
+Expose parameters in one place:
+ - DATASET_ROOT
+ - RAW_VOLUME_DIR
+ - RAW_SEGMENTATION_DIR
+ - DOWNLOAD_DIR
+ - STAGING_ROOT
+ - BUILD_ID
+ - AUDIT_ONLY=True
+ - ALLOW_WRITE=False
+ - EXPECTED_VOLUME_IDS=set(range(131))
+ - IMAGE_SIZE=(256, 256)
+ - RANDOM_SEED=42
+ - IMAGE_PROFILE_NAME
+ - HU/window parameters, if an 8-bit training PNG profile is produced
+ - MASK_RESAMPLE='nearest'
+
+Do not use per-slice min/max normalization. It changes the meaning of intensity
+between slices. If HU is mapped to 8-bit PNG, use one named, fixed, documented
+window for every slice. Prefer also retaining a lossless/int16 derived representation
+or the authoritative NIfTI as the source of truth.
+
+CELL 2 - SAFE I/O AND HASH HELPERS
+---------------------------------
+
+Implement and unit-test:
+ - sha256_file(path)
+ - atomic_write_json(...)
+ - atomic_write_csv(...)
+ - safe_copy_or_extract(source, destination)
+ - validate_png(path, expected_mode, expected_size)
+ - parse_volume_id(path)
+
+safe_copy_or_extract must:
+ - refuse overwrite when hashes differ;
+ - skip only when hashes are identical;
+ - return a structured status, never silently return;
+ - write a log row for copied, identical, conflicting, corrupt, or failed.
+
+CELL 3 - INVENTORY AND VALIDATE DOWNLOADS
+-----------------------------------------
+
+Inventory extracted NIfTI and ZIP files by numeric ID. For every ZIP:
+ - open it with zipfile.ZipFile;
+ - run testzip();
+ - require exactly the expected volume-<id>.nii member;
+ - reject partial downloads and HTML/error pages saved with a .zip suffix;
+ - record size and SHA-256.
+
+Write/read the proposed report only inside the new build audit directory:
+ - source_inventory.csv
+ - corrupt_downloads.csv
+ - source_checksums.csv
+
+Current required action:
+ - Extract valid archives for 51, 52, 54-58, 60, and 61 into a staging source area.
+ - Re-download 59, 62, and 63 completely.
+ - Obtain official volume NIfTI files 64-130.
+ - Do not begin the full conversion until all 131 volume IDs and all 131
+   segmentation IDs are present and readable.
+
+CELL 4 - AUTHORITATIVE NIFTI PAIR VALIDATION
+--------------------------------------------
+
+For every ID 0-130:
+ - nibabel must load both files without error;
+ - image and segmentation must both be 3-D;
+ - shapes must be equal;
+ - slice count must be positive;
+ - segmentation values must be a subset of {0,1,2};
+ - record image dtype, segmentation dtype, shape, voxel spacing, affine, axis codes,
+   qform/sform codes, and file hashes;
+ - record all affine/orientation mismatches without automatically hiding them.
+
+Write:
+ - nifti_pair_validation.csv
+ - geometry_report.csv
+ - affine_mismatches.csv
+
+Gate:
+ - Exactly 131 unique pairs.
+ - IDs exactly 0-130.
+ - No unreadable files.
+ - No shape mismatches.
+ - Every affine mismatch has a documented review decision.
+
+CELL 5 - DRY-RUN BUILD PLAN
+---------------------------
+
+Before writing data, calculate the expected:
+ - number of volumes;
+ - total slices;
+ - per-volume slice counts;
+ - output file count and approximate storage;
+ - output paths;
+ - preprocessing profile;
+ - source and code hashes.
+
+Print the plan and stop if AUDIT_ONLY=True or ALLOW_WRITE=False. Enabling writes must
+be an explicit manual edit in the parameter cell, not a hidden state change.
+
+CELL 6 - DETERMINISTIC CONVERSION FUNCTIONS
+-------------------------------------------
+
+Create one function that receives one paired NIfTI volume and returns all derived
+slice outputs. The same spatial transform must be applied to image and masks.
+
+Mask definitions:
+ - organ_mask = segmentation > 0  (liver including tumor)
+ - liver_only_mask = segmentation == 1  (optional, clearly named)
+ - tumor_mask = segmentation == 2
+
+Do not name segmentation==1 simply `liver_mask` if containment checks expect tumor
+to lie inside it. Prefer saving `organ_masks` and `tumor_masks`; save
+`liver_only_masks` only if a downstream task needs them.
+
+Conversion requirements:
+ - fixed axial slice-index policy;
+ - identical orientation operation for image and all masks;
+ - image interpolation documented (bilinear/area as selected);
+ - masks resized with nearest-neighbour only;
+ - masks saved as single-channel mode L with values only 0 and 255;
+ - image mode and intensity profile documented and checked;
+ - no RGB duplication for binary masks;
+ - no CLAHE unless it is a separately named experimental profile;
+ - no silent HU conversion;
+ - no reuse of the current mixed 03_derived_256 files.
+
+CELL 7 - SMALL DRY-RUN CONVERSION
+---------------------------------
+
+Convert only selected volumes into 02_dry_run or a new build-specific dry-run area:
+ - ordinary examples: 0, 8, 22
+ - known/suspicious examples: 4, 33, 44, 48, 49, 50
+ - later-source examples after download: 71, 76, 100, 108, 116
+
+For each, verify:
+ - expected slice count;
+ - image/mask size and mode;
+ - binary masks;
+ - no key duplication;
+ - tumor is a subset of organ_mask;
+ - final 256 flags equal final 256 pixel counts;
+ - input/output hashes and preprocessing profile are logged.
+
+CELL 8 - REQUIRED SPATIAL VISUAL AUDIT
+--------------------------------------
+
+Generate saved figures, not just transient notebook plots. For each reviewed volume,
+show at least:
+ - an early organ-positive slice;
+ - the maximum tumor-burden slice;
+ - a middle tumor-positive slice when available;
+ - a late organ-positive slice;
+ - one negative slice.
+
+Each panel must show:
+ - grayscale CT image;
+ - organ contour in one color;
+ - tumor contour in another color;
+ - volume ID, slice index, source ID, orientation policy, and mask pixel counts.
+
+Never combine two competing masks with logical OR before comparison. Display them
+separately or use disagreement colors so conflicts remain visible.
+
+Save review records with:
+ - volume_id
+ - reviewer
+ - review_timestamp
+ - status: approved / rejected / needs_review
+ - notes
+ - figure_path
+ - affine_policy
+
+Volumes 48, 49, and 50 require explicit manual approval because their NIfTI header
+metadata disagrees. Previously suspicious volumes 4, 33, 44, 71, 76, 100, 108,
+and 116 also require explicit approval.
+
+CELL 9 - FULL BUILD INTO A NEW STAGING DIRECTORY
+------------------------------------------------
+
+Run only after source and dry-run gates pass. Convert all 131 paired volumes into a
+new build directory such as:
+
+02_staging\build_<BUILD_ID>\
+  images\v000\s0000.png
+  organ_masks\v000\s0000.png
+  tumor_masks\v000\s0000.png
+  manifests\
+  audits\
+
+Support resume by writing a per-volume completion record containing source hashes,
+configuration hash, output counts, and output hashes. Resume only when all hashes
+and the configuration match. Otherwise rebuild that volume in a new location.
+
+CELL 10 - BUILD THE MANIFEST FROM SAVED OUTPUTS
+-----------------------------------------------
+
+Do not use lits_df.csv to decide whether the final tumor mask is positive. The mask
+saved in the build is the truth for final-resolution sampling metadata.
+
+Required one-row-per-slice columns:
+ - sample_id
+ - volume_id
+ - slice_index
+ - image_path
+ - organ_mask_path
+ - tumor_mask_path
+ - image_exists
+ - organ_mask_exists
+ - tumor_mask_exists
+ - organ_present_256
+ - tumor_present_256
+ - organ_pixels_256
+ - tumor_pixels_256
+ - source_volume_path
+ - source_segmentation_path
+ - source_volume_sha256
+ - source_segmentation_sha256
+ - preprocessing_profile
+ - build_id
+ - verification_status
+ - exclusion_reason
+
+Use paths relative to the dataset version root. Calculate flags and pixel counts by
+opening the final saved single-channel files. An empty mask must have count 0 and
+present=False; a nonempty mask must have count >0 and present=True.
+
+CELL 11 - DATA-QUALITY AND RECONCILIATION AUDIT
+-----------------------------------------------
+
+Generate all of these files:
+ - integrity_report.json
+ - missing_data.csv
+ - duplicate_keys.csv
+ - excluded_samples.csv
+ - key_reconciliation.csv
+ - geometry_report.csv
+ - label_distribution.json
+ - source_checksums.csv
+ - derived_checksums.csv or a documented checksum manifest
+ - spatial_audit.csv/json
+ - conversion_log.csv
+
+Automated checks:
+ - exactly 131 volumes;
+ - expected IDs exactly 0-130;
+ - expected total slice count reconciled to NIfTI shapes;
+ - one unique sample_id per slice;
+ - image/organ/tumor key sets identical;
+ - every manifest path exists and is readable;
+ - every output is 256x256;
+ - mask mode is L and values are a subset of {0,255};
+ - manifest flags/counts equal saved mask contents;
+ - tumor_mask is a subset of organ_mask;
+ - no unexpected all-empty segmentation volume;
+ - no source mixing within a canonical version;
+ - no unresolved verification_status values.
+
+CELL 12 - GENERATE SPLITS FROM THE FINAL MANIFEST
+-------------------------------------------------
+
+Only generate splits after the final manifest is internally valid. Keep the locked
+sequential volume split unless a later research decision explicitly changes it:
+ - train: volumes 0-103
+ - validation: volumes 104-116
+ - test: volumes 117-130
+
+Write volume text files using plain integers, one per line (`0`, not `v000`).
+Write slice CSVs by filtering the same final manifest; never carry forward old CSVs.
+
+Assertions:
+ - train/val/test volume intersections are empty;
+ - slice-key intersections are empty;
+ - union equals the complete eligible manifest;
+ - each row's volume belongs to its split;
+ - no excluded or pending row enters a split;
+ - test rows are not loaded by training or threshold-selection code.
+
+Record SHA-256 for every split file in split_hashes.json. Expected slice counts may
+be 40,667 / 10,685 / 7,286 only if the authoritative NIfTI inventory independently
+reconciles to those counts; do not hardcode them as a substitute for validation.
+
+CELL 13 - VERSION AND PROVENANCE RECORD
+---------------------------------------
+
+Write dataset_version.json from calculated evidence, not stale constants. Include:
+ - status: unverified / verified / rejected
+ - build_id and creation time
+ - source IDs and hashes
+ - preprocessing profile and parameters
+ - conversion code/notebook hash
+ - environment/package versions
+ - row, volume, positive-slice, and pixel counts
+ - manifest hash
+ - split hashes
+ - audit report hashes
+ - unresolved warnings
+ - manual review summary
+
+Remain `lits-v0.x-unverified` until the full gate passes. Promote to v1.0.0 only
+after explicit human approval.
+
+CELL 14 - PROMOTION GATE
+------------------------
+
+The notebook must calculate a final PASS/FAIL table. Promotion requires all true:
+ - 131 readable official image NIfTI files;
+ - 131 readable official segmentation NIfTI files;
+ - exact ID pairing 0-130;
+ - no shape mismatch;
+ - all affine anomalies resolved and documented;
+ - all required spatial reviews approved;
+ - one clean source profile for every derived row;
+ - equal image/organ/tumor key sets;
+ - no missing or unreadable outputs;
+ - no duplicate keys;
+ - no mask/manifest label mismatch;
+ - no tumor pixel outside organ_mask;
+ - split disjointness and completeness pass;
+ - all required reports and hashes exist;
+ - verification_status contains no pending or needs_review row.
+
+If any gate fails:
+ - print DATASET_READY=False and TRAINING_BLOCKED=True;
+ - list the exact failed gates and affected IDs/files;
+ - do not copy/rename staging into the canonical training directory.
+
+If all gates pass:
+ - print DATASET_READY=True;
+ - require a separate explicit PROMOTE=True manual action;
+ - preserve the previous build unchanged;
+ - promote by atomic directory rename or a versioned canonical pointer.
+
+CELL 15 - TRAINING-LOADER CONTRACT TEST
+---------------------------------------
+
+After promotion, test the actual project loader against the final manifest. The
+current framework still expects flat `Volume-*.png` and `mask-*.png` folders and
+defaults to the legacy directories. It must be changed deliberately to a
+manifest-driven loader before training.
+
+Loader acceptance test:
+ - loads train and validation from final manifest/splits;
+ - refuses pending/excluded rows;
+ - returns image [1,256,256] and binary tumor mask [1,256,256];
+ - uses nearest-neighbour for any mask resize;
+ - never opens the test split during training/threshold selection;
+ - deterministic sample and augmentation behavior under seed 42;
+ - a 16-slice overfit test reaches Dice >=0.80 before a full baseline run.
+
+
+4. CORRECTIONS TO EXISTING NOTEBOOK CELLS
+=========================================
+
+The following existing logic must be removed or replaced:
+
+1. `DRY_RUN = False`
+   Replace with AUDIT_ONLY=True and ALLOW_WRITE=False by default.
+
+2. Old safe_copy behavior
+   Skipping an existing destination without comparing hashes is unsafe. Add hash
+   comparison, conflict reporting, and build-specific destinations.
+
+3. CSV-derived tumor-positive flag
+   Keep lits_df.csv only as a reconciliation reference. Calculate final positive
+   status from the final saved 256 tumor mask.
+
+4. Hardcoded `has_image=True` and `has_tumor_mask=True`
+   Replace with actual existence and readability checks.
+
+5. Hardcoded source_package='lits-png'
+   Canonical rows must point to their official NIfTI source paths and hashes.
+
+6. Manifest paths for absent liver files
+   Do not write a usable mask path when the file is absent. In the canonical build,
+   derive an organ mask for every official segmentation slice.
+
+7. `np.sum(arr > 0) // 3`
+   Remove this RGB assumption. Save masks as single-channel L and count
+   `np.count_nonzero(mask_array)`.
+
+8. Old overlay logic
+   Never OR competing masks before display. Show source, converted, and disagreement
+   masks separately.
+
+9. One-volume/four-slice visualization
+   Replace with stratified per-volume review and mandatory suspicious-volume review.
+
+10. Direct writes to 04_manifests and 05_splits
+    Write inside the build directory first. Promote only after the final gate.
+
+11. Stale notebook outputs
+    Clear outputs after editing, restart the kernel, and execute top-to-bottom.
+    Saved results must match the current build ID and on-disk file hashes.
+
+12. Missing cell ID
+    Normalize the notebook using nbformat and ensure every cell has a stable ID.
+
+
+5. MANUAL RUN ORDER
+===================
+
+Run the corrected notebook in this order:
+
+1. AUDIT_ONLY=True, ALLOW_WRITE=False.
+2. Review source inventory and corrupt/missing download table.
+3. Finish official NIfTI acquisition outside the canonical derived directory.
+4. Repeat audit until all 131 image/segmentation pairs pass.
+5. Enable a small dry-run build only.
+6. Inspect and record the required overlays, especially volumes 48-50 and the
+   previously suspicious IDs.
+7. Enable full staging conversion.
+8. Run manifest, integrity, geometry, label, containment, and split audits.
+9. Review the final PASS/FAIL table.
+10. Promote only after every gate passes.
+11. Update/test the manifest-driven training loader.
+12. Run the 16-slice overfit test.
+13. Only then consider the research baseline.
+
+
+6. FILES TO SHARE FOR THE NEXT REVIEW
+=====================================
+
+Do not share the full dataset or checkpoints. Share these small files:
+
+ - dataset_version.json
+ - integrity_report.json
+ - source_inventory.csv
+ - nifti_pair_validation.csv
+ - affine_mismatches.csv
+ - missing_data.csv
+ - duplicate_keys.csv
+ - key_reconciliation.csv
+ - geometry_report.csv
+ - label_distribution.json
+ - spatial_audit.csv or spatial_audit.json
+ - split_hashes.json
+ - final slice_manifest.csv summary/count output
+ - saved overlay contact sheets for required suspicious volumes
+ - the executed corrected notebook, including the final gate output
+
+
+7. FINAL STOP/GO RULE
+====================
+
+Current decision: STOP.
+
+The next objective is not model training. The next objective is a complete,
+single-source, reproducible, spatially approved official-NIfTI dataset build with
+one internally consistent manifest and split set. A large file count alone is not
+evidence of readiness.

@@ -1,0 +1,8 @@
+claim_id,proposed_claim,status,evidence,required_caveat
+C1,The frozen pipeline achieved LiTS global Dice 0.7677.,supported,Step 5 sealed held-out result,formal acceptance failed because minimum patient Dice was 0
+C2,The pipeline achieved external global Dice 0.8480 and mean positive-patient Dice 0.7112.,supported,Steps 16-17 sealed and independently reconciled,single public external cohort; 15 positive patients
+C3,The model generalized externally under the frozen 3D-IRCADb-01 contract.,supported_with_caveats,11/11 external gate rows passed,does not reverse LiTS formal failure or establish clinical readiness
+C4,Small lesions remain a reproducible weakness.,supported,LiTS Q1 lesion detection 60.3%; external Q1 63.64%,strata use train-derived size edges but datasets differ
+C5,The model is clinically ready.,prohibited,"patient failures, false positives, no prospective/expert review",not supportable
+C6,Case 7 and 14 external predictions are true tumours.,prohibited,source-label concordance is not expert adjudication,retain frozen false-positive classification
+C7,The external dataset outperformed LiTS.,prohibited_as_inferential_claim,descriptive metric differences only,cohorts and label semantics are not directly exchangeable

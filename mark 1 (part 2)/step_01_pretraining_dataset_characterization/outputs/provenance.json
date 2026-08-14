@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-08-03T08:52:34.583401+00:00",
+  "dataset_build_id": "build_corrected_20260713_214847_v2",
+  "input_artifact_hashes": {
+    "mark_4d_gate": "4bf8621b9cb6dc08921f1de72cbbac930347b34bf524d532a37fdff49cea9907",
+    "mark_4e_gate": "31f952a32623d3578232572b203d2e6d4bffc2eff9cc85ae862f20a250ec4241",
+    "mark_4e_patient_metrics": "592db46fbaeb14918447fc6ea4df0fb4684d4f9fe529d20dddc1ff9d642e6fab",
+    "train_roi_manifest": "990882d81d79064f286ce1dc56811cf9609a8f8ea51cf5c8ac2fefab38dc02b0",
+    "validation_roi_manifest": "95927515e3e6c34b161c31f217a0b784ecfb64d2ae543f3c9d7a9435a9a4d297"
+  },
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "notebook": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1 (part 2)\\step_01_pretraining_dataset_characterization\\step_01_pretraining_dataset_characterization.ipynb",
+  "random_seed": 42,
+  "software": {
+    "nibabel": "5.4.2",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "source_hashes_verified_train_val": true,
+  "source_volume_count": 117,
+  "test_images_accessed": false,
+  "test_rows_metadata_count_only": 7286,
+  "train_val_rows": 51352,
+  "train_val_volumes": 117
+}

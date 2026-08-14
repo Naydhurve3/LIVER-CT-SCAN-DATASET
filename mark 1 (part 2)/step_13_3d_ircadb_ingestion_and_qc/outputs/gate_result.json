@@ -1,0 +1,26 @@
+{
+  "archive_set_sha256": "55cd6722da6c02f8365ab566603db116128e0d854782d2a174b85056f4a5ba96",
+  "conversion_performed": false,
+  "decision": "PROCEED_TO_NORMALIZED_CONVERSION_AND_PARITY_QC",
+  "download_authorized": true,
+  "download_status": "reused_existing_archives",
+  "extracted_patient_count": 20,
+  "formal_model_acceptance_passed": false,
+  "inference_performed": false,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "next_step": "step_14_external_normalized_conversion_and_parity_qc",
+  "phase_integrity_passed": true,
+  "result_level": "EXTERNAL_SOURCE_INGESTION_QC_PASS",
+  "source_ingestion_qc_passed": true,
+  "status": "external_source_ingestion_qc_pass",
+  "targets": {
+    "Step 12 prerequisite checks": true,
+    "download requests when unauthorized": true,
+    "official terms snapshot saved": true,
+    "zero local LiTS test source accesses": true,
+    "zero model inference runs": true
+  },
+  "test_images_accessed": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

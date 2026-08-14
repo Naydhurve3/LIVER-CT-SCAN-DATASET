@@ -1,0 +1,10 @@
+metric_key,metric,lits_heldout,ircadb_external,external_minus_lits,comparison_type
+global_dice,Global Dice,0.76769626,0.8479770814155181,0.08028082141551807,descriptive_only_different_cohorts
+global_pixel_precision,Pixel precision,0.84439412,0.8236994367770734,-0.02069468322292667,descriptive_only_different_cohorts
+global_pixel_recall,Pixel recall,0.70377141,0.8737293018906901,0.1699578918906901,descriptive_only_different_cohorts
+mean_positive_patient_dice,Mean positive-patient Dice,0.50729684,0.7111958843137554,0.20389904431375538,descriptive_only_different_cohorts
+median_positive_patient_dice,Median positive-patient Dice,0.56513738,0.8355140187135496,0.27037663871354956,descriptive_only_different_cohorts
+minimum_positive_patient_dice,Minimum positive-patient Dice,0.0,0.0129922862310222,0.0129922862310222,descriptive_only_different_cohorts
+q1_positive_slice_detection_pct_train_edges,Q1 positive-slice detection (%),47.55244755,50.0,2.4475524500000034,descriptive_only_different_cohorts
+positive_predicted_empty_pct,Positive predicted-empty (%),9.94152047,9.859154929577464,-0.0823655404225363,descriptive_only_different_cohorts
+empty_slice_false_positive_pct,Empty-slice false-positive (%),3.81014945,11.574279379157428,7.764129929157428,descriptive_only_different_cohorts

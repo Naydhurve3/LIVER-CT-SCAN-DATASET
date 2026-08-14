@@ -1,0 +1,19 @@
+{
+  "authorization_granted": false,
+  "ready": true,
+  "required_authorization_text": "I explicitly authorize one-time locked test evaluation using the Step 03 frozen policy and acceptance contract.",
+  "requirements": {
+    "all_six_validation_targets_passed": true,
+    "artifact_inventory_complete": true,
+    "final_acceptance_declared_before_test": true,
+    "freeze_fields_identical": true,
+    "immutable_hashes_verified": true,
+    "probability_cache_inventory_complete": true,
+    "roi_generator_fully_frozen": true,
+    "step01_gate_passed": true,
+    "step02_validation_freeze_passed": true,
+    "test_lock_intact": true
+  },
+  "status": "READY_TO_REQUEST_EXPLICIT_ONE_TIME_TEST_AUTHORIZATION",
+  "test_images_accessed": false
+}

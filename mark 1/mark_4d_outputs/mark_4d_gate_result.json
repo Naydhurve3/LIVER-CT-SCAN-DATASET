@@ -1,0 +1,19 @@
+{
+  "status": "mark_4d_diagnostic_complete_no_full_pass",
+  "selected_model": "recall_loss",
+  "selected_threshold": 0.6000000238418579,
+  "selected_metrics": {
+    "mean_patient_dice": 0.3765875940211553,
+    "volume_104_dice": 0.10023956287717371,
+    "volume_116_dice": 0.0007116977290326623,
+    "q1_detected_pct": 47.90874524714829,
+    "positive_predicted_empty_pct": 30.518234165067177,
+    "empty_slice_false_positive_pct": 4.791040132738774
+  },
+  "targets_passed": 5,
+  "decision": "V116_LOCALIZATION_FAILURE_RUN_SMALL_LESION_SAMPLING_ABLATION",
+  "next_notebook": "mark_4e_v116_targeted_ablation",
+  "metric_definition": "mean Dice over nine tumour-positive validation patients",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "test_images_accessed": false
+}

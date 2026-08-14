@@ -1,0 +1,14 @@
+{
+  "acceptance_contract_sha256": "12e8932d71651fd9247d841a86dfcd0fa80d64d74c4f334e29b113c28213b52d",
+  "authorization_recorded_utc": "2026-08-05T11:39:37.3247843Z",
+  "completed_utc": "2026-08-05T11:47:12.782379+00:00",
+  "gate_result_sha256": "3efe028e1ab3edd32f59fa7bf648c130179c1c12b39038bac7e435ce72a23432",
+  "policy_sha256": "52d2df856709254992ab6b59f84a213a0a00f6e67293f66665b6f258d01f2131",
+  "rerun_allowed": false,
+  "run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "status": "COMPLETE",
+  "test_images_accessed": true,
+  "test_rows": 7286,
+  "test_split_opened_utc": "2026-08-05T11:42:01.401417+00:00",
+  "test_volumes": 14
+}

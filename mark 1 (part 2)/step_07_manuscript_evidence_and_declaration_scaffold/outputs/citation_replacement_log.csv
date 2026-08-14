@@ -1,0 +1,4 @@
+source_text,replacement_applied,occurrences_before
+The study used corrected build,True,1
+Control and recall-loss MobileNetV2 U-Net checkpoints,True,1
+The inference policy and formal acceptance table were frozen,True,1

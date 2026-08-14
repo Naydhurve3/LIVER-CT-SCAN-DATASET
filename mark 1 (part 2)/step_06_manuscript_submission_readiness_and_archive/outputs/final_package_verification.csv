@@ -1,0 +1,20 @@
+check,passed,observed
+step05_result_level,True,FINAL_PROJECT_COMPLETE
+step05_package_targets,True,True
+formal_failure_preserved,True,False
+manifest_hash,True,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889
+test_inference_not_rerun,True,False
+test_sources_not_reopened,True,False
+sealed_run_id,True,871d289b-bf6b-4346-978f-2df02ade26ab
+ledger_complete,True,COMPLETE
+ledger_rerun_prohibited,True,False
+step04_result_level,True,FINAL_TEST_COMPLETE
+step05_output:FINAL_TECHNICAL_REPORT.md,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_05_final_research_package\outputs\FINAL_TECHNICAL_REPORT.md
+step05_output:PAPER_DRAFT.md,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_05_final_research_package\outputs\PAPER_DRAFT.md
+step05_output:LIMITATIONS_AND_FAILURE_ANALYSIS.md,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_05_final_research_package\outputs\LIMITATIONS_AND_FAILURE_ANALYSIS.md
+step05_output:REPRODUCIBILITY_INSTRUCTIONS.md,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_05_final_research_package\outputs\REPRODUCIBILITY_INSTRUCTIONS.md
+step05_output:FINAL_PROJECT_DATA_CARD.md,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_05_final_research_package\outputs\FINAL_PROJECT_DATA_CARD.md
+step05_output:ARTIFACT_CHECKSUM_INVENTORY.csv,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_05_final_research_package\outputs\ARTIFACT_CHECKSUM_INVENTORY.csv
+step05_output:final_outcome_dashboard.png,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_05_final_research_package\outputs\final_outcome_dashboard.png
+step05_output:patient_failure_distribution.png,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_05_final_research_package\outputs\patient_failure_distribution.png
+step05_output:validation_to_test_comparison.png,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_05_final_research_package\outputs\validation_to_test_comparison.png

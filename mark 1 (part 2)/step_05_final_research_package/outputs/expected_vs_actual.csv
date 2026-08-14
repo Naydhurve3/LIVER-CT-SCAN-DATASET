@@ -1,0 +1,13 @@
+requirement,expected,actual,passed
+sealed_evidence_verified,True,True,True
+metrics_independently_reconciled,True,True,True
+formal_test_failure_preserved,True,True,True
+v121_failure_characterized,True,True,True
+methods_parameters_saved,True,True,True
+technical_report_saved,True,True,True
+paper_draft_saved,True,True,True
+limitations_saved,True,True,True
+reproducibility_saved,True,True,True
+figures_saved,True,True,True
+test_source_files_reopened_false,True,True,True
+test_inference_rerun_false,True,True,True

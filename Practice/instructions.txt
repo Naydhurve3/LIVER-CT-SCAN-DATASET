@@ -1,0 +1,1310 @@
+LIVER TUMOR SEGMENTATION PROJECT - AGENT OPERATING INSTRUCTIONS
+================================================================
+
+Document status: Active project operating manual
+Prepared: 2026-07-12
+Project root: D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver
+Primary user environment: Windows PowerShell 5.1, local NVIDIA laptop GPU
+
+
+MANDATORY INSTRUCTION TO EVERY FUTURE AGENT
+-------------------------------------------
+
+Read this entire file and Practice\dataset summary.txt before planning work,
+editing code, moving data, evaluating checkpoints, or asking the user to run a
+GPU command.
+
+This file explains HOW the project must be operated. Practice\dataset summary.txt
+explains the current DATASET evidence and reconstruction plan. When they differ:
+
+1. The user's newest explicit instruction has highest project-level priority.
+2. Current verified filesystem evidence overrides stale historical notes.
+3. This operating manual controls workflow and decision discipline.
+4. dataset summary.txt controls dataset-specific facts and gates.
+5. Older experiment reports and checkpoints remain historical artifacts unless
+   reproduced under the current dataset, preprocessing, split, and metric rules.
+
+Do not train merely because training code runs. The project advances only when
+the current stage has objective evidence that its acceptance gate passed.
+
+
+1. FINAL PROJECT GOAL
+---------------------
+
+Build a trustworthy, reproducible liver-tumor/lesion segmentation research
+pipeline that can:
+
+- prove image-mask spatial correspondence
+- train a reproducible canonical baseline
+- compare MobileNetV2-U-Net, FAUP-Net, and UWACL-v2 under controlled conditions
+- evaluate locked models once on a held-out test set
+- produce auditable metrics, figures, manifests, hashes, and reports
+- support a later multi-seed research study without misleading claims
+
+The immediate goal is not publication, clinical deployment, or the highest
+possible Dice. The immediate goal is to establish trustworthy evidence.
+
+The project is currently single-seed model selection work. Statistical
+significance, publication claims, clinical claims, cross-validation, external
+validation, dashboards, and manuscript writing remain deferred until the
+foundation is valid.
+
+
+2. OBJECTIVE HIERARCHY
+----------------------
+
+FINAL GOAL
+  Trustworthy and reproducible tumor-segmentation research evidence
+
+OBJECTIVE 1 - DATA TRUST
+  Establish a complete same-source canonical dataset with verified spatial
+  alignment, manifests, checksums, and volume-wise splits.
+
+OBJECTIVE 2 - PIPELINE TRUST
+  Establish deterministic loading, preprocessing, loss, metrics, checkpointing,
+  evaluation, and reporting with passing tests.
+
+OBJECTIVE 3 - LEARNABILITY
+  Prove the model can overfit a tiny verified subset. This separates model/code
+  problems from dataset-scale optimization problems.
+
+OBJECTIVE 4 - BASELINE SANITY
+  Train a staged canonical MobileNetV2-U-Net baseline and confirm predictions
+  are meaningfully better than prevalence and not collapsed.
+
+OBJECTIVE 5 - CONTROLLED COMPARISON
+  Compare baseline, FAUP-Net, and FAUP-Net plus UWACL-v2 with all non-model
+  conditions held constant.
+
+OBJECTIVE 6 - LOCKED GENERALIZATION TEST
+  Evaluate promoted models once on the held-out test set using locked
+  checkpoints and thresholds.
+
+OBJECTIVE 7 - LONGER RESEARCH PROGRAM
+  If a candidate passes the continuation gate, conduct multiple seeds,
+  confidence intervals, ablations, external validation, and publication work.
+
+Dependency rule:
+
+Each objective depends on every objective above it. If Objective 1 is later
+invalidated, Objectives 2 through 7 must be reconsidered and any dependent
+results must be marked legacy/untrusted.
+
+
+3. CURRENT VERIFIED PROJECT STATE
+---------------------------------
+
+Snapshot date: 2026-07-12. Future agents must verify this state live before
+relying on it.
+
+Known repository commits:
+
+- c1ba3a2 Establish reproducible tumor segmentation baseline
+- ccce9d5 Add resumable manual research runs
+- 910c681 Add next-phase alignment audit notebook
+
+Known test state:
+
+- 234 repository tests passed when run with a writable isolated pytest temp
+  directory.
+- Two expected NumPy warnings occurred in a single-sample bootstrap test.
+- Static notebook validation passed.
+
+Known experiment state:
+
+- A five-epoch baseline was trained using the legacy 512x512 image pairing.
+- Validation positive-volume Dice was approximately 0.0343.
+- Precision was approximately 0.0284.
+- Recall was approximately 0.1003.
+- AUPRC was approximately 0.00854.
+- Predicted foreground fraction was approximately 0.00321 versus true 0.000908.
+- The run failed the project sanity gate.
+- Visual evidence showed untrustworthy image-mask pairing.
+- This baseline and its checkpoints are legacy artifacts, not a valid canonical
+  comparison.
+
+Known current stage:
+
+- Dataset filename-count gate: passed.
+- Dataset spatial approval gate: failed/not approved.
+- Tiny-set overfit gate: not run.
+- Corrected canonical baseline: not run.
+- FAUP/UWACL comparison: not authorized.
+- Held-out test evaluation: not authorized.
+
+Current authoritative next action:
+
+Implement and review the read-only source audit described in
+Practice\dataset summary.txt. Do not train.
+
+
+4. PROJECT STATE MACHINE
+------------------------
+
+Every stage must have exactly one current status:
+
+- NOT_STARTED
+- READY
+- IN_PROGRESS
+- PASS
+- FAIL_DIAGNOSIS
+- BLOCKED_USER
+- BLOCKED_EXTERNAL
+- INVALIDATED
+
+Status meanings:
+
+NOT_STARTED
+  Entry requirements have not been evaluated.
+
+READY
+  All entry requirements are confirmed and work may begin.
+
+IN_PROGRESS
+  Work is actively being performed and evidence is incomplete.
+
+PASS
+  Every mandatory acceptance criterion passed and outputs were preserved.
+
+FAIL_DIAGNOSIS
+  The stage produced evidence of failure. The next action is diagnosis, not
+  advancing to the next stage.
+
+BLOCKED_USER
+  A necessary user decision, manual action, credential, dataset download, or
+  hardware run is required.
+
+BLOCKED_EXTERNAL
+  A source, service, license, dependency, or hardware condition outside the
+  user's and agent's immediate control prevents progress.
+
+INVALIDATED
+  New evidence proves that an earlier PASS result is no longer trustworthy.
+
+Allowed transitions:
+
+- NOT_STARTED -> READY
+- READY -> IN_PROGRESS
+- IN_PROGRESS -> PASS
+- IN_PROGRESS -> FAIL_DIAGNOSIS
+- IN_PROGRESS -> BLOCKED_USER or BLOCKED_EXTERNAL
+- FAIL_DIAGNOSIS -> READY only after a documented fix/hypothesis change
+- PASS -> INVALIDATED when upstream evidence changes
+- INVALIDATED -> READY only after dependencies are repaired
+
+Never label a stage PASS because code was written, a command exited zero, or a
+plot was generated. PASS requires acceptance evidence.
+
+
+5. STANDARD OPERATING CYCLE FOR EVERY TASK
+------------------------------------------
+
+Use this cycle for all work:
+
+STEP 1 - ORIENT
+
+- Read the user's newest request.
+- Read this file and the relevant Practice evidence.
+- Inspect Git status and preserve unrelated user changes.
+- Identify the current stage and its entry gate.
+- Confirm whether the request asks to analyze, diagnose, plan, implement, run,
+  monitor, or report.
+
+STEP 2 - BOUND THE SCOPE
+
+- State the concrete objective.
+- State what is explicitly not being done.
+- Identify data, files, models, splits, and outputs in scope.
+- Identify actions requiring user authority, such as downloading data, moving
+  large directories, deleting files, running long GPU jobs, or publishing.
+
+STEP 3 - VERIFY READINESS
+
+- Check dependencies and paths.
+- Check required prior-stage outputs.
+- Check data/checkpoint/config provenance.
+- Check whether the test split must remain inaccessible.
+- Do not assume readiness from historical notes when live verification is cheap.
+
+STEP 4 - FORM A TESTABLE HYPOTHESIS
+
+For diagnosis or improvement work, write the hypothesis in this form:
+
+  Observation:
+  Suspected cause:
+  Smallest useful test:
+  Expected result if correct:
+  Alternative interpretation:
+
+Do not change multiple major variables before the hypothesis is tested.
+
+STEP 5 - EXECUTE THE SMALLEST SAFE ACTION
+
+- Prefer read-only inspection before mutation.
+- Prefer unit/synthetic/tiny-subset tests before full data/GPU work.
+- Use dry-run modes for data movement and canonical conversion.
+- Preserve existing artifacts.
+- Keep test data locked.
+
+STEP 6 - VALIDATE
+
+- Verify outputs structurally and semantically.
+- Run tests proportional to risk.
+- Inspect metrics against acceptance gates.
+- Inspect visual evidence when geometry or predictions matter.
+- Confirm reproducibility metadata and hashes.
+
+STEP 7 - DECIDE
+
+Choose one outcome only:
+
+- PASS and advance
+- FAIL and diagnose
+- BLOCKED and request a specific action
+- INVALIDATE previous work and return to an earlier stage
+
+STEP 8 - RECORD AND HAND OFF
+
+- Lead with the outcome.
+- State evidence, not impressions.
+- State the next action and why.
+- Provide exact PowerShell commands when the user must run something.
+- List only the small result files the user needs to share.
+- Update the durable project status/decision evidence when authorized.
+
+
+6. HOW TO DETECT FAILURE
+------------------------
+
+A process can fail even when there is no exception.
+
+6.1 Hard failure
+
+Examples:
+
+- nonzero command exit
+- exception or out-of-memory error
+- corrupt file
+- missing dependency
+- missing checkpoint
+- failed assertion/test
+- interrupted process without a valid resume artifact
+
+Response:
+
+Capture the exact error, environment, command, input path, and last successful
+step. Diagnose before retrying. Do not repeatedly rerun the same command without
+changing a hypothesis or condition.
+
+
+6.2 Silent data failure
+
+Examples:
+
+- matching filenames but anatomically incorrect overlays
+- tumor outside liver
+- different patients/scans sharing numerical keys
+- missing mask treated as empty label
+- duplicated slice keys from instance_number wrapping
+- split leakage
+- different preprocessing applied to checkpoint evaluation
+
+Response:
+
+Stop training/evaluation. Mark downstream results INVALIDATED. Return to the
+dataset or provenance stage.
+
+
+6.3 Silent model failure
+
+Examples:
+
+- predicts all background
+- predicts almost every pixel as tumor
+- recall is zero or effectively one
+- precision near zero
+- AUPRC close to or below foreground prevalence
+- predicted foreground fraction is implausible
+- validation metric spikes once and immediately collapses
+- loss decreases while segmentation metrics remain meaningless
+
+Response:
+
+Do not extend epochs automatically. Check threshold, labels, sampler, loss,
+output activation, mask values, and tiny-set overfit behavior.
+
+
+6.4 Silent metric failure
+
+Examples:
+
+- overall Dice dominated by empty slices
+- empty masks handled inconsistently
+- per-slice and per-volume denominators mixed
+- threshold selected on test
+- positive-slice Dice mislabeled tumor-only Dice
+- surface metrics reported when one surface is empty
+
+Response:
+
+Validate metrics using hand-computed arrays and explicit empty-mask policies.
+Mark old reports non-comparable if definitions changed.
+
+
+6.5 Reproducibility failure
+
+Examples:
+
+- missing config or manifest
+- unknown checkpoint preprocessing profile
+- missing split hash
+- results cannot be reproduced from code commit and dataset version
+- dry-run and real run share/overwrite one directory
+
+Response:
+
+Do not treat the result as research evidence. Repair provenance and rerun only
+after the artifact contract is complete.
+
+
+6.6 Research failure
+
+Examples:
+
+- candidate architecture does not improve the locked baseline
+- improvement is below the continuation threshold
+- result comes from one seed but is described as significant
+- test result used to create a new objective/configuration
+
+Response:
+
+Stop architecture expansion. Preserve the negative result. Return to diagnosis
+or end the branch. Do not manufacture a new model objective solely to obtain a
+positive result.
+
+
+7. READINESS CHECK BEFORE EVERY MAJOR PART
+------------------------------------------
+
+Before starting any part, answer:
+
+1. What exact stage are we in?
+2. What must already be PASS?
+3. What evidence proves it passed?
+4. What data/config/checkpoint version will be used?
+5. What result would count as success?
+6. What result would count as failure?
+7. What is the smallest test before the expensive run?
+8. What files will be produced?
+9. Who performs the next action: Codex or the user?
+10. What must remain untouched, especially the held-out test?
+
+If any answer is missing, the stage is not READY.
+
+
+8. STAGE 0 - REPOSITORY AND ENVIRONMENT READINESS
+--------------------------------------------------
+
+Objective:
+Make sure code changes and experiments run from a known, reproducible base.
+
+Entry requirements:
+
+- project root is available
+- user request is understood
+- existing changes are preserved
+
+Required actions:
+
+- inspect Git status
+- inspect current commit
+- verify .venv Python 3.11
+- verify pinned PyTorch/torchvision/NumPy versions
+- verify CUDA availability only when GPU work is requested
+- use project-local uv cache for dependency work
+- run unit tests with a writable isolated pytest temp directory
+- run smoke/integration tests appropriate to changes
+
+PASS evidence:
+
+- dependency versions recorded
+- required tests pass
+- canonical tools return meaningful nonzero status on failure
+- no unrelated user files were altered
+
+Failure response:
+
+- Dependency import failure: inspect environment before reinstalling everything.
+- CUDA failure: separate environment correctness from GPU availability.
+- Temp/cache ACL failure: rerun tests with isolated writable temp/cache paths.
+- Dirty worktree: preserve unrelated files; stage/commit only intended changes.
+- Test failure: diagnose exact regression before data processing or training.
+
+Do not move to Stage 1 merely because the environment imports successfully.
+
+
+9. STAGE 1 - DATASET TRUST AND CANONICALIZATION
+-----------------------------------------------
+
+Objective:
+Produce a complete same-source, spatially validated, versioned canonical
+dataset.
+
+Primary specification:
+Practice\dataset summary.txt
+
+Current status:
+FAIL_DIAGNOSIS / dataset reconstruction required.
+
+Required sequence:
+
+1. Read-only audit of all current source folders.
+2. Source registry and checksum capture.
+3. Recover complete authoritative same-source images and segmentations.
+4. Dry-run canonical conversion.
+5. Full staging conversion.
+6. Complete automatic integrity validation.
+7. Per-volume spatial visual validation.
+8. Dataset version freeze.
+9. Volume-wise split creation and hashing.
+
+PASS evidence:
+
+- 131 same-source volumes
+- expected complete image/liver/tumor slice triplets
+- unique canonical keys
+- no unexplained gaps
+- valid labels
+- matching geometry
+- tumor contained within liver
+- every volume spatially approved
+- checksums and manifests frozen
+- 104/13/14 volume split with zero overlap
+
+Failure signals and actions:
+
+Missing authoritative files:
+  Stop. Recover/re-extract source. Never fill with zeros.
+
+Image/mask mismatch:
+  Stop. Compare shared affine/orientation/slice order. Re-export together.
+
+Only filename-count match:
+  Insufficient. Continue spatial and provenance validation.
+
+Positive masks outside liver:
+  Block affected volume. Investigate label conversion and registration.
+
+New reconstruction differs from historical counts:
+  Do not force a match. Reconcile source versions, labels, orientation, and
+  slice inclusion rules.
+
+Dataset subset passes but full dataset does not:
+  Use subset only for conversion/testing diagnostics, not final research.
+
+When Stage 1 fails, no training objective is allowed.
+
+
+10. STAGE 2 - DATA LOADER, METRICS, CHECKPOINTS, AND REPORTING
+-------------------------------------------------------------
+
+Objective:
+Prove that the canonical data is consumed and measured correctly.
+
+Entry gate:
+Stage 1 PASS.
+
+Required components:
+
+- manifest-driven data loading
+- split enforcement
+- binary mask conversion
+- synchronized augmentation
+- nearest-neighbour mask resizing
+- no-HU preprocessing for PNG baseline
+- sampler and loss implementation
+- checkpoint save/load/resume
+- threshold selection on validation only
+- per-slice and per-volume aggregation
+- report generation with provenance
+
+Required metric definitions:
+
+- micro tumor Dice and IoU over all pixels
+- macro Dice on tumor-positive slices
+- macro per-volume Dice
+- positive-volume Dice excluding zero-tumor volumes
+- precision
+- recall
+- specificity
+- pixel AUPRC
+- pixel AUROC
+- HD95 and ASD on eligible positive volumes
+- predicted and true foreground fraction
+- ECE and Brier globally and on tumor-positive slices
+
+Empty-mask policy:
+
+- empty ground truth plus empty prediction -> Dice 1
+- empty ground truth plus nonempty prediction -> Dice 0
+- omit invalid surface metrics and count omissions separately
+
+PASS evidence:
+
+- unit tests against hand-computed arrays
+- native mask alignment test
+- checkpoint raw-state and trainer-format tests
+- deterministic synthetic one-epoch integration
+- checkpoint reload produces deterministic evaluation
+- report files include config, environment, dataset/split/checkpoint hashes
+- test split is inaccessible from training and threshold selection
+
+Failure response:
+
+Loader geometry failure:
+  Stop before training. Inspect manifest row and transformation pair.
+
+Metric disagreement:
+  Reduce to hand-computed arrays. Do not compare experiments until fixed.
+
+Checkpoint mismatch:
+  Identify model config and preprocessing profile. Preserve checkpoint as
+  legacy rather than force-loading incompatible weights.
+
+Report missing provenance:
+  Treat experiment as incomplete even if metrics exist.
+
+
+11. STAGE 3 - TINY-SET OVERFIT LEARNABILITY GATE
+-------------------------------------------------
+
+Objective:
+Prove the canonical model/loss/loader can learn verified tumor masks.
+
+Entry gate:
+Stages 1 and 2 PASS.
+
+Protocol:
+
+- 16 verified tumor-positive slices
+- training volumes only
+- include image and tumor mask from canonical manifest
+- preferably retain liver mask for QA
+- MobileNetV2-U-Net
+- actual Focal-Dice loss implementation
+- monitor thresholded micro Dice and qualitative predictions
+- target Dice at least 0.80
+
+PASS evidence:
+
+- Dice at least 0.80 for a stable checkpoint/epochs
+- loss decreases
+- predictions visibly track the provided masks
+- no shape, activation, or threshold errors
+- history and prediction images saved
+
+If overfit fails, use this order:
+
+1. Inspect all 16 image/mask overlays.
+2. Confirm masks are positive and binary after loading.
+3. Confirm model output and target shapes match.
+4. Confirm logits are passed correctly to the loss.
+5. Confirm sigmoid is applied for metrics, not twice in loss.
+6. Confirm gradients are nonzero and optimizer updates parameters.
+7. Try one batch repeatedly with augmentation disabled.
+8. Check learning rate and pretrained input-channel adaptation.
+9. Compare BCE-only and Dice-only diagnostic losses without redefining the
+   canonical objective prematurely.
+10. Inspect predicted foreground fraction and probability histograms.
+
+Do not respond to an overfit failure by increasing full-dataset epochs or
+switching to FAUP-Net.
+
+
+12. STAGE 4 - CANONICAL BASELINE THROUGH EPOCH 5
+------------------------------------------------
+
+Objective:
+Establish a sane, reproducible MobileNetV2-U-Net baseline.
+
+Entry gate:
+Stage 3 PASS.
+
+Locked baseline configuration:
+
+- canonical verified dataset
+- train volumes 0-103
+- validation volumes 104-116
+- test locked
+- 256x256 grayscale
+- no HU transformation for PNG
+- no CLAHE
+- pretrained MobileNetV2 encoder
+- Focal-Dice alpha 0.75, gamma 2.0
+- tumor-positive sampler weight 3
+- batch size 4
+- mixed precision
+- DataLoader workers 0
+- seed 42
+- horizontal flip and intensity shift on training only
+- target 5 epochs first
+- select best checkpoint on validation positive-volume Dice
+- threshold search 0.10 to 0.90 in 0.05 increments on validation only
+
+User/agent responsibility:
+
+- Agent prepares code/config, runs unit/synthetic checks, and provides commands.
+- User runs long GPU training manually unless explicitly requesting otherwise.
+- User monitors GPU temperature.
+- Agent analyzes small JSON/CSV outputs shared after the run.
+
+PASS/sanity gate:
+
+- AUPRC at least 2 times foreground prevalence
+- positive-slice Dice greater than 0.10
+- precision greater than 0.10
+- recall between 0.01 and 0.99
+- predicted foreground fraction between 0.25 and 4 times true fraction
+- qualitative cases show anatomical tumor prediction, not random regions
+
+Conditional promotion:
+
+Positive-volume Dice should exceed 0.10, or be at least 0.05 with a credible
+improving trend over the last three epochs.
+
+Failure interpretations:
+
+All-background prediction:
+  Check sampler activation, positive-slice availability, loss scaling,
+  threshold, logits, and class imbalance.
+
+Nearly all-foreground prediction:
+  Check focal alpha/weights, mask inversion, sigmoid/threshold, sampler excess,
+  and target encoding.
+
+Loss decreases but Dice remains near zero:
+  Check spatial pairing, empty-dominated loss, metric definition, and threshold.
+
+Recall near one with low precision:
+  Overprediction. Diagnose sampler/loss balance and threshold using validation.
+
+High training metric, low validation metric:
+  Check overfitting, augmentation mismatch, split distribution, and leakage.
+
+Epoch metric spike then collapse:
+  Check checkpoint selection, learning rate instability, small positive-volume
+  denominator, and per-volume variance. Do not promote on one unexplained spike.
+
+If gate fails:
+
+Stop. Diagnose dataset, loader, sampler, loss, and label pipeline. Do not run
+FAUP-Net or extend to epoch 10 automatically.
+
+
+13. STAGE 5 - BASELINE THROUGH EPOCH 10
+---------------------------------------
+
+Objective:
+Complete the locked baseline only after epoch-5 evidence supports continuation.
+
+Entry gate:
+Stage 4 PASS.
+
+Rules:
+
+- Resume the existing run.
+- --epochs means total target epoch count.
+- Restore model, optimizer, scheduler, history, best score, and next epoch.
+- Preserve last_checkpoint.pth and best_checkpoint.pth.
+- Use graceful Ctrl+C handling and interrupted_checkpoint.pth.
+- Do not change data, sampler, loss, seed, augmentation, or threshold grid.
+- Select threshold using validation only after checkpoint selection.
+
+If interrupted by heat:
+
+- User presses Ctrl+C.
+- Confirm interrupted checkpoint and manifest status.
+- Let GPU cool below the user's safe threshold.
+- Resume the same run directory.
+- Do not start a new run unless checkpoint integrity fails.
+
+If resumed metrics change unexpectedly:
+
+- verify checkpoint belongs to the run directory
+- verify config and dataset hashes
+- verify scheduler/optimizer/history restoration
+- compare next epoch number
+- do not merge histories manually without provenance
+
+PASS evidence:
+
+- completed status manifest
+- deterministic/reproducible config and hashes
+- best checkpoint selected by locked validation metric
+- locked validation threshold
+- baseline passes sanity gate
+
+
+14. STAGE 6 - CONTROLLED FAUP/UWACL COMPARISON
+----------------------------------------------
+
+Objective:
+Determine whether FAUP-Net or UWACL-v2 justifies a larger research study.
+
+Entry gate:
+Stage 5 PASS.
+
+Candidates:
+
+1. MobileNetV2-U-Net plus Focal-Dice
+2. FAUP-Net plus Focal-Dice
+3. FAUP-Net plus UWACL-v2
+
+Controls that must remain identical:
+
+- dataset version
+- split hashes
+- preprocessing
+- augmentation
+- sampler
+- seed
+- batch size
+- epoch targets
+- checkpoint-selection metric
+- threshold-selection procedure
+- evaluation definitions
+
+Staged protocol:
+
+- train candidates to epoch 5 first
+- evaluate on validation
+- promote to epoch 10 only with evidence of benefit
+- do not touch test
+
+Research continuation gate:
+
+Advance a candidate to a multi-seed study only if it:
+
+- improves positive-volume Dice by at least 0.02, OR
+- materially improves HD95 or calibration with no more than 0.01 Dice loss
+
+If no candidate passes:
+
+- preserve the negative result
+- stop architecture expansion
+- prioritize sampler/loss/label-pipeline or data-difficulty diagnosis
+- do not create an endless sequence of new architectures
+
+If a candidate only improves one unstable metric:
+
+- inspect per-volume results
+- check confidence intervals/variance when possible
+- check whether improvement comes from one volume
+- do not claim superiority from a fragile aggregate
+
+
+15. STAGE 7 - LOCKED HELD-OUT TEST AND REPORT
+---------------------------------------------
+
+Objective:
+Measure final single-seed generalization without contaminating model selection.
+
+Entry gate:
+
+- all model/configuration decisions locked
+- checkpoint selected on validation
+- threshold selected on validation
+- promoted models identified
+- test never used for configuration changes
+
+Procedure:
+
+- evaluate each promoted locked model once
+- preserve raw per-slice probabilities/metrics as allowed
+- generate per-slice and per-volume CSVs
+- generate aggregate JSON with all provenance
+- generate PR curve and reliability diagram
+- generate best/median/worst qualitative cases and error overlays
+- produce a concise decision report
+
+If test is worse than validation:
+
+- do not retune on test
+- investigate and report the known test tumor-burden shift
+- inspect per-volume failure patterns for interpretation only
+- treat any proposed fix as a new future study requiring a fresh untouched test
+  strategy or external validation
+
+If test is unexpectedly excellent:
+
+- check leakage, duplicates, split overlap, and checkpoint selection
+- do not assume the result is valid until leakage checks pass
+
+PASS evidence:
+
+- one-time evaluation recorded
+- complete metrics and provenance
+- no test-driven configuration changes
+- conclusions limited to single-seed model selection evidence
+
+
+16. FAILURE CLASSIFICATION AND PLAYBOOKS
+----------------------------------------
+
+Classify every failure before choosing a fix.
+
+TYPE A - Environment
+
+Symptoms:
+Import failure, CUDA unavailable, dependency mismatch, temp/cache permission.
+
+Actions:
+Inspect environment, versions, PATH, cache location, permissions, and GPU state.
+Use the smallest repair. Rerun relevant tests.
+
+
+TYPE B - Data/provenance
+
+Symptoms:
+Missing files, mismatched overlays, invalid geometry, different source content,
+duplicate keys, split leakage.
+
+Actions:
+Stop downstream work. Capture evidence. Return to Stage 1. Do not patch around
+missing provenance in the loader.
+
+
+TYPE C - Code/test
+
+Symptoms:
+Unit/integration failure, wrong tensor shape, checkpoint load error, report
+missing fields.
+
+Actions:
+Reduce to failing test, fix the implementation, add regression coverage, run
+the complete relevant suite.
+
+
+TYPE D - Optimization
+
+Symptoms:
+Tiny-set cannot overfit, unstable loss, zero gradients, NaNs.
+
+Actions:
+Use one batch, disable augmentation, inspect gradients, activation/loss contract,
+learning rate, target scale, and optimizer state.
+
+
+TYPE E - Class imbalance/decision threshold
+
+Symptoms:
+All background, extreme overprediction, precision/recall collapse.
+
+Actions:
+Verify tumor-positive sampler, foreground prevalence, loss parameters,
+probability distribution, and validation-only threshold tuning. Change one
+controlled element at a time after baseline diagnosis.
+
+
+TYPE F - Metric/reporting
+
+Symptoms:
+Contradictory metrics, empty masks dominate, volume/slice disagreement, missing
+provenance.
+
+Actions:
+Validate hand arrays, denominators, empty policy, aggregation, and report schema.
+Invalidate misleading reports.
+
+
+TYPE G - Compute/heat/interruption
+
+Symptoms:
+GPU temperature too high, Ctrl+C, power loss, out-of-memory.
+
+Actions:
+Use graceful checkpoint, cool, resume. For OOM, reduce only approved compute
+settings such as batch size after recording the deviation; do not alter model
+or data silently.
+
+
+TYPE H - Research negative result
+
+Symptoms:
+Candidate fails continuation gate or provides no credible improvement.
+
+Actions:
+Stop that branch, record result, and return to the most plausible limiting
+factor. A negative result is valid evidence, not a code failure.
+
+
+17. HOW TO CREATE, CHANGE, OR RETIRE OBJECTIVES
+-----------------------------------------------
+
+The final project goal should remain stable. Stage objectives may change only
+when evidence shows the current assumption is false, the objective is already
+achieved, or a new blocking dependency is discovered.
+
+Before creating a new objective, document:
+
+- evidence that the current objective is insufficient or invalid
+- relationship to the final goal
+- exact measurable success criterion
+- required inputs and dependencies
+- smallest first test
+- compute/data/time cost
+- what will be stopped or deferred
+- fallback if it fails
+
+Good objective example:
+
+"Verify that every canonical tumor mask is contained within its same-source
+liver mask and generate a blocking report for exceptions. Success is zero
+unexplained outside-liver pixels across 58,638 slices."
+
+Bad objective example:
+
+"Try more models to improve performance."
+
+Objective-change rules:
+
+1. A user request that clearly replaces the current objective takes priority.
+2. A user addition should be integrated only if it does not invalidate the
+   current stage; otherwise explain the dependency.
+3. Major scope changes, destructive actions, external downloads, or new test
+   usage require explicit user direction.
+4. Do not invent a new objective to hide a failed gate.
+5. Do not advance to architecture work while the data objective is unresolved.
+6. Retire objectives that no longer affect the final goal and record why.
+7. Deferred work must be listed, not silently forgotten.
+
+When evidence changes an earlier assumption:
+
+- state the previous assumption
+- show the contradictory evidence
+- mark dependent results INVALIDATED
+- return to the correct stage
+- propose the smallest replacement objective
+
+
+18. COOPERATION WITH THE USER
+-----------------------------
+
+The user is an active collaborator and will manually run long GPU notebooks or
+PowerShell training commands.
+
+Agent responsibilities:
+
+- analyze repository and evidence
+- implement scoped code changes
+- run safe unit/static/synthetic tests
+- prepare exact commands
+- explain expected outputs and stop conditions
+- analyze small shared JSON/CSV/TXT/image results
+- preserve user files and decisions
+- state pass/fail clearly
+- propose the next bounded action
+
+User responsibilities when requested:
+
+- approve material scope changes
+- obtain/download licensed datasets
+- run long GPU experiments manually
+- monitor laptop temperature and cooling
+- stop unsafe runs using Ctrl+C
+- share the requested small result files/logs
+- make subjective visual alignment decisions when necessary
+
+Manual run handoff must include:
+
+1. Purpose of the run.
+2. Exact PowerShell command.
+3. Expected approximate duration if known.
+4. GPU temperature/interrupt guidance.
+5. What successful console output looks like.
+6. What errors require stopping.
+7. Exact files to share afterward.
+8. What must not be run next until analysis.
+
+When the user shares results:
+
+- parse the actual values
+- compare each acceptance criterion explicitly
+- do not ask the user to rerun before diagnosing the evidence
+- request large checkpoints only when checkpoint loading itself needs diagnosis
+- normally request JSON, CSV, TXT, and selected images only
+
+When the user changes instructions:
+
+- determine whether the new message replaces or extends current work
+- preserve already completed valid work
+- stop obsolete running work when the request replaces it
+- explain any conflict with dataset/test/reproducibility gates
+- follow the user where safe, but do not claim invalid evidence is valid
+- update the next-action plan to reflect the new priority
+
+Communication style:
+
+- lead with outcome
+- use plain language
+- distinguish confirmed facts, inferences, and unknowns
+- keep progress updates concise
+- make commands copy-pasteable in PowerShell 5.1
+- never bury a blocker beneath optimistic language
+
+
+19. PROGRESS, DECISION, AND EVIDENCE MANAGEMENT
+-----------------------------------------------
+
+Progress is based on passed gates, not hours worked, files created, or epochs
+run.
+
+Recommended progress stages:
+
+1. Repository/environment ready
+2. Dataset/source audit complete
+3. Canonical dataset validated
+4. Loader/metric/report pipeline validated
+5. Tiny-set overfit passed
+6. Canonical baseline passed
+7. Controlled candidates evaluated on validation
+8. Locked held-out evaluation complete
+9. Research continuation decision recorded
+
+For every major stage, preserve:
+
+- objective
+- status
+- start/end timestamps
+- inputs and versions
+- commands/code commit
+- outputs
+- acceptance criteria
+- measured results
+- decision
+- failure reason, if any
+- next action
+- user instruction/approval that changed scope
+
+Recommended future durable files under Practice:
+
+- project status.txt
+- decision log.txt
+- blocked issues.txt
+- dataset summary.txt
+- instructions.txt
+
+Do not create or modify these additional status files unless the user asks or
+the active implementation plan includes them. When used, append timestamped
+entries; do not erase earlier decisions without a correction note.
+
+Minimum status entry template:
+
+  Timestamp:
+  Stage:
+  Objective:
+  Status:
+  Evidence:
+  Acceptance result:
+  Decision:
+  User change/approval:
+  Next action:
+
+Progress percentage must be calculated from completed mandatory stages, with
+the denominator stated. Do not present a subjective percentage as fact.
+
+
+20. EXPERIMENT PROVENANCE CONTRACT
+----------------------------------
+
+Every training/evaluation run must record:
+
+- experiment name
+- unique run directory
+- status: running, interrupted, completed, or failed
+- dataset version
+- source and derived manifest hashes
+- split hashes
+- preprocessing profile
+- model architecture/config
+- loss and sampler config
+- augmentation config
+- seed
+- epoch target
+- starting/resumed epoch
+- optimizer and scheduler
+- checkpoint-selection metric
+- threshold grid and selected threshold
+- environment versions
+- Git commit
+- start/end/runtime
+- best and last checkpoint paths/hashes
+- per-epoch history
+
+Run-directory rules:
+
+- never reuse a run directory for a different config
+- dry runs use dedicated dry_run directories
+- manifests are never overwritten by another run
+- resume checkpoint must belong to the intended model/run directory
+- interrupted runs save an interrupt checkpoint and status
+- --epochs is total target epochs
+
+Legacy checkpoint rule:
+
+Associate every legacy checkpoint with its original simulated-HU or other
+preprocessing profile. Never evaluate it silently against the corrected
+canonical PNG profile.
+
+
+21. GIT AND FILE SAFETY
+-----------------------
+
+- Inspect Git status before editing.
+- Existing/untracked changes belong to the user unless proven otherwise.
+- Preserve Practice\next_phase_outputs and other generated user evidence.
+- Use targeted patches and commits.
+- Do not stage unrelated files.
+- Do not commit datasets, checkpoints, caches, or generated result trees.
+- Do not use destructive Git commands such as reset --hard.
+- Before recursive move/delete, verify absolute paths and obtain user approval.
+- Prefer copy/dry-run/manifest-based data reconstruction over in-place mutation.
+- Keep current raw dataset folders unchanged until checksums/source registry are
+  complete.
+
+
+22. TESTING POLICY
+------------------
+
+Test effort must match risk.
+
+Documentation-only change:
+  Validate file content, paths, references, and Git diff.
+
+Small code change:
+  Run targeted tests plus related regression tests.
+
+Loader/metric/checkpoint change:
+  Run targeted unit tests, synthetic integration, and full suite.
+
+Dataset-build tool:
+  Run dry-run fixtures, missing/duplicate/corrupt cases, path-safety checks, and
+  deterministic manifest/hash tests before touching full data.
+
+Training lifecycle change:
+  Test fresh run, resume, interruption, checkpoint reload, isolated run dirs,
+  and manifest transitions.
+
+Before a manual GPU run:
+  Unit and synthetic integration tests must pass. A long GPU experiment must
+  not be used as a substitute for a failing test.
+
+
+23. DEFINITION OF DONE
+----------------------
+
+Code change done:
+
+- implementation complete
+- tests pass
+- no unrelated changes
+- interfaces documented
+- failure exits are meaningful
+
+Stage done:
+
+- every acceptance gate passed
+- required outputs saved
+- hashes/provenance recorded
+- decision documented
+- next stage entry conditions satisfied
+
+Experiment done:
+
+- run completed or interruption explicitly recorded
+- best/last checkpoints preserved
+- validation threshold locked correctly
+- evaluation/report artifacts complete
+- sanity gate decision recorded
+
+Project sprint done:
+
+- canonical data trusted
+- baseline and controlled candidates completed as authorized
+- one-time test evaluation performed only after lock
+- research continuation decision recorded
+- limitations clearly stated
+
+Final research goal done:
+
+- multiple seeds and uncertainty analysis
+- appropriate external/robustness validation
+- reproducible public/internal artifact package as permitted
+- claims supported by evidence and scoped correctly
+
+
+24. STOP RULES
+--------------
+
+Stop and diagnose when:
+
+- spatial alignment is unapproved
+- authoritative data is incomplete
+- critical tests fail
+- tiny-set overfit fails
+- baseline sanity gate fails
+- provenance is missing
+- test data was accessed improperly
+- GPU heat is unsafe
+- results contradict expected definitions
+- a candidate fails continuation criteria
+
+Stop and ask the user when:
+
+- a destructive filesystem action is needed
+- a new dataset must be downloaded/licensed
+- a major scope/objective change is required
+- external credentials or manual GUI steps are required
+- user intent cannot be inferred safely
+
+Do not stop merely because work is difficult. Exhaust safe read-only checks and
+small tests first.
+
+
+25. STARTING PROMPT FOR A NEW AGENT/CHAT
+----------------------------------------
+
+Use this prompt when continuing in another chat:
+
+"Read Practice/instructions.txt and Practice/dataset summary.txt completely.
+Inspect the current repository and Git status. State the current project stage,
+entry gate, evidence already available, and the smallest next action. Do not
+train or touch the held-out test. Preserve all existing dataset and Practice
+artifacts. Follow the stage gates and failure playbooks. If new filesystem
+evidence contradicts the documents, report the contradiction, mark dependent
+work invalidated, and propose the smallest corrective objective before making
+large changes."
+
+Current recommended first task after reading:
+
+Implement the read-only dataset source audit specified in dataset summary.txt,
+with tests and timestamped evidence outputs. Do not move data and do not train.
+
+
+26. FINAL OPERATING PRINCIPLE
+-----------------------------
+
+The project should always answer three questions before spending significant
+compute:
+
+1. Are the data and labels unquestionably paired and valid?
+2. Is the pipeline proven correct on small deterministic tests?
+3. Is the proposed experiment the smallest one that can change the decision?
+
+If the answer to any question is no, create a bounded validation or diagnosis
+objective first. Reliable negative evidence is more valuable than an impressive
+metric produced by an untrustworthy pipeline.
+
+
+END OF PROJECT OPERATING INSTRUCTIONS
+=====================================

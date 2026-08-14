@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-08-06T03:38:05.726478+00:00",
+  "inference_performed": false,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "medical_source_data_opened": false,
+  "phase": "step_21_terminal_evidence_chain_and_project_handoff",
+  "phase_count": 20,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "project_status_sha256_before_step21_update": "9cda8478495c29b8f40342830b3e0f01343693403a0ff7124a40eafbd537d932",
+  "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+  "step20_signature_sha256": "3f2e679a0353ecc0413938eb9d44739d6cf9954bbdacc4d22ea6c5249452155c",
+  "submission_action_performed": false,
+  "test_source_files_reopened": false
+}

@@ -1,0 +1,17 @@
+sample_id,volume_id,slice_index,tumor_pixels,organ_pixels,transform_applied,size_quartile,split
+v084_s0632,84,632,18,2149,rot180,0,train
+v008_s0391,8,391,40,3071,identity,0,train
+v049_s0158,49,158,41,4768,identity,0,train
+v037_s0092,37,92,42,7552,identity,0,train
+v007_s0387,7,387,68,4144,identity,1,train
+v019_s0439,19,439,157,10450,identity,1,train
+v035_s0053,35,53,169,6944,identity,1,train
+v068_s0132,68,132,192,8903,identity,1,train
+v103_s0515,103,515,307,3028,rot180,2,train
+v101_s0422,101,422,392,1759,rot180,2,train
+v097_s0526,97,526,492,8312,rot180,2,train
+v093_s0393,93,393,621,8374,rot180,2,train
+v033_s0089,33,89,926,6716,identity,3,train
+v004_s0527,4,527,1689,9281,identity,3,train
+v039_s0043,39,43,1925,1939,identity,3,train
+v100_s0481,100,481,2066,6271,identity,3,train

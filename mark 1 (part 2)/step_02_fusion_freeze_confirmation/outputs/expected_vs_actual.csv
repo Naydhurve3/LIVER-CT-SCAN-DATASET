@@ -1,0 +1,18 @@
+requirement,passed,actual,expected
+step01_dataset_gate,True,Step 01 pass,pass
+manifest_identity,True,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889,pass
+checkpoint_hashes_recorded,True,"{'control': '9b0c7749af66b0fc3808f6757d0d90af01384e06afe02090361b220df48b6e8b', 'recall_loss': 'c01eb4b81e4e7f1d84c7966aca56e738d87d06d404907f0bcc7c67a79ed4ec4d'}",pass
+fresh_historical_cache_equivalence,True,"{'aggregate_mean_abs': 1.086131790255706e-07, 'fraction_above_diagnostic_tolerance': 3.6571825783443497e-05, 'maximum_outlier_diagnostic': 0.038818359375}",pass
+hard_prediction_equivalence,True,1.2138484513921385e-07,pass
+deterministic_repeated_inference,True,0.0,pass
+cache_integrity,True,13,pass
+reference_metric_equivalence,True,0.00015329104044814468,pass
+target_mean_patient_dice,True,0.3770605982242971,pass
+target_volume_104_dice,True,0.11647368422215168,pass
+target_volume_116_dice,True,0.010473419058478897,pass
+target_q1_detected_pct,True,50.57034220532319,pass
+target_positive_predicted_empty_pct,True,27.447216890595012,pass
+target_empty_slice_false_positive_pct,True,5.548065954578451,pass
+bootstrap_reported,True,"{'estimate': 0.3770605982242971, 'ci_lower_2_5': 0.197929871077172, 'ci_upper_97_5': 0.5542092886036671, 'iterations': 10000, 'resampling_unit': 'tumour_positive_validation_patient', 'seed': 42}",pass
+v104_v116_localization_saved,True,both panels,pass
+test_images_accessed_false,True,False,pass

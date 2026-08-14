@@ -1,0 +1,22 @@
+{
+  "status": "sampler_ablation_fail",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "sampler_strategy": "inverse_volume_x_lesion_quartile_v1",
+  "epochs_completed": 10,
+  "best_epoch": 7,
+  "best_global_micro_dice": 0.5241997849488681,
+  "best_mean_patient_dice": 0.3561890545907611,
+  "baseline_mean_patient_dice": 0.3830690071400127,
+  "volume_104_dice": 0.15244365012083316,
+  "volume_116_dice": 0.0018561255297576758,
+  "q1_smallest_detected_pct": 53.99239543726235,
+  "positive_predicted_empty_pct": 19.28982725527831,
+  "empty_slice_false_positive_pct": 17.82640257181375,
+  "mean_patient_improved": false,
+  "volume_104_preserved": false,
+  "volume_116_recovered": false,
+  "q1_detection_improved": true,
+  "detection_guardrails_pass": false,
+  "test_images_accessed": false,
+  "decision": "FAIL \u2014 balanced sampling alone is insufficient; keep the better baseline and test a recall-aware loss."
+}

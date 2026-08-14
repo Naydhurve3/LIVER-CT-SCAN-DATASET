@@ -1,0 +1,14 @@
+{
+  "all_mandatory_targets_passed": true,
+  "authorization_recorded_utc": "2026-08-05T14:49:18.3333060Z",
+  "authorization_text": "I authorize the one-time Step 16 3D-IRCADb-01 external evaluation under the frozen Step 15 contract.",
+  "cache_count": 20,
+  "complete_result_produced": true,
+  "inference_completed_utc": "2026-08-05T14:52:49.070695+00:00",
+  "metrics_completed_utc": "2026-08-05T14:53:07.797046+00:00",
+  "run_id": "61d1f140-c8b4-436a-928a-1e4b6f7c0b56",
+  "sealed_utc": "2026-08-05T14:53:07.797046+00:00",
+  "started_utc": "2026-08-05T14:50:16.752314+00:00",
+  "status": "sealed_complete",
+  "step15_policy_sha256": "671a49e437b62321fa4e8ebfcc42a8bad9fe216f2f06a11c3d2dbc5c10183105"
+}

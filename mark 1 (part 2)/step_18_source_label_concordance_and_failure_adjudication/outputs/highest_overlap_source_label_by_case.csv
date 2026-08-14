@@ -1,0 +1,7 @@
+internal_patient_id,source_patient_id,label_name,semantic_category,accepted_evaluation_truth,prediction_pixels,label_pixels,overlap_pixels,prediction_explained_fraction,label_recall_by_prediction,dice,jaccard
+ircadb_05,3Dircadb1.5,rightkidney,other_structure,False,140,60190,8,0.05714285714285714,0.0001329124439275627,0.0002652080225426819,0.00013262159742714102
+ircadb_07,3Dircadb1.7,tumor,generic_tumour_excluded,False,6174,170910,5334,0.8639455782312925,0.031209408460593294,0.06024259673375347,0.031056768558951967
+ircadb_11,3Dircadb1.11,artery,other_structure,False,1,25641,0,0.0,0.0,0.0,0.0
+ircadb_14,3Dircadb1.14,metastasectomie,metastasectomy_excluded,False,7527,8188,6694,0.8893317390726717,0.8175378602833415,0.8519249125039771,0.7420463363263496
+ircadb_18,3Dircadb1.18,livertumor,accepted_hepatic_tumour,True,1328,1135,16,0.012048192771084338,0.014096916299559472,0.012992285830288266,0.006538618716796077
+ircadb_20,3Dircadb1.20,gallbladder,other_structure,False,621,4266,445,0.71658615136876,0.1043131739334271,0.1821158174749335,0.10018009905447997

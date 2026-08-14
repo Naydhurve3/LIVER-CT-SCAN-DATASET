@@ -1,0 +1,9 @@
+model,truth_size_quartile,slices,detected_pct,median_truth_probability,median_tumor_pixels
+control,Q1,34,0.0,0.0,172.0
+control,Q2,33,18.181818181818183,0.0,585.0
+control,Q3,33,3.0303030303030303,0.0,1554.0
+control,Q4,33,0.0,0.0,2324.0
+recall_loss,Q1,34,0.0,0.0,172.0
+recall_loss,Q2,33,0.0,0.0,585.0
+recall_loss,Q3,33,9.090909090909092,0.0,1554.0
+recall_loss,Q4,33,3.0303030303030303,0.0,2324.0

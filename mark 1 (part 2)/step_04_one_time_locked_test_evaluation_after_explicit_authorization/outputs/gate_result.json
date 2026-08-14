@@ -1,0 +1,85 @@
+{
+  "all_mandatory_targets_passed": false,
+  "decision": "REPORT_FINAL_TEST_GATE_FAILURE_NO_TUNING_NO_RERUN",
+  "input_artifact_hashes": {
+    "acceptance_contract": "12e8932d71651fd9247d841a86dfcd0fa80d64d74c4f334e29b113c28213b52d",
+    "final_test_signature": "4da370ea561c98e4abf55c2a1cdfd60f4b94bc34c4b1ea22c39c640f53adf7b1",
+    "policy": "52d2df856709254992ab6b59f84a213a0a00f6e67293f66665b6f258d01f2131",
+    "step03_gate": "b701caeeb9814bc65ae33ea9a66039156125bf20daa52286b3d1e0c63c9fe9e0"
+  },
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "next_step": "step_05_final_research_package",
+  "one_time_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "result_level": "FINAL_TEST_COMPLETE",
+  "selected_configuration": {
+    "fusion": "maximum",
+    "policy_sha256": "52d2df856709254992ab6b59f84a213a0a00f6e67293f66665b6f258d01f2131",
+    "post_processing": "none",
+    "threshold": 0.7
+  },
+  "selected_metrics": {
+    "empty_slice_false_positive_pct": 3.810149449827558,
+    "finite_probability_fraction": 1.0,
+    "global_dice": 0.7676962584530078,
+    "global_pixel_precision": 0.8443941209256601,
+    "global_pixel_recall": 0.7037714136893984,
+    "mean_positive_patient_dice": 0.5072968405781896,
+    "median_positive_patient_dice": 0.5651373760392446,
+    "minimum_positive_patient_dice": 7.610350070311757e-10,
+    "positive_predicted_empty_pct": 9.941520467836257,
+    "q1_positive_slice_detection_pct_train_edges": 47.55244755244755,
+    "sample_coverage_fraction": 1.0,
+    "unique_sample_id_fraction": 1.0
+  },
+  "status": "one_time_locked_test_evaluation_complete",
+  "target_passes": {
+    "empty_slice_false_positive_pct": true,
+    "finite_probability_fraction": true,
+    "mean_positive_patient_dice": true,
+    "minimum_positive_patient_dice": false,
+    "positive_predicted_empty_pct": true,
+    "q1_positive_slice_detection_pct_train_edges": true,
+    "sample_coverage_fraction": true,
+    "unique_sample_id_fraction": true
+  },
+  "targets": {
+    "empty_slice_false_positive_pct": 20.0,
+    "finite_probability_fraction": 1.0,
+    "mean_positive_patient_dice": 0.3329,
+    "minimum_positive_patient_dice": 0.01,
+    "positive_predicted_empty_pct": 35.0,
+    "q1_positive_slice_detection_pct_train_edges": 35.0,
+    "sample_coverage_fraction": 1.0,
+    "unique_sample_id_fraction": 1.0
+  },
+  "test_images_accessed": true,
+  "uncertainty": [
+    {
+      "ci_lower_2_5": 0.3441752801857416,
+      "ci_upper_97_5": 0.6594107518771707,
+      "estimate": 0.5072968405781896,
+      "iterations": 10000,
+      "metric": "mean_positive_patient_dice",
+      "resampling_unit": "tumour-positive test patient",
+      "seed": 42
+    },
+    {
+      "ci_lower_2_5": 0.36170024738606177,
+      "ci_upper_97_5": 0.7305075591021915,
+      "estimate": 0.5536555900736139,
+      "iterations": 10000,
+      "metric": "mean_positive_patient_precision",
+      "resampling_unit": "tumour-positive test patient",
+      "seed": 42
+    },
+    {
+      "ci_lower_2_5": 0.4383546724992429,
+      "ci_upper_97_5": 0.7250787264723013,
+      "estimate": 0.5903423677933898,
+      "iterations": 10000,
+      "metric": "mean_positive_patient_recall",
+      "resampling_unit": "tumour-positive test patient",
+      "seed": 42
+    }
+  ]
+}

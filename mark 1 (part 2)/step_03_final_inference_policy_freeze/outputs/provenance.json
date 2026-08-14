@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-08-03T13:18:23.520051+00:00",
+  "freeze_signature_sha256": "3cb5996b54ff7e4e24a31314f9aeba328f564d31a2160dd488d3fc7a3e35426d",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "numpy": "1.26.4",
+  "operations": [
+    "read prerequisite JSON/CSV/PNG/notebook/source/checkpoint bytes for SHA-256",
+    "write Step 03 contract artifacts"
+  ],
+  "pandas": "2.3.3",
+  "phase": "step_03_final_inference_policy_freeze",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "prohibited_operations_confirmed_absent": [
+    "test loading",
+    "training",
+    "model inference",
+    "threshold search",
+    "checkpoint selection"
+  ],
+  "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+  "roi_generator_checkpoint_sha256": "9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223",
+  "source_gate_hashes": {
+    "step01": "fcc1f735a1f10e7c9ac5c94029b513ab498be6f39cf243fa36f4562d358266cb",
+    "step02": "d3dfb86af103e048ece734ac88ffccfeaaaa84a68596ae9f8c1012e2ea72a9c8"
+  },
+  "test_images_accessed": false
+}

@@ -1,0 +1,8 @@
+risk,severity,mitigation,status
+formal_model_acceptance_failed,high,preserve as primary negative result,open scientific limitation
+no_external_validation,high,avoid transportability/clinical claims; future separate cohort only,open scientific limitation
+small_test_cohort,high,retain patient-bootstrap interval and heterogeneity,open scientific limitation
+related_work_depth,medium,expand literature and comparison table,open manuscript task
+owner_declarations,high,obtain verified owner/institutional text,open submission blocker
+dataset_terms,high,verify exact acquisition terms,open submission blocker
+venue_not_selected,medium,owner selects before formatting,open submission blocker

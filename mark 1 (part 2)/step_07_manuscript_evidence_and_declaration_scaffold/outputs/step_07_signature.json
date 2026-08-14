@@ -1,0 +1,17 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "06bf3410ca1308c25dcc6cd29caa8bb5e27ea335f9bfdcd2edec5dacecf07d08",
+  "created_utc": "2026-08-05T12:36:22.661954+00:00",
+  "formal_model_acceptance_passed": false,
+  "signed_artifacts": {
+    "step_06_manuscript_submission_readiness_and_archive/outputs/final_archive_signature.json": "9c027b16f9253c2fe5a226a491ca79c52cad73bd0049e95e8d8debd756eb37a5",
+    "step_07_manuscript_evidence_and_declaration_scaffold/outputs/PAPER_DRAFT_WITH_CITATION_KEYS.md": "a663e31d13a2277b41bb3b310ad1d6040c16dbac9f4448c2a019f277fc79a64d",
+    "step_07_manuscript_evidence_and_declaration_scaffold/outputs/claim_2024_alignment_gap_map.csv": "92b7097069859a8db0d94cd7ac2957e7e7c1024a3e5a0915f80368dba1bb33aa",
+    "step_07_manuscript_evidence_and_declaration_scaffold/outputs/gate_result.json": "199ede841ea82a881274516c5d07672faedd81dc9b2bc9f2de824ccd19ce0608",
+    "step_07_manuscript_evidence_and_declaration_scaffold/outputs/reference_evidence.csv": "4e90e4fea545fbc838cd351e2db8f6b53006a44d136f44c2c6d4c6ce80ad4d4c"
+  },
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "submission_ready": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

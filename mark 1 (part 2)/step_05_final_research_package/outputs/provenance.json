@@ -1,0 +1,19 @@
+{
+  "completed_utc": "2026-08-05T12:13:11.044013+00:00",
+  "input_gate_hashes": {
+    "step01": "fcc1f735a1f10e7c9ac5c94029b513ab498be6f39cf243fa36f4562d358266cb",
+    "step02": "d3dfb86af103e048ece734ac88ffccfeaaaa84a68596ae9f8c1012e2ea72a9c8",
+    "step03": "b701caeeb9814bc65ae33ea9a66039156125bf20daa52286b3d1e0c63c9fe9e0",
+    "step04": "3efe028e1ab3edd32f59fa7bf648c130179c1c12b39038bac7e435ce72a23432"
+  },
+  "numpy": "2.4.6",
+  "package_signature_sha256": "ebfa0d9ed78391cc077c8a6dc1f78d5afc226e6d00ec8f1261002e07c97f2986",
+  "pandas": "2.3.3",
+  "phase": "step_05_final_research_package",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+  "source_test_evaluation_test_images_accessed": true,
+  "step04_signature_sha256": "4da370ea561c98e4abf55c2a1cdfd60f4b94bc34c4b1ea22c39c640f53adf7b1",
+  "test_images_accessed_in_this_phase": false,
+  "test_source_files_reopened_in_this_phase": false
+}

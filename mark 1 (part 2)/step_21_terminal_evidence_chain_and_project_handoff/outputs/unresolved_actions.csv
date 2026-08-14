@@ -1,0 +1,6 @@
+priority,action,owner,required_before,scientific_rerun_required,status
+1,Complete and certify all 14 Step 11 owner fields,project owner,submission readiness,False,blocking
+2,Select venue and publication budget from the verified venue matrix,project owner,venue finalization,False,blocking
+3,Review dataset/code availability statements against intended release and institutional policy,project owner,submission,False,blocking
+4,Optional blinded expert review of external source-label discordance,qualified medical/source reviewer,biological reinterpretation only,False,optional
+5,Define a new predeclared study only if new independent data or a new research question becomes available,research team,any future model development,False,future_conditional

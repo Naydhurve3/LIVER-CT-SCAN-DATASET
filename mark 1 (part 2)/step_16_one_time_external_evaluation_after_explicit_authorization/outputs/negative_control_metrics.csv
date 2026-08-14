@@ -1,0 +1,6 @@
+internal_patient_id,predicted_pixels,false_positive_pixels,dice,any_false_positive
+ircadb_05,140,140,7.142857091836735e-09,True
+ircadb_07,6174,6174,1.6196954969841762e-10,True
+ircadb_11,1,1,9.99999000001e-07,True
+ircadb_14,7527,7527,1.328550551171974e-10,True
+ircadb_20,621,621,1.6103059555389597e-09,True

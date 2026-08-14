@@ -1,0 +1,9 @@
+decision_area,decision,basis
+dataset,Retain corrected build,All integrity and leakage gates passed
+sampling,Retain patient-aware existing sampler,Audit did not support a new sampling intervention
+fusion,Maximum control/recall scores,Only bounded policy satisfying six validation targets
+threshold,Global 0.70,Frozen before test; no patient-specific thresholds
+training,Skip optional Part 2 refinement,Validation confirmation passed without evidence for another bounded intervention
+test,Run exactly once,Authorization recorded; ledger complete; rerun prohibited
+final_outcome,Report failed formal acceptance,V121 Dice below catastrophic-patient floor
+post_test,No tuning or retraining,Test evidence is report-only under the frozen contract

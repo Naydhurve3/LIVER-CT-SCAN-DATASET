@@ -1,0 +1,33 @@
+{
+  "all_mandatory_targets_passed": true,
+  "decision": "OWNER_COMPLETE_INPUTS_AND_SELECT_VENUE",
+  "direct_lits_source_count": 5,
+  "formal_model_acceptance_failure": "minimum_positive_patient_dice",
+  "formal_model_acceptance_passed": false,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "next_step": "owner_confirmed_venue_specific_finalization",
+  "primary_source_count": 13,
+  "quantitative_ranking_allowed": false,
+  "result_level": "RELATED_WORK_EVIDENCE_COMPLETE",
+  "scientific_consistency_passed": true,
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "status": "related_work_evidence_complete",
+  "submission_ready": false,
+  "targets": {
+    "direct LiTS sources": true,
+    "expanded BibTeX exists": true,
+    "expanded manuscript exists": true,
+    "external quantitative rankings prohibited": true,
+    "primary literature sources": true,
+    "related-work draft exists": true,
+    "sealed Step 09 input checks": true,
+    "test inference reruns": true,
+    "test source files reopened": true,
+    "theme coverage": true,
+    "unique citation keys": true
+  },
+  "test_images_accessed": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false,
+  "venue_selected": null
+}

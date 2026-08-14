@@ -1,0 +1,17 @@
+{
+  "status": "validation_3d_postprocessing_fail",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "checkpoint_sha256": "5f18223c0f618d45d1433dc4a48d950fdea8a039db9ea557629ffd38fe06270f",
+  "source_model": "organ_robust_zscore_clip3_gamma_noise_v1",
+  "selected_configuration": "raw_t050",
+  "mean_patient_dice": 0.4069637790059099,
+  "volume_104_dice": 0.5865548029846169,
+  "volume_116_dice": 0.026793883158310893,
+  "q1_detected_pct": 60.07604562737643,
+  "positive_predicted_empty_pct": 8.253358925143955,
+  "empty_slice_false_positive_pct": 47.433371357461375,
+  "targets_passed": 4,
+  "all_expected_targets_passed": false,
+  "test_images_accessed": false,
+  "decision": "FAIL \u2014 do not open test; next experiment should learn liver/tumor localization rather than add another heuristic."
+}

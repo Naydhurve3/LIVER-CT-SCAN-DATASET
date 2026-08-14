@@ -1,0 +1,57 @@
+{
+  "bin_edges": {
+    "connectivity": 6,
+    "derivation_split": "train",
+    "equivalent_spherical_diameter_mm": [
+      -Infinity,
+      6.919361927399862,
+      10.871369630119,
+      19.601187720092135,
+      Infinity
+    ],
+    "lesion_volume_ml": [
+      -Infinity,
+      0.1734589731240447,
+      0.6727467170278852,
+      3.9438243504657855,
+      Infinity
+    ],
+    "patient_lesion_count": [
+      -Infinity,
+      1.0,
+      2.5,
+      8.0,
+      Infinity
+    ],
+    "patient_tumour_volume_ml": [
+      -Infinity,
+      1.9557421551130936,
+      14.323927780151367,
+      42.139110338374046,
+      Infinity
+    ],
+    "random_seed": 42,
+    "tiny_component_threshold_ml": 0.001,
+    "validation_used_to_fit": false
+  },
+  "caps": {
+    "maximum_weight": 1.0,
+    "minimum_weight": 1.0
+  },
+  "derivation_split": "train",
+  "policy": "uniform_patient_aware_existing_sampler_no_change",
+  "random_seed": 42,
+  "rationale": "Dataset characterization defines reproducible strata, but descriptive validation failures do not justify validation-patient-specific weights. Retain the existing sampler unless a later bounded train-only intervention is predeclared.",
+  "status": "FROZEN_TRAIN_DERIVED_POLICY",
+  "test_used": false,
+  "train_stratum_counts": {
+    "burden_q1": 26,
+    "burden_q2": 26,
+    "burden_q3": 26,
+    "burden_q4": 26
+  },
+  "validation_used_to_fit": false,
+  "weights": {
+    "default": 1.0
+  }
+}

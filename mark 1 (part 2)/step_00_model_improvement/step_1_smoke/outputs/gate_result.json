@@ -1,0 +1,51 @@
+{
+  "all_arms_pass": false,
+  "arms": [
+    {
+      "arm": "control",
+      "epochs": 60,
+      "hard_micro_dice": 0.0706,
+      "loss_name": "FocalDiceLoss",
+      "steps_per_epoch": 4
+    },
+    {
+      "arm": "c1_roi_highres",
+      "epochs": 60,
+      "hard_micro_dice": 0.1544,
+      "loss_name": "FocalDiceLoss",
+      "steps_per_epoch": 4
+    },
+    {
+      "arm": "c2_analog_sampler",
+      "epochs": 60,
+      "hard_micro_dice": 0.0915,
+      "loss_name": "FocalDiceLoss",
+      "steps_per_epoch": 16
+    },
+    {
+      "arm": "c3_recall_capped",
+      "epochs": 60,
+      "hard_micro_dice": 0.0615,
+      "loss_name": "StabilityBoundedRecallLoss",
+      "steps_per_epoch": 4
+    }
+  ],
+  "decision": "HALT_REVIEW_ARM",
+  "external_dataset_accessed": false,
+  "gate_hard_micro_dice": 0.8,
+  "holdout_excluded": true,
+  "holdout_volumes": [
+    4,
+    25,
+    44,
+    64,
+    83,
+    84,
+    90,
+    100
+  ],
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "result_level": "DIAGNOSTIC_COMPLETE",
+  "status": "STEP_1_SMOKE_GATE",
+  "test_images_accessed": false
+}

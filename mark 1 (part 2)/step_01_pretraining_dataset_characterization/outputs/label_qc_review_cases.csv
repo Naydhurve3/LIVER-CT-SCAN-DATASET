@@ -1,0 +1,8 @@
+split,volume_id,reason,priority
+train,4,affine=numeric_match_after_approved_transform; shape_match=True; containment_failure=False; connectivity_delta=29,review
+train,48,affine=manual_spatial_approval_header_mismatch; shape_match=True; containment_failure=False; connectivity_delta=0,review
+train,49,affine=manual_spatial_approval_header_mismatch; shape_match=True; containment_failure=False; connectivity_delta=0,review
+train,50,affine=manual_spatial_approval_header_mismatch; shape_match=True; containment_failure=False; connectivity_delta=0,review
+train,51,affine=manual_spatial_approval_header_mismatch; shape_match=True; containment_failure=False; connectivity_delta=1,review
+train,52,affine=manual_spatial_approval_header_mismatch; shape_match=True; containment_failure=False; connectivity_delta=0,review
+val,113,affine=numeric_match_after_approved_transform; shape_match=True; containment_failure=False; connectivity_delta=36,review

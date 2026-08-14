@@ -1,0 +1,17 @@
+field,step02_value,step03_value,passed
+manifest_sha256,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889,True
+control_checkpoint_sha256,9b0c7749af66b0fc3808f6757d0d90af01384e06afe02090361b220df48b6e8b,9b0c7749af66b0fc3808f6757d0d90af01384e06afe02090361b220df48b6e8b,True
+recall_checkpoint_sha256,c01eb4b81e4e7f1d84c7966aca56e738d87d06d404907f0bcc7c67a79ed4ec4d,c01eb4b81e4e7f1d84c7966aca56e738d87d06d404907f0bcc7c67a79ed4ec4d,True
+hu_window,"[-160, 240]","[-160, 240]",True
+normalization,uint8/255,uint8/255,True
+roi_threshold,0.5,0.5,True
+roi_component,largest_3d,largest_3d,True
+roi_padding,16,16,True
+roi_resize,"[256, 256]","[256, 256]",True
+roi_generator_checkpoint_sha256,9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223,9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223,True
+fusion_equation,"maximum(control_probability, recall_probability)","maximum(control_probability, recall_probability)",True
+global_threshold,0.7,0.7,True
+post_processing,none,none,True
+metric_epsilon,1e-06,1e-06,True
+random_seed,42,42,True
+test_images_accessed,False,False,True

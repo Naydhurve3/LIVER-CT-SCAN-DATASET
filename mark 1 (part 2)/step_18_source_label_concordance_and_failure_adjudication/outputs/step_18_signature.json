@@ -1,0 +1,21 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "cbc47cb9c300e25cb46879ef6abe10c94cc70023d8ee7938b415fc884fc17861",
+  "created_utc": "2026-08-05T15:12:39.193750+00:00",
+  "local_lits_test_accessed": false,
+  "result_level": "SOURCE_LABEL_CONCORDANCE_COMPLETE_EXPERT_REVIEW_REQUIRED",
+  "signed_artifacts": {
+    "step_18_source_label_concordance_and_failure_adjudication\\outputs\\SOURCE_LABEL_CONCORDANCE_REPORT.md": "7e8a350e2940bbe0a0afcef2e1a86e48d6892173295a6b72e78871e378c87356",
+    "step_18_source_label_concordance_and_failure_adjudication\\outputs\\case_adjudication_summary.csv": "e06a8f3906445530be250f6fb9160f8fee928949dc39322ef6c530ec2287c8e7",
+    "step_18_source_label_concordance_and_failure_adjudication\\outputs\\expected_vs_actual.csv": "55dd986685452783004af528e94567ba8a99421279c81d1a46e25777c68219af",
+    "step_18_source_label_concordance_and_failure_adjudication\\outputs\\gate_result.json": "d4e3802533bb85d4d0cd2604e91d546ccdffe323506fad1d06c9d0928e5bb636",
+    "step_18_source_label_concordance_and_failure_adjudication\\outputs\\highest_overlap_source_label_by_case.csv": "072c334b167241581dda66cc0d3933d7b3e86827c0fef57de1d908f48dd305bd",
+    "step_18_source_label_concordance_and_failure_adjudication\\outputs\\input_verification.csv": "376f902ecd4914a9d100b029c32bec3e8fabe107f291c7c2fb96653aa34179ed",
+    "step_18_source_label_concordance_and_failure_adjudication\\outputs\\provenance.json": "2fef4f24e1127cf7c68505963c1c15913ef33b8e9d9324917bbd04171a5f791b",
+    "step_18_source_label_concordance_and_failure_adjudication\\outputs\\selected_source_label_inventory.csv": "692e986fa6ac8c88e5cb0501140822d67bae689635d7fc766712ef998a1bcb2d",
+    "step_18_source_label_concordance_and_failure_adjudication\\outputs\\source_label_concordance_panels.png": "543b64257d214092384c432f99a9d45d636ccefb41ea8b8a1d815b4d14652829",
+    "step_18_source_label_concordance_and_failure_adjudication\\outputs\\source_label_overlap_dashboard.png": "2a05bee838b11dce838ac45c222f8f696f8c43477374c7526ef99a9340c689af",
+    "step_18_source_label_concordance_and_failure_adjudication\\outputs\\source_label_prediction_concordance.csv": "6000a5ee41879bf7c0650e3f55caab668194e599ab591e0d83aecaa951740e0c",
+    "step_18_source_label_concordance_and_failure_adjudication\\outputs\\source_mask_alignment_qc.csv": "49cfb2a5a284df3bd8490fcee42833cd9a878787b0b984636b6fb98acb9feb58"
+  }
+}

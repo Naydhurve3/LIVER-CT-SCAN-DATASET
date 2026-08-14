@@ -1,0 +1,3 @@
+evaluation,patients,positive_patients,negative_controls,slices,truth_semantics,formal_gate,role
+LiTS held-out,14,13,1,7286,LiTS hepatic tumour label,FAIL: minimum positive-patient Dice,one-time internal held-out evaluation
+3D-IRCADb-01 external,20,15,5,2823,folders matching ^livertumors?\d*$,PASS under separately frozen external contract,one-time external evaluation

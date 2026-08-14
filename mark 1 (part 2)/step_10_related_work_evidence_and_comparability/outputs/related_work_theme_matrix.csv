@@ -1,0 +1,14 @@
+theme,source_count,citation_keys,covered
+benchmark and evaluation,1,Bilic2023LiTS,True
+cascaded ROI segmentation,1,Christ2017CFCN,True
+false-positive control,1,Chlebus2018ObjectPost,True
+2D/3D context fusion,1,Li2018HDenseUNet,True
+attention and 3D context,1,Jin2020RAUNet,True
+self-configuring baseline,1,Isensee2021nnUNet,True
+architecture lineage,1,Ronneberger2015UNet,True
+volumetric context,1,Cicek2016ThreeDUNet,True
+class imbalance,1,Sudre2017GeneralizedDice,True
+attention mechanisms,1,Oktay2018AttentionUNet,True
+evaluation validity,1,MaierHein2018Rankings,True
+efficient encoder,1,Sandler2018MobileNetV2,True
+reporting governance,1,Tejani2024CLAIM,True

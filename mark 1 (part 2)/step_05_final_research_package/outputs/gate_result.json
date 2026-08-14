@@ -1,0 +1,67 @@
+{
+  "all_mandatory_targets_passed": true,
+  "decision": "ARCHIVE_FINAL_RESULT_FORMAL_MODEL_ACCEPTANCE_FAILED_NO_FURTHER_TEST_USE",
+  "formal_model_acceptance_failure": "minimum_positive_patient_dice",
+  "formal_model_acceptance_passed": false,
+  "input_artifact_hashes": {
+    "final_package_signature": "ebfa0d9ed78391cc077c8a6dc1f78d5afc226e6d00ec8f1261002e07c97f2986",
+    "step04_gate": "3efe028e1ab3edd32f59fa7bf648c130179c1c12b39038bac7e435ce72a23432",
+    "step04_signature": "4da370ea561c98e4abf55c2a1cdfd60f4b94bc34c4b1ea22c39c640f53adf7b1"
+  },
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "next_step": "archive_and_manuscript_revision_without_test_reuse",
+  "result_level": "FINAL_PROJECT_COMPLETE",
+  "selected_configuration": {
+    "fusion": "maximum",
+    "policy_sha256": "52d2df856709254992ab6b59f84a213a0a00f6e67293f66665b6f258d01f2131",
+    "post_processing": "none",
+    "threshold": 0.7
+  },
+  "selected_metrics": {
+    "empty_slice_false_positive_pct": 3.810149449827558,
+    "final_test_targets_passed": 7,
+    "final_test_targets_total": 8,
+    "global_dice": 0.7676962584530078,
+    "global_pixel_precision": 0.8443941209256601,
+    "global_pixel_recall": 0.7037714136893984,
+    "mean_positive_patient_dice": 0.5072968415384616,
+    "median_positive_patient_dice": 0.56513738,
+    "minimum_positive_patient_dice": 0.0,
+    "positive_predicted_empty_pct": 9.941520467836257,
+    "q1_positive_slice_detection_pct_train_edges": 47.55244755244755,
+    "test_positive_patients": 13,
+    "test_volumes": 14
+  },
+  "source_test_evaluation_test_images_accessed": true,
+  "status": "final_research_package_complete",
+  "target_passes": {
+    "figures_saved": true,
+    "formal_test_failure_preserved": true,
+    "limitations_saved": true,
+    "methods_parameters_saved": true,
+    "metrics_independently_reconciled": true,
+    "paper_draft_saved": true,
+    "reproducibility_saved": true,
+    "sealed_evidence_verified": true,
+    "technical_report_saved": true,
+    "test_inference_rerun_false": true,
+    "test_source_files_reopened_false": true,
+    "v121_failure_characterized": true
+  },
+  "targets": {
+    "figures_saved": true,
+    "formal_test_failure_preserved": true,
+    "limitations_saved": true,
+    "methods_parameters_saved": true,
+    "metrics_independently_reconciled": true,
+    "paper_draft_saved": true,
+    "reproducibility_saved": true,
+    "sealed_evidence_verified": true,
+    "technical_report_saved": true,
+    "test_inference_rerun_false": true,
+    "test_source_files_reopened_false": true,
+    "v121_failure_characterized": true
+  },
+  "test_images_accessed": false,
+  "test_source_files_reopened": false
+}

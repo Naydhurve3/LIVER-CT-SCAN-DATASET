@@ -1,0 +1,22 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "1c59075b8d30d7988797adf777ff2ca9db5c931f476f0df29c14087373bac86a",
+  "created_utc": "2026-08-06T03:33:32.724336+00:00",
+  "result_level": "EXTERNAL_CITATION_VERIFIED_OWNER_DECLARATIONS_REQUIRED",
+  "signed_artifacts": {
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\DATASET_ATTRIBUTION_AND_AVAILABILITY_DRAFTS.md": "adbee06d7fd1969e5faa5f15d649b65bbfe5581096da610975faae4ae6c6697d",
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\PAPER_DRAFT_WITH_VERIFIED_EXTERNAL_CITATION.md": "662ad2f23cc0eb4fcc619dc7189fa04e3e5de24353ef7c303c71bf4afa118209",
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\expected_vs_actual.csv": "bc5f0480d0ebaf8a0116073892019a1655328f602e2f07674a1018f6599cb387",
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\external_dataset_reference_addendum.bib": "2217f1d7130be52b36a53cc1a3b339ac231607c52fb170bf8d6fcb1df352cbd2",
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\gate_result.json": "4b7d7190222c01cec5cf35df834d66e25e8be7e19c78ab3aed39e59cb6de6436",
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\input_verification.csv": "b10737b45162aa3bce499a4cf2b79d7cb354c436f16e329b2b6859dc5dc2d964",
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\manuscript_citation_patch_plan.csv": "88c9924ccb7660fcf4a9df84205b37e70dab08806197b7adc6c9485f4f0885cd",
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\official_citation_evidence.csv": "3c15863cf5d08b98b4732d812aae368a56caf08add8e94d1c2579359c42544ef",
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\official_ircadb_source_snapshot.json": "463dcb3c657e41b97369fd15d79f3ef2a6e4626372c254eb36c6b239706251fc",
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\owner_submission_blocker_matrix.csv": "549a504ed3630c3841c3c63c6ddb75b3a0445b00672045e3f7dfcf7749620743",
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\provenance.json": "aa926d9921b4daf2c92df9506c7339298e1e3ffdbbed69f81dfc8306071bcc5c",
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\step19_signature_verification.csv": "29d636c1a9234333375257b3722d2865bcd6c58882dfbd8a5eadca7a920c44dd",
+    "step_20_external_citation_verification_and_owner_readiness\\outputs\\submission_readiness_summary.csv": "4d3a24a1e088835a687630ac2ea18a092a52d6aa934d440983420e2dd5a07568"
+  },
+  "submission_action_performed": false
+}

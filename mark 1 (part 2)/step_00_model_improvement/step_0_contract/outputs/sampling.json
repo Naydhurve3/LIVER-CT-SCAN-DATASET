@@ -1,0 +1,24 @@
+{
+  "c2_analog": {
+    "boost_cap": 4.0,
+    "exclude_holdout": true,
+    "source": "validation_training_analogs top-5 for volumes 104 (V104) and 116 (V116)"
+  },
+  "control_weighting": "patient-aware uniform (1/volume_count) with positive-slice multiplier 3.0",
+  "dead_volume_exclusion": {
+    "reason": "sealed single-use internal holdout",
+    "volumes": [
+      4,
+      25,
+      44,
+      64,
+      83,
+      84,
+      90,
+      100
+    ]
+  },
+  "policy_name": "development_sampler_policy",
+  "seed": 42,
+  "test_used": false
+}

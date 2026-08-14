@@ -1,0 +1,11 @@
+check,passed,observed
+step09_result_level,True,INTERNAL_PEER_REVIEW_COMPLETE
+step09_scientific_consistency,True,True
+submission_remains_closed,True,False
+formal_model_acceptance_failed,True,False
+manifest_hash,True,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889
+test_run_id,True,871d289b-bf6b-4346-978f-2df02ade26ab
+test_images_not_accessed,True,False
+test_inference_not_rerun,True,False
+revised_manuscript_exists,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_09_internal_peer_review_and_claim_consistency\outputs\PAPER_DRAFT_SCIENTIFICALLY_REVISED.md
+step09_signature_valid,True,6/6

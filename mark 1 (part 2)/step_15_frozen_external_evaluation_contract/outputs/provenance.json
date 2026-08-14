@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-08-05T14:29:30.960810+00:00",
+  "inference_performed": false,
+  "local_lits_test_accessed": false,
+  "model_source_sha256": "ce3afb27f841cec237478e598be8ea370a8456f4c4c151c5c10774e280f439e4",
+  "phase": "step_15_frozen_external_evaluation_contract",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+  "step03_policy_sha256": "52d2df856709254992ab6b59f84a213a0a00f6e67293f66665b6f258d01f2131",
+  "step14_signature_sha256": "957019b63982d4661c9a3d735afb283f55e41bbb15e7df1ac92ba28e05cd6d60"
+}

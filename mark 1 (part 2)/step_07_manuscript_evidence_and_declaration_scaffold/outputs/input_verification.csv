@@ -1,0 +1,11 @@
+check,passed,observed
+step05_complete,True,FINAL_PROJECT_COMPLETE
+formal_failure_preserved,True,False
+step06_complete,True,DIAGNOSTIC_COMPLETE
+step06_submission_not_ready,True,False
+step06_next_decision,True,COMPLETE_REFERENCES_DECLARATIONS_AND_VENUE_FORMATTING
+manifest_hash,True,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889
+test_run_id,True,871d289b-bf6b-4346-978f-2df02ade26ab
+step06_test_rerun_false,True,False
+step06_sources_reopened_false,True,False
+paper_draft_exists,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_05_final_research_package\outputs\PAPER_DRAFT.md

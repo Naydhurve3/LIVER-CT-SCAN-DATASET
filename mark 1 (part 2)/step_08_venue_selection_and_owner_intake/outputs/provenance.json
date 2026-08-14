@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-08-05T12:43:44.700497+00:00",
+  "model_or_loader_instantiated": false,
+  "official_sources_verified_date": "2026-08-05",
+  "scores_are_judgments_not_acceptance_probabilities": true,
+  "step07_gate_sha256": "199ede841ea82a881274516c5d07672faedd81dc9b2bc9f2de824ccd19ce0608",
+  "step07_signature_sha256": "6a5303f99239b72546e8b91b1c1ed77437cf44ad822a9b6067a10c6363f04856",
+  "test_images_accessed": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

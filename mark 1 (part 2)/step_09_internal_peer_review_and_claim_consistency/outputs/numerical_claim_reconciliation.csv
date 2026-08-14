@@ -1,0 +1,13 @@
+claim,authoritative_value,display_precision,expected_text,calculated_text,present_in_manuscript,rounding_matches,source,passed
+global Dice,0.76769626,4,0.7677,0.7677,True,True,global_metrics.csv,True
+mean positive-patient Dice,0.50729684,4,0.5073,0.5073,True,True,global_metrics.csv,True
+median positive-patient Dice,0.56513738,4,0.5651,0.5651,True,True,global_metrics.csv,True
+bootstrap lower 95% bound,0.34417528,4,0.3442,0.3442,True,True,bootstrap_uncertainty.csv,True
+bootstrap upper 95% bound,0.65941075,4,0.6594,0.6594,True,True,bootstrap_uncertainty.csv,True
+global precision,0.84439412,4,0.8444,0.8444,True,True,global_metrics.csv,True
+global recall,0.70377141,4,0.7038,0.7038,True,True,global_metrics.csv,True
+Q1 slice detection percent,47.55244755,1,47.6%,47.6%,True,True,global_metrics.csv,True
+positive predicted-empty percent,9.94152047,1,9.9%,9.9%,True,True,global_metrics.csv,True
+empty-slice false-positive percent,3.81014945,1,3.8%,3.8%,True,True,global_metrics.csv,True
+Q1 lesion detection percent,60.29411765,1,60.3%,60.3%,True,True,size_stratum_metrics.csv,True
+Q1 mean matched Dice,0.23756658,3,0.238,0.238,True,True,size_stratum_metrics.csv,True

@@ -1,0 +1,7 @@
+finding,value,severity,confidence
+formal_predeclared_external_gate,PASS,positive evidence,high
+mean_positive_patient_dice,0.7111958843137554,positive evidence,high
+minimum_positive_patient_dice,0.0129922862310222,critical caveat,high
+tumour_negative_patients_with_any_fp,5,high caveat,high
+tumour_negative_total_fp_ml,52.93573938214034,high caveat,high
+smallest_lesion_stratum_detection_pct,63.63636363636363,moderate caveat,high

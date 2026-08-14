@@ -1,0 +1,39 @@
+{
+  "status": "mark_4b_diagnostic_complete",
+  "selected_global_threshold": 0.6000000238418579,
+  "continuation_gate_passed": false,
+  "final_validation_gate_passed": false,
+  "selected_metrics": {
+    "mean_patient_dice": 0.3645500967728056,
+    "volume_104_dice": 0.06455658243962056,
+    "volume_116_dice": 0.010424480722403422,
+    "q1_detected_pct": 42.585551330798474,
+    "positive_predicted_empty_pct": 37.04414587332054,
+    "empty_slice_false_positive_pct": 3.401431089909779
+  },
+  "targets_passed": 5,
+  "threshold_0_50_metrics": {
+    "mean_patient_dice": 0.363902230361049,
+    "volume_104_dice": 0.06718626946382444,
+    "volume_116_dice": 0.01078020785500504,
+    "q1_detected_pct": 42.585551330798474,
+    "positive_predicted_empty_pct": 36.85220729366603,
+    "empty_slice_false_positive_pct": 3.4221715233848387
+  },
+  "bootstrap": {
+    "threshold": 0.6000000238418579,
+    "patients": 9.0,
+    "iterations": 1000.0,
+    "mean_dice_p2_5": 0.18934107678960424,
+    "mean_dice_p50": 0.3686140141359048,
+    "mean_dice_p97_5": 0.5313809856244291,
+    "original_median": 0.42483907621642575,
+    "original_q25": 0.15033947664871994,
+    "original_q75": 0.528209674988037
+  },
+  "decision": "PROBABILITIES_REMAIN_INSUFFICIENT_REVISE_INPUT_OR_OBJECTIVE",
+  "next_notebook": "mark_4c_two_channel_or_recall_ablation",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "checkpoint_sha256": "9b0c7749af66b0fc3808f6757d0d90af01384e06afe02090361b220df48b6e8b",
+  "test_images_accessed": false
+}

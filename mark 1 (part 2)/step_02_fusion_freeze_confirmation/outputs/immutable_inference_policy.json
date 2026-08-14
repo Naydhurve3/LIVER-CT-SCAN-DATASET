@@ -1,0 +1,52 @@
+{
+  "checkpoint_paths": {
+    "control": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1\\mark_4_outputs\\mark_4_best.pth",
+    "recall_loss": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1\\mark_4c_outputs\\recall_loss_best.pth"
+  },
+  "checkpoint_sha256": {
+    "control": "9b0c7749af66b0fc3808f6757d0d90af01384e06afe02090361b220df48b6e8b",
+    "recall_loss": "c01eb4b81e4e7f1d84c7966aca56e738d87d06d404907f0bcc7c67a79ed4ec4d"
+  },
+  "dataset_build_id": "build_corrected_20260713_214847_v2",
+  "fusion": {
+    "equation": "maximum(control_probability, recall_probability)"
+  },
+  "global_threshold": 0.7,
+  "input": {
+    "channels": [
+      "broad_window"
+    ],
+    "derived_normalization": "uint8/255",
+    "hu_window": [
+      -160,
+      240
+    ]
+  },
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "metric_epsilon": 1e-06,
+  "metric_population": "nine tumour-positive validation patients for mean Dice",
+  "post_processing": "none",
+  "probability_cache": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1 (part 2)\\step_02_fusion_freeze_confirmation\\outputs\\probability_cache",
+  "random_seed": 42,
+  "roi": {
+    "component": "largest_3d",
+    "inverse_mapping": "bilinear_to_frozen_box",
+    "padding": 16,
+    "resize": [
+      256,
+      256
+    ],
+    "source": "predicted_liver",
+    "threshold": 0.5
+  },
+  "score": "sigmoid(logit)",
+  "software": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.6.0+cu124"
+  },
+  "status": "FROZEN",
+  "test_images_accessed": false
+}

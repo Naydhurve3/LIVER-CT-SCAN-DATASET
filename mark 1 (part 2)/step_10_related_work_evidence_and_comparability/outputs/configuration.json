@@ -1,0 +1,18 @@
+{
+  "comparability_dimensions": [
+    "dataset family",
+    "exact split",
+    "metric population",
+    "post-processing",
+    "inclusion rules"
+  ],
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "minimum_direct_lits_sources": 5,
+  "minimum_primary_sources": 12,
+  "mode": "artifact_only_offline_literature_synthesis",
+  "phase": "step_10_related_work_evidence_and_comparability",
+  "quantitative_ranking_allowed": false,
+  "snapshot_date": "2026-08-05",
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "test_access_allowed": false
+}

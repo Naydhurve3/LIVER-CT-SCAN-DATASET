@@ -1,0 +1,5 @@
+case_type,volume_id,sample_id,slice_index,patient_dice
+lowest_patient_dice,121,v121_s0259,259,0.00000000
+lowest_patient_dice,127,v127_s0631,631,0.08260326
+lowest_patient_dice,120,v120_s0268,268,0.11231256
+largest_empty_slice_false_positive,120,v120_s0245,245,0.11231256

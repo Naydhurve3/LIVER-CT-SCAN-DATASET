@@ -1,0 +1,19 @@
+{
+  "cases_profiled": 6,
+  "cases_with_excluded_annotation_overlap_gt_5pct": [
+    "ircadb_07",
+    "ircadb_14"
+  ],
+  "created_utc": "2026-08-05T15:12:39.177158+00:00",
+  "gate_passed": true,
+  "inference_performed": false,
+  "interpretation": "Source-label overlap was measured. It can explain annotation-semantic discordance but cannot establish biological truth without expert review.",
+  "local_lits_test_accessed": false,
+  "next_step": "optional blinded expert review of preserved panels and source annotations; otherwise stop analysis or freeze a second independent external dataset contract",
+  "result_level": "SOURCE_LABEL_CONCORDANCE_COMPLETE_EXPERT_REVIEW_REQUIRED",
+  "source_label_folders_profiled": 72,
+  "step16_metrics_changed": false,
+  "step16_rerun_performed": false,
+  "step16_result_changed": false,
+  "tuning_performed": false
+}

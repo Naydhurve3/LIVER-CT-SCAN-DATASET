@@ -1,0 +1,13 @@
+{
+  "last_completed_epoch": 10,
+  "decision_epoch": 10,
+  "epochs_remaining": 0,
+  "mean_patient_dice": 0.3296161144822648,
+  "mean_liver_dice": 0.8881473307299668,
+  "volume_104_dice": 1.448183977271503e-11,
+  "volume_116_dice": 0.0001175802060258,
+  "positive_predicted_empty_pct": 45.87332053742802,
+  "empty_slice_false_positive_pct": 2.893290469770818,
+  "temperature_c": 86.0,
+  "test_images_accessed": false
+}

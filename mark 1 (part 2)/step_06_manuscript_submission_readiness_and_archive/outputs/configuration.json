@@ -1,0 +1,9 @@
+{
+  "archive_scope": "Part 2 contracts and non-bulky Steps 01-05 deliverables; bulky binaries rely on signed source inventories",
+  "created_utc": "2026-08-05T12:29:03.226239+00:00",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "mode": "artifact_only_no_test_source_access",
+  "phase": "step_06_manuscript_submission_readiness_and_archive",
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "submission_ready_rule": "all required checklist items complete"
+}

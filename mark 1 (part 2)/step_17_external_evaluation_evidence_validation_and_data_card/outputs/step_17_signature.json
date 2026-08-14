@@ -1,0 +1,27 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "be053589daf3e6e92db395a727a91658318c3f8b577c348f879828605edd702b",
+  "created_utc": "2026-08-05T15:01:15.270885+00:00",
+  "inference_performed": false,
+  "local_lits_test_accessed": false,
+  "result_level": "EXTERNAL_GENERALIZATION_EVIDENCE_VALIDATED_WITH_CAVEATS",
+  "signed_artifacts": {
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\EXTERNAL_EVALUATION_DATA_CARD.md": "7eb1e46f3382065b3011ee25de4e139a796ad81ae46e58cef247c183a6c0127a",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\acceptance_reconciliation.csv": "b6644f4bf9af5cce88d921b20204280fc619d00bf5203f656665f569ecc81da4",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\descriptive_reliability.csv": "f9c4f80769fb9f704f3c3a33e65b72ca71fc58eb7e8121f0715edd8835cbef09",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\external_evidence_validation_dashboard.png": "6cb9f9edfaa4bf9830f4be7dadcdab7d71e295e56f52d29c1cedd5c028b68768",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\external_failure_atlas.png": "fceb1a969704663d6da08050cac909aea47237bdbc5a6bacffe0c8f18f9a4d9c",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\gate_result.json": "a496cad2bbe1b1c7a1226dcb44f98149e718ef8722a199565968406bd1afc3ec",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\independent_metric_reconciliation.csv": "72e552b4001276b404e63461d802d60172bd9f038f61eff122ea74c3d184aedc",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\input_verification.csv": "15a45d58840b9d36511fddfb68728573b9b717c4584720774c91834394aacf09",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\lesion_difficulty_validation.csv": "54cb1d3127c2740cc6a4a58715f15c11fb0d8950376251eda0cbd67cd7557273",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\negative_control_physical_volume.csv": "e919ad7e1452c0fb3ce76e5539ea0909c348f9f31c39d200ca4fc4b3dc15465d",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\patient_risk_profile.csv": "78baf84dab77c76ee5ce3ef113b6d41b5e124ddd7766cab81511953a9e285587",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\probability_histograms.csv": "88bc7af3863758f4873769a3563ba9a6dfa2f9d1b37c23163009ab34d8fbca8a",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\provenance.json": "170a5dd6defbc9e378186b1a6b46439470dd138464724313a0d78d8a418d73a2",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\step_16_evidence_inventory_verification.csv": "a5f08dc89077d91058ed55908a333c619328b2cbf4f8398fc16f34c9d7cce387",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\step_16_signature_verification.csv": "c6ebcf819a5e178587bf68b7445fed4a67b802387fbde07042babe40e98e693d",
+    "step_17_external_evaluation_evidence_validation_and_data_card\\outputs\\validated_findings.csv": "164522a15f5845ccc2683094bb9fc6d193bfabdad890d9c548bec55886d8fd4e"
+  },
+  "step16_rerun_performed": false
+}

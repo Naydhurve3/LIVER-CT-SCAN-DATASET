@@ -1,0 +1,6 @@
+internal_patient_id,has_tumour,truth_pixels,predicted_pixels,intersection_pixels,false_positive_pixels,false_negative_pixels,dice,precision,recall,train_derived_burden_stratum,tumour_volume_ml_external,spacing_z_mm,tumour_minus_liver_hu
+ircadb_14,False,0,7527,0,7527,0,1.328550551171974e-10,0.0,,tumour_negative,0.0,1.6000000238419003,
+ircadb_07,False,0,6174,0,6174,0,1.6196954969841762e-10,0.0,,tumour_negative,0.0,1.6000000238419505,
+ircadb_20,False,0,621,0,621,0,1.6103059555389597e-09,0.0,,tumour_negative,0.0,2.0,
+ircadb_05,False,0,140,0,140,0,7.142857091836735e-09,0.0,,tumour_negative,0.0,1.6000000238419003,
+ircadb_11,False,0,1,0,1,0,9.99999000001e-07,0.0,,tumour_negative,0.0,1.6000000238419003,

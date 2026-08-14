@@ -1,0 +1,39 @@
+{
+  "acceptance_contract_sha256": "12e8932d71651fd9247d841a86dfcd0fa80d64d74c4f334e29b113c28213b52d",
+  "authorization": {
+    "acceptance_contract_sha256": "12e8932d71651fd9247d841a86dfcd0fa80d64d74c4f334e29b113c28213b52d",
+    "authorization_granted": true,
+    "authorization_recorded_utc": "2026-08-05T11:39:37.3247843Z",
+    "authorization_source_message": "got this error make edit as required",
+    "authorization_text": "I explicitly authorize one-time locked test evaluation using the Step 03 frozen policy and acceptance contract.",
+    "one_time_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+    "policy_sha256": "52d2df856709254992ab6b59f84a213a0a00f6e67293f66665b6f258d01f2131"
+  },
+  "checkpoint_sha256": {
+    "control": "9b0c7749af66b0fc3808f6757d0d90af01384e06afe02090361b220df48b6e8b",
+    "recall_loss": "c01eb4b81e4e7f1d84c7966aca56e738d87d06d404907f0bcc7c67a79ed4ec4d",
+    "roi_generator": "9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223"
+  },
+  "completed_utc": "2026-08-05T11:47:12.732969+00:00",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "one_time_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "policy_sha256": "52d2df856709254992ab6b59f84a213a0a00f6e67293f66665b6f258d01f2131",
+  "positive_test_volumes": 13,
+  "software": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.6.0+cu124"
+  },
+  "test_images_accessed": true,
+  "test_results_may_not_trigger": [
+    "threshold tuning",
+    "checkpoint selection",
+    "fusion changes",
+    "post-processing changes",
+    "retraining"
+  ],
+  "test_rows": 7286,
+  "test_volumes": 14
+}

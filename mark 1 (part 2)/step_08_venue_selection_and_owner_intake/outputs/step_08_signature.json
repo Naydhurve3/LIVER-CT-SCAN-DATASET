@@ -1,0 +1,18 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "4b8135bc28f2a302e39d6848aea665dfbd913ffbe261c908823c3f839562b961",
+  "created_utc": "2026-08-05T12:43:44.700497+00:00",
+  "formal_model_acceptance_passed": false,
+  "signed_artifacts": {
+    "step_07_manuscript_evidence_and_declaration_scaffold/outputs/step_07_signature.json": "6a5303f99239b72546e8b91b1c1ed77437cf44ad822a9b6067a10c6363f04856",
+    "step_08_venue_selection_and_owner_intake/outputs/VENUE_DECISION_REPORT.md": "fb29a19f2e8646c50e4ed8f749e7f55bf30190ced1e14895035b2a5deab965e9",
+    "step_08_venue_selection_and_owner_intake/outputs/gate_result.json": "6bba56fde5686ca1467d2331217b29af28a98d99b53afac600a9f20d03412a3c",
+    "step_08_venue_selection_and_owner_intake/outputs/venue_score_breakdown.csv": "337aea8dcafb36f83ee8485310ea594f0f82cc107f6d06b8d1d187df5ad4d5ae",
+    "step_08_venue_selection_and_owner_intake/outputs/venue_shortlist.csv": "fb54422bf9a715f77b6cda25041a0ef5a9d66c59211e9416cc4250aa1b3f3fd3",
+    "step_08_venue_selection_and_owner_intake/outputs/venue_source_and_candidate_matrix.csv": "1bb215563371189cdbbdd3829b2d423b01c72d7969bf7e3c271ecd90fad2bdf8"
+  },
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "submission_ready": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

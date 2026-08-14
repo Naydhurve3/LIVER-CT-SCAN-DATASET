@@ -1,0 +1,25 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "a023b54f4b93ca935162824b6e51d3e70a405383ae38ba5b89c675a24839dc90",
+  "created_utc": "2026-08-05T14:22:00.041168+00:00",
+  "local_lits_test_accessed": false,
+  "model_inference_performed": false,
+  "normalized_artifact_hashes_are_in_conversion_manifest": true,
+  "result_level": "EXTERNAL_NORMALIZED_CONVERSION_QC_PASS",
+  "signed_artifacts": {
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\configuration.json": "0971ba77f7cd8fb798306d111ea2d4d87d54256fd9cfef66a834a5d83799343c",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\conversion_manifest.csv": "3e0435e5999b7ef2bd473de5d8d0e0fd12f4ce0834b81e60541880c9aaffda1c",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\conversion_qc_dashboard.png": "51727a6dc04daf10ac46d16f8c71e31762aa080cb09a1851636b32c755d7bb4f",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\conversion_qc_results.csv": "a12034111cc05cffc8eac521ca92c578916f7f9ba73a255d9e5f80a1a20723c8",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\gate_result.json": "0e643c8e6c8cc9d16ebe0d8e58b749b7889467c5325c07bacc79bd99155e6577",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\hu_profile.csv": "8c31f6eb18754abd9623d3660e010276bf7406311fde1861211cecf50cad6f27",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\input_verification.csv": "b1fa613f2d7da5433b915c1d74bd8c93333e0338b4fcd3c48857efabd3cc3a58",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\label_pixel_profile.csv": "63819edf44df75a1576146818729b7dc51a55be01e42860f311d19f5a77e2011",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\overlap_and_containment_qc.csv": "2ce5bf5c9f3e49138b47a1fefafef13f13d499808455e4c08ff62fc074ef6eff",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\patient_geometry_profile.csv": "4bb2514b8ec8446184859010a7776fde4747c9fd1013683eaa646e4f11c90ae7",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\provenance.json": "814a01c3df92962a5cdf28be83103a7dac7ba654eb8b9b19f11d66a723ffec0c",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\source_to_normalized_parity.csv": "3e0435e5999b7ef2bd473de5d8d0e0fd12f4ce0834b81e60541880c9aaffda1c",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\step_13_signature_verification.csv": "edd630e5f4f39569025814aa9cf751b4228e4cc5b6c1f21f5ba12075a3457c40",
+    "step_14_3d_ircadb_normalized_conversion_and_parity_qc\\outputs\\tumour_folder_vs_nonzero_audit.csv": "2ce5bf5c9f3e49138b47a1fefafef13f13d499808455e4c08ff62fc074ef6eff"
+  }
+}

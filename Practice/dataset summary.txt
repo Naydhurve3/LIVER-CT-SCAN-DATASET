@@ -1,0 +1,1360 @@
+LITS DATASET RECONSTRUCTION, ARRANGEMENT, AND TRAINING-READINESS PLAN
+===================================================================
+
+Document status: Active dataset handoff and execution specification
+Prepared: 2026-07-12
+Project: D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver
+
+
+INSTRUCTION TO ANY FUTURE CODEX CHAT
+------------------------------------
+
+Read this entire file before changing data loaders, moving dataset files, or
+running training. This document records the current verified dataset state,
+known risks, required target structure, missing-data policy, validation gates,
+split policy, and training promotion order.
+
+The immediate objective is DATA RECONSTRUCTION AND VALIDATION, not training.
+Do not start MobileNetV2, FAUP-Net, UWACL, threshold tuning, or held-out test
+evaluation until every mandatory dataset gate in this file passes.
+
+Important operating rules:
+
+1. Do not delete, rename, overwrite, or reorganize the three current dataset
+   folders until checksums and a source registry have been created.
+2. Treat the current folders as immutable raw imports/evidence.
+3. Do not infer spatial correspondence from matching filenames alone.
+4. Do not manually shift, rotate, flip, crop, or resize masks until they look
+   correct. Image and segmentation transformations must come from shared source
+   metadata and must be applied identically.
+5. Do not manufacture missing masks, copy masks from nearby slices, or silently
+   convert missing labels into empty tumor masks.
+6. Empty tumor masks are valid negative labels. A missing tumor-mask file is a
+   data-integrity failure. These cases must never be confused.
+7. Keep Practice\ as the canonical project evidence store. Existing evidence
+   should remain unchanged except for clearly marked corrections and new
+   summaries such as this file.
+8. Dataset files, generated audit images, checkpoints, caches, and experiment
+   outputs must remain outside Git. Commit only scripts, tests, configs, and
+   durable documentation.
+
+
+1. DECISION AND TECHNICAL SUMMARY
+---------------------------------
+
+Training is currently BLOCKED.
+
+The dataset has complete numerical filename coverage, but only part of the
+image-mask collection can be proven locally to originate from the same source
+payload. The legacy 512x512 image collection is not safely interchangeable
+with the 256x256 lits-png image collection. A successful count-based join of
+58,638 images and masks is therefore insufficient evidence for segmentation.
+
+The preferred resolution is to reconstruct all image, liver-mask, and
+tumor-mask slices from one authoritative source. The strongest option is the
+official LiTS NIfTI volumes and segmentations. The fallback is a complete,
+fresh extraction of the same lits-png package containing the image, liver mask,
+and lesion mask for every slice.
+
+After reconstruction, build a versioned canonical dataset, generate a complete
+slice manifest and checksums, perform automatic and visual spatial validation,
+lock volume-wise splits, run a small overfit sanity test, and only then return
+to the staged 5-to-10-epoch research protocol.
+
+
+2. CURRENT DATA LOCATIONS
+-------------------------
+
+A. Current tumor-mask collection
+
+   D:\DATA SCIENCE AND ANALYTICS\Dataset\LiTS_masks
+
+B. Current lits-png source and manifests
+
+   D:\DATA SCIENCE AND ANALYTICS\Dataset\lits-png
+   D:\DATA SCIENCE AND ANALYTICS\Dataset\lits-png\dataset_6\dataset_6
+   D:\DATA SCIENCE AND ANALYTICS\Dataset\lits-png\lits_df.csv
+   D:\DATA SCIENCE AND ANALYTICS\Dataset\lits-png\lits_train.csv
+   D:\DATA SCIENCE AND ANALYTICS\Dataset\lits-png\lits_test.csv
+   D:\DATA SCIENCE AND ANALYTICS\Dataset\lits-png\lits_probe.csv
+
+C. Legacy 512x512 image collection
+
+   D:\DATA SCIENCE AND ANALYTICS\Dataset\Liver Img Dataset
+
+D. Existing project split definitions
+
+   D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\configs\splits
+
+E. Existing dataset evidence
+
+   D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\Practice
+   D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\Practice\next_phase_outputs
+
+
+3. VERIFIED INVENTORY AS OF 2026-07-12
+--------------------------------------
+
+3.1 LiTS_masks
+
+Path:
+  D:\DATA SCIENCE AND ANALYTICS\Dataset\LiTS_masks
+
+Verified properties:
+
+- Files: 58,638
+- Volumes: 131
+- Volume IDs: 0 through 130
+- Slice keys: complete and continuous within every volume
+- Slices per volume: minimum 74, median 432, maximum 987
+- Duplicate (volume_id, slice_index) keys: 0
+- Missing keys relative to the two complete image collections: 0
+- Dimensions: all 58,638 masks are 256x256
+- On-disk mode: all RGB
+- Pixel values: only 0 and 1
+- RGB channel disagreements: 0; all three channels are identical
+- Corrupt/unreadable files: 0
+- Tumor-positive slices: 7,114
+- Empty/negative tumor slices: 51,524
+- Total positive mask pixels: 4,489,160
+- Approximate storage: 0.039 GiB
+
+Interpretation:
+
+This is a structurally complete tumor/lesion-mask collection. Completeness and
+valid binary values do not by themselves establish that every mask is spatially
+registered to either image collection.
+
+
+3.2 lits-png candidate images
+
+Path:
+  D:\DATA SCIENCE AND ANALYTICS\Dataset\lits-png\dataset_6\dataset_6
+
+Image filename format:
+  volume-{volume_id}_{slice_index}.png
+
+Verified properties:
+
+- Candidate images: 58,638
+- Volumes: 131
+- Volume IDs: 0 through 130
+- Slice keys: complete and continuous within every volume
+- Duplicate keys: 0
+- Dimensions: sampled files are consistently 256x256
+- On-disk mode: sampled files are RGB
+- Sampled intensity range: 0 through 255
+- Approximate candidate-image storage: 4.084 GiB
+
+The directory also contains partial same-package masks:
+
+- Lesion masks: 15,817
+- Liver masks: 15,868
+- Volumes represented by embedded masks: 25
+- Embedded-mask volume IDs:
+  7, 8, 9, and 78 through 99
+- Missing embedded lesion masks: 42,821
+- Missing embedded liver masks: 42,770
+- Liver masks without corresponding embedded lesion-mask files: 51
+
+The lesion-mask filename format is:
+  segmentation-{volume_id}_lesionmask_{slice_index}.png
+
+The liver-mask filename format is:
+  segmentation-{volume_id}_livermask_{slice_index}.png
+
+Important integrity result:
+
+- Every one of the 15,817 locally available embedded lesion masks is
+  byte-identical to the corresponding renamed mask in LiTS_masks.
+- Across these 15,817 source triples, tumor pixels outside the corresponding
+  liver mask: 0.
+- Therefore, this 15,817-slice subset has strong same-source evidence.
+
+Limitation:
+
+The remaining 42,821 lesion masks do not have a locally available embedded
+counterpart. Their positive/negative status agrees with lits_df.csv, but their
+full pixel geometry cannot be independently verified from the current partial
+payload.
+
+
+3.3 Liver Img Dataset legacy images
+
+Path:
+  D:\DATA SCIENCE AND ANALYTICS\Dataset\Liver Img Dataset
+
+Filename format:
+  Volume-{volume_id:03d}-{slice_index:03d}.png
+
+Verified properties:
+
+- Images: 58,638
+- Volumes: 131
+- Volume IDs: 0 through 130
+- Slice keys: complete and continuous
+- Duplicate keys: 0
+- Dimensions: all sampled images are 512x512
+- On-disk mode: grayscale, mode L
+- Intensity range: 0 through 255
+- Approximate storage: 3.672 GiB
+
+Cross-source comparison:
+
+- The numerical keys match the candidate image keys exactly.
+- The visible anatomy and preprocessing differ substantially.
+- Across 384 sampled same-key pairs, even after selecting the best simple
+  rotation/flip, median intensity correlation was approximately 0.614.
+- Median edge correlation was approximately 0.198.
+- Reversing slice order performed worse.
+
+Decision:
+
+This collection must be marked LEGACY/CLASSIFICATION-ONLY until its exact source
+lineage and transformation history are proven. It must not be used with the
+current tumor masks for segmentation training or evaluation.
+
+
+3.4 CSV manifest findings
+
+lits_df.csv:
+
+- Rows: 58,638
+- Filepath-derived (volume_id, slice_index) keys: 58,638 unique
+- Filepath-derived volume IDs: 0 through 130
+- Image, liver-mask, and tumor-mask path suffixes agree on every row
+- study_number agrees with the volume ID on every row
+
+Critical field warning:
+
+- instance_number wraps after 255 for long volumes.
+- Duplicate (study_number, instance_number) keys: 30,105.
+- Rows where instance_number differs from the filepath slice suffix: 30,105.
+- Never use instance_number as the canonical slice key.
+- Use the integer suffix parsed from filepath or the NIfTI array index.
+
+Misleading flag warning:
+
+- tumor_mask_empty=False rows: 51,524
+- tumor_mask_empty=True rows: 7,114
+- Across all 58,638 rows, tumor_mask_empty=True exactly matches masks with
+  positive tumor pixels.
+- The field is semantically inverted/misnamed. In the canonical manifest it
+  must be renamed to tumor_present.
+- Do not preserve the old name in model-facing code.
+
+Upstream split CSV warning:
+
+- lits_train.csv: 38,523 rows, 65.70% of all slices
+- lits_test.csv: 3,038 rows, 5.18% of all slices
+- lits_probe.csv is byte-identical to lits_test.csv
+- Train and test have no key or volume overlap
+- Train plus test cover only 70.88% of the complete dataset
+- Uncovered slices: 17,077
+- Uncovered volumes: 40
+
+Decision:
+
+Do not use lits_train.csv, lits_test.csv, or lits_probe.csv to define the
+research split. Preserve them as upstream historical artifacts only.
+
+
+4. DATA QUALITY RISKS AND SEVERITY
+----------------------------------
+
+CRITICAL: Training on unproven spatial pairs
+
+Matching counts and filenames do not prove the mask belongs to the displayed
+CT slice. A segmentation model trained on misregistered masks will learn noise,
+produce extremely low Dice, and make every architecture/loss comparison
+meaningless.
+
+HIGH: Incomplete same-package mask extraction
+
+Only 15,817 lesion masks and 15,868 liver masks remain beside the complete
+58,638 candidate images. The missing source masks prevent complete local
+pixel-level provenance verification.
+
+HIGH: Legacy and candidate images are not interchangeable
+
+The 512x512 legacy images and 256x256 candidate images share numerical keys but
+do not have sufficiently similar image content to be treated as alternative
+preprocessing versions without additional provenance proof.
+
+HIGH: Invalid CSV key choice
+
+Using study_number plus instance_number creates 30,105 duplicate keys because
+instance_number wraps at 256.
+
+MEDIUM: Misleading empty-mask field name
+
+The tumor_mask_empty field means tumor present. This can silently invert label
+logic in analysis, sampling, or training.
+
+MEDIUM: Incomplete upstream train/test CSVs
+
+The supplied CSV splits omit 29.12% of the dataset and duplicate test as probe.
+
+MEDIUM: Masks stored as RGB values 0/1
+
+The masks are valid, but they appear nearly black in ordinary image viewers.
+Canonical derived masks should be documented and may be stored as 0/255 for
+easy inspection while being converted to binary 0/1 tensors in memory.
+
+
+5. AUTHORITATIVE SOURCE STRATEGY
+--------------------------------
+
+Use the following preference order.
+
+Option A - preferred:
+
+Obtain the official LiTS NIfTI volumes and matching segmentation NIfTI files.
+Each CT and segmentation pair must come from the same release and preserve:
+
+- volume identity
+- voxel spacing
+- affine/orientation metadata
+- slice ordering
+- original segmentation labels
+
+For official LiTS labels, normally derive:
+
+- background: label 0
+- liver region: labels 1 and 2
+- tumor region: label 2
+
+Confirm the source label definition before conversion rather than relying only
+on this expectation.
+
+Option B - acceptable fallback:
+
+Re-download or re-extract the complete lits-png package so that every filepath
+listed in lits_df.csv is present together:
+
+- volume-{v}_{s}.png
+- segmentation-{v}_livermask_{s}.png
+- segmentation-{v}_lesionmask_{s}.png
+
+Do not merge images from one PNG source with masks from a separately converted
+source merely because volume and slice numbers look identical.
+
+Option C - temporary audit only:
+
+Use the existing 15,817 same-source triples to verify conversion code and build
+tests. Do not use this biased 25-volume subset for final baseline comparison,
+validation, or held-out evaluation.
+
+
+6. TARGET CANONICAL DIRECTORY STRUCTURE
+---------------------------------------
+
+Create this beside the current folders only after a dry-run audit and user
+approval:
+
+D:\DATA SCIENCE AND ANALYTICS\Dataset\LiTS_canonical\
+|
++-- 00_source_registry\
+|   +-- source_registry.json
+|   +-- source_checksums.sha256
+|   +-- licenses_and_urls.txt
+|
++-- 01_raw_authoritative\
+|   +-- volumes\
+|   +-- segmentations\
+|   +-- README.txt
+|
++-- 02_staging\
+|   +-- images\
+|   +-- liver_masks\
+|   +-- tumor_masks\
+|   +-- staging_manifest.csv
+|
++-- 03_derived_256\
+|   +-- images\
+|   |   +-- v000\s0000.png
+|   |   +-- ...
+|   +-- liver_masks\
+|   |   +-- v000\s0000.png
+|   |   +-- ...
+|   +-- tumor_masks\
+|       +-- v000\s0000.png
+|       +-- ...
+|
++-- 04_manifests\
+|   +-- slice_manifest.csv
+|   +-- volume_manifest.csv
+|   +-- missing_data.csv
+|   +-- duplicate_keys.csv
+|   +-- excluded_samples.csv
+|   +-- dataset_version.json
+|   +-- derived_checksums.sha256
+|
++-- 05_splits\
+|   +-- train_volumes.txt
+|   +-- val_volumes.txt
+|   +-- test_volumes.txt
+|   +-- train_slices.csv
+|   +-- val_slices.csv
+|   +-- test_slices.csv
+|   +-- split_hashes.json
+|
++-- 06_audits\
+|   +-- source_inventory.json
+|   +-- integrity_report.json
+|   +-- spatial_audit.json
+|   +-- label_distribution.json
+|   +-- overlays\
+|   +-- positive_cases\
+|   +-- negative_cases\
+|   +-- audit_summary.txt
+|
++-- 07_training_cache\
+|   +-- README.txt
+|
++-- 99_quarantine\
+    +-- legacy_512_manifest.csv
+    +-- unverified_mask_manifest.csv
+    +-- corrupt_files\
+    +-- README.txt
+
+Do not copy or move the current raw folders into this structure until their
+checksums are recorded. source_registry.json may initially reference their
+absolute read-only locations.
+
+
+7. CANONICAL NAMING AND GRAIN
+-----------------------------
+
+Canonical unit of analysis:
+
+One 2D CT slice and its same-source liver and tumor masks.
+
+Canonical primary key:
+
+  (volume_id, slice_index)
+
+Recommended sample ID:
+
+  v{volume_id:03d}_s{slice_index:04d}
+
+Examples:
+
+  v000_s0000
+  v071_s0075
+  v130_s0623
+
+Recommended derived file layout:
+
+  images\v071\s0075.png
+  liver_masks\v071\s0075.png
+  tumor_masks\v071\s0075.png
+
+Rules:
+
+- Parse slice_index from the source filename suffix or paired NIfTI array.
+- Never use instance_number as a key.
+- Keep the original source path in the manifest.
+- Never encode train/validation/test status in the filename.
+- Keep volume grouping explicit so adjacent slices cannot leak across splits.
+
+
+8. REQUIRED SLICE MANIFEST
+---------------------------
+
+Create one row per canonical slice with at least these fields:
+
+- dataset_version
+- sample_id
+- volume_id
+- slice_index
+- source_package
+- source_image_path
+- source_segmentation_path
+- source_liver_mask_path, when using PNG masks
+- source_tumor_mask_path, when using PNG masks
+- derived_image_path
+- derived_liver_mask_path
+- derived_tumor_mask_path
+- source_image_sha256
+- source_segmentation_sha256 or source_mask_sha256
+- derived_image_sha256
+- derived_liver_mask_sha256
+- derived_tumor_mask_sha256
+- source_width
+- source_height
+- derived_width
+- derived_height
+- source_spacing_x, when available
+- source_spacing_y, when available
+- source_spacing_z, when available
+- source_orientation, when available
+- image_min
+- image_max
+- liver_pixels
+- tumor_pixels
+- tumor_present
+- tumor_inside_liver_fraction
+- verification_status
+- exclusion_reason
+- split
+
+Allowed verification_status values:
+
+- verified
+- pending_source
+- pending_spatial_review
+- quarantined
+- excluded_corrupt
+- excluded_duplicate
+- excluded_missing_image
+- excluded_missing_liver_mask
+- excluded_missing_tumor_mask
+
+No training loader may consume rows unless verification_status=verified.
+
+
+9. PHASED DATASET EXECUTION PROCESS
+-----------------------------------
+
+PHASE 0 - Freeze and register current imports
+
+Purpose:
+Preserve evidence before rearranging anything.
+
+Actions:
+
+1. Confirm the three current directories are readable.
+2. Record directory paths, file counts, byte sizes, creation/modification dates,
+   filename patterns, and software environment.
+3. Generate SHA-256 checksums for every source file or, if initially too slow,
+   generate per-volume checksum manifests followed by a complete background
+   checksum pass.
+4. Save source_registry.json and source_checksums.sha256.
+5. Mark the three source folders read-only at the workflow level. Do not rely
+   only on Windows file attributes for protection.
+6. Check available disk space before downloading or deriving another copy.
+7. Do not delete duplicates to save space until the canonical dataset passes.
+
+Required outputs:
+
+- source_inventory.json
+- source_registry.json
+- source_checksums.sha256
+- initial_key_inventory.csv
+- initial_audit_summary.txt
+
+Promotion gate:
+
+All source paths and counts are recorded and reproducible.
+
+
+PHASE 1 - Recover the complete authoritative source
+
+Actions:
+
+1. Prefer official LiTS NIfTI volume/segmentation pairs.
+2. Otherwise obtain a complete fresh lits-png extraction.
+3. Verify archive/file checksums when the publisher provides them.
+4. Store the source name, version, download date, URL, license, and checksum.
+5. Confirm 131 volumes before conversion.
+6. Confirm every CT volume has exactly one matching segmentation volume.
+7. Keep downloads and extraction separate from the existing folders.
+
+Missing-source policy:
+
+- If any authoritative volume or segmentation is missing, stop.
+- Do not substitute the legacy 512x512 images.
+- Do not mix a segmentation from another conversion.
+- Record the missing item in missing_data.csv.
+
+Required outputs:
+
+- authoritative_source_inventory.json
+- missing_source_files.csv
+- source_pairing_report.csv
+- authoritative_checksums.sha256
+
+Promotion gate:
+
+All 131 same-source image/segmentation volume pairs are present and unique.
+
+
+PHASE 2 - Perform a dry-run conversion
+
+Actions:
+
+1. Implement conversion as a deterministic tool with --dry-run and --output-dir.
+2. Select a small set of volumes covering:
+   - a small volume
+   - a large volume with more than 256 slices
+   - tumor-positive and tumor-negative volumes
+   - volumes from the currently verified mask subset
+   - volumes implicated in the failed visual overlays
+3. Load image and segmentation together.
+4. Apply one shared orientation transform.
+5. Export images and masks from the same array index.
+6. Derive liver and tumor labels using documented rules.
+7. Store masks as lossless binary PNGs.
+8. Produce side-by-side and overlay images.
+9. Compare newly derived lesion masks against the 15,817 byte-verified masks
+   after accounting for the chosen storage encoding.
+
+Required outputs:
+
+- dry_run_manifest.csv
+- dry_run_integrity_report.json
+- dry_run_overlays\
+- conversion_profile.json
+- known_subset_comparison.csv
+
+Promotion gate:
+
+- No missing dry-run triplets.
+- Tumor is contained within liver.
+- Orientation and slice progression are visually correct.
+- Known-source masks agree with the established subset.
+
+
+PHASE 3 - Build the full staging dataset
+
+Actions:
+
+1. Convert all 131 volumes into 02_staging.
+2. Write each image, liver mask, and tumor mask atomically.
+3. Never overwrite an existing staging file silently.
+4. Write manifest rows only after all three files for a slice are valid.
+5. Record failures with their exact reason.
+6. Preserve raw source paths and checksums.
+7. Do not assign train/validation/test during conversion.
+
+Required outputs:
+
+- staging_manifest.csv
+- conversion_failures.csv
+- staging_checksums.sha256
+- volume_conversion_summary.csv
+
+Promotion gate:
+
+Every expected slice is either a valid triplet or an explicitly recorded
+blocking failure. The preferred gate is zero failures.
+
+
+PHASE 4 - Run complete automatic validation
+
+Required checks:
+
+1. Completeness
+   - expected volumes: 131
+   - expected slices: 58,638, if the authoritative source reproduces the current
+     export exactly
+   - one image, liver mask, and tumor mask per key
+
+2. Uniqueness
+   - no duplicate sample_id
+   - no duplicate (volume_id, slice_index)
+   - no unexpected duplicate source paths
+
+3. Continuity
+   - slice index starts at 0 for each derived volume
+   - no internal gaps
+   - identical image/liver/tumor key sets
+
+4. Geometry
+   - source CT and segmentation geometry agree
+   - derived triplet dimensions agree
+   - all derived images and masks are 256x256
+   - masks are resized using nearest-neighbour only
+
+5. Label validity
+   - derived liver and tumor masks are binary
+   - no NaN or invalid values
+   - tumor is a subset of liver
+   - empty tumor masks remain valid negative slices
+
+6. Image validity
+   - no unreadable or truncated files
+   - no unexpected all-black/non-anatomical images
+   - intensity profile recorded, not silently modified
+
+7. Distribution
+   - positive slices by volume
+   - tumor pixels by slice and volume
+   - liver pixels by slice and volume
+   - foreground prevalence
+   - zero-tumor volumes
+   - outliers investigated rather than automatically deleted
+
+8. Provenance
+   - every derived file links to source and checksum
+   - conversion profile has a stable hash
+   - code commit and environment versions recorded
+
+Important expected comparison values from the existing tumor masks:
+
+- 58,638 slices
+- 7,114 positive slices
+- 51,524 empty tumor slices
+- 4,489,160 positive pixels at native 256x256 mask resolution
+
+These are comparison references, not values to force. If an authoritative
+NIfTI reconstruction differs, investigate orientation, label derivation,
+slice inclusion, and export rules. Do not modify the new data merely to match
+historical counts.
+
+Required outputs:
+
+- integrity_report.json
+- key_reconciliation.csv
+- duplicate_keys.csv
+- missing_data.csv
+- corrupt_files.csv
+- geometry_report.csv
+- label_distribution.json
+- slice_manifest.csv
+- volume_manifest.csv
+
+Promotion gate:
+
+All critical checks pass with zero unexplained exceptions.
+
+
+PHASE 5 - Run spatial and manual visual validation
+
+Automatic filename and count checks cannot replace this phase.
+
+Overlay design:
+
+- CT image in grayscale
+- liver boundary in one color
+- tumor boundary in a second color
+- titles include sample_id, volume, slice, tumor pixels, and source
+- do not use only tumor masks; liver context is required
+
+Sampling requirements:
+
+- include every volume in the audit
+- for tumor-positive volumes, show at least:
+  - largest tumor slice
+  - median tumor slice
+  - smallest nontrivial tumor slice
+- include representative negative slices
+- include first/middle/last anatomical progression checks
+- specifically include volumes previously shown as suspicious:
+  4, 33, 44, 71, 76, 100, 108, and 116
+- include the known same-source mask volumes 7, 8, 9, and 78 through 99
+
+Review questions:
+
+- Is the liver mask located on the liver?
+- Is every tumor mask contained within the liver mask?
+- Does anatomy progress smoothly between adjacent slices?
+- Is the volume orientation consistent?
+- Do image and mask boundaries share the same field of view?
+- Are suspicious masks explained by genuine multifocal disease, or are they on
+  unrelated organs/background?
+
+Important interpretation:
+
+Tumor masks are not supposed to outline the whole liver. They may identify
+subtle lesions that are difficult to see in the windowed PNG. However, tumor
+masks must still remain inside the liver region and share the same spatial
+coordinate system.
+
+Required outputs:
+
+- spatial_audit.json
+- spatial_review.csv
+- overlays\volume_XXX\...
+- spatial_audit_summary.txt
+
+Promotion gate:
+
+Every volume is approved or explicitly blocked. There must be no unexplained
+systematic shift, rotation, slice offset, patient mismatch, or field-of-view
+mismatch.
+
+
+PHASE 6 - Promote staging to a versioned canonical dataset
+
+Actions:
+
+1. Assign a dataset version, for example:
+   lits-canonical-v1.0.0
+2. Freeze conversion_profile.json.
+3. Generate final derived checksums.
+4. Copy or move only verified staging files into 03_derived_256 using an atomic,
+   restartable process.
+5. Mark staging failures as quarantined rather than deleting evidence.
+6. Write dataset_version.json with:
+   - version
+   - creation timestamp
+   - source version/checksum
+   - conversion code commit
+   - preprocessing profile hash
+   - slice manifest hash
+   - volume manifest hash
+   - known limitations
+
+Required outputs:
+
+- dataset_version.json
+- derived_checksums.sha256
+- final slice_manifest.csv
+- final volume_manifest.csv
+- dataset_card.txt
+
+Promotion gate:
+
+The canonical dataset is immutable, versioned, and reproducible from recorded
+source plus conversion code.
+
+
+10. MISSING-DATA AND EXCLUSION POLICY
+-------------------------------------
+
+10.1 Valid empty tumor mask
+
+Definition:
+A tumor-mask file exists, is readable, has correct geometry, and contains zero
+positive pixels.
+
+Action:
+Keep it. This is a valid negative training/evaluation slice.
+
+
+10.2 Missing tumor-mask file
+
+Definition:
+The expected tumor-mask file is absent.
+
+Action:
+
+- Mark excluded_missing_tumor_mask.
+- Add the key and reason to missing_data.csv.
+- Do not create an empty mask.
+- Do not include in training, validation, or test.
+- Prefer blocking the entire canonical build until the authoritative source is
+  recovered.
+
+
+10.3 Missing liver-mask file
+
+Action:
+
+- Mark excluded_missing_liver_mask.
+- Do not use the slice for tumor training because spatial containment cannot be
+  validated under this workflow.
+- Recover the correct source rather than copying a neighboring mask.
+
+
+10.4 Missing image file
+
+Action:
+
+- Mark excluded_missing_image.
+- Do not retain orphan masks as training samples.
+- Investigate archive/extraction completeness.
+
+
+10.5 Corrupt or unreadable files
+
+Action:
+
+- Record original path, checksum if readable, exception, and key.
+- Copy to 99_quarantine only after source registry/checksum capture.
+- Re-extract from the authoritative archive.
+- Do not repair pixels manually.
+
+
+10.6 Duplicate key
+
+Action:
+
+- Compare checksums and provenance.
+- Identical duplicates: retain one canonical record and document all aliases.
+- Different-content duplicates: block the volume until source lineage resolves
+  which record is authoritative.
+- Never choose the newest file automatically.
+
+
+10.7 Geometry mismatch
+
+Action:
+
+- Stop processing that volume.
+- Compare affine, spacing, orientation, dimensions, and slice count.
+- Re-export image and masks together.
+- Do not independently resize or rotate only the mask.
+
+
+10.8 Outlier masks
+
+Large, tiny, fragmented, or multifocal masks are not automatically errors.
+Flag them for review using robust volume/slice distributions. Exclude only when
+there is documented corruption or misregistration.
+
+
+11. CANONICAL PREPROCESSING POLICY
+----------------------------------
+
+11.1 If source is official NIfTI
+
+- Preserve original NIfTI files unchanged.
+- Record spacing, affine, orientation, and intensity units.
+- Apply any canonical orientation to image and segmentation together.
+- Derive a documented 256x256 training representation.
+- If an HU window is used, define it explicitly and store it in the conversion
+  profile.
+- Never overwrite raw NIfTI data with windowed arrays.
+
+11.2 If source is PNG
+
+- Treat PNG intensities as already windowed display values.
+- Do not apply simulated HU conversion.
+- Do not claim that 0-255 PNG values are calibrated Hounsfield units.
+- Use grayscale 256x256 training images.
+- Keep no-HU and no-CLAHE as the initial canonical baseline profile.
+
+11.3 Mask handling
+
+- Use nearest-neighbour interpolation only.
+- Store masks losslessly.
+- Recommended on-disk derived representation: uint8 values 0 and 255.
+- Convert to float/binary 0 and 1 in memory.
+- Threshold source 0/1 masks using value greater than zero.
+- Never use bilinear or bicubic interpolation for labels.
+
+11.4 Training-time augmentation
+
+Apply only to training data and synchronously to image and mask:
+
+- horizontal flip
+- intensity shift plus/minus 0.1 on image only
+
+Do not augment validation or test data.
+
+
+12. SPLIT DESIGN AND MANAGEMENT
+-------------------------------
+
+Canonical research split:
+
+- Train volumes: 0 through 103
+- Validation volumes: 104 through 116
+- Test volumes: 117 through 130
+- Expected volume counts: 104 train, 13 validation, 14 test
+
+Rules:
+
+1. Split by volume, never by slice.
+2. Every slice from a volume belongs to exactly one split.
+3. No overlap between train, validation, and test volume IDs.
+4. Create splits only after the canonical dataset passes integrity and spatial
+   validation.
+5. Generate train/val/test slice CSVs from the locked volume lists and final
+   slice manifest.
+6. Store SHA-256 hashes for all split files.
+7. Record dataset_version and manifest hash in split_hashes.json.
+8. Training may read train and validation only.
+9. Threshold selection may read validation only.
+10. Test remains inaccessible until model, checkpoint, preprocessing, and
+    threshold decisions are locked.
+11. Dataset-level integrity checks may validate test file existence, geometry,
+    labels, and provenance before model development. Do not inspect test model
+    performance or use test difficulty to change the configuration.
+
+Expected historical slice counts for comparison:
+
+- Train: 40,667
+- Validation: 10,685
+- Test: 7,286
+- Total: 58,638
+
+If a newly reconstructed authoritative dataset produces different counts, stop
+and reconcile the source/export rules before accepting new split hashes.
+
+Distribution reporting required for each split:
+
+- volumes
+- total slices
+- tumor-positive slices
+- positive-slice rate
+- tumor pixels
+- foreground prevalence
+- zero-tumor volumes
+- per-volume tumor burden
+- image intensity summary
+- excluded/missing samples
+
+Historical comparison values:
+
+- Positive slice rate: approximately 12.0% train, 9.7% validation, 16.4% test
+- The test split has higher tumor burden than train and validation.
+
+This distribution shift must be disclosed in future research reports.
+
+
+13. DATA LOADER REQUIREMENTS
+----------------------------
+
+The canonical data loader must consume slice_manifest.csv or split-specific
+slice CSVs rather than globbing unrelated folders and replacing filename
+prefixes.
+
+Required loader behavior:
+
+- Read only verification_status=verified rows.
+- Enforce the requested split.
+- Assert image, liver mask, and tumor mask exist.
+- Assert matching sample IDs and geometry.
+- Load grayscale image as one channel.
+- Convert tumor mask to binary using value greater than zero.
+- Optionally load liver mask for QA or liver-aware sampling.
+- Do not apply HU transformation to already windowed PNGs.
+- Resize labels with nearest-neighbour only.
+- Apply synchronized spatial augmentation.
+- Return volume_id, slice_index, and sample_id for evaluation aggregation.
+- Fail loudly on missing or duplicate samples.
+- Never silently skip a broken row.
+
+Required tests:
+
+- filename and manifest parsing
+- instance_number wrap regression
+- unique primary keys
+- missing file behavior
+- valid empty masks
+- binary conversion for masks stored as 0/1 and 0/255
+- image/mask alignment after resizing
+- synchronized augmentation
+- train/validation/test isolation
+- deterministic seed behavior
+- per-volume grouping
+
+
+14. REQUIRED AUDIT AND BUILD TOOLS
+----------------------------------
+
+The following command names are proposed interfaces. They may not exist yet.
+A future chat must inspect the repository before claiming they are available.
+
+Proposed tools:
+
+1. tools/audit_dataset_sources.py
+
+Purpose:
+Read-only inventory, key reconciliation, geometry sampling, manifest checks,
+and source equivalence.
+
+Required options:
+
+  --candidate-images
+  --legacy-images
+  --masks
+  --lits-csv
+  --output-dir
+  --full-checksums
+
+
+2. tools/build_canonical_dataset.py
+
+Purpose:
+Convert same-source NIfTI or complete PNG triplets into the target structure.
+
+Required options:
+
+  --source-dir
+  --source-type nifti|lits-png
+  --output-dir
+  --dry-run
+  --overwrite false
+  --resume
+
+
+3. tools/validate_canonical_dataset.py
+
+Purpose:
+Run all completeness, uniqueness, geometry, label, containment, corruption,
+distribution, and provenance gates.
+
+Required options:
+
+  --dataset-dir
+  --manifest
+  --output-dir
+  --strict
+
+
+4. tools/generate_spatial_audit.py
+
+Purpose:
+Generate liver/tumor overlays and per-volume review sheets.
+
+Required options:
+
+  --manifest
+  --output-dir
+  --all-volumes
+  --include-suspicious-volumes
+
+
+5. tools/create_splits.py
+
+Purpose:
+Generate volume-wise split lists, slice manifests, and hashes from the verified
+canonical manifest.
+
+Required options:
+
+  --manifest
+  --train-volumes 0-103
+  --val-volumes 104-116
+  --test-volumes 117-130
+  --output-dir
+
+
+All data-writing tools must support:
+
+- dry-run
+- explicit output directory
+- restart/resume
+- no silent overwrite
+- structured JSON/CSV reports
+- nonzero exit code on failed gates
+- deterministic processing
+- clear progress messages
+
+
+15. HOW TO OBTAIN AND REVIEW THE REQUIRED OUTPUTS
+-------------------------------------------------
+
+Step 1:
+Run the read-only source audit tool after it is implemented. It should create a
+new timestamped output directory under Practice, for example:
+
+  Practice\dataset_audit\2026-07-12_190000\
+
+Review first:
+
+- audit_summary.txt
+- source_inventory.json
+- key_reconciliation.csv
+- missing_data.csv
+- source_pairing_report.csv
+
+Step 2:
+Run canonical conversion with --dry-run. Review:
+
+- dry_run_manifest.csv
+- dry_run_integrity_report.json
+- dry_run_overlays
+- conversion_profile.json
+
+Do not start the full build until the dry-run overlay is approved.
+
+Step 3:
+Run the full canonical build and strict validator. Review:
+
+- integrity_report.json
+- slice_manifest.csv
+- volume_manifest.csv
+- geometry_report.csv
+- label_distribution.json
+- corrupt_files.csv
+- missing_data.csv
+
+Step 4:
+Open the per-volume overlays. Record approval in spatial_review.csv. Do not edit
+VISUAL_ALIGNMENT_APPROVED or an equivalent global flag until every systematic
+issue is resolved.
+
+Step 5:
+Generate split files and verify split_hashes.json. Confirm:
+
+- 104/13/14 volumes
+- expected slice counts
+- zero overlap
+- total equals canonical manifest
+- hashes recorded
+
+Step 6:
+Share the small JSON, CSV, and TXT files with Codex. Large image folders and
+checkpoints do not need to be shared unless visual or loading diagnosis is
+required.
+
+
+16. TRAINING PROMOTION ORDER AFTER DATASET APPROVAL
+---------------------------------------------------
+
+Gate 1 - small overfit sanity
+
+- Select 16 verified tumor-positive slices from training volumes only.
+- Use the canonical MobileNetV2-U-Net and Focal-Dice implementation.
+- Require training micro Dice of at least 0.80.
+- Inspect predictions visually.
+- Failure means loader, label, loss, normalization, or architecture debugging.
+- Do not proceed to full training after an overfit failure.
+
+Gate 2 - synthetic integration smoke test
+
+- One epoch
+- Checkpoint save/reload
+- Deterministic evaluation
+- Report generation
+- Resume behavior
+
+Gate 3 - corrected baseline through epoch 5
+
+- MobileNetV2-U-Net with pretrained encoder
+- 256x256 grayscale
+- verified tumor masks
+- no simulated HU transformation
+- no CLAHE
+- Focal-Dice alpha 0.75, gamma 2.0
+- tumor-positive sampler weight 3
+- batch size 4
+- mixed precision
+- zero DataLoader workers
+- seed 42
+- horizontal flip and intensity shift on training only
+- select best checkpoint using validation positive-volume Dice
+
+Gate 4 - validation promotion
+
+Promote to epoch 10 only if validation evidence is credible and improving. Use
+the previously defined baseline sanity criteria:
+
+- AUPRC greater than at least 2 times foreground prevalence
+- positive-slice Dice greater than 0.10
+- precision greater than 0.10
+- recall not zero and not effectively one
+- predicted foreground fraction between 0.25 and 4 times true fraction
+
+Gate 5 - controlled candidate comparison
+
+Only after the corrected baseline passes:
+
+- MobileNetV2-U-Net plus Focal-Dice
+- FAUP-Net plus Focal-Dice
+- FAUP-Net plus UWACL-v2
+
+Keep data, augmentation, seed, epoch target, checkpoint selection, and threshold
+selection identical.
+
+Gate 6 - one-time held-out test
+
+Evaluate each locked promoted model once. Do not use test outcomes to modify the
+threshold, loss, sampler, preprocessing, or architecture.
+
+
+17. DATASET VERSIONING AND REPRODUCIBILITY
+------------------------------------------
+
+Every experiment must record:
+
+- dataset version
+- slice manifest hash
+- volume manifest hash
+- split file hashes
+- source registry hash
+- conversion profile hash
+- preprocessing profile
+- model config hash
+- checkpoint hash
+- Git commit
+- Python version
+- PyTorch/CUDA versions
+- seed
+- start/end/runtime
+
+Never report results only as a checkpoint filename. Results without dataset and
+split hashes are not comparable.
+
+When the dataset changes:
+
+- create a new semantic version
+- do not overwrite the previous canonical version
+- regenerate manifests, checksums, audits, and split hashes
+- mark older checkpoints with their original dataset version
+- never evaluate an old checkpoint against a new preprocessing/dataset version
+  without explicitly labeling it as a compatibility experiment
+
+
+18. WHAT MUST NOT BE DONE
+-------------------------
+
+- Do not train on current pairs simply because all 58,638 filenames match.
+- Do not use Liver Img Dataset as the corrected segmentation image source.
+- Do not use instance_number as slice_index.
+- Do not treat tumor_mask_empty=False as tumor present.
+- Do not use lits_train.csv/lits_test.csv as the canonical research split.
+- Do not replace missing masks with zeros.
+- Do not interpolate masks with bilinear/bicubic methods.
+- Do not use PNG intensity values as calibrated HU.
+- Do not apply independent image and mask orientation transforms.
+- Do not choose transformations by optimizing model performance.
+- Do not inspect test performance during development.
+- Do not delete old data/checkpoints before provenance is captured.
+- Do not make publication or significance claims from a one-seed sprint.
+
+
+19. OPEN QUESTIONS THAT MUST BE RESOLVED
+----------------------------------------
+
+1. Where are the missing 42,821 original lits-png lesion masks and 42,770 liver
+   masks?
+2. Was LiTS_masks copied from a once-complete lits-png extraction, or assembled
+   from another export?
+3. Is the complete official LiTS NIfTI source available locally or downloadable
+   under the applicable license?
+4. What exact conversion created Liver Img Dataset, and was it originally built
+   for classification rather than segmentation?
+5. Is there enough free disk space for raw authoritative data plus a complete
+   derived canonical copy?
+6. Do newly reconstructed NIfTI masks reproduce the historical 7,114 positive
+   slices and 4,489,160 positive pixels? If not, why?
+7. Do the previously suspicious volumes align after same-source reconstruction?
+
+
+20. NEXT CHAT STARTING TASK
+---------------------------
+
+The next chat should be asked to perform this bounded task first:
+
+"Read Practice/dataset summary.txt completely. Do not train. Implement a
+read-only tools/audit_dataset_sources.py with tests. It must inventory the three
+current dataset directories, parse canonical keys from filenames rather than
+instance_number, compare the available embedded lits-png masks against
+LiTS_masks, detect missing/duplicate/corrupt files, produce source_inventory,
+key_reconciliation, missing-data, and source-pairing reports in a timestamped
+Practice/dataset_audit directory, and exit nonzero on critical integrity
+failures. Do not move or modify dataset files."
+
+After that audit is reviewed, the next separate task is authoritative source
+recovery and dry-run canonical conversion. Training is a later task.
+
+
+21. FINAL GO/NO-GO RULE
+-----------------------
+
+GO for training only when:
+
+- one authoritative source is established
+- 131 complete same-source volumes are present
+- canonical triplet keys are complete and unique
+- image/liver/tumor geometry matches
+- tumor is contained within liver
+- automatic validation passes
+- every volume passes spatial review
+- canonical manifests and checksums are frozen
+- volume-wise split files and hashes are locked
+- 16-slice overfit Dice reaches at least 0.80
+
+Otherwise the decision is NO-GO. Continue dataset/source diagnosis rather than
+architecture expansion.
+
+
+END OF DATASET HANDOFF
+======================

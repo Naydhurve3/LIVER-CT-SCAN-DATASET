@@ -1,0 +1,11 @@
+requirement,passed
+signed Step 14 conversion pass,True
+complete 20-case cohort,True
+15 positive and 5 negative patients,True
+all normalized paths exist,True
+three checkpoint hashes match,True
+policy and acceptance contract saved,True
+train-only strata frozen,True
+no model inference in Step 15,True
+no local LiTS test access,True
+one-time execution authorization still required,True

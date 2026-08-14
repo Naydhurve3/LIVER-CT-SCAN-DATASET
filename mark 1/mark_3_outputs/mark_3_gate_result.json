@@ -1,0 +1,25 @@
+{
+  "status": "mark_3_overfit_pass",
+  "training_roi_gate_passed": true,
+  "overfit_gate_passed": true,
+  "geometry_gate_passed": true,
+  "selected_configuration": {
+    "configuration": "broad_1ch",
+    "channels": 1,
+    "epochs_completed": 17,
+    "best_hard_micro_dice": 0.9005570034263234,
+    "final_hard_micro_dice": 0.9005570034263234,
+    "positive_predicted_empty_pct": 0.0,
+    "passed": true
+  },
+  "selected_channels": [
+    "broad"
+  ],
+  "minimum_training_tumor_containment": 1.0,
+  "minimum_roundtrip_dice": 1.0,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "source_checkpoint_sha256": "9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223",
+  "test_images_accessed": false,
+  "decision": "PROCEED_TO_3_TO_5_EPOCH_TWO_STAGE_VALIDATION_SMOKE",
+  "next_notebook": "mark_4_two_stage_validation_smoke"
+}

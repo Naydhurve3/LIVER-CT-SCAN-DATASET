@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-08-05T12:58:34.392394+00:00",
+  "input_manuscript": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1 (part 2)\\step_09_internal_peer_review_and_claim_consistency\\outputs\\PAPER_DRAFT_SCIENTIFICALLY_REVISED.md",
+  "input_manuscript_sha256": "9f1e73d2e444b5445b0084f4d671d808461c070b88cb086c597702ae94aab4f5",
+  "input_step09_gate_sha256": "0912c6abc9353e740a5ec0bfb6ce1416216451db4f0e8185e978d9450463c56f",
+  "input_step09_signature_sha256": "5892272a75c65fb5e131d9a297aec66887572413c3236728ae4754da428a4f0f",
+  "literature_snapshot_date": "2026-08-05",
+  "literature_source_count": 13,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "phase": "step_10_related_work_evidence_and_comparability",
+  "result_level": "RELATED_WORK_EVIDENCE_COMPLETE",
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "test_images_accessed": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

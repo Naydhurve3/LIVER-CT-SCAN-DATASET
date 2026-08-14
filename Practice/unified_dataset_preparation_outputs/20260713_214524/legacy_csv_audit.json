@@ -1,0 +1,8 @@
+{
+  "rows": 58638,
+  "unique_filepath_keys": 58638,
+  "wrapped_instance_rows": 30105,
+  "instance_mod256_matches": 58638,
+  "liver_present_rows": 19143,
+  "tumor_present_rows": 7114
+}

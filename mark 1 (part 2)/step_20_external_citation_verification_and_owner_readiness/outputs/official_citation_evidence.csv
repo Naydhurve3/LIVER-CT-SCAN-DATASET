@@ -1,0 +1,7 @@
+item,official_evidence,status,source,access_date
+dataset identity,3D-IRCADb-01,verified,https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/,2026-08-06
+cohort size,"20 different patients (10 women, 10 men)",verified,https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/,2026-08-06
+tumour prevalence,hepatic tumours in 75% of cases,verified,https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/,2026-08-06
+licence,CC BY-NC-ND 4.0 International,verified,https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/,2026-08-06
+citation,3D image reconstruction for comparison of algorithm database: A patient specific anatomical and medical image database; IRCAD technical report (2010),verified,https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/,2026-08-06
+DOI,none supplied on official page,not_applicable_not_invented,https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/,2026-08-06

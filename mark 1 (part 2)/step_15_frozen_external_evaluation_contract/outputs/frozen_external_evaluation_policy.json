@@ -1,0 +1,117 @@
+{
+  "execution": {
+    "authorization_required": true,
+    "batch_size": 24,
+    "expected_authorization_text": "I authorize the one-time Step 16 3D-IRCADb-01 external evaluation under the frozen Step 15 contract.",
+    "mode": "one_time_external_evaluation",
+    "no_result_driven_changes": [
+      "threshold tuning",
+      "threshold sweeps",
+      "checkpoint selection",
+      "fusion changes",
+      "post-processing changes",
+      "case exclusion",
+      "retraining"
+    ],
+    "num_workers": 0,
+    "random_seed": 42,
+    "technical_failure_rule": "rerun only if ledger proves no complete metric result was produced; record repair and reuse preserved probability files only after integrity verification"
+  },
+  "frozen_utc": "2026-08-05T14:29:30.322697+00:00",
+  "metrics": {
+    "bootstrap": {
+      "iterations": 10000,
+      "seed": 42,
+      "unit": "tumour-positive patient"
+    },
+    "dice": "(2*intersection+epsilon)/(truth_pixels+predicted_pixels+epsilon)",
+    "empty_truth": "reported separately and excluded from positive-patient mean",
+    "epsilon": 1e-06,
+    "primary": "mean patient Dice over all 15 tumour-positive patients",
+    "q1_positive_slice": "1 to 51 truth pixels inclusive on standardized full 256x256 grid; threshold derived from LiTS train only",
+    "subgroups": {
+      "contrast": "tumour_minus_liver_hu",
+      "geometry": "slice spacing and in-plane spacing",
+      "lesion_proxy_edges_ml": [
+        -Infinity,
+        0.1734589731240447,
+        0.6727467170278852,
+        3.9438243504657855,
+        Infinity
+      ],
+      "patient_burden_edges_ml": [
+        -Infinity,
+        1.9557421551130936,
+        14.323927780151367,
+        42.139110338374046,
+        Infinity
+      ]
+    }
+  },
+  "model": {
+    "architecture": "MobileNetV2UNet",
+    "control_checkpoint": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1\\mark_4_outputs\\mark_4_best.pth",
+    "control_sha256": "9b0c7749af66b0fc3808f6757d0d90af01384e06afe02090361b220df48b6e8b",
+    "recall_checkpoint": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1\\mark_4c_outputs\\recall_loss_best.pth",
+    "recall_sha256": "c01eb4b81e4e7f1d84c7966aca56e738d87d06d404907f0bcc7c67a79ed4ec4d",
+    "roi_checkpoint": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\Practice\\multitask_liver_tumor_outputs\\multitask_best.pth",
+    "roi_sha256": "9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223",
+    "source_path": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\src\\framework\\models\\mobilenetv2_unet.py",
+    "source_sha256": "ce3afb27f841cec237478e598be8ea370a8456f4c4c151c5c10774e280f439e4",
+    "strict_state_loading": true
+  },
+  "prediction": {
+    "fusion": "maximum(control_probability, recall_probability)",
+    "global_threshold": 0.7,
+    "hard_rule": "fused_probability >= 0.70",
+    "inference_dtype": "float32",
+    "post_processing": "none",
+    "probability_cache_dtype": "float16",
+    "score": "sigmoid(logit)"
+  },
+  "preprocessing": {
+    "empty_roi_fallback": "full_image_box_[0,256,0,256]",
+    "external_orientation_transform": "none",
+    "full_grid": [
+      256,
+      256
+    ],
+    "full_slice_image_resize": "PIL bilinear to 256x256",
+    "full_slice_mask_resize": "PIL nearest to 256x256",
+    "hu_clip": [
+      -160,
+      240
+    ],
+    "inverse_mapping": "bilinear probability resize into frozen full-grid ROI box",
+    "normalized_input": "Step 14 NIfTI ct_hu/liver_mask/tumour_mask",
+    "roi_component": "largest 3D, connectivity 26",
+    "roi_generator_input": "broad uint8/255 then per-slice positive-pixel median and IQR/1.349 robust z; fallback whole slice; clip [-3,3], map [0,1]",
+    "roi_liver_score": "sigmoid(logit)[:,0]",
+    "roi_liver_threshold": 0.5,
+    "roi_padding_pixels_on_256_grid": 16,
+    "slice_array_rule": "volume[:,:,z]",
+    "truth_crop_resize": "nearest mask to 256x256",
+    "tumour_crop_resize": "bilinear image to 256x256",
+    "uint8_rule": "rint((clip(HU,-160,240)+160)/400*255)"
+  },
+  "safety": {
+    "local_lits_test_access_allowed": false,
+    "local_lits_test_accessed": false,
+    "model_inference_performed_in_step15": false
+  },
+  "schema_version": "1.0",
+  "source": {
+    "all_cases_included": true,
+    "archive_set_sha256": "55cd6722da6c02f8365ab566603db116128e0d854782d2a174b85056f4a5ba96",
+    "cohort_registry": "external_cohort_registry.csv",
+    "dataset": "3D-IRCADb-01",
+    "license": "CC BY-NC-ND 4.0",
+    "patients": 20,
+    "redistribution_authorized": false,
+    "step14_combined_sha256": "a023b54f4b93ca935162824b6e51d3e70a405383ae38ba5b89c675a24839dc90",
+    "step14_signature_sha256": "957019b63982d4661c9a3d735afb283f55e41bbb15e7df1ac92ba28e05cd6d60",
+    "tumour_negative_patients": 5,
+    "tumour_positive_patients": 15
+  },
+  "status": "FROZEN_AWAITING_EXPLICIT_ONE_TIME_AUTHORIZATION"
+}

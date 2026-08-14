@@ -1,0 +1,6 @@
+{
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "checkpoint_sha256": "5f18223c0f618d45d1433dc4a48d950fdea8a039db9ea557629ffd38fe06270f",
+  "quantization": "round(probability * 255) uint8",
+  "validation_slices": 10685
+}

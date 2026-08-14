@@ -1,0 +1,15 @@
+category,blocker,required_action
+owner input,selected_venue,must exactly match a venue in the verified Step 08 matrix
+owner input,open_access_required,must be explicitly True or False
+owner input,maximum_publication_budget_usd,must be a non-negative number
+owner input,corresponding_author_name,must contain verified non-placeholder text
+owner input,corresponding_author_email,must be a syntactically valid email address
+owner input,authors_and_affiliations,must contain a verified non-placeholder statement of at least 10 characters
+owner input,ethics_or_applicability_statement,must contain a verified non-placeholder statement of at least 10 characters
+owner input,dataset_terms_and_availability_statement,must contain a verified non-placeholder statement of at least 10 characters
+owner input,author_contributions_statement,must contain a verified non-placeholder statement of at least 10 characters
+owner input,conflicts_of_interest_statement,must contain a verified non-placeholder statement of at least 10 characters
+owner input,funding_statement,must contain a verified non-placeholder statement of at least 10 characters
+owner input,code_availability_statement,must contain a verified non-placeholder statement of at least 10 characters
+owner input,data_availability_statement,must contain a verified non-placeholder statement of at least 10 characters
+owner input,owner_certifies_accuracy,must be explicitly True after owner review

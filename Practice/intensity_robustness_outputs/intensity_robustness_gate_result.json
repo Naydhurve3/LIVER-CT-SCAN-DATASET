@@ -1,0 +1,23 @@
+{
+  "status": "intensity_robustness_fail",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "preprocessing_strategy": "organ_robust_zscore_clip3_gamma_noise_v1",
+  "epochs_completed": 10,
+  "best_epoch": 8,
+  "best_global_micro_dice": 0.5461316674679476,
+  "best_mean_patient_dice": 0.4069151209157075,
+  "baseline_mean_patient_dice": 0.3830690071400127,
+  "volume_104_dice": 0.586500198968808,
+  "baseline_volume_104_dice": 0.19761296685971613,
+  "volume_116_dice": 0.02678184205945247,
+  "q1_smallest_detected_pct": 60.07604562737643,
+  "positive_predicted_empty_pct": 8.253358925143955,
+  "empty_slice_false_positive_pct": 47.42300114072384,
+  "mean_patient_improved": true,
+  "volume_104_improved": true,
+  "volume_116_acceptable": false,
+  "q1_detection_acceptable": true,
+  "detection_guardrails_pass": false,
+  "test_images_accessed": false,
+  "decision": "FAIL \u2014 retain the original Focal-Dice baseline and test 2.5D context."
+}

@@ -1,0 +1,5 @@
+priority_rank,dataset,external_independence_0_5,tumour_label_fit_0_5,access_convenience_0_5,format_compatibility_0_5,size_convenience_0_5,terms_clarity_0_5,interpretation,weighted_priority_0_5,independent_tumour_evaluation_eligible
+1,3D-IRCADb-01,5,5,4,3,5,2,priority 1: smallest independent tumour-labelled feasibility dataset,4.25,True
+2,HCC-TACE-Seg,5,5,3,2,2,5,priority 2: high-value larger domain-shift dataset after conversion QC,3.95,True
+3,MSD Task03 Liver,0,5,5,5,4,3,do not use for independent validation because it overlaps LiTS,3.45,False
+4,CHAOS CT,5,0,2,3,4,2,organ-only auxiliary source for liver ROI/domain shift,2.6,False

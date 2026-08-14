@@ -1,0 +1,13 @@
+{
+  "archive_bytes": 820269486,
+  "archive_set_sha256": "55cd6722da6c02f8365ab566603db116128e0d854782d2a174b85056f4a5ba96",
+  "authorization_granted": true,
+  "authorization_recorded_utc": "2026-08-05T13:26:50.2768777+00:00",
+  "authorization_text": "I accept the 3D-IRCADb-01 CC BY-NC-ND 4.0 terms and authorize the Step 13 download and extraction.",
+  "download_enabled": true,
+  "download_started": true,
+  "download_status": "reused_existing_archives",
+  "extract_enabled": true,
+  "extracted_now": false,
+  "user_accepts_terms": true
+}

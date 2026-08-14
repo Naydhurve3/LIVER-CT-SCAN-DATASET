@@ -1,0 +1,8 @@
+{
+  "minimum_tumor_pixel_containment": 1.0,
+  "minimum_positive_slice_containment": 1.0,
+  "empty_training_rois": 0,
+  "median_crop_area_ratio": 0.4204254150390625,
+  "maximum_crop_area_ratio": 0.606201171875,
+  "passed": true
+}

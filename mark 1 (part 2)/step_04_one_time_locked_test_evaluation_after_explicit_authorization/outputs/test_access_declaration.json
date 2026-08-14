@@ -1,0 +1,8 @@
+{
+  "one_time_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "rerun_allowed": false,
+  "test_images_accessed": true,
+  "test_masks_accessed": true,
+  "test_probabilities_computed": true,
+  "test_statistics_computed": true
+}

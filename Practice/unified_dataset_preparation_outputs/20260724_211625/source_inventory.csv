@@ -1,0 +1,6 @@
+source,rows,volumes,duplicate_keys
+LiTS_masks tumor masks,58638,131,0
+lits-png CT,58638,131,0
+lits-png liver masks,15868,25,0
+lits-png tumor masks,15817,25,0
+legacy 512 CT,58638,131,0

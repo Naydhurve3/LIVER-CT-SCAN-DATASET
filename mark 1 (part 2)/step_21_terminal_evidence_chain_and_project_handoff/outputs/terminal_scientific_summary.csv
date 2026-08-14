@@ -1,0 +1,6 @@
+evidence_area,status,key_result,claim_boundary
+authoritative corrected dataset,verified,manifest SHA-256 575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889,patient-disjoint build; historical source remains read-only
+LiTS held-out evaluation,complete_formal_acceptance_failed,global Dice 0.767696; minimum patient Dice 0.000000,no further test reuse or test-driven tuning
+3D-IRCADb-01 external evaluation,separate_frozen_contract_passed,global Dice 0.847977; mean positive-patient Dice 0.711196,"single public cohort; material patient, lesion and negative-control caveats"
+external source citation and licence,verified,Soler2010IRCADb; CC BY-NC-ND 4.0,no redistribution authorization; owner reviews availability language
+manuscript evidence package,complete_with_owner_blockers,citation-patched manuscript and signed evidence package exist,not submission-ready; owner gate closed

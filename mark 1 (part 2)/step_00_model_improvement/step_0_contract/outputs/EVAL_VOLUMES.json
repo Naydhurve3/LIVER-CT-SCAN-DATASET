@@ -1,0 +1,33 @@
+{
+  "description": "One-time internal holdout from the 104 train volumes for a single final evaluation only. Never used for training or validation selection.",
+  "random_seed": 42,
+  "registrar": "step_00_model_improvement",
+  "rerun_allowed": false,
+  "sealed": true,
+  "stratum_large_lesion": [
+    4,
+    100
+  ],
+  "stratum_low_burden": [
+    83,
+    25
+  ],
+  "stratum_v104_analog": [
+    64,
+    90
+  ],
+  "stratum_v116_analog": [
+    84,
+    44
+  ],
+  "volumes": [
+    4,
+    25,
+    44,
+    64,
+    83,
+    84,
+    90,
+    100
+  ]
+}

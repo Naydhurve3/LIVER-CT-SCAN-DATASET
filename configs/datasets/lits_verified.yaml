@@ -1,0 +1,20 @@
+# Verified corrected LiTS dataset for training.
+# Canonical build: build_corrected_20260713_214847_v2 (manifest hash below).
+# Loader validation and the 16-slice overfit gate (hard micro-Dice >= 0.80) passed.
+dataset:
+  name: lits-corrected-v2
+  status: verified_training_ready
+  training_ready: true
+  root_dir: 'D:\DATA SCIENCE AND ANALYTICS\Dataset\Liver\02_staging\build_corrected_20260713_214847_v2'
+  slice_manifest: 'D:\DATA SCIENCE AND ANALYTICS\Dataset\Liver\02_staging\build_corrected_20260713_214847_v2\manifests\slice_manifest.csv'
+  split_dir: 'D:\DATA SCIENCE AND ANALYTICS\Dataset\Liver\02_staging\build_corrected_20260713_214847_v2\splits'
+  manifest_sha256: 575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889
+  preprocessing_profile: HU[-160,240]_bilinear_image_nearest_mask_256
+  counts:
+    volumes: 131
+    slices: 58638
+    organ_positive_slices: 19156
+    tumor_positive_slices: 7169
+    organ_pixels: 87806713
+    tumor_pixels: 4615891
+  test_holdout_sealed: true

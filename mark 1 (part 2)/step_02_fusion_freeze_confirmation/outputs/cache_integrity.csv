@@ -1,0 +1,14 @@
+volume_id,slices,finite,minimum_score,maximum_score,sample_ids_unique,truth_shape_matches,cache_path
+104,781,True,0.00000000,1.00000000,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_104.npz
+105,986,True,0.00000000,1.00000000,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_105.npz
+106,771,True,0.00000000,1.00000000,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_106.npz
+107,771,True,0.00000000,1.00000000,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_107.npz
+108,856,True,0.00000000,1.00000000,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_108.npz
+109,756,True,0.00000000,1.00000000,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_109.npz
+110,816,True,0.00000000,1.00000000,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_110.npz
+111,761,True,0.00000000,1.00000000,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_111.npz
+112,751,True,0.00000000,1.00000000,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_112.npz
+113,836,True,0.00000000,1.00000000,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_113.npz
+114,846,True,0.00000000,1.00000000,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_114.npz
+115,846,True,0.00000000,1.00000000,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_115.npz
+116,908,True,0.00000000,0.99999982,True,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_02_fusion_freeze_confirmation\outputs\probability_cache\volume_116.npz

@@ -1,0 +1,41 @@
+{
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "mark_4d_gate_sha256": "4bf8621b9cb6dc08921f1de72cbbac930347b34bf524d532a37fdff49cea9907",
+  "policies": [
+    "control",
+    "recall_loss",
+    "maximum",
+    "mean",
+    "control75_recall25",
+    "control25_recall75",
+    "geometric_mean"
+  ],
+  "thresholds": [
+    0.05000000074505806,
+    0.10000000149011612,
+    0.15000000596046448,
+    0.20000000298023224,
+    0.25,
+    0.30000001192092896,
+    0.3499999940395355,
+    0.4000000059604645,
+    0.44999998807907104,
+    0.5,
+    0.550000011920929,
+    0.6000000238418579,
+    0.6499999761581421,
+    0.699999988079071
+  ],
+  "positive_patient_definition": [
+    104,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    116
+  ],
+  "test_images_accessed": false
+}

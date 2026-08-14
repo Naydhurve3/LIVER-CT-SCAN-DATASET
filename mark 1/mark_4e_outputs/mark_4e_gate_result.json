@@ -1,0 +1,19 @@
+{
+  "status": "mark_4e_fusion_pass",
+  "selected_policy": "maximum",
+  "selected_threshold": 0.699999988079071,
+  "selected_metrics": {
+    "mean_patient_dice": 0.3770866927494516,
+    "volume_104_dice": 0.11662697526259982,
+    "volume_116_dice": 0.010473553322754188,
+    "q1_detected_pct": 50.57034220532319,
+    "positive_predicted_empty_pct": 27.447216890595012,
+    "empty_slice_false_positive_pct": 5.548065954578451
+  },
+  "targets_passed": 6,
+  "decision": "FREEZE_FUSION_POLICY_AND_THRESHOLD",
+  "next_notebook": "mark_4f_fusion_freeze_and_bounded_confirmation",
+  "metric_definition": "mean Dice over nine tumour-positive validation patients",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "test_images_accessed": false
+}

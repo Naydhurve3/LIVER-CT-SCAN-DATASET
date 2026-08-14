@@ -1,0 +1,52 @@
+{
+  "all_mandatory_targets_passed": true,
+  "decision": "REQUEST_EXPLICIT_ONE_TIME_TEST_AUTHORIZATION",
+  "input_artifact_hashes": {
+    "freeze_signature": "3cb5996b54ff7e4e24a31314f9aeba328f564d31a2160dd488d3fc7a3e35426d",
+    "step01_gate": "fcc1f735a1f10e7c9ac5c94029b513ab498be6f39cf243fa36f4562d358266cb",
+    "step02_gate": "d3dfb86af103e048ece734ac88ffccfeaaaa84a68596ae9f8c1012e2ea72a9c8",
+    "step02_policy": "a7de4cffd425bf0fdfb360f8cfba5fb973623158a546247aa6983a403adaf7a1"
+  },
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "next_step": "step_04_one_time_locked_test_evaluation_after_explicit_authorization",
+  "result_level": "VALIDATION_FREEZE_PASS",
+  "selected_configuration": {
+    "acceptance_contract_sha256": "12e8932d71651fd9247d841a86dfcd0fa80d64d74c4f334e29b113c28213b52d",
+    "fusion": "maximum",
+    "policy_sha256": "52d2df856709254992ab6b59f84a213a0a00f6e67293f66665b6f258d01f2131",
+    "post_processing": "none",
+    "threshold": 0.7
+  },
+  "selected_metrics": {
+    "frozen_artifacts": 38,
+    "prerequisite_gates_passed": 2,
+    "validation_probability_caches": 13,
+    "validation_targets_passed": 6
+  },
+  "status": "final_inference_policy_freeze_complete",
+  "target_passes": {
+    "all_six_validation_targets_passed": true,
+    "artifact_inventory_complete": true,
+    "final_acceptance_declared_before_test": true,
+    "freeze_fields_identical": true,
+    "immutable_hashes_verified": true,
+    "probability_cache_inventory_complete": true,
+    "roi_generator_fully_frozen": true,
+    "step01_gate_passed": true,
+    "step02_validation_freeze_passed": true,
+    "test_lock_intact": true
+  },
+  "targets": {
+    "all_six_validation_targets_passed": true,
+    "artifact_inventory_complete": true,
+    "final_acceptance_declared_before_test": true,
+    "freeze_fields_identical": true,
+    "immutable_hashes_verified": true,
+    "probability_cache_inventory_complete": true,
+    "roi_generator_fully_frozen": true,
+    "step01_gate_passed": true,
+    "step02_validation_freeze_passed": true,
+    "test_lock_intact": true
+  },
+  "test_images_accessed": false
+}

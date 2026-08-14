@@ -1,0 +1,8 @@
+{
+  "expected_patients": 20,
+  "liver_definition": "exact folder liver",
+  "redistribution_authorized": false,
+  "serialization_parity": "exact array equality after NIfTI reload",
+  "source_license": "CC BY-NC-ND 4.0",
+  "tumour_definition": "union of nonzero ^livertumors?\\d*$ folders; excludes adrenal and generic non-liver tumour labels"
+}

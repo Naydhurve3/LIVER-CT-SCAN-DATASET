@@ -1,0 +1,17 @@
+{
+  "status": "context_2_5d_fail",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "input_strategy": "adjacent_slice_previous_current_next_v1",
+  "epochs_completed": 10,
+  "best_epoch": 10,
+  "best_global_micro_dice": 0.553526697298632,
+  "best_mean_patient_dice": 0.355937646103287,
+  "volume_104_dice": 0.0006364543850167582,
+  "volume_116_dice": 0.0009323422010776594,
+  "q1_smallest_detected_pct": 25.475285171102662,
+  "positive_predicted_empty_pct": 42.99424184261037,
+  "empty_slice_false_positive_pct": 2.374779632894328,
+  "all_expected_targets_passed": false,
+  "test_images_accessed": false,
+  "decision": "FAIL \u2014 retain baseline and review the expected-versus-actual gaps."
+}

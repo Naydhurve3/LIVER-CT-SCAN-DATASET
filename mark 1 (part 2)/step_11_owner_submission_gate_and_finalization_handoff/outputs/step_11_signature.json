@@ -1,0 +1,27 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "e31f5ec342f8becab48131f2ddd1a4164f412445a320fac06b68bef668e3788b",
+  "created_utc": "2026-08-06T03:45:06.119714+00:00",
+  "formal_model_acceptance_passed": false,
+  "owner_gate_passed": false,
+  "payment_action_authorized": false,
+  "result_level": "OWNER_INPUT_REQUIRED",
+  "signed_artifacts": {
+    "step_11_owner_submission_gate_and_finalization_handoff/outputs/MANUAL_OWNER_ACTIONS.md": "f45ab8b059ed1369688cd870096ff94a9e6d032eaef774524f1a06aea57c1f71",
+    "step_11_owner_submission_gate_and_finalization_handoff/outputs/OWNER_CONFIRMED_DECLARATIONS.md": "7bf36cf44ba7880d2a5d20eb4d9854d96fb84dd9201d0479194dcab6004efca4",
+    "step_11_owner_submission_gate_and_finalization_handoff/outputs/SELECTED_VENUE_FINALIZATION_HANDOFF.md": "a085248c786da2ab66b3f0a59006eafb9c29fa53ee5ab9f4a4c12e53e6e147fa",
+    "step_11_owner_submission_gate_and_finalization_handoff/outputs/configuration.json": "a998966a988c658ccacb0a1898829b686c0f59be7ea1b81c2fb9a6fb10e7eccb",
+    "step_11_owner_submission_gate_and_finalization_handoff/outputs/expected_vs_actual.csv": "4e250bc1616a569ca7e75bc7f9e8cc7fb9b0ba752bd4db02ae2e4045c8040f84",
+    "step_11_owner_submission_gate_and_finalization_handoff/outputs/gate_result.json": "08312184e8c554b29d40d193d4b89ac5ed92e7563951fff5259ee2663551c38b",
+    "step_11_owner_submission_gate_and_finalization_handoff/outputs/input_verification.csv": "377a8f5689f09f2679eff7fafc6c01364764b442c6c1f6e3e3d78135228fd977",
+    "step_11_owner_submission_gate_and_finalization_handoff/outputs/owner_input_status.csv": "522dd9bf5aa1fe78c290026ba2623429d989c7361ec1e43078c3f85ac42f3b19",
+    "step_11_owner_submission_gate_and_finalization_handoff/outputs/owner_input_template.csv": "e0525fd7016a5f325e6f78c2a6aeaed82f401f34f9a98413f9157bc596bce4e1",
+    "step_11_owner_submission_gate_and_finalization_handoff/outputs/owner_submission_gate_dashboard.png": "05c69795c6a25ddfb8a1eb0c110de7a67439b46948219979da8c956f468249e2",
+    "step_11_owner_submission_gate_and_finalization_handoff/outputs/provenance.json": "4e81f98fa8ef402febb42cc832f48c24bdcc0c4c660cfcb8676190d147bb07b1",
+    "step_11_owner_submission_gate_and_finalization_handoff/outputs/submission_blockers.csv": "95470a0b3642f7365353aacfe7ec4b363495b4c4bb6d0647578119aaf5e17270"
+  },
+  "submission_action_authorized": false,
+  "submission_ready": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

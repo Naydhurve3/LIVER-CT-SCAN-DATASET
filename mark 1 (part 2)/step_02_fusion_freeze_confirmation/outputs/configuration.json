@@ -1,0 +1,132 @@
+{
+  "allowed_splits": [
+    "val"
+  ],
+  "batch_size": 24,
+  "bootstrap": {
+    "iterations": 10000,
+    "seed": 42,
+    "unit": "patient"
+  },
+  "checkpoint_sha256": {
+    "control": "9b0c7749af66b0fc3808f6757d0d90af01384e06afe02090361b220df48b6e8b",
+    "recall_loss": "c01eb4b81e4e7f1d84c7966aca56e738d87d06d404907f0bcc7c67a79ed4ec4d"
+  },
+  "checkpoints": {
+    "control": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1\\mark_4_outputs\\mark_4_best.pth",
+    "recall_loss": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1\\mark_4c_outputs\\recall_loss_best.pth"
+  },
+  "completed_utc": "2026-08-03T09:48:35.994992+00:00",
+  "device": "cuda",
+  "expected_outputs": [
+    "configuration.json",
+    "provenance.json",
+    "checkpoint_hashes.json",
+    "cache_integrity.csv",
+    "fresh_vs_historical_cache_equivalence.csv",
+    "hard_prediction_equivalence.csv",
+    "determinism_check.csv",
+    "runtime_log.csv",
+    "patient_metrics.csv",
+    "slice_metrics.csv",
+    "lesion_or_size_metrics.csv",
+    "size_stratum_metrics.csv",
+    "bootstrap_uncertainty.csv",
+    "threshold_sensitivity.csv",
+    "probability_histograms.csv",
+    "probability_reliability.csv",
+    "selected_gate_table.csv",
+    "expected_vs_actual.csv",
+    "fusion_confirmation_dashboard.png",
+    "selected_policy_patient_heatmap.png",
+    "probability_diagnostics_dashboard.png",
+    "v104_localization.png",
+    "v116_localization.png",
+    "immutable_inference_policy.json",
+    "gate_result.json"
+  ],
+  "full_analysis_executed": true,
+  "fusion": {
+    "equation": "maximum(control_probability, recall_probability)",
+    "policy": "maximum",
+    "weights": null
+  },
+  "input": {
+    "broad_window_hu": [
+      -160,
+      240
+    ],
+    "channels": [
+      "broad"
+    ],
+    "normalization": "uint8/255",
+    "source": "derived 256x256 PNG"
+  },
+  "manifest_path": "D:\\DATA SCIENCE AND ANALYTICS\\Dataset\\Liver\\02_staging\\build_corrected_20260713_214847_v2\\manifests\\slice_manifest.csv",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "metric_epsilon": 1e-06,
+  "mode": "VALIDATION_CONFIRMATION",
+  "model": {
+    "architecture": "MobileNetV2UNet",
+    "input_channels": 1,
+    "output_channels": 1,
+    "strict_state_loading": true
+  },
+  "num_workers": 0,
+  "phase": "step_02_fusion_freeze_confirmation",
+  "positive_patient_definition": [
+    104,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    116
+  ],
+  "post_processing": "none",
+  "q1_positive_slice_pixel_limit": 36.0,
+  "random_seed": 42,
+  "roi": {
+    "component_rule": "largest_3d",
+    "crop_resize": [
+      256,
+      256
+    ],
+    "image_interpolation": "bilinear",
+    "inverse_mapping": "bilinear score resize into frozen full-image box",
+    "padding": 16,
+    "source": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1\\mark_4_outputs\\validation_roi_manifest.csv",
+    "threshold": 0.5
+  },
+  "score": {
+    "definition": "sigmoid(logit)",
+    "dtype_during_inference": "float32",
+    "saved_dtype": "float16"
+  },
+  "sensitivity_thresholds_report_only": [
+    0.65,
+    0.7
+  ],
+  "targets": {
+    "empty_slice_false_positive_pct": 20.0,
+    "mean_patient_dice": 0.3329,
+    "positive_predicted_empty_pct": 35.0,
+    "q1_detected_pct": 35.0,
+    "volume_104_dice": 0.05,
+    "volume_116_dice": 0.01
+  },
+  "test_images_accessed": false,
+  "threshold": 0.7,
+  "tolerances": {
+    "cache_fraction_above_max_abs": 0.0001,
+    "cache_max_abs_diagnostic": 0.0005,
+    "cache_mean_abs": 0.0001,
+    "determinism_max_abs": 1e-06,
+    "hard_prediction_disagreement_fraction": 1e-06,
+    "reference_metric_abs": 0.0005
+  },
+  "validation_rows": 10685,
+  "validation_volumes": 13
+}

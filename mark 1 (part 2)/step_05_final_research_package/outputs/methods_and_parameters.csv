@@ -1,0 +1,22 @@
+section,parameter,value
+dataset,build_id,build_corrected_20260713_214847_v2
+dataset,manifest_sha256,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889
+input,channel,broad_window
+input,hu_window,"[-160,240]"
+input,normalization,uint8/255
+roi,generator_checkpoint_sha256,9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223
+roi,threshold,0.5
+roi,component,largest_3d_26conn
+roi,padding_pixels,16
+roi,empty_fallback,"full_image_box_[0,256,0,256]"
+tumour_model,architecture,MobileNetV2UNet
+tumour_model,control_checkpoint_sha256,9b0c7749af66b0fc3808f6757d0d90af01384e06afe02090361b220df48b6e8b
+tumour_model,recall_checkpoint_sha256,c01eb4b81e4e7f1d84c7966aca56e738d87d06d404907f0bcc7c67a79ed4ec4d
+inference,fusion,"maximum(control_probability,recall_probability)"
+inference,threshold,0.7
+inference,post_processing,none
+metrics,epsilon,1e-06
+metrics,q1_positive_slice_max_pixels_train_only,51
+uncertainty,bootstrap_iterations,10000
+uncertainty,bootstrap_seed,42
+uncertainty,resampling_unit,tumour-positive patient

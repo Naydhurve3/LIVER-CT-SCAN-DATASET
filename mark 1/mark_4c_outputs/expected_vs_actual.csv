@@ -1,0 +1,7 @@
+check,target,direction
+mean_patient_dice,0.3329,>=
+volume_104_dice,0.05,>=
+volume_116_dice,0.01,>=
+q1_detected_pct,35.0,>=
+positive_predicted_empty_pct,35.0,<=
+empty_slice_false_positive_pct,20.0,<=

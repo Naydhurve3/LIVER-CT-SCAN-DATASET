@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-08-06T03:45:06.119714+00:00",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "mode": "artifact_only_owner_gate",
+  "owner_inputs": {
+    "author_contributions_statement": "",
+    "authors_and_affiliations": "",
+    "code_availability_statement": "",
+    "conflicts_of_interest_statement": "",
+    "corresponding_author_email": "",
+    "corresponding_author_name": "",
+    "data_availability_statement": "",
+    "dataset_terms_and_availability_statement": "",
+    "ethics_or_applicability_statement": "",
+    "funding_statement": "",
+    "maximum_publication_budget_usd": null,
+    "open_access_required": null,
+    "owner_certifies_accuracy": null,
+    "selected_venue": ""
+  },
+  "payment_action_authorized": false,
+  "phase": "step_11_owner_submission_gate_and_finalization_handoff",
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "submission_action_authorized": false,
+  "test_access_allowed": false
+}

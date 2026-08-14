@@ -1,0 +1,8 @@
+manuscript_location,evidence_purpose,citation_keys
+Introduction / Related work,cascaded liver-first ROI lineage,Christ2017CFCN;Chlebus2018ObjectPost
+Introduction / Related work,hybrid volumetric context and attention,Li2018HDenseUNet;Jin2020RAUNet;Cicek2016ThreeDUNet;Oktay2018AttentionUNet
+Introduction / Related work,reproducible baseline context,Isensee2021nnUNet
+Introduction / Related work,imbalance-aware optimization,Sudre2017GeneralizedDice
+Introduction / Related work,evaluation and ranking caution,Bilic2023LiTS;MaierHein2018Rankings
+Methods,encoder provenance,Ronneberger2015UNet;Sandler2018MobileNetV2
+Governance,reporting framework,Tejani2024CLAIM

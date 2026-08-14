@@ -1,0 +1,19 @@
+{
+  "authorization_granted": false,
+  "cohort": {
+    "all": 20,
+    "excluded": 0,
+    "tumour_negative": 5,
+    "tumour_positive": 15
+  },
+  "contract_frozen": true,
+  "created_utc": "2026-08-05T14:29:30.960810+00:00",
+  "expected_authorization_text": "I authorize the one-time Step 16 3D-IRCADb-01 external evaluation under the frozen Step 15 contract.",
+  "formal_external_evaluation_performed": false,
+  "inference_performed": false,
+  "local_lits_test_accessed": false,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "next_step": "step_16_one_time_external_evaluation_after_explicit_authorization",
+  "ready_for_explicit_authorization": true,
+  "result_level": "EXTERNAL_EVALUATION_CONTRACT_FROZEN_AWAITING_AUTHORIZATION"
+}

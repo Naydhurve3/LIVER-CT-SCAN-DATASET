@@ -1,0 +1,11 @@
+check,passed,expected
+step01_dataset_gate,True,True
+step02_validation_freeze,True,True
+step03_policy_freeze,True,True
+step04_final_test_complete,True,True
+step04_ledger_complete,True,True
+step04_rerun_prohibited,True,True
+gate_hash_matches_ledger,True,True
+evidence_inventory_hash_matches_signature,True,True
+all_inventory_files_match,True,True
+test_source_files_reopened_false,True,True

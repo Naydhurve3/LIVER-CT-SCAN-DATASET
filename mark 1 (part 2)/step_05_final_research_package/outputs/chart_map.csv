@@ -1,0 +1,4 @@
+report_segment,analytical_question,family,variant,output
+final outcome,patient reliability and formal gate,comparison/distribution,"horizontal bars, normalized bars, grouped bars, scatter",final_outcome_dashboard.png
+generalization,validation versus test descriptive comparison,comparison,four small-multiple bars,validation_to_test_comparison.png
+uncertainty,patient spread and bootstrap interval,distribution/uncertainty,histogram plus point interval,patient_failure_distribution.png

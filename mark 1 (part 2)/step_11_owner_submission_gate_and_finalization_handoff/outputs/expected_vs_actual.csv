@@ -1,0 +1,8 @@
+requirement,expected,actual,passed
+sealed input checks,12,12,True
+owner input fields represented,14,14,True
+owner blockers saved,True,True,True
+manual action pack saved,True,True,True
+formal model failure preserved,False,False,True
+test inference reruns,0,0,True
+test source files reopened,0,0,True

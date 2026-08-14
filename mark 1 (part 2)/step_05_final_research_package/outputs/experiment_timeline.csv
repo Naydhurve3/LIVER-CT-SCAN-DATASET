@@ -1,0 +1,9 @@
+sequence,phase,result_level,decision_or_evidence
+1,Practice correction and loader gates,PIPELINE_VERIFIED,"Corrected manifest, strict loader and overfit evidence established"
+2,Mark 1–4D diagnostics and bounded training,VALIDATION_ONLY,Diagnosed calibration/localization and produced control plus recall checkpoints
+3,Mark 4E fusion selection,TEMPORARY_CONTINUATION_PASS,Selected maximum fusion at threshold 0.70
+4,Part 2 Step 01 dataset characterization,DIAGNOSTIC_COMPLETE,12/12 audit requirements passed; data card and sampling policy frozen
+5,Part 2 Step 02 fusion confirmation,VALIDATION_FREEZE_PASS,Fresh deterministic inference reproduced all six validation targets
+6,Part 2 Step 03 final policy freeze,VALIDATION_FREEZE_PASS,"Policy, acceptance table, ROI generator and artifact chain frozen"
+7,Part 2 Step 04 one-time test evaluation,FINAL_TEST_COMPLETE,Seven of eight final targets passed; catastrophic-patient guardrail failed
+8,Part 2 Step 05 final research package,FINAL_PROJECT_COMPLETE,Report and reproducibility package completed without further test use

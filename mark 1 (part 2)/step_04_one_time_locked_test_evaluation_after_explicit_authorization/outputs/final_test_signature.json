@@ -1,0 +1,11 @@
+{
+  "acceptance_contract_sha256": "12e8932d71651fd9247d841a86dfcd0fa80d64d74c4f334e29b113c28213b52d",
+  "algorithm": "SHA-256",
+  "created_utc": "2026-08-05T11:47:12.607685+00:00",
+  "evidence_inventory_sha256": "9b61a09119128c7b85689762aee51617ee791a2a2b1aafc56adf185dbe6672ab",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "policy_sha256": "52d2df856709254992ab6b59f84a213a0a00f6e67293f66665b6f258d01f2131",
+  "probability_cache_count": 14,
+  "run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "test_images_accessed": true
+}

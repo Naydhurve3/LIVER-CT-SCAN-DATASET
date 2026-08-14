@@ -1,0 +1,8 @@
+{
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "source_checkpoint_sha256": "9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223",
+  "seed": 42,
+  "epochs_per_new_arm": 5,
+  "threshold": 0.5,
+  "test_images_accessed": false
+}

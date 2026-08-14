@@ -1,0 +1,9 @@
+check,passed,observed
+step07_complete,True,MANUSCRIPT_EVIDENCE_SCAFFOLD_COMPLETE
+step07_targets,True,True
+submission_not_ready,True,False
+formal_failure_preserved,True,False
+manifest_hash,True,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889
+test_run_id,True,871d289b-bf6b-4346-978f-2df02ade26ab
+test_rerun_false,True,False
+test_sources_reopened_false,True,False

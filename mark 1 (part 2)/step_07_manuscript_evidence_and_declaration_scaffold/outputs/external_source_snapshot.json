@@ -1,0 +1,36 @@
+{
+  "dataset_terms_note": "Exact terms for the owner's acquired LiTS copy remain owner-verified; no license was inferred.",
+  "dataset_terms_source_verified": false,
+  "network_required_for_notebook_run": false,
+  "sources": [
+    {
+      "doi": "10.1016/j.media.2022.102680",
+      "key": "Bilic2023LiTS",
+      "source_class": "primary benchmark paper",
+      "title": "The Liver Tumor Segmentation Benchmark (LiTS)",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1361841522003085"
+    },
+    {
+      "doi": "10.1007/978-3-319-24574-4_28",
+      "key": "Ronneberger2015UNet",
+      "source_class": "primary architecture paper",
+      "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+      "url": "https://arxiv.org/abs/1505.04597"
+    },
+    {
+      "doi": "10.1109/CVPR.2018.00474",
+      "key": "Sandler2018MobileNetV2",
+      "source_class": "primary architecture paper",
+      "title": "MobileNetV2: Inverted Residuals and Linear Bottlenecks",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Sandler_MobileNetV2_Inverted_Residuals_CVPR_2018_paper"
+    },
+    {
+      "doi": "10.1148/ryai.240300",
+      "key": "Tejani2024CLAIM",
+      "source_class": "primary reporting-guideline article",
+      "title": "Checklist for Artificial Intelligence in Medical Imaging (CLAIM): 2024 Update",
+      "url": "https://pubs.rsna.org/doi/10.1148/ryai.240300"
+    }
+  ],
+  "verified_online_date": "2026-08-05"
+}

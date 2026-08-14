@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-08-06T03:45:06.119714+00:00",
+  "expanded_manuscript_sha256": "9fdb27e48e1e041c82bc3ea44cbdf28791109411d8999db6f707cf4d684d2e80",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "phase": "step_11_owner_submission_gate_and_finalization_handoff",
+  "result_level": "OWNER_INPUT_REQUIRED",
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "step08_gate_sha256": "6bba56fde5686ca1467d2331217b29af28a98d99b53afac600a9f20d03412a3c",
+  "step10_gate_sha256": "1ce2fb1db620c3ef9b984c451fcc276e4ea1f331510606067247671d0d518d8e",
+  "step10_signature_sha256": "32014ddcdb3611a14e07c75c48028f9f0044b2aec7f429e4b888e5f17c9f5127",
+  "test_images_accessed": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

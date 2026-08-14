@@ -1,0 +1,13 @@
+check,passed,observed
+step08_decision_support_complete,True,VENUE_DECISION_SUPPORT_COMPLETE
+step08_owner_gate_unresolved,True,False
+step10_related_work_complete,True,RELATED_WORK_EVIDENCE_COMPLETE
+step10_all_targets_pass,True,True
+formal_failure_preserved,True,False
+manifest_hash,True,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889
+test_run_id,True,871d289b-bf6b-4346-978f-2df02ade26ab
+test_sources_not_reopened,True,False
+test_inference_not_rerun,True,False
+step10_signature_valid,True,16/16
+expanded_manuscript_exists,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_10_related_work_evidence_and_comparability\outputs\PAPER_DRAFT_WITH_EXPANDED_RELATED_WORK.md
+venue_matrix_nonempty,True,5

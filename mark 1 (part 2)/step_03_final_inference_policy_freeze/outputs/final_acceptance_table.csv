@@ -1,0 +1,15 @@
+order,scope,metric,direction,target,mandatory,rationale
+1,validation_prerequisite,mean_positive_patient_dice,>=,0.3329,True,retained temporary patient guardrail
+2,validation_prerequisite,volume_104_dice,>=,0.05,True,validation-only hard-case sentinel
+3,validation_prerequisite,volume_116_dice,>=,0.01,True,validation-only hard-case sentinel
+4,validation_prerequisite,q1_positive_slice_detection_pct,>=,35.0,True,retained small-lesion guardrail
+5,validation_prerequisite,positive_predicted_empty_pct,<=,35.0,True,retained miss-rate guardrail
+6,validation_prerequisite,empty_slice_false_positive_pct,<=,20.0,True,retained false-positive guardrail
+7,final_test,mean_positive_patient_dice,>=,0.3329,True,minimum final patient-level performance
+8,final_test,q1_positive_slice_detection_pct_train_edges,>=,35.0,True,small-lesion sensitivity with frozen train-derived edge
+9,final_test,positive_predicted_empty_pct,<=,35.0,True,positive-slice miss guardrail
+10,final_test,empty_slice_false_positive_pct,<=,20.0,True,empty-slice false-positive guardrail
+11,final_test,minimum_positive_patient_dice,>=,0.01,True,prohibit catastrophic positive-patient failure
+12,final_test_integrity,sample_coverage_fraction,==,1.0,True,complete one-time evaluation
+13,final_test_integrity,finite_probability_fraction,==,1.0,True,numerical integrity
+14,final_test_integrity,unique_sample_id_fraction,==,1.0,True,no duplicated evaluations

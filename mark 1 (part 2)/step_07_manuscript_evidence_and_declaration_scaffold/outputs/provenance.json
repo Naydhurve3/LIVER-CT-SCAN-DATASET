@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-08-05T12:36:22.661954+00:00",
+  "external_sources_verified_online_date": "2026-08-05",
+  "model_or_loader_instantiated": false,
+  "step05_paper_sha256": "d3d23c24a870c16b7e373d00812c7e941437394bf0f63c140242b3d96b9454f3",
+  "step06_gate_sha256": "bbb00cf2f3740b0dc72ff59077a89ee7f9a71238865c885923696e45fb2eff83",
+  "step06_signature_sha256": "9c027b16f9253c2fe5a226a491ca79c52cad73bd0049e95e8d8debd756eb37a5",
+  "test_images_accessed": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

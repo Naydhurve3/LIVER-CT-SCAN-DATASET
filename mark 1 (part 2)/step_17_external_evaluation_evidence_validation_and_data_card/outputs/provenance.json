@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-08-05T15:01:15.250600+00:00",
+  "inference_performed": false,
+  "local_lits_test_accessed": false,
+  "phase": "step_17_external_evaluation_evidence_validation_and_data_card",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+  "step16_signature_sha256": "6fd0390b310254c911f2ed6c3d91aadc4d2482e7fa5162e0fe171eff0686bb73",
+  "tuning_performed": false
+}

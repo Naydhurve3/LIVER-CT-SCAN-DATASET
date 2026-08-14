@@ -1,0 +1,9 @@
+{
+  "authorization_recorded": false,
+  "statement": "Step 03 never opens the test split. Explicit owner authorization is still required for exactly one final evaluation.",
+  "test_images_accessed": false,
+  "test_loader_instantiated": false,
+  "test_masks_accessed": false,
+  "test_probabilities_accessed": false,
+  "test_statistics_computed": false
+}

@@ -1,0 +1,40 @@
+{
+  "caveats": {
+    "negative_patients_total": 5,
+    "negative_patients_with_any_fp": 5,
+    "negative_total_fp_ml": 52.93573938214034,
+    "smallest_lesion_detection_pct": 63.63636363636363,
+    "worst_positive_dice": 0.0129922862310222,
+    "worst_positive_patient": "ircadb_18"
+  },
+  "created_utc": "2026-08-05T15:01:15.250600+00:00",
+  "evidence_validation_passed": true,
+  "headline": {
+    "empty_slice_false_positive_pct": 11.574279379157428,
+    "global_dice": 0.8479770814155181,
+    "mean_dice_ci_95": [
+      0.5678026439203137,
+      0.8278227849113334
+    ],
+    "mean_positive_patient_dice": 0.7111958843137554,
+    "median_positive_patient_dice": 0.8355140187135496,
+    "minimum_positive_patient_dice": 0.0129922862310222,
+    "q1_detection_pct": 50.0
+  },
+  "inference_performed": false,
+  "interpretation": "Formal frozen external gate passed. Evidence supports external generalization on 3D-IRCADb-01, with material patient-level, small-lesion and negative-control caveats.",
+  "local_lits_test_accessed": false,
+  "next_step": "optional_read_only_error_review_or_second_external_dataset_contract; no Step16 tuning or rerun",
+  "prohibited_claims": [
+    "clinical readiness",
+    "universal generalization",
+    "state of the art",
+    "zero false-positive risk"
+  ],
+  "result_level": "EXTERNAL_GENERALIZATION_EVIDENCE_VALIDATED_WITH_CAVEATS",
+  "step16_predeclared_gate_passed": true,
+  "step16_rerun_performed": false,
+  "step16_run_id": "61d1f140-c8b4-436a-928a-1e4b6f7c0b56",
+  "step16_signature_sha256": "6fd0390b310254c911f2ed6c3d91aadc4d2482e7fa5162e0fe171eff0686bb73",
+  "tuning_performed": false
+}

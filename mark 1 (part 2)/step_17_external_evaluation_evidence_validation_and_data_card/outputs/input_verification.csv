@@ -1,0 +1,9 @@
+check,passed
+step16_external_evaluation_complete,True
+step16_ledger_sealed,True
+step16_rerun_prohibited,True
+all_step16_signed_hashes_match,True
+all_evidence_and_cache_hashes_match,True
+twenty_probability_caches,True
+one_time_run_identity,True
+local_lits_test_not_accessed,True

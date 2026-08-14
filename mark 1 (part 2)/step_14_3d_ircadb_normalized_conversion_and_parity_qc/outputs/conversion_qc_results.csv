@@ -1,0 +1,13 @@
+check,required,actual,passed
+signed_step13_prerequisite,True,True,True
+exactly_20_converted_patients,20,20,True
+all_ct_finite,True,True,True
+all_ct_serialization_exact,True,True,True
+all_liver_serialization_exact,True,True,True
+all_tumour_serialization_exact,True,True,True
+all_mask_slices_matched,0,0,True
+all_mask_positions_match_ct,<=0.001 mm,0.0,True
+all_liver_masks_nonempty,20,20,True
+official_tumour_case_count_reconciled,15,15,True
+zero_model_inference_runs,0,0,True
+zero_local_lits_test_accesses,0,0,True

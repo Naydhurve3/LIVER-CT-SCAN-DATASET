@@ -1,0 +1,2 @@
+configuration_mode,tumor_threshold,liver_threshold,dilation_kernel,patients,bootstrap_iterations,mean_dice_p2_5,mean_dice_p50,mean_dice_p97_5,original_median,original_q25,original_q75
+raw,0.699999988079071,,1,9,1000,0.13401430668908426,0.3363425537247204,0.5117022700669469,0.3135493949016889,0.07036144600714181,0.5952754928049709

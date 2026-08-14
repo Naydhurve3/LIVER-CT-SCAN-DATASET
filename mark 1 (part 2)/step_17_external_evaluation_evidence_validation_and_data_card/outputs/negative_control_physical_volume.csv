@@ -1,0 +1,6 @@
+internal_patient_id,predicted_pixels,false_positive_pixels,standardized_voxel_ml,predicted_false_positive_ml,any_false_positive,interpretation_boundary
+ircadb_05,140,140,0.003913753710822022,0.5479255195150831,True,false positive against accepted hepatic-tumour truth; biological meaning unresolved
+ircadb_07,6174,6174,0.003913753710822144,24.16351541061592,True,false positive against accepted hepatic-tumour truth; biological meaning unresolved
+ircadb_11,1,1,0.0033177603131104446,0.0033177603131104446,True,false positive against accepted hepatic-tumour truth; biological meaning unresolved
+ircadb_14,7527,7527,0.0033177603131104446,24.972781876782317,True,false positive against accepted hepatic-tumour truth; biological meaning unresolved
+ircadb_20,621,621,0.00523059390485332,3.248198814913912,True,false positive against accepted hepatic-tumour truth; biological meaning unresolved

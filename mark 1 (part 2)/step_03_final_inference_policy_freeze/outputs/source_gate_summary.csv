@@ -1,0 +1,3 @@
+gate,result_level,passed,test_images_accessed
+step_01_dataset_audit,DIAGNOSTIC_COMPLETE,True,False
+step_02_fusion_confirmation,VALIDATION_FREEZE_PASS,True,False

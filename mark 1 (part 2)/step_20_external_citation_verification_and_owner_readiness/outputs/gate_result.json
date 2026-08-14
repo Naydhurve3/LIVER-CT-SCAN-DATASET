@@ -1,0 +1,23 @@
+{
+  "citation_access_date": "2026-08-06",
+  "citation_key": "Soler2010IRCADb",
+  "citation_source": "https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/",
+  "created_utc": "2026-08-06T03:33:32.709455+00:00",
+  "dataset_download_performed": false,
+  "external_dataset_citation_verified": true,
+  "gate_passed": true,
+  "inference_performed": false,
+  "license": "CC BY-NC-ND 4.0 International",
+  "license_verified": true,
+  "next_step": "owner completes and certifies the 14 Step 11 fields using the verified citation and advisory dataset statements",
+  "owner_fields_complete": 0,
+  "owner_fields_total": 14,
+  "owner_gate_passed": false,
+  "payment_action_performed": false,
+  "result_level": "EXTERNAL_CITATION_VERIFIED_OWNER_DECLARATIONS_REQUIRED",
+  "submission_action_performed": false,
+  "submission_ready": false,
+  "test_images_accessed": false,
+  "test_source_files_reopened": false,
+  "tuning_performed": false
+}

@@ -1,0 +1,17 @@
+sample_id,volume_id,slice_index,loaded_tumor_pixels,manifest_tumor_pixels,pixel_count_match
+v095_s0080,95,80,0,0,True
+v005_s0469,5,469,0,0,True
+v025_s0447,25,447,0,0,True
+v092_s0541,92,541,0,0,True
+v017_s0298,17,298,0,0,True
+v019_s0471,19,471,0,0,True
+v014_s0400,14,400,0,0,True
+v057_s0003,57,3,0,0,True
+v084_s0632,84,632,18,18,True
+v049_s0158,49,158,41,41,True
+v066_s0078,66,78,179,179,True
+v033_s0049,33,49,189,189,True
+v088_s0432,88,432,699,699,True
+v056_s0150,56,150,537,537,True
+v039_s0028,39,28,1251,1251,True
+v071_s0070,71,70,1545,1545,True

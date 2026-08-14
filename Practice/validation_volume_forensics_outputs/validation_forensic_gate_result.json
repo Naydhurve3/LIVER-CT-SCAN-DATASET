@@ -1,0 +1,14 @@
+{
+  "dataset_build": "build_corrected_20260713_214847_v2",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "validation_tumor_positive_slices_audited": 1042,
+  "training_reference_slices_audited": 1200,
+  "minimum_volume_containment": 1.0,
+  "minimum_slice_containment": 1.0,
+  "slices_below_99pct_containment": 0,
+  "source_metadata_pass": false,
+  "automated_geometry_gate_pass": false,
+  "manual_contact_sheet_review_required": true,
+  "test_images_accessed": false,
+  "decision": "FAIL \u2014 do not continue model training. Identify and correct the failing volumes, rebuild the manifest, and repeat loader/overfit gates."
+}

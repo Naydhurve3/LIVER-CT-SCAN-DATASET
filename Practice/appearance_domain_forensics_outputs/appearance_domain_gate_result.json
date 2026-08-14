@@ -1,0 +1,16 @@
+{
+  "status": "diagnostic_complete",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "training_volumes": 104,
+  "validation_volumes": 13,
+  "sampled_slices": 3106,
+  "shift_threshold_training_p95": 6.4021768079237305,
+  "volume_104_shift_score": 6.676829510123268,
+  "volume_116_shift_score": 3.7398188679495443,
+  "focus_appearance_outliers": [
+    104
+  ],
+  "next_notebook_type": "intensity_normalization_augmentation_ablation",
+  "recommendation": "Run a controlled robust-intensity experiment: per-slice liver z-score normalization plus bounded gamma/noise augmentation, keeping the Focal-Dice baseline loss and sampler fixed.",
+  "test_images_accessed": false
+}

@@ -1,0 +1,27 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "7b89b942fc62f26e945d0dad58d8d453c0ef9bfb20d58e71ddaf95557a562106",
+  "created_utc": "2026-08-05T13:15:25.405358+00:00",
+  "download_performed": false,
+  "formal_model_acceptance_passed": false,
+  "result_level": "PUBLIC_EXTERNAL_DATA_AUDIT_COMPLETE",
+  "signed_artifacts": {
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/PUBLIC_EXTERNAL_DATA_ACQUISITION_PLAN.md": "c82c2631ec6f14536e4768b11e1d5bd491f50fb6745eb7143677a2c8996c0783",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/configuration.json": "40682b5baaed3e237885d252675efdc199dd39628682c86876489081f9b54d90",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/dataset_compatibility_and_priority.csv": "6cd5f21612164af89552edf8499850fe102bc46a7afefc2fbd6afdcf49dcfcb7",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/download_manifest_template.csv": "4adce3a054bbd8f212fb3f98cbebe38adfce0cf6b7a932faae0a6c5345ef18ec",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/expected_vs_actual.csv": "83af2cd18bd619885f5d907c6d8d48b33f41a4db39e6cee6942c1ccf3e89dfdb",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/external_dataset_ingestion_qc_contract.csv": "4ad90331d688a56ff5790717436e5852b981cf258b5958f778428472237c23d4",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/full_dataset_compatibility_matrix.csv": "0aa562ddae78f6eb1b3f254ce697491c301362cf65c9f7a6875db7b2c47531af",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/gate_result.json": "4ed9f03166bbf2d5f6c5736585e314b77da5a988abc5edf785f98534b71207a7",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/independence_and_leakage_audit.csv": "90a1e65968ae723512afbcbff7f9f97e62484583b67a7eae1f95d69aedf098d4",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/input_verification.csv": "5d30a0b78f1fe656f8d26ac2d0bb9ee5477962005fbe23f3fe391f7788b83766",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/internal_train_validation_reference_profile.csv": "ba4bc1af1c04321e29d5ecf358579f5b737b20c90cfe65980bc0076db71fcfdb",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/online_source_snapshot.json": "6bf66a6b96b4987b6c4d5a880c297e07e5512b86f525e0a1924e42def0ee836b",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/provenance.json": "ad706772d0fa9a93ca55e1e755a0410f44a73735b566c0aa0b1c4ef084768113",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/public_dataset_audit_dashboard.png": "465d705dec611796dcc5614b03dc690ecf74e83e297f6c947a94aac47ccd6de0",
+    "step_12_public_external_dataset_audit_and_acquisition_plan/outputs/public_dataset_source_registry.csv": "ac2cf9c3367bb4cb5e93c04e8091d1d4cba55205402c153c7e35b4d38f57dcd4"
+  },
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

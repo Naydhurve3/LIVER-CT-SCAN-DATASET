@@ -1,0 +1,7 @@
+requirement,expected,actual,passed
+sealed_inputs_verified,True,True,True
+all_source_masks_aligned,True,True,True
+six_cases_profiled,6,6,True
+frozen_metrics_unchanged,True,True,True
+no_inference_or_tuning,True,True,True
+local_lits_test_not_accessed,True,True,True

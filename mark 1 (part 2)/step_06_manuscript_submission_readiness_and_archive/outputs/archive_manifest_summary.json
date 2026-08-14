@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-08-05T12:29:03.226239+00:00",
+  "excluded_bulky_bytes": 25744129,
+  "excluded_bulky_cache_or_model_files": 27,
+  "excluded_integrity_source": "Existing signed Step 03-05 checksum inventories",
+  "file_count": 160,
+  "phases": {
+    "part2_contract": 10,
+    "step_01_pretraining_dataset_characterization": 41,
+    "step_02_fusion_freeze_confirmation": 29,
+    "step_03_final_inference_policy_freeze": 21,
+    "step_04_one_time_locked_test_evaluation_after_explicit_authorization": 32,
+    "step_05_final_research_package": 27
+  },
+  "scope": "Part 2 contracts and non-bulky Steps 01-05 deliverables; Step 06 excluded to prevent circular signing",
+  "sha256_complete": true,
+  "total_bytes": 16280971,
+  "unique_paths": true
+}

@@ -1,0 +1,10 @@
+{
+  "algorithm": "SHA-256",
+  "artifact_checksum_inventory_sha256": "71a3f7025787e3589a2ce8b7a9cd01be3ce4d5be14ecb85fd3068b084cb100ec",
+  "created_utc": "2026-08-03T13:18:23.492981+00:00",
+  "final_acceptance_contract_sha256": "12e8932d71651fd9247d841a86dfcd0fa80d64d74c4f334e29b113c28213b52d",
+  "final_acceptance_table_sha256": "c9b5fb86997bb626cb102e7d1ef1c79d8879b32ad47a10571300a2334f166b20",
+  "final_inference_policy_sha256": "52d2df856709254992ab6b59f84a213a0a00f6e67293f66665b6f258d01f2131",
+  "source_step02_gate_sha256": "d3dfb86af103e048ece734ac88ffccfeaaaa84a68596ae9f8c1012e2ea72a9c8",
+  "test_images_accessed": false
+}

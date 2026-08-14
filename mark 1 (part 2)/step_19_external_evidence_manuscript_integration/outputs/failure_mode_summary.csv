@@ -1,0 +1,6 @@
+evaluation,failure,evidence,interpretation,claim_boundary
+LiTS held-out,catastrophic positive-patient miss,V121 Dice 0.000000,failed predeclared minimum-patient guardrail,formal model acceptance remains failed
+3D-IRCADb-01 external,worst positive-patient performance,ircadb_18 Dice 0.012992,passes 0.01 floor narrowly,external pass does not establish universal reliability
+3D-IRCADb-01 external,smallest-lesion detection,14/22 (63.64%),small lesions remain the shared weakness,no clinical sensitivity claim
+3D-IRCADb-01 external,negative-control predictions,5/5 cases; 52.936 ml total,false positive under frozen hepatic truth,biological meaning unresolved
+3D-IRCADb-01 external,source-label semantic discordance,case 7: 86.39% generic tumor overlap; case 14: 88.93% metastasectomie overlap,excluded annotations explain much of two large negative-control predictions,no retrospective relabeling without expert review

@@ -1,0 +1,24 @@
+{
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "mark1_checkpoint_sha256": "9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223",
+  "mark1_gate_path": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1\\mark_1_outputs\\mark_1_gate_result.json",
+  "validation_slices": 10685,
+  "validation_patients": 13,
+  "roi_uses_ground_truth": false,
+  "ground_truth_used_for_scoring_only": true,
+  "test_images_accessed": false,
+  "windows_hu": {
+    "broad_abdominal": [
+      -160.0,
+      240.0
+    ],
+    "liver_soft_tissue": [
+      -20.0,
+      140.0
+    ],
+    "narrow_lesion": [
+      20.0,
+      120.0
+    ]
+  }
+}

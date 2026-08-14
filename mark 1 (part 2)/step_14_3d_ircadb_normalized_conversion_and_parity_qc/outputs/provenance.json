@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-08-05T14:21:59.993531+00:00",
+  "local_lits_test_access_allowed": false,
+  "model_inference_allowed": false,
+  "nibabel": "5.4.2",
+  "numpy": "2.4.6",
+  "pandas": "2.3.3",
+  "phase": "step_14_3d_ircadb_normalized_conversion_and_parity_qc",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "pydicom": "3.0.2",
+  "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+  "source_read_only": true,
+  "source_step13_signature_sha256": "4bb81aec015c3380cdd6535c95f60cf812ce152e6cfd1710c4dcc079cf0149b9"
+}

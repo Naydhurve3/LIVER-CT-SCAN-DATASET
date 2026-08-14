@@ -1,0 +1,24 @@
+{
+  "access_date": "2026-08-06",
+  "cohort_statement": "3D CT scans of 10 women and 10 men; hepatic tumours in 75% of cases; 20 different patients",
+  "content_statement": "PATIENT_DICOM, LABELLED_DICOM, MASKS_DICOM, and MESHES_VTK folders",
+  "dataset": "3D-IRCADb-01",
+  "download_performed": false,
+  "license_name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "official_citation": {
+    "access_date": "2026-08-06",
+    "address": "Strasbourg, France",
+    "authors": "Soler, L.; Hostettler, A.; Agnus, V.; Charnoz, A.; Fasquel, J.; Moreau, J.; Osswald, A.; Bouhadjar, M.; Marescaux, J.",
+    "citation_key": "Soler2010IRCADb",
+    "doi": "not provided by official source",
+    "institution": "IRCAD",
+    "official_url": "https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/",
+    "title": "3D image reconstruction for comparison of algorithm database: A patient specific anatomical and medical image database",
+    "type": "Technical Report",
+    "year": 2010
+  },
+  "official_url": "https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/",
+  "source_owner": "IRCAD",
+  "source_status": "primary_official_page_verified"
+}

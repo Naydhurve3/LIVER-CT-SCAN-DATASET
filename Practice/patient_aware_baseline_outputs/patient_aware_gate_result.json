@@ -1,0 +1,18 @@
+{
+  "status": "needs_model_revision",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "epochs_completed": 10,
+  "best_epoch": 9,
+  "best_global_micro_dice": 0.5583570881805978,
+  "best_mean_patient_dice": 0.3830690071400127,
+  "best_median_patient_dice": 0.3425925932013031,
+  "best_worst_patient_dice": 6.412393874840252e-12,
+  "smoke_mean_patient_dice": 0.34889071563342067,
+  "volume_104_dice": 0.19761296685971613,
+  "volume_116_dice": 6.412393874840252e-12,
+  "patient_mean_improved": true,
+  "key_patients_above_0_05": false,
+  "detection_guardrails_pass": false,
+  "test_images_accessed": false,
+  "decision": "STOP \u2014 inspect patient trajectories, size strata, and errors before changing architecture or loss."
+}

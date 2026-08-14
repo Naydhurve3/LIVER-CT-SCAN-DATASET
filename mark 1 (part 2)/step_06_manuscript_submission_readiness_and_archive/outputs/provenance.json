@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-08-05T12:29:03.226239+00:00",
+  "external_literature_or_venue_rules_queried": false,
+  "source_step04_ledger_sha256": "4629cda97b9a2c371ca8ded4b2705dd86184e8c75f4fe49011fc82bdfef7462b",
+  "source_step05_gate_sha256": "3d3921fd3447312d82fefc3ecd3cee8436109faa5e24b0f878f15bc401de7d6e",
+  "source_step05_signature_sha256": "ebfa0d9ed78391cc077c8a6dc1f78d5afc226e6d00ec8f1261002e07c97f2986",
+  "test_images_accessed": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

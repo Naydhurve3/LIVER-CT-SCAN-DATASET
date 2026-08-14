@@ -1,0 +1,15 @@
+field,value,validation_rule,complete
+selected_venue,,must exactly match a venue in the verified Step 08 matrix,False
+open_access_required,,must be explicitly True or False,False
+maximum_publication_budget_usd,,must be a non-negative number,False
+corresponding_author_name,,must contain verified non-placeholder text,False
+corresponding_author_email,,must be a syntactically valid email address,False
+authors_and_affiliations,,must contain a verified non-placeholder statement of at least 10 characters,False
+ethics_or_applicability_statement,,must contain a verified non-placeholder statement of at least 10 characters,False
+dataset_terms_and_availability_statement,,must contain a verified non-placeholder statement of at least 10 characters,False
+author_contributions_statement,,must contain a verified non-placeholder statement of at least 10 characters,False
+conflicts_of_interest_statement,,must contain a verified non-placeholder statement of at least 10 characters,False
+funding_statement,,must contain a verified non-placeholder statement of at least 10 characters,False
+code_availability_statement,,must contain a verified non-placeholder statement of at least 10 characters,False
+data_availability_statement,,must contain a verified non-placeholder statement of at least 10 characters,False
+owner_certifies_accuracy,,must be explicitly True after owner review,False

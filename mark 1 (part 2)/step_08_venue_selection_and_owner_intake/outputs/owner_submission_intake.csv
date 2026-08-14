@@ -1,0 +1,13 @@
+field,value,complete
+selected_venue,,False
+open_access_required,,False
+maximum_publication_budget_usd,,False
+corresponding_author_name,,False
+corresponding_author_email,,False
+authors_and_affiliations_confirmed,False,False
+ethics_or_applicability_confirmed,False,False
+dataset_terms_confirmed,False,False
+author_contributions_confirmed,False,False
+conflicts_confirmed,False,False
+funding_confirmed,False,False
+code_and_data_availability_confirmed,False,False

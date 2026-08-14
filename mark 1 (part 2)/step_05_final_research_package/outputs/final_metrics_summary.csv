@@ -1,0 +1,10 @@
+metric,value,saved_value,absolute_delta
+global_dice,0.76769626,0.76769626,0.00000000
+global_pixel_precision,0.84439412,0.84439412,0.00000000
+global_pixel_recall,0.70377141,0.70377141,0.00000000
+mean_positive_patient_dice,0.50729684,0.50729684,0.00000000
+median_positive_patient_dice,0.56513738,0.56513738,0.00000000
+minimum_positive_patient_dice,0.00000000,0.00000000,0.00000000
+q1_positive_slice_detection_pct_train_edges,47.55244755,47.55244755,0.00000000
+positive_predicted_empty_pct,9.94152047,9.94152047,0.00000000
+empty_slice_false_positive_pct,3.81014945,3.81014945,0.00000000

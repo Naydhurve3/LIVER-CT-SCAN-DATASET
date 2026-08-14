@@ -1,0 +1,28 @@
+{
+  "all_mandatory_targets_passed": true,
+  "candidate_sources": 4,
+  "decision": "CONFIRM_TERMS_THEN_INGEST_3D_IRCADB_01",
+  "download_performed": false,
+  "formal_model_acceptance_passed": false,
+  "independent_tumour_candidates": 2,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "msd_independent_validation_allowed": false,
+  "next_step": "step_13_selected_external_dataset_ingestion_and_qc",
+  "recommended_first_source": "3D-IRCADb-01",
+  "recommended_second_source": "HCC-TACE-Seg",
+  "result_level": "PUBLIC_EXTERNAL_DATA_AUDIT_COMPLETE",
+  "status": "public_external_dataset_audit_complete",
+  "submission_ready": false,
+  "targets": {
+    "MSD prohibited as independent validation": true,
+    "independent tumour candidates": true,
+    "ingestion QC checks": true,
+    "internal boundary checks": true,
+    "local test source files remained sealed": true,
+    "official source records": true,
+    "zero external dataset downloads performed": true
+  },
+  "test_images_accessed": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

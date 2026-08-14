@@ -1,0 +1,8 @@
+{
+  "cost_flexibility": 0.05,
+  "evidence_compatibility": 0.25,
+  "format_compatibility": 0.1,
+  "novelty_alignment": 0.2,
+  "reporting_alignment": 0.15,
+  "scope_fit": 0.25
+}

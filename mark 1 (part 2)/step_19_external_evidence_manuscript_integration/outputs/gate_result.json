@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-08-05T16:05:21.201758+00:00",
+  "exact_external_dataset_citation_verified": false,
+  "external_contract_passed": true,
+  "external_inference_rerun": false,
+  "formal_model_acceptance_passed": false,
+  "gate_passed": true,
+  "inference_performed": false,
+  "manuscript_update_ready": true,
+  "next_step": "owner completes declarations and verifies exact 3D-IRCADb-01 scholarly citation; optional expert annotation review",
+  "owner_gate_passed": false,
+  "result_level": "MANUSCRIPT_EXTERNAL_EVIDENCE_UPDATED_OWNER_INPUT_REQUIRED",
+  "submission_action_performed": false,
+  "submission_ready": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false,
+  "tuning_performed": false
+}

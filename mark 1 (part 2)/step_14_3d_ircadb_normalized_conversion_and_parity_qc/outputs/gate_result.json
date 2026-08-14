@@ -1,0 +1,20 @@
+{
+  "actual_nonzero_tumour_cases": 15,
+  "archive_set_sha256": "55cd6722da6c02f8365ab566603db116128e0d854782d2a174b85056f4a5ba96",
+  "conversion_qc_passed": true,
+  "converted_patient_count": 20,
+  "created_utc": "2026-08-05T14:21:59.993531+00:00",
+  "decision": "PROCEED_TO_FROZEN_EXTERNAL_EVALUATION_CONTRACT",
+  "formal_external_evaluation_performed": false,
+  "license": "CC BY-NC-ND 4.0",
+  "local_lits_test_accessed": false,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "minimum_tumour_containment_fraction": 0.9854482344302784,
+  "model_inference_performed": false,
+  "next_step": "step_15_frozen_external_evaluation_contract",
+  "redistribution_authorized": false,
+  "result_level": "EXTERNAL_NORMALIZED_CONVERSION_QC_PASS",
+  "source": "3D-IRCADb-01",
+  "tumour_folder_positive_cases": 15,
+  "tumour_folder_zero_union_cases": []
+}

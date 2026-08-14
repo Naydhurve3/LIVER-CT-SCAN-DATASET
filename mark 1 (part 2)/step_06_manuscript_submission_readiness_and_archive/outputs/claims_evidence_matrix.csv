@@ -1,0 +1,10 @@
+claim,evidence,status,interpretation_boundary
+Corrected dataset identity and patient-disjoint audit,step_01_pretraining_dataset_characterization/outputs/gate_result.json; DATA_CARD.md,verified,Manifest hash and train/validation-only audit
+Frozen maximum fusion at threshold 0.70 with no post-processing,step_03_final_inference_policy_freeze/outputs/final_inference_policy.json,verified,Policy frozen before test access
+Global Dice 0.767696,step_04_one_time_locked_test_evaluation_after_explicit_authorization/outputs/gate_result.json; global_metrics.csv,verified,Reconciled again in Step 05
+Mean positive-patient Dice 0.507297 with 95% CI 0.344175–0.659411,step_04_one_time_locked_test_evaluation_after_explicit_authorization/outputs/gate_result.json; bootstrap_summary.csv,verified,"10,000 patient resamples, seed 42"
+Formal acceptance failed 7/8 because minimum patient Dice failed,step_04_one_time_locked_test_evaluation_after_explicit_authorization/outputs/expected_vs_actual.csv; gate_result.json,verified,Negative result preserved
+V121 failure was recognition rather than ROI clipping,step_05_final_research_package/outputs/v121_failure_evidence.csv; LIMITATIONS_AND_FAILURE_ANALYSIS.md,verified,100% truth ROI containment; no truth score reached 0.70
+Small lesions were the principal systematic weakness,step_04_one_time_locked_test_evaluation_after_explicit_authorization/outputs/lesion_size_stratum_metrics.csv,verified,Q1 detection and matched Dice materially lower
+Test evaluation occurred once and is sealed,step_04_one_time_locked_test_evaluation_after_explicit_authorization/outputs/run_ledger.json,verified,COMPLETE; rerun_allowed false
+No Step 05/06 test inference rerun or source-data reopening,step_05_final_research_package/outputs/provenance.json; step_06 gate_result.json,verified,Artifact-only reporting phases

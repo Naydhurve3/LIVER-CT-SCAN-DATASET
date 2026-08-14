@@ -1,0 +1,13 @@
+requirement,passed,severity,actual,expected
+manifest_identity,True,critical,manifest/integrity,pass
+train_validation_leakage,True,critical,no patient/source hash overlap,pass
+geometry_affine,True,critical,source image/segmentation agreement,pass
+label_semantics_containment,True,critical,labels and containment,pass
+frozen_roi_coverage,True,critical,tumour containment,pass
+geometry_profile_complete,True,required,117,pass
+morphology_profile_complete,True,required,117,pass
+hu_profile_complete,True,required,117,pass
+focus_v104_v116_present,True,required,"[104, 116]",pass
+train_derived_bins_saved,True,required,train only,pass
+sampling_policy_train_only,True,critical,uniform_patient_aware_existing_sampler_no_change,pass
+test_images_accessed_false,True,critical,False,pass

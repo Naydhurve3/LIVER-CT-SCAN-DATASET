@@ -1,0 +1,3 @@
+section,question,family,chart,fields,claim,palette,artifact
+Primary comparative results,How do the two sealed evaluations compare descriptively?,comparison,grouped horizontal bar,"evaluation, metric, value",external evidence is strong but does not erase held-out failure,blue/orange plus labels,comparative_results_figure.png
+Patient reliability,How heterogeneous is positive-patient Dice?,distribution,box plus jittered points,"evaluation, patient_id, dice",case-level variation persists in both cohorts,blue/orange plus shape,patient_dice_distribution_figure.png

@@ -1,0 +1,9 @@
+check,passed
+step16_complete,True
+step16_sealed_and_rerun_prohibited,True
+step17_validated,True
+step17_points_to_step16_signature,True
+six_selected_caches_exist,True
+source_label_inventory_exists,True
+extracted_source_exists,True
+local_lits_test_not_accessed,True

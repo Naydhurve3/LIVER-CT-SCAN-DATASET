@@ -1,0 +1,14 @@
+{
+  "dataset_build": "build_corrected_20260713_214847_v2",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "loader_gate_pass": true,
+  "overfit_gate_pass": true,
+  "all_gates_pass": true,
+  "best_hard_micro_dice": 0.8163059889383042,
+  "required_hard_micro_dice": 0.8,
+  "overfit_status": "passed",
+  "selected_training_slices": 16,
+  "test_images_accessed": false,
+  "decision": "PASS \u2014 proceed to manifest integration and staged baseline training.",
+  "next_action": "Wire VerifiedManifestDataset into the experiment builder, rerun the full test suite, then train the baseline to epoch 5 and validate only on val."
+}

@@ -1,0 +1,13 @@
+order,check,stage,acceptance_rule,severity
+1,terms_and_attribution,before download,"record official URL, terms snapshot, citation and permitted use",critical
+2,download_inventory,after download,"save original filenames, byte sizes and SHA-256 hashes",critical
+3,patient_identity,before conversion,derive stable source-local patient IDs; prohibit cross-source collisions,critical
+4,series_selection,before conversion,"document CT phase, study/series UID and inclusion/exclusion",high
+5,dicom_geometry,before conversion,"verify orientation, spacing, origin, slice order, duplicates and gaps",critical
+6,seg_reference_integrity,before conversion,"verify DICOM-SEG references, frame count and source-image alignment",critical
+7,label_semantics,before inference,map liver/tumour class names; preserve unknown structures separately,critical
+8,conversion_parity,after conversion,voxelwise compare converted masks with source geometry and pixel counts,critical
+9,intensity_semantics,after conversion,confirm RescaleSlope/Intercept and HU plausibility,critical
+10,overlap_leakage,before inference,"compare patient identifiers, geometry fingerprints and image hashes against LiTS train/validation; keep local test sealed",critical
+11,preprocessing_compatibility,before inference,"predeclare HU window, resizing, ROI fallback and mapping rules",high
+12,evaluation_contract,before inference,"freeze cohort, metric populations, empty-mask rules and no-tuning policy",critical

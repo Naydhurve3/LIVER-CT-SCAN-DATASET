@@ -1,0 +1,25 @@
+source_patient_id,internal_patient_id,label_name,source_slices,matched_slices,missing_instances,max_position_error_mm,nonzero_voxels,nonzero,spacing_x_mm,spacing_y_mm,spacing_z_mm,lesion_proxy_volume_ml,train_derived_lesion_stratum,definition_caveat
+3Dircadb1.1,ircadb_01,livertumor01,129,129,0,0.0,162337,True,0.569999992847443,0.569999992847443,1.6000000238419003,84.38926521960892,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.1,ircadb_01,livertumor02,129,129,0,0.0,14464,True,0.569999992847443,0.569999992847443,1.6000000238419003,7.518965683340356,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.1,ircadb_01,livertumor03,129,129,0,0.0,7192,True,0.569999992847443,0.569999992847443,1.6000000238419003,3.738689241882179,lesion_q3,one source livertumor folder used as lesion proxy
+3Dircadb1.1,ircadb_01,livertumor04,129,129,0,0.0,4859,True,0.569999992847443,0.569999992847443,1.6000000238419003,2.525902534247151,lesion_q3,one source livertumor folder used as lesion proxy
+3Dircadb1.1,ircadb_01,livertumor05,129,129,0,0.0,19426,True,0.569999992847443,0.569999992847443,1.6000000238419003,10.098411737041605,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.1,ircadb_01,livertumor06,129,129,0,0.0,766,True,0.569999992847443,0.569999992847443,1.6000000238419003,0.3981974359401764,lesion_q2,one source livertumor folder used as lesion proxy
+3Dircadb1.1,ircadb_01,livertumor07,129,129,0,0.0,5224,True,0.569999992847443,0.569999992847443,1.6000000238419003,2.7156441323126397,lesion_q3,one source livertumor folder used as lesion proxy
+3Dircadb1.2,ircadb_02,livertumor,172,172,0,0.0,14062,True,0.782000005245209,0.782000005245209,1.600000023842,13.758801170395675,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.3,ircadb_03,livertumor,200,200,0,0.0,14252,True,0.625,0.625,1.25,6.958984375,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.4,ircadb_04,livertumor,91,91,0,0.0,6736,True,0.742187976837158,0.742187976837158,2.0,7.42095680117913,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.6,ircadb_06,livertumor,135,135,0,0.0,434721,True,0.782000005245209,0.782000005245209,1.6000000238419003,425.3477317305651,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.8,ircadb_08,livertumor01,124,124,0,0.0,1130,True,0.560999989509583,0.560999989509583,1.6000000238419003,0.5690155551983994,lesion_q2,one source livertumor folder used as lesion proxy
+3Dircadb1.8,ircadb_08,livertumor02,124,124,0,0.0,8421,True,0.560999989509583,0.560999989509583,1.6000000238419003,4.240424770199754,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.8,ircadb_08,livertumor03,124,124,0,0.0,10767,True,0.560999989509583,0.560999989509583,1.6000000238419003,5.421761489222271,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.9,ircadb_09,livertumor,111,111,0,0.0,39484,True,0.87304699420929,0.87304699420929,2.0,60.19028252000107,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.10,ircadb_10,livertumor,122,122,0,0.0,14981,True,0.736000001430511,0.736000001430511,1.6000000238419003,12.984236685553624,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.12,ircadb_12,livertumor,260,260,0,0.0,348986,True,0.679687976837158,0.679687976837158,1.0,161.22306764364717,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.13,ircadb_13,livertumor,122,122,0,0.0,122480,True,0.671000003814697,0.671000003814697,1.6000000238419003,88.23283060599753,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.15,ircadb_15,livertumor,125,125,0,0.0,1638,True,0.782000005245209,0.782000005245209,1.6000000238419003,1.602682144581618,lesion_q3,one source livertumor folder used as lesion proxy
+3Dircadb1.16,ircadb_16,livertumor,155,155,0,0.0,7337,True,0.698000013828278,0.698000013828278,1.600000023842,5.719385508642753,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.17,ircadb_17,livertumor1,119,119,0,0.0,96961,True,0.742999970912933,0.742999970912933,1.6000000238419003,85.64355151301908,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.17,ircadb_17,livertumor2,119,119,0,0.0,89029,True,0.742999970912933,0.742999970912933,1.6000000238419003,78.63738768837548,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.18,ircadb_18,livertumor,74,74,0,0.0,4539,True,0.742187976837158,0.742187976837158,2.5,6.250690862632139,lesion_q4,one source livertumor folder used as lesion proxy
+3Dircadb1.19,ircadb_19,livertumors,124,124,0,0.0,41416,True,0.703125,0.703125,4.0,81.9017578125,lesion_q4,one source livertumor folder used as lesion proxy

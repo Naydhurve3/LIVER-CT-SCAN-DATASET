@@ -1,0 +1,4 @@
+configuration,channels,epochs_completed,best_hard_micro_dice,final_hard_micro_dice,positive_predicted_empty_pct,passed
+broad_1ch,1,17,0.9005570034263234,0.9005570034263234,0.0,True
+broad_liver_2ch,2,20,0.9038589317683655,0.9038589317683655,0.0,True
+broad_liver_narrow_3ch,3,42,0.9004699519572457,0.9004699519572457,0.0,True

@@ -1,0 +1,10 @@
+check,passed,observed
+step08_complete,True,VENUE_DECISION_SUPPORT_COMPLETE
+step08_submission_closed,True,False
+venue_not_selected,True,
+formal_failure_preserved,True,False
+manifest_hash,True,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889
+test_run_id,True,871d289b-bf6b-4346-978f-2df02ade26ab
+test_rerun_false,True,False
+test_sources_reopened_false,True,False
+paper_exists,True,D:\DATA SCIENCE AND ANALYTICS\PROJECTS\Liver\mark 1 (part 2)\step_07_manuscript_evidence_and_declaration_scaffold\outputs\PAPER_DRAFT_WITH_CITATION_KEYS.md

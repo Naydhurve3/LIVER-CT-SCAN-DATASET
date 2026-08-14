@@ -1,0 +1,5 @@
+dataset,independent_of_lits,evidence,decision
+3D-IRCADb-01,True,independent institution/source,eligible after patient and file-hash audit
+HCC-TACE-Seg,True,independent TCIA HCC cohort,eligible after series/phase identity audit
+MSD Task03 Liver,False,published as a subset of LiTS patients,prohibited as independent external validation; hash/identity overlap assumed until disproved
+CHAOS CT,True,healthy donor CT cohort,independent but tumour endpoint not evaluable

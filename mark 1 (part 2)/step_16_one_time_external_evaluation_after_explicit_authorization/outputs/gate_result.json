@@ -1,0 +1,45 @@
+{
+  "all_mandatory_targets_passed": true,
+  "cohort": {
+    "all": 20,
+    "excluded": 0,
+    "negative": 5,
+    "positive": 15
+  },
+  "created_utc": "2026-08-05T14:53:07.797046+00:00",
+  "decision": "REPORT_EXTERNAL_GENERALIZATION_PASS_NO_TUNING",
+  "formal_external_evaluation_performed": true,
+  "inference_performed": true,
+  "local_lits_test_accessed": false,
+  "rerun_permitted": false,
+  "result_level": "EXTERNAL_EVALUATION_COMPLETE",
+  "run_id": "61d1f140-c8b4-436a-928a-1e4b6f7c0b56",
+  "selected_metrics": {
+    "checkpoint_hashes_match": 1.0,
+    "empty_slice_false_positive_pct": 11.574279379157428,
+    "finite_probability_fraction": 1.0,
+    "global_dice": 0.8479770814155181,
+    "global_pixel_precision": 0.8236994367770734,
+    "global_pixel_recall": 0.8737293018906901,
+    "mean_positive_patient_dice": 0.7111958843137554,
+    "median_positive_patient_dice": 0.8355140187135496,
+    "minimum_positive_patient_dice": 0.012992286231022214,
+    "positive_predicted_empty_pct": 9.859154929577464,
+    "q1_positive_slice_detection_pct": 50.0,
+    "sample_coverage_fraction": 1.0,
+    "unique_patient_id_fraction": 1.0
+  },
+  "target_passes": {
+    "all_20_patient_rows_saved": true,
+    "burden_and_negative_subgroups_saved": true,
+    "checkpoint_hashes_match": true,
+    "empty_slice_false_positive_pct": true,
+    "finite_probability_fraction": true,
+    "mean_positive_patient_dice": true,
+    "minimum_positive_patient_dice": true,
+    "positive_predicted_empty_pct": true,
+    "q1_positive_slice_detection_pct": true,
+    "sample_coverage_fraction": true,
+    "unique_patient_id_fraction": true
+  }
+}

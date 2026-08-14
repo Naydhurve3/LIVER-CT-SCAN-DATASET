@@ -1,0 +1,9 @@
+domain,score_pct,interpretation
+Numerical consistency,100.0,all displayed numbers reconciled
+Frozen-method consistency,100.0,all method claims matched policy
+Structure completeness,100.0,required internal sections present
+Foundational citation-key coverage,100.0,four keys present in text and candidate list
+Language restraint after revision,100.0,identified overstatement and mojibake repaired
+Related-work depth,35.0,foundational candidates only; venue-grade review remains
+Owner declarations,0.0,owner/institutional inputs absent
+External validation,0.0,not performed; limitation only

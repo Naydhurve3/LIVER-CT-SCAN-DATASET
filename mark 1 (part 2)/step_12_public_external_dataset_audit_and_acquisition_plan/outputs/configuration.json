@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-08-05T13:15:25.405358+00:00",
+  "download_enabled": false,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "mode": "online_metadata_and_internal_train_validation_reference_only",
+  "phase": "step_12_public_external_dataset_audit_and_acquisition_plan",
+  "recommended_first_source": "3D-IRCADb-01",
+  "snapshot_date": "2026-08-05",
+  "test_access_allowed": false,
+  "weights": {
+    "access_convenience_0_5": 0.15,
+    "external_independence_0_5": 0.25,
+    "format_compatibility_0_5": 0.15,
+    "size_convenience_0_5": 0.1,
+    "terms_clarity_0_5": 0.1,
+    "tumour_label_fit_0_5": 0.25
+  }
+}

@@ -1,0 +1,4 @@
+volume_id,patient_dice,truth_pixels,roi_truth_containment,maximum_control_truth_score,maximum_recall_truth_score,maximum_fused_truth_score,median_fused_truth_score,truth_pixels_at_or_above_0_70
+120,0.11231256,1305,1.00000000,1.00000000,1.00000000,1.00000000,1.00000000,1101
+121,0.00000000,526,1.00000000,0.00000000,0.00000000,0.00000000,0.00000000,0
+127,0.08260326,73,1.00000000,1.00000000,1.00000000,1.00000000,0.62109375,33

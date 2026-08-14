@@ -1,0 +1,29 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "4fb3d6d14010a982912c9ca8e85854e326960fa4a60543da47a378c6fd1b13aa",
+  "created_utc": "2026-08-05T14:53:07.819172+00:00",
+  "inference_performed": true,
+  "local_lits_test_accessed": false,
+  "result_level": "EXTERNAL_EVALUATION_COMPLETE",
+  "run_id": "61d1f140-c8b4-436a-928a-1e4b6f7c0b56",
+  "signed_artifacts": {
+    "authorization_state.json": "21a5814533e4ee2720cab7438bf39d04d87d5fd99d1e1fbe515c4ca44ce161b3",
+    "bootstrap_uncertainty.csv": "5a418ea66f977bc605ae02a9bc915ceae00929e0c56273cce1561a59d3441013",
+    "cache_integrity.csv": "cf698ed82308db7450dff40f598656744aa3e2a26f8a562277e903f8624129a4",
+    "checkpoint_verification.csv": "14f7106e236c07651135aadcc8ac4f83af8ca3a508acb31cb931802a9a742de1",
+    "expected_vs_actual.csv": "5741371c4ca480a06dcbf07dbe4e9461278d559cc7fb453ad74cce54b868e9d9",
+    "external_evaluation_dashboard.png": "b423f926e56dcbcbd2f250c1a8fdc53f988b9b0534950e33041f765a03083163",
+    "external_evidence_inventory.csv": "280df689aa621cbdd6e7cbe00f12691f54c32c7b1aa2fc0f5176f3405f01e403",
+    "gate_result.json": "e4b499b36fc6e4aa556a8680e46f09891f59c848a66273b659264120c639ddc9",
+    "global_metrics.csv": "e3321ec2cae1fdebe57a13f215a09c3d389e8eee19e823aea86947782c3d0192",
+    "lesion_metrics.csv": "c4fd015f7c825a91ce2e008c160343191f8423f650358b87877976e28e388085",
+    "lesion_stratum_metrics.csv": "63831ed6f81ee98d163baf99fbb7ead17aacff95ed94c62cf773ef3905ed8870",
+    "negative_control_metrics.csv": "aff3abc88c261e383a48735dbdd1bffc476273821599d8d4f164464d69833db5",
+    "patient_burden_metrics.csv": "ad75a279faecc59ef9fadb1f18d2527741474950b029bb2163db7681d1fbce0a",
+    "patient_metrics.csv": "9bb17b39431f0145445ac7cd25a6a42a18074dc8ee67a2eb6d7a2efc39afe38d",
+    "preflight_checks.csv": "f48822971eb7040f9b42433f31a308c3c8f8e1aad37a076e03a0ce2dcc9138a6",
+    "run_ledger.json": "780b9292bdb186981506a8c9c2f5a12bad0c46b9c3278b2e84f9ec143b2fd1eb",
+    "runtime_log.csv": "e276349ee8721b0e8910631c7e39d5948a30a0b08e0ea450204d31a02e8c5cb1",
+    "slice_metrics.csv": "233e9b028daf75d0646a2de5ac16017d1c780f6cfe93a95526ea2df22a3bfe2e"
+  }
+}

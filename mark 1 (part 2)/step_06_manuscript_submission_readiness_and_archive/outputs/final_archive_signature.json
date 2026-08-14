@@ -1,0 +1,18 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "8e1efec2f30e64e4c668b69d2d6b0438ee737775d04953fe893b88fccafa5704",
+  "created_utc": "2026-08-05T12:29:03.226239+00:00",
+  "formal_model_acceptance_passed": false,
+  "signed_artifacts": {
+    "step_05_final_research_package/outputs/FINAL_TECHNICAL_REPORT.md": "b02d12069f437b4438b877e3accb46294e7f2c3904dcc54bd99824db126b30cb",
+    "step_05_final_research_package/outputs/PAPER_DRAFT.md": "d3d23c24a870c16b7e373d00812c7e941437394bf0f63c140242b3d96b9454f3",
+    "step_05_final_research_package/outputs/final_package_signature.json": "ebfa0d9ed78391cc077c8a6dc1f78d5afc226e6d00ec8f1261002e07c97f2986",
+    "step_05_final_research_package/outputs/gate_result.json": "3d3921fd3447312d82fefc3ecd3cee8436109faa5e24b0f878f15bc401de7d6e",
+    "step_06_manuscript_submission_readiness_and_archive/outputs/archive_manifest.csv": "9b9ca38aa97c5dd5299d938d427a545713c39ae6332bd4d186150a4a53730577",
+    "step_06_manuscript_submission_readiness_and_archive/outputs/gate_result.json": "bbb00cf2f3740b0dc72ff59077a89ee7f9a71238865c885923696e45fb2eff83"
+  },
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "submission_ready": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

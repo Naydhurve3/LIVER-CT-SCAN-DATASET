@@ -1,0 +1,7 @@
+{
+  "declared_before_external_inference": true,
+  "failure_action": "Report the completed external result without tuning or rerun; preserve negative findings.",
+  "formal_model_acceptance_note": "Existing project acceptance remains failed; external evaluation is an independent generalization analysis and cannot retroactively change the one-time LiTS result.",
+  "schema_version": "1.0",
+  "table": "external_acceptance_contract.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "run_id": "20260713_214524",
+  "audit_output_dir": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\Practice\\unified_dataset_preparation_outputs\\20260713_214524",
+  "corrected_build_dir": null,
+  "source_key_count": 58638,
+  "source_volume_count": 131,
+  "nifti_complete_pairs": 131,
+  "nifti_shape_matches": 131,
+  "nifti_affine_matches": 79,
+  "automatic_build_gates_pass": false,
+  "manually_approved_volumes": 0,
+  "manually_rejected_volumes": 0,
+  "nonspatial_eda_ready": false,
+  "spatial_eda_ready": false,
+  "training_ready": false,
+  "next_required_action": "Review/correct all orientation figures and complete the 131-volume spatial approval before spatial EDA or training."
+}

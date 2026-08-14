@@ -1,0 +1,24 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "aaca93be9d1d64e63807fb10f642b98cd0371504667f55ad69a14d8f1246f77d",
+  "created_utc": "2026-08-05T14:29:30.986230+00:00",
+  "inference_performed": false,
+  "local_lits_test_accessed": false,
+  "result_level": "EXTERNAL_EVALUATION_CONTRACT_FROZEN_AWAITING_AUTHORIZATION",
+  "signed_artifacts": {
+    "step_15_frozen_external_evaluation_contract\\outputs\\checkpoint_integrity.csv": "617bd7cb674d498378c899da73565d92d12dce0c9c7783cde6778fc75a5bfda7",
+    "step_15_frozen_external_evaluation_contract\\outputs\\external_acceptance_contract.csv": "dffbd60087a36f2a6327543b3aabffb9e1520106ac39e640b162adb85248fe5b",
+    "step_15_frozen_external_evaluation_contract\\outputs\\external_acceptance_contract.json": "6995baa9c4f41225fc7336435556d760970ae7c6ac843a3b93e48883c30630e7",
+    "step_15_frozen_external_evaluation_contract\\outputs\\external_cohort_registry.csv": "f140828d4a456935ad4a5c1e09af97af0d82f185e5e4c6871a9178efe62ed60a",
+    "step_15_frozen_external_evaluation_contract\\outputs\\external_cohort_summary.csv": "4af1a30172f856871ce4796d5fdd4f38ed5934a809ffa4cdb741510fae137593",
+    "step_15_frozen_external_evaluation_contract\\outputs\\external_contract_dashboard.png": "39494b1aaf0d6e4859016851a98173ae509074e671eadadb575211b4b28f1981",
+    "step_15_frozen_external_evaluation_contract\\outputs\\external_lesion_strata.csv": "607b41f01f8c216f2cfbcb42b6dfa0ea4ef2ab75c21c5d9d859b81315ce89b9e",
+    "step_15_frozen_external_evaluation_contract\\outputs\\external_train_geometry_shift.csv": "ee90ff14c55c63c584f800914534ac130eedfa10790b6244793a6658313f2009",
+    "step_15_frozen_external_evaluation_contract\\outputs\\freeze_readiness.csv": "ff67b50ab8e99565a255ac62cb8d11b9264f6b97affa68e6f652371943488ba5",
+    "step_15_frozen_external_evaluation_contract\\outputs\\frozen_external_evaluation_policy.json": "671a49e437b62321fa4e8ebfcc42a8bad9fe216f2f06a11c3d2dbc5c10183105",
+    "step_15_frozen_external_evaluation_contract\\outputs\\gate_result.json": "10ae51510621245fb5e76c449d1cd52d71932ef952ba099f8d1898b194de5af6",
+    "step_15_frozen_external_evaluation_contract\\outputs\\input_verification.csv": "f297029b7d1853df85a4774e603f7cd0fcab6094ee64b81f052df390b5856989",
+    "step_15_frozen_external_evaluation_contract\\outputs\\provenance.json": "98468eac60b599a26d1a2a127adaf4e0573e7bd61603a246912503b243a6a724",
+    "step_15_frozen_external_evaluation_contract\\outputs\\step_14_signature_verification.csv": "647b0942122991a33155265b2dfe5147d3a22526fb9afe0dfbdec853776f1bc6"
+  }
+}

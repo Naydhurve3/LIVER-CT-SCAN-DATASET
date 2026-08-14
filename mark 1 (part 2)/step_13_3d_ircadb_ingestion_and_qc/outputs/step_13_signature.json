@@ -1,0 +1,27 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "6cc337aa35b0f3f9a539d84257c781138bb5cc74dbe295a70903a08879df336d",
+  "created_utc": "2026-08-05T13:50:21.359830+00:00",
+  "download_status": "reused_existing_archives",
+  "inference_performed": false,
+  "result_level": "EXTERNAL_SOURCE_INGESTION_QC_PASS",
+  "signed_artifacts": {
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/INGESTION_QC_REPORT.md": "7a8b6d95810cfad9079bec5f22e86c108f7181263aade90f36b46fdb4b0d436e",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/archive_inventory.csv": "fe893de097e6e2fd118b974c02818d99e0ce59260c6c3b7fe1d2bf826dd5bb0b",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/authorization_state.json": "b36b0654540dd364c896cae89ad757a9a173cd83c0efb884a46ebcd0ce13ce72",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/configuration.json": "cd1a1aa7516e6b454a5e4a719c0f0af68c8b6f48145910809091b7776af22253",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/dicom_series_profile.csv": "ef3e6cabfcea564872112eb39e0e63f8b4a03dacc19c54e2ce7383a76f556069",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/download_manifest.csv": "0604c572835bc05ddea97afc04765cc581d0df13d99f4200b8eec430d0dcbfc7",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/expected_vs_actual.csv": "420bd3a1c41e0761f3f5f0cf20ef04a31001085628f16e38a5461815a899a02f",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/extracted_file_inventory.csv": "65a79ee778d460042c171d28dfed56ad766a77f0aa1639984c9b070cd464edea",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/gate_result.json": "919548688e59a53e2db7d7360f65d7ab803fd833117ed0de9ffee1ced27eb376",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/ingestion_qc_dashboard.png": "50a717a7f962b7e249cbc7621b288b8731e3b971288238eb032c23cd0ca2673d",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/ingestion_qc_results.csv": "d45fddd82f4dd7586a3d01ec5f7353195e7382dd8b92509957cf02cd6dcbf72e",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/input_verification.csv": "e39b171fa66a024837d3cfba2a91cc6c48efc9d008509ca720e351ade4247046",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/label_inventory.csv": "c561027f07ba4410c929b2bf77f28947a79fe328bd338b72f53e598c993d12e4",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/patient_source_qc_summary.csv": "9bb2c293b3dc989c29278883decb02d936a566ca5cf6d7ab0274397e012f14db",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/provenance.json": "571b50f85832384dab4267ca31656ea7a5e38dc05e01213b05e1894377bc43bd",
+    "step_13_3d_ircadb_ingestion_and_qc/outputs/source_terms_snapshot.json": "1d4667c44bc8b4093cb49d019d9430b1a52536124e9185c11de4c9226f6d4ae4"
+  },
+  "test_source_files_reopened": false
+}

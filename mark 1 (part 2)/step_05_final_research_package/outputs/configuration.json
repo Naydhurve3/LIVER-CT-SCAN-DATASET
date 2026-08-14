@@ -1,0 +1,41 @@
+{
+  "audience": "technical",
+  "expected_outputs": [
+    "configuration.json",
+    "provenance.json",
+    "final_evidence_validation.csv",
+    "final_metrics_summary.csv",
+    "methods_and_parameters.csv",
+    "experiment_timeline.csv",
+    "decision_log.csv",
+    "patient_results_table.csv",
+    "lesion_stratum_results.csv",
+    "v121_failure_evidence.csv",
+    "chart_map.csv",
+    "final_outcome_dashboard.png",
+    "validation_to_test_comparison.png",
+    "patient_failure_distribution.png",
+    "FINAL_TECHNICAL_REPORT.md",
+    "PAPER_DRAFT.md",
+    "LIMITATIONS_AND_FAILURE_ANALYSIS.md",
+    "REPRODUCIBILITY_INSTRUCTIONS.md",
+    "FINAL_PROJECT_DATA_CARD.md",
+    "expected_vs_actual.csv",
+    "ARTIFACT_CHECKSUM_INVENTORY.csv",
+    "final_package_signature.json",
+    "gate_result.json"
+  ],
+  "formal_model_acceptance_passed": false,
+  "mode": "NO_INFERENCE_FINAL_RESEARCH_PACKAGE",
+  "phase": "step_05_final_research_package",
+  "random_seed": 42,
+  "source_steps": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "test_images_accessed_in_this_phase": false,
+  "test_source_files_reopened": false
+}

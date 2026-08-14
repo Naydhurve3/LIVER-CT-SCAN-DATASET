@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-08-05T12:43:44.700497+00:00",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "mode": "artifact_only_decision_support",
+  "owner_inputs": {
+    "author_contributions_confirmed": false,
+    "authors_and_affiliations_confirmed": false,
+    "code_and_data_availability_confirmed": false,
+    "conflicts_confirmed": false,
+    "corresponding_author_email": "",
+    "corresponding_author_name": "",
+    "dataset_terms_confirmed": false,
+    "ethics_or_applicability_confirmed": false,
+    "funding_confirmed": false,
+    "maximum_publication_budget_usd": null,
+    "open_access_required": null,
+    "selected_venue": ""
+  },
+  "phase": "step_08_venue_selection_and_owner_intake",
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "venue_information_as_of": "2026-08-05",
+  "weights": {
+    "cost_flexibility": 0.05,
+    "evidence_compatibility": 0.25,
+    "format_compatibility": 0.1,
+    "novelty_alignment": 0.2,
+    "reporting_alignment": 0.15,
+    "scope_fit": 0.25
+  }
+}

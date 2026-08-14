@@ -1,0 +1,4 @@
+metric,estimate,ci_lower_2_5,ci_upper_97_5,iterations,seed,resampling_unit
+mean_positive_patient_dice,0.50729684,0.34417528,0.65941075,10000,42,tumour-positive test patient
+mean_positive_patient_precision,0.55365559,0.36170025,0.73050756,10000,42,tumour-positive test patient
+mean_positive_patient_recall,0.59034237,0.43835467,0.72507873,10000,42,tumour-positive test patient

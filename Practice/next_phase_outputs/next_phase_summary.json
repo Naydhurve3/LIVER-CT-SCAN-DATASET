@@ -1,0 +1,11 @@
+{
+  "pair_gate_passed": true,
+  "visual_alignment_approved": false,
+  "overfit_status": "not_run",
+  "overfit_best_dice": null,
+  "overfit_gate_passed": false,
+  "progress_pct": 28.571428571428573,
+  "ready_for_framework_repair": false,
+  "previous_baseline_valid": false,
+  "previous_baseline_reason": "512x512 image source was spatially mismatched with 256x256 tumor masks"
+}

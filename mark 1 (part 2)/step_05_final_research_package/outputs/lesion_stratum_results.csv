@@ -1,0 +1,5 @@
+size_stratum,lesions,detected_pct,mean_matched_dice,median_matched_dice,median_volume_ml
+train_lesion_volume_q1,68,60.29411765,0.23756658,0.09666976,0.07953987
+train_lesion_volume_q2,50,98.00000000,0.57819942,0.67458143,0.33476997
+train_lesion_volume_q3,38,97.36842105,0.52118650,0.63636110,1.65015188
+train_lesion_volume_q4,31,100.00000000,0.66436314,0.74738350,29.54150391

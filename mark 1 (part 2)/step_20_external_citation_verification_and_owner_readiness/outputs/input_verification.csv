@@ -1,0 +1,8 @@
+check,passed
+step19_manuscript_update_ready,True
+step19_submission_closed,True
+all_step19_signed_artifacts_match,True
+fourteen_owner_fields_present,True
+owner_fields_remain_unset,True
+local_terms_snapshot_matches_dataset,True
+redistribution_remains_unauthorized,True

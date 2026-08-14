@@ -1,0 +1,7 @@
+metric,actual,target,direction,passed,mark4e_reference,absolute_reference_delta
+mean_patient_dice,0.37706060,0.33290000,>=,True,0.37708669,0.00002609
+volume_104_dice,0.11647368,0.05000000,>=,True,0.11662698,0.00015329
+volume_116_dice,0.01047342,0.01000000,>=,True,0.01047355,0.00000013
+q1_detected_pct,50.57034221,35.00000000,>=,True,50.57034221,0.00000000
+positive_predicted_empty_pct,27.44721689,35.00000000,<=,True,27.44721689,0.00000000
+empty_slice_false_positive_pct,5.54806595,20.00000000,<=,True,5.54806595,0.00000000

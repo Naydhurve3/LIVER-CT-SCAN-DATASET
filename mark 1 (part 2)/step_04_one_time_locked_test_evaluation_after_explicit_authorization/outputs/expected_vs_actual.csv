@@ -1,0 +1,10 @@
+order,scope,metric,direction,target,mandatory,rationale,actual,passed
+0,validation_prerequisite,step03_validation_freeze,==,1.00000000,True,frozen prerequisite,1.00000000,True
+7,final_test,mean_positive_patient_dice,>=,0.33290000,True,minimum final patient-level performance,0.50729684,True
+8,final_test,q1_positive_slice_detection_pct_train_edges,>=,35.00000000,True,small-lesion sensitivity with frozen train-derived edge,47.55244755,True
+9,final_test,positive_predicted_empty_pct,<=,35.00000000,True,positive-slice miss guardrail,9.94152047,True
+10,final_test,empty_slice_false_positive_pct,<=,20.00000000,True,empty-slice false-positive guardrail,3.81014945,True
+11,final_test,minimum_positive_patient_dice,>=,0.01000000,True,prohibit catastrophic positive-patient failure,0.00000000,False
+12,final_test_integrity,sample_coverage_fraction,==,1.00000000,True,complete one-time evaluation,1.00000000,True
+13,final_test_integrity,finite_probability_fraction,==,1.00000000,True,numerical integrity,1.00000000,True
+14,final_test_integrity,unique_sample_id_fraction,==,1.00000000,True,no duplicated evaluations,1.00000000,True

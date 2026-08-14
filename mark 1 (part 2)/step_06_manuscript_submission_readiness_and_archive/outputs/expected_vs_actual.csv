@@ -1,0 +1,9 @@
+requirement,expected,actual,passed
+sealed_package_verified,True,True,True
+scientific_content_complete,True,True,True
+claims_traceable,True,True,True
+archive_inventory_complete,True,True,True
+readiness_report_saved,True,True,True
+completion_actions_saved,True,True,True
+test_inference_rerun_false,True,True,True
+test_source_files_reopened_false,True,True,True

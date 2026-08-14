@@ -1,0 +1,7 @@
+requirement,expected,actual,passed
+sealed_inputs_verified,True,True,True
+headline_means_reconciled,True,True,True
+formal_lits_failure_preserved,False,False,True
+external_caveats_preserved,True,True,True
+owner_submission_gate_closed,False,False,True
+no_inference_test_reopen_or_submission,True,True,True

@@ -1,0 +1,8 @@
+requirement,expected,actual,passed
+internal boundary checks,8,8,True
+official source records,4,4,True
+independent tumour candidates,2,2,True
+MSD prohibited as independent validation,True,True,True
+ingestion QC checks,12,12,True
+zero external dataset downloads performed,0,0,True
+local test source files remained sealed,0,0,True

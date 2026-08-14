@@ -1,0 +1,19 @@
+{
+  "status": "multitask_localization_fail",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "source_checkpoint_sha256": "5f18223c0f618d45d1433dc4a48d950fdea8a039db9ea557629ffd38fe06270f",
+  "best_epoch": 8,
+  "mean_patient_dice": 0.3328539054838034,
+  "volume_104_dice": 1.4421898210034442e-11,
+  "volume_116_dice": 6.52328486528423e-12,
+  "q1_detected_pct": 28.13688212927757,
+  "positive_predicted_empty_pct": 46.161228406909785,
+  "empty_slice_false_positive_pct": 3.245877838846832,
+  "mean_liver_dice": 0.8863217756637942,
+  "targets_passed": 1,
+  "all_expected_targets_passed": false,
+  "ground_truth_organ_used_for_validation_preprocessing": false,
+  "ground_truth_organ_used_for_validation_gating": false,
+  "test_images_accessed": false,
+  "decision": "FAIL \u2014 keep test locked and inspect whether errors are inside predicted liver or caused by missed liver support."
+}

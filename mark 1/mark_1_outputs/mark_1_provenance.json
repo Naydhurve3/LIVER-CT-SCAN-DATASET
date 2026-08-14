@@ -1,0 +1,41 @@
+{
+  "manifest_path": "D:\\DATA SCIENCE AND ANALYTICS\\Dataset\\Liver\\02_staging\\build_corrected_20260713_214847_v2\\manifests\\slice_manifest.csv",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "checkpoint_path": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\Practice\\multitask_liver_tumor_outputs\\multitask_best.pth",
+  "checkpoint_sha256": "9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223",
+  "validation_slices": 10685,
+  "validation_patients": 13,
+  "random_seed": 42,
+  "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+  "pytorch": "2.6.0+cu124",
+  "numpy": "2.4.6",
+  "pandas": "2.3.3",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "test_images_accessed": false,
+  "test_lock_message": "Test data access is locked. Pass allow_test=True only for the one-time held-out evaluation after model decisions are frozen.",
+  "run_full_diagnostic": true,
+  "checkpoint_epoch": 8,
+  "parent_checkpoint_sha256": "5f18223c0f618d45d1433dc4a48d950fdea8a039db9ea557629ffd38fe06270f",
+  "checkpoint_configuration": {
+    "epochs": 15,
+    "learning_rate": 0.0001,
+    "liver_dilation_kernel": 31,
+    "tumor_loss_weight": 0.72,
+    "liver_loss_weight": 0.23,
+    "containment_loss_weight": 0.05
+  },
+  "model_input_shape": [
+    1,
+    1,
+    256,
+    256
+  ],
+  "model_output_shape": [
+    1,
+    2,
+    256,
+    256
+  ],
+  "strict_checkpoint_load": true
+}

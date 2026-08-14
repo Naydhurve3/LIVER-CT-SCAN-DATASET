@@ -1,0 +1,29 @@
+{
+  "critical_identity_note": "MSD Task03 Liver overlaps LiTS and is not independent external validation.",
+  "download_performed": false,
+  "refresh_before_download": true,
+  "snapshot_date": "2026-08-05",
+  "source_policy": "Official dataset/challenge pages and primary dataset publication only.",
+  "sources": [
+    {
+      "dataset": "3D-IRCADb-01",
+      "official_url": "https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/",
+      "source_owner": "IRCAD"
+    },
+    {
+      "dataset": "HCC-TACE-Seg",
+      "official_url": "https://www.cancerimagingarchive.net/collection/hcc-tace-seg/",
+      "source_owner": "The Cancer Imaging Archive"
+    },
+    {
+      "dataset": "MSD Task03 Liver",
+      "official_url": "https://medicaldecathlon.com/dataaws/",
+      "source_owner": "Medical Segmentation Decathlon"
+    },
+    {
+      "dataset": "CHAOS CT",
+      "official_url": "https://chaos.grand-challenge.org/Data/",
+      "source_owner": "CHAOS / Grand Challenge"
+    }
+  ]
+}

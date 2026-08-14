@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-08-05T13:15:25.405358+00:00",
+  "download_performed": false,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "official_source_urls": [
+    "https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/",
+    "https://www.cancerimagingarchive.net/collection/hcc-tace-seg/",
+    "https://medicaldecathlon.com/dataaws/",
+    "https://chaos.grand-challenge.org/Data/"
+  ],
+  "phase": "step_12_public_external_dataset_audit_and_acquisition_plan",
+  "snapshot_date": "2026-08-05",
+  "step01_gate_sha256": "fcc1f735a1f10e7c9ac5c94029b513ab498be6f39cf243fa36f4562d358266cb",
+  "step01_geometry_profile_sha256": "c5dddf6877c7125ef251d7fdbd8742ed54db1b592d62aba5777e35ad4cf58f35",
+  "step10_gate_sha256": "1ce2fb1db620c3ef9b984c451fcc276e4ea1f331510606067247671d0d518d8e",
+  "test_images_accessed": false,
+  "test_source_files_reopened": false
+}

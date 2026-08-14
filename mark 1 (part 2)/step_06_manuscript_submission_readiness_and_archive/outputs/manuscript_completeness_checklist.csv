@@ -1,0 +1,22 @@
+category,item,complete,required_for_submission,evidence_or_action
+scientific_content,Descriptive title,True,True,Present in draft
+scientific_content,Structured abstract,True,True,Present in draft
+scientific_content,Introduction,True,True,Present in draft
+scientific_content,Dataset governance,True,True,Manifest-locked governance described
+scientific_content,Model and inference policy,True,True,Frozen maximum-fusion policy described
+scientific_content,Uncertainty and metrics,True,True,Patient bootstrap and metrics described
+scientific_content,One-time test governance,True,True,Run UUID and no-rerun rule present
+scientific_content,Results and negative gate,True,True,Formal acceptance failure preserved
+scientific_content,Limitations,True,True,Limitations present
+scientific_content,Conclusion,True,True,Conclusion matches failed formal acceptance
+citations_references,Literature citations and reference list,False,True,External scholarly review required; intentionally absent
+declarations_metadata,Authors and affiliations,False,True,Owner input required
+declarations_metadata,Ethics or applicability statement,False,True,Owner/institutional determination required
+declarations_metadata,Dataset license and terms statement,False,True,Verify against authoritative LiTS terms
+declarations_metadata,Author contributions,False,True,Owner input required
+declarations_metadata,Conflicts of interest,False,True,Owner input required
+declarations_metadata,Funding statement,False,True,Owner input required
+declarations_metadata,Code and data availability,False,True,Repository/archive decision required
+venue_formatting,Target venue selected,False,True,Venue not specified
+venue_formatting,Venue formatting applied,False,True,Requires selected venue
+venue_formatting,Reporting-guideline mapping,False,True,Select applicable current guideline before submission

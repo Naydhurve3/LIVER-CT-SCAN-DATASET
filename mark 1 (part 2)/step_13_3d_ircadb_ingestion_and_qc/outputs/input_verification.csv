@@ -1,0 +1,7 @@
+check,passed,observed
+step12_complete,True,PUBLIC_EXTERNAL_DATA_AUDIT_COMPLETE
+recommended_source,True,3D-IRCADb-01
+manifest_hash,True,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889
+step12_signature_valid,True,15/15
+step12_download_false,True,False
+test_remained_sealed,True,False

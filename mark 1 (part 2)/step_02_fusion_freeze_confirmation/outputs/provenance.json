@@ -1,0 +1,30 @@
+{
+  "checkpoint_sha256": {
+    "control": "9b0c7749af66b0fc3808f6757d0d90af01384e06afe02090361b220df48b6e8b",
+    "recall_loss": "c01eb4b81e4e7f1d84c7966aca56e738d87d06d404907f0bcc7c67a79ed4ec4d"
+  },
+  "created_utc": "2026-08-03T09:48:35.988793+00:00",
+  "device": "cuda",
+  "input_artifact_hashes": {
+    "mark4e_gate": "31f952a32623d3578232572b203d2e6d4bffc2eff9cc85ae862f20a250ec4241",
+    "step01_gate": "fcc1f735a1f10e7c9ac5c94029b513ab498be6f39cf243fa36f4562d358266cb",
+    "validation_roi_manifest": "95927515e3e6c34b161c31f217a0b784ecfb64d2ae543f3c9d7a9435a9a4d297"
+  },
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "positive_volumes": [
+    104,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    116
+  ],
+  "test_images_accessed": false,
+  "test_metadata_rows_counted_only": 7286,
+  "total_inference_seconds": 405.0313238999952,
+  "validation_rows": 10685,
+  "validation_volumes": 13
+}

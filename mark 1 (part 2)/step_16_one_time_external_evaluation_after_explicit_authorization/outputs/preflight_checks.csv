@@ -1,0 +1,13 @@
+check,passed
+step15_contract_frozen,True
+step15_result_level,True
+step15_signed_artifacts_match,True
+three_checkpoint_hashes_match,True
+complete_20_case_cohort,True
+15_positive_5_negative,True
+all_60_normalized_paths_exist,True
+manifest_identity,True
+policy_threshold_0_70,True
+policy_fusion_maximum,True
+policy_post_processing_none,True
+local_lits_test_access_disabled,True

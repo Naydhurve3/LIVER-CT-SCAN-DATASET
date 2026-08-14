@@ -1,0 +1,11 @@
+requirement,complete,venue_relevance,action_or_evidence
+Authorship and affiliations,False,all candidates,"Complete ordered authors, affiliations and corresponding-author details"
+Ethics/applicability,False,all candidates,Obtain owner/institutional determination; do not infer from public-dataset status
+Dataset terms,False,all candidates,Verify terms applying to the exact acquired LiTS copy
+Data/code availability,False,all candidates,State access and redistribution boundaries
+Conflicts and funding,False,all candidates,"Provide explicit declarations, including none if applicable"
+Author contributions,False,all candidates,Complete contribution roles
+CLAIM mapping,True,Radiology: Artificial Intelligence; useful for all,Step 07 gap map exists; page/line mapping remains after venue formatting
+Negative formal outcome preserved,True,all candidates,V121 guardrail failure remains explicit
+Train/validation/test governance,True,all candidates; explicitly important for CBM,Patient-disjoint partitions and one-time test ledger documented
+External validation,False,editorial risk across candidates,Report as absent limitation; do not manufacture or reuse test split

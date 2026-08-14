@@ -1,0 +1,12 @@
+metric,value
+all_cases,20
+tumour_positive_cases,15
+tumour_negative_cases,5
+lesion_proxy_folders,24
+patients_burden_q1,1
+patients_burden_q2,7
+patients_burden_q4,7
+patients_tumour_negative,5
+lesions_lesion_q2,2
+lesions_lesion_q3,4
+lesions_lesion_q4,18

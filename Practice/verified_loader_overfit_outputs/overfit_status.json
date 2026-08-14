@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "gate_dice": 0.8,
+  "threshold": 0.5,
+  "epochs_completed": 76,
+  "best_hard_micro_dice": 0.8163059889383042,
+  "selected_sample_ids": [
+    "v084_s0632",
+    "v008_s0391",
+    "v049_s0158",
+    "v037_s0092",
+    "v007_s0387",
+    "v019_s0439",
+    "v035_s0053",
+    "v068_s0132",
+    "v103_s0515",
+    "v101_s0422",
+    "v097_s0526",
+    "v093_s0393",
+    "v033_s0089",
+    "v004_s0527",
+    "v039_s0043",
+    "v100_s0481"
+  ],
+  "test_images_accessed": false,
+  "device": "cuda",
+  "mixed_precision": true,
+  "pretrained_encoder": false,
+  "max_epochs": 150
+}

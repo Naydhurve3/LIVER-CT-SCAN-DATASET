@@ -1,0 +1,14 @@
+method_claim,authoritative_value,present_and_consistent,passed
+corrected build,build_corrected_20260713_214847_v2,True,True
+HU window,"[-160,240]",True,True
+input resolution,256×256,True,True
+ROI threshold,0.50,True,True
+ROI connectivity,26-connected,True,True
+ROI padding,16 pixels,True,True
+maximum fusion,"max(p_control,p_recall)",True,True
+global threshold,0.70,True,True
+no post-processing,none,True,True
+bootstrap iterations,10000,True,True
+bootstrap seed,42,True,True
+one-time run UUID,871d289b-bf6b-4346-978f-2df02ade26ab,True,True
+formal failure,V121 minimum-patient floor,True,True

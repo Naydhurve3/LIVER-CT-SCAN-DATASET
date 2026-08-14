@@ -1,0 +1,43 @@
+{
+  "all_mandatory_targets_passed": true,
+  "decision": "OWNER_COMPLETE_DECLARATIONS_VERIFY_DATASET_TERMS_AND_SELECT_VENUE",
+  "formal_model_acceptance_failure": "minimum_positive_patient_dice",
+  "formal_model_acceptance_passed": false,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "next_step": "owner_metadata_completion_then_venue_specific_finalization",
+  "reference_candidates": 4,
+  "reporting_areas_complete": 10,
+  "reporting_areas_total": 16,
+  "result_level": "MANUSCRIPT_EVIDENCE_SCAFFOLD_COMPLETE",
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "status": "manuscript_evidence_scaffold_complete",
+  "submission_ready": false,
+  "target_passes": {
+    "citation_insertion_plan_saved": true,
+    "citation_keyed_manuscript_saved": true,
+    "dataset_terms_left_unresolved_not_invented": true,
+    "declaration_template_saved": true,
+    "owner_metadata_template_saved": true,
+    "primary_reference_candidates_saved": true,
+    "reporting_gap_map_saved": true,
+    "sealed_inputs_verified": true,
+    "test_inference_rerun_false": true,
+    "test_source_files_reopened_false": true
+  },
+  "targets": {
+    "citation_insertion_plan_saved": true,
+    "citation_keyed_manuscript_saved": true,
+    "dataset_terms_left_unresolved_not_invented": true,
+    "declaration_template_saved": true,
+    "owner_metadata_template_saved": true,
+    "primary_reference_candidates_saved": true,
+    "reporting_gap_map_saved": true,
+    "sealed_inputs_verified": true,
+    "test_inference_rerun_false": true,
+    "test_source_files_reopened_false": true
+  },
+  "test_images_accessed": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false,
+  "unresolved_owner_or_venue_fields": 13
+}

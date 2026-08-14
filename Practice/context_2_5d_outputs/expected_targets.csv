@@ -1,0 +1,7 @@
+metric,direction,target,baseline
+Mean patient Dice,higher,0.383069,0.383069
+Volume 104 Dice,higher,0.197613,0.197613
+Volume 116 Dice,higher,0.05,0.0
+Q1 detection (%),higher,35.0,25.475285
+Positive predicted empty (%),lower,30.0,39.443378
+Empty-slice FP (%),lower,15.0,3.34958

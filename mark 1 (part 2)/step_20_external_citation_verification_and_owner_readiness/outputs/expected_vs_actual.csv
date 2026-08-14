@@ -1,0 +1,7 @@
+requirement,expected,actual,passed
+Step19 evidence verified,True,True,True
+official citation captured,True,True,True
+licence captured,True,True,True
+owner fields unmodified,0,0,True
+submission remains closed,False,False,True
+no inference download test access or submission,True,True,True

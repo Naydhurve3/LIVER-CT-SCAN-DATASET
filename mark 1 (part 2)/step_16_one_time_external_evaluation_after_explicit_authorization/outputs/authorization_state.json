@@ -1,0 +1,13 @@
+{
+  "authorization_granted": true,
+  "authorization_recorded_utc": "2026-08-05T14:49:18.3333060Z",
+  "authorization_text": "I authorize the one-time Step 16 3D-IRCADb-01 external evaluation under the frozen Step 15 contract.",
+  "authorization_text_exact": true,
+  "completed_utc": "2026-08-05T14:53:07.797046+00:00",
+  "expected_authorization_text": "I authorize the one-time Step 16 3D-IRCADb-01 external evaluation under the frozen Step 15 contract.",
+  "formal_external_evaluation_performed": true,
+  "inference_performed": true,
+  "model_loaded": true,
+  "one_time_run_id": "61d1f140-c8b4-436a-928a-1e4b6f7c0b56",
+  "run_evaluation": true
+}

@@ -1,0 +1,18 @@
+{
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "source_checkpoint_sha256": "9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223",
+  "mark3_gate_path": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1\\mark_3_outputs\\mark_3_gate_result.json",
+  "train_slices": 40667,
+  "validation_slices": 10685,
+  "roi_rule": {
+    "liver_threshold": 0.5,
+    "padding": 16,
+    "component_mode": "largest_3d"
+  },
+  "input_window_hu": [
+    -160.0,
+    240.0
+  ],
+  "overfit_checkpoint_used_for_initialization": false,
+  "test_images_accessed": false
+}

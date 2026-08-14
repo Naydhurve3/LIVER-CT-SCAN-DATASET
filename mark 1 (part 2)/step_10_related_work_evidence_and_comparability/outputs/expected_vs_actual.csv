@@ -1,0 +1,12 @@
+requirement,expected,actual,passed
+sealed Step 09 input checks,10,10,True
+primary literature sources,12,13,True
+direct LiTS sources,5,5,True
+unique citation keys,13,13,True
+theme coverage,13,13,True
+external quantitative rankings prohibited,0,0,True
+related-work draft exists,1,1,True
+expanded manuscript exists,1,1,True
+expanded BibTeX exists,1,1,True
+test inference reruns,0,0,True
+test source files reopened,0,0,True

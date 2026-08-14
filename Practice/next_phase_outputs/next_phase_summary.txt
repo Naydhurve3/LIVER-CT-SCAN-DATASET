@@ -1,0 +1,10 @@
+LITS NEXT-PHASE SUMMARY
+========================================================================
+Pair gate:             PASS
+Visual approval:       PENDING
+Overfit gate:          PENDING/FAIL
+Best overfit Dice:     None
+Overall progress:      28.6%
+Ready for code repair: False
+
+Do not run FAUP/UWACL or the held-out test set from this notebook.

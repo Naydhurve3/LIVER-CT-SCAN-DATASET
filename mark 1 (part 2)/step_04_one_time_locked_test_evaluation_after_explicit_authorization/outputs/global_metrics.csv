@@ -1,0 +1,2 @@
+global_dice,global_pixel_precision,global_pixel_recall,mean_positive_patient_dice,median_positive_patient_dice,minimum_positive_patient_dice,q1_positive_slice_detection_pct_train_edges,positive_predicted_empty_pct,empty_slice_false_positive_pct,sample_coverage_fraction,finite_probability_fraction,unique_sample_id_fraction
+0.76769626,0.84439412,0.70377141,0.50729684,0.56513738,0.00000000,47.55244755,9.94152047,3.81014945,1.00000000,1.00000000,1.00000000

@@ -1,0 +1,154 @@
+{
+  "acceptance_contract_sha256": "12e8932d71651fd9247d841a86dfcd0fa80d64d74c4f334e29b113c28213b52d",
+  "batch_size": 24,
+  "device": "cuda",
+  "expected_outputs": [
+    "preflight_status.json",
+    "authorization_record.json",
+    "run_ledger.json",
+    "configuration.json",
+    "provenance.json",
+    "checkpoint_hashes.json",
+    "test_roi_manifest.csv",
+    "runtime_log.csv",
+    "cache_integrity.csv",
+    "patient_metrics.csv",
+    "slice_metrics.csv",
+    "global_metrics.csv",
+    "bootstrap_uncertainty.csv",
+    "lesion_or_size_metrics.csv",
+    "size_stratum_metrics.csv",
+    "probability_histograms.csv",
+    "probability_reliability.csv",
+    "failure_cases.csv",
+    "expected_vs_actual.csv",
+    "final_test_dashboard.png",
+    "patient_dice_heatmap.png",
+    "probability_diagnostics_dashboard.png",
+    "failure_case_panels.png",
+    "final_test_evidence_inventory.csv",
+    "final_test_signature.json",
+    "test_access_declaration.json",
+    "TEST_RESULTS_DATA_CARD.md",
+    "gate_result.json"
+  ],
+  "full_analysis_executed": true,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "mode": "ONE_TIME_LOCKED_TEST_EVALUATION",
+  "num_workers": 0,
+  "one_time_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "phase": "step_04_one_time_locked_test_evaluation_after_explicit_authorization",
+  "policy": {
+    "dataset": {
+      "build_id": "build_corrected_20260713_214847_v2",
+      "manifest_path": "D:\\DATA SCIENCE AND ANALYTICS\\Dataset\\Liver\\02_staging\\build_corrected_20260713_214847_v2\\manifests\\slice_manifest.csv",
+      "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889"
+    },
+    "frozen_utc": "2026-08-03T13:18:23.165931+00:00",
+    "immutable_after_test": [
+      "dataset",
+      "model",
+      "input",
+      "roi",
+      "probability",
+      "metrics"
+    ],
+    "input": {
+      "channels_in_order": [
+        "broad_window"
+      ],
+      "clipping": "clip(HU,-160,240)",
+      "hu_window": [
+        -160,
+        240
+      ],
+      "normalization": "float32(uint8)/255",
+      "source_type": "derived 256x256 PNG produced from source CT",
+      "stored_representation": "uint8"
+    },
+    "metrics": {
+      "bootstrap": {
+        "iterations": 10000,
+        "resampling_unit": "patient",
+        "seed": 42
+      },
+      "dice_formula": "(2*intersection + epsilon)/(truth_pixels + predicted_pixels + epsilon)",
+      "empty_truth_convention": "reported separately; not included in positive-patient mean Dice",
+      "epsilon": 1e-06,
+      "primary_population": "tumour-positive patients",
+      "q1_positive_slice_definition": {
+        "derivation_split": "train",
+        "truth_pixels_max_inclusive": 51.0,
+        "truth_pixels_min_exclusive": 0
+      }
+    },
+    "model": {
+      "architecture": "MobileNetV2UNet",
+      "control_checkpoint": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1\\mark_4_outputs\\mark_4_best.pth",
+      "control_checkpoint_sha256": "9b0c7749af66b0fc3808f6757d0d90af01384e06afe02090361b220df48b6e8b",
+      "input_channels": 1,
+      "output_channels": 1,
+      "recall_checkpoint": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\mark 1\\mark_4c_outputs\\recall_loss_best.pth",
+      "recall_checkpoint_sha256": "c01eb4b81e4e7f1d84c7966aca56e738d87d06d404907f0bcc7c67a79ed4ec4d",
+      "strict_state_loading": true
+    },
+    "probability": {
+      "description": "model probability score; not claimed to be calibrated",
+      "fusion_equation": "maximum(control_probability, recall_probability)",
+      "global_threshold": 0.7,
+      "hard_prediction_rule": "fused_probability >= 0.70",
+      "inference_dtype": "float32",
+      "post_processing": "none",
+      "score_definition": "sigmoid(logit)"
+    },
+    "random_seed": 42,
+    "roi": {
+      "component_rule": "largest_3d",
+      "crop_resize": [
+        256,
+        256
+      ],
+      "generator": {
+        "architecture": "MobileNetV2UNet",
+        "checkpoint": "D:\\DATA SCIENCE AND ANALYTICS\\PROJECTS\\Liver\\Practice\\multitask_liver_tumor_outputs\\multitask_best.pth",
+        "checkpoint_sha256": "9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223",
+        "connectivity": 26,
+        "empty_roi_fallback": "full_image_box_[0,256,0,256]",
+        "input_channels": 1,
+        "input_source": "derived broad-window uint8 PNG divided by 255",
+        "output_channels": 2,
+        "per_slice_normalization": "positive-pixel median and IQR/1.349 robust z-score, fallback whole slice; clip [-3,3], map to [0,1]",
+        "robust_z_clip": 3.0,
+        "score_definition": "sigmoid(logit)[:,0]",
+        "strict_state_loading": true
+      },
+      "image_interpolation": "bilinear",
+      "inverse_mapping": "bilinear score resize into frozen full-image box",
+      "padding_pixels": 16,
+      "source": "predicted_liver",
+      "threshold": 0.5,
+      "validation_roi_manifest_sha256": "95927515e3e6c34b161c31f217a0b784ecfb64d2ae543f3c9d7a9435a9a4d297"
+    },
+    "runtime_reference": {
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+      "torch": "2.6.0+cu124"
+    },
+    "schema_version": "1.0",
+    "status": "FROZEN_PENDING_EXPLICIT_TEST_AUTHORIZATION",
+    "test_images_accessed": false,
+    "test_results_may_not_trigger": [
+      "threshold tuning",
+      "checkpoint selection",
+      "fusion changes",
+      "post-processing changes",
+      "retraining"
+    ]
+  },
+  "random_seed": 42,
+  "test_images_accessed": true,
+  "test_rows": 7286,
+  "test_volumes": 14
+}

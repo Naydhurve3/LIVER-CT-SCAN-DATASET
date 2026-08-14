@@ -1,0 +1,17 @@
+reporting_area,project_evidence_or_requirement,status,evidence_source,required_action
+Title/abstract,"AI method, task, data and negative formal outcome identified",complete,PAPER_DRAFT.md,Preserve failed formal acceptance
+Introduction,Clinical/research context and study objective stated,complete,PAPER_DRAFT.md,Add literature context during editing
+Data provenance,"LiTS identity, corrected build and manifest governance stated",complete,PAPER_DRAFT.md; Step 01 data card,Add Bilic2023LiTS
+Eligibility and partitions,Patient-disjoint partitions and counts documented,complete,Step 01; Step 05 report,No test re-analysis
+Reference standard,Label semantics and QC documented,complete,Step 01 outputs,Summarize annotation provenance cautiously
+Model specification,"Architecture, checkpoints and input processing documented",complete,Step 03 policy; Step 05 methods,Add U-Net and MobileNetV2 citations
+Evaluation design,Frozen one-time held-out evaluation described,complete,Step 03 contract; Step 04 ledger,Do not imply external validation
+Metrics and uncertainty,"Dice, precision, recall, patient bootstrap and strata documented",complete,Step 04/05 outputs,Keep denominators explicit
+Error analysis,V121 and small-lesion weaknesses reported,complete,Step 05 failure analysis,Recognition failure is evidence-bound
+Limitations,"Cohort, 2D design, calibration and external validity limits stated",complete,Step 05 limitations,No clinical safety claim
+Ethics/applicability,Ethics determination or public-dataset applicability statement,owner_required,OWNER INPUT,Institutional determination required
+Data terms,Authoritative dataset-use/license statement,owner_required,OWNER INPUT,Verify acquisition source and terms; do not infer license
+Code/data availability,Availability and redistribution boundaries,owner_required,OWNER INPUT,Select repository/archive and respect dataset terms
+Authors/contributions,"Names, affiliations and contribution taxonomy",owner_required,OWNER INPUT,Complete CRediT roles if venue supports them
+Conflicts/funding,Conflict and funding declarations,owner_required,OWNER INPUT,Explicit statements required even if none
+Venue compliance,"Target venue instructions, article type and formatting",venue_required,VENUE INPUT,Complete only after venue selection

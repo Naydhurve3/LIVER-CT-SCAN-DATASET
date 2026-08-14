@@ -1,0 +1,11 @@
+check,passed,observed
+manifest_sha256_match,True,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889
+row_count_train_val,True,51352
+column_count,True,27
+sample_id_unique,True,51352
+volume_slice_unique,True,51352
+train_val_volume_disjoint,True,[]
+train_val_source_hash_disjoint,True,0
+required_source_files_exist,True,117
+sampled_mask_counts_match,True,128
+test_images_accessed_false,True,False

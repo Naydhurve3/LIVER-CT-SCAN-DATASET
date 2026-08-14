@@ -1,0 +1,15 @@
+{
+  "access_date": "2026-08-06",
+  "created_utc": "2026-08-06T03:33:32.709455+00:00",
+  "dataset_download_performed": false,
+  "inference_performed": false,
+  "official_source": "https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/",
+  "phase": "step_20_external_citation_verification_and_owner_readiness",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+  "step11_owner_status_sha256": "522dd9bf5aa1fe78c290026ba2623429d989c7361ec1e43078c3f85ac42f3b19",
+  "step13_terms_snapshot_sha256": "1d4667c44bc8b4093cb49d019d9430b1a52536124e9185c11de4c9226f6d4ae4",
+  "step19_signature_sha256": "32bfbb445bdece2027734fb2d5aefb76e17238bc1cd60eee97642000fb3ebaa9",
+  "submission_action_performed": false,
+  "test_source_files_reopened": false
+}

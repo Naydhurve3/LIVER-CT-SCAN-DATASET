@@ -1,0 +1,8 @@
+metric,reported,recomputed,absolute_difference,passed
+global_dice,0.8479770814155181,0.8479770814155181,0.0,True
+mean_positive_patient_dice,0.7111958843137554,0.7111958843137554,0.0,True
+median_positive_patient_dice,0.8355140187135496,0.8355140187135496,0.0,True
+minimum_positive_patient_dice,0.0129922862310222,0.0129922862310222,0.0,True
+q1_positive_slice_detection_pct,50.0,50.0,0.0,True
+positive_predicted_empty_pct,9.859154929577464,9.859154929577464,0.0,True
+empty_slice_false_positive_pct,11.574279379157428,11.574279379157428,0.0,True

@@ -1,0 +1,14 @@
+{
+  "corrected_images": 58638,
+  "legacy_images": 58638,
+  "masks": 58638,
+  "matched_corrected_pairs": 58638,
+  "source_duplicates": 0,
+  "mask_duplicates": 0,
+  "missing_masks": 0,
+  "missing_corrected_images": 0,
+  "dimension_sample_count": 256,
+  "dimension_mismatches": 0,
+  "expected_pair_count": 58638,
+  "pair_gate_passed": true
+}

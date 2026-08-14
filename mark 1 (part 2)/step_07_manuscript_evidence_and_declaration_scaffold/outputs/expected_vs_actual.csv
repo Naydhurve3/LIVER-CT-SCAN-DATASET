@@ -1,0 +1,11 @@
+requirement,expected,actual,passed
+sealed_inputs_verified,True,True,True
+primary_reference_candidates_saved,True,True,True
+citation_insertion_plan_saved,True,True,True
+citation_keyed_manuscript_saved,True,True,True
+reporting_gap_map_saved,True,True,True
+owner_metadata_template_saved,True,True,True
+declaration_template_saved,True,True,True
+dataset_terms_left_unresolved_not_invented,True,True,True
+test_inference_rerun_false,True,True,True
+test_source_files_reopened_false,True,True,True

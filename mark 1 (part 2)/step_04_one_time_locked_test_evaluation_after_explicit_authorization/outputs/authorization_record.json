@@ -1,0 +1,9 @@
+{
+  "acceptance_contract_sha256": "12e8932d71651fd9247d841a86dfcd0fa80d64d74c4f334e29b113c28213b52d",
+  "authorization_granted": true,
+  "authorization_recorded_utc": "2026-08-05T11:39:37.3247843Z",
+  "authorization_source_message": "got this error make edit as required",
+  "authorization_text": "I explicitly authorize one-time locked test evaluation using the Step 03 frozen policy and acceptance contract.",
+  "one_time_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "policy_sha256": "52d2df856709254992ab6b59f84a213a0a00f6e67293f66665b6f258d01f2131"
+}

@@ -1,0 +1,4 @@
+rank,venue,weighted_score_1_to_5,editorial_risk,official_url,interpretation
+1,BMC Medical Imaging,4.05,moderate: owner declarations and data terms are blockers,https://bmcmedimaging.biomedcentral.com/submission-guidelines/preparing-your-manuscript/research-article,preliminary practical candidate; owner must confirm open-access budget and declarations
+2,Biomedical Signal Processing and Control,3.6,moderate: limited clinical/external validation may weaken applications-led positioning,https://www.sciencedirect.com/journal/biomedical-signal-processing-and-control,engineering-oriented alternative; strengthen applications framing and limitations
+3,Medical Image Analysis,3.275,"very high: current package is rigorous but has limited method novelty, cohort size and external validation",https://www.sciencedirect.com/journal/medical-image-analysis,topical but explicit novelty/comparison risk requires a stronger literature comparison before submission

@@ -1,0 +1,13 @@
+{
+  "dataset": "3D-IRCADb-01",
+  "license_name": "CC BY-NC-ND 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "official_download_url": "https://cloud.ircad.fr/index.php/s/JN3z7EynBiwYyjy/download",
+  "official_page": "https://www.ircad.fr/research-and-development/data-sets/liver-segmentation-3d-ircadb-01/",
+  "official_page_checked_date": "2026-08-05",
+  "permitted_project_mode": "non-commercial research subject to official terms",
+  "redistribution_of_downloaded_or_derived_data_authorized": false,
+  "reported_combined_archive_size": "782 MB",
+  "required_attribution": "Soler et al., IRCAD Technical Report, 2010",
+  "user_acceptance_recorded": true
+}

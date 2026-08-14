@@ -1,0 +1,10 @@
+{
+  "algorithm": "SHA-256",
+  "created_utc": "2026-08-05T12:13:11.043014+00:00",
+  "formal_model_acceptance_passed": false,
+  "inventory_sha256": "62bfa49dbe7f83a0a8c5e4d805cea96c247394f64da006762b1492d2079acd5a",
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "source_test_signature_sha256": "4da370ea561c98e4abf55c2a1cdfd60f4b94bc34c4b1ea22c39c640f53adf7b1",
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

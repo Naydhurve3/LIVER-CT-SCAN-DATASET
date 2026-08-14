@@ -1,0 +1,6 @@
+requirement,expected,actual,passed
+Step 12 prerequisite checks,6,6,True
+official terms snapshot saved,1,1,True
+download requests when unauthorized,0,0,True
+zero local LiTS test source accesses,0,0,True
+zero model inference runs,0,0,True

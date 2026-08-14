@@ -1,0 +1,6 @@
+manuscript_location,supported_claim,citation_key,insertion_instruction
+2.1 Dataset governance,LiTS dataset/challenge identity and heterogeneity,Bilic2023LiTS,insert after first LiTS dataset sentence
+2.3 Tumour models and fusion,U-Net family architecture,Ronneberger2015UNet,insert after first model-architecture sentence
+2.3 Tumour models and fusion,MobileNetV2 encoder architecture,Sandler2018MobileNetV2,insert after first model-architecture sentence
+2.5 Governance and test lock,transparent reporting of medical-imaging AI,Tejani2024CLAIM,"cite only as reporting framework, not as claimed compliance"
+Limitations / declarations,reporting gaps and applicability boundaries,Tejani2024CLAIM,cite when describing completed checklist mapping

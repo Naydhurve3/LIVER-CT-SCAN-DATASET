@@ -1,0 +1,35 @@
+{
+  "completed_stages": 2,
+  "total_stages": 7,
+  "progress_pct": 28.571428571428573,
+  "stages": [
+    {
+      "name": "Runtime and paths",
+      "complete": true
+    },
+    {
+      "name": "58,638 corrected pairs",
+      "complete": true
+    },
+    {
+      "name": "Visual alignment approval",
+      "complete": false
+    },
+    {
+      "name": "Overfit Dice \u2265 0.80",
+      "complete": false
+    },
+    {
+      "name": "Corrected 5-epoch baseline",
+      "complete": false
+    },
+    {
+      "name": "FAUP/UWACL comparison",
+      "complete": false
+    },
+    {
+      "name": "Held-out test evaluation",
+      "complete": false
+    }
+  ]
+}

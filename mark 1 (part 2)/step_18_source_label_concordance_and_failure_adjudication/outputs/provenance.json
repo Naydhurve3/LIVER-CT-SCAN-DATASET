@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-08-05T15:12:39.177158+00:00",
+  "inference_performed": false,
+  "local_lits_test_accessed": false,
+  "mask_interpolation": "nearest",
+  "phase": "step_18_source_label_concordance_and_failure_adjudication",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+  "selected_cases": [
+    "ircadb_05",
+    "ircadb_07",
+    "ircadb_11",
+    "ircadb_14",
+    "ircadb_18",
+    "ircadb_20"
+  ],
+  "step16_signature_sha256": "6fd0390b310254c911f2ed6c3d91aadc4d2482e7fa5162e0fe171eff0686bb73",
+  "step17_signature_sha256": "b73deaeac42005a8b2ab0fc4dbccfc0efa6999b2b6a7b04aecbfac5f0cdc5da4",
+  "threshold": 0.7,
+  "tuning_performed": false
+}

@@ -1,0 +1,12 @@
+category,metric,operator,threshold,mandatory,derivation,actual,passed
+integrity,sample_coverage_fraction,>=,1.0,True,Step15 integrity,1.0,True
+integrity,unique_patient_id_fraction,>=,1.0,True,Step15 integrity,1.0,True
+integrity,finite_probability_fraction,>=,1.0,True,Step15 integrity,1.0,True
+integrity,checkpoint_hashes_match,>=,1.0,True,Step15 integrity,1.0,True
+performance,mean_positive_patient_dice,>=,0.3329,True,frozen validation floor,0.7111958843137554,True
+performance,minimum_positive_patient_dice,>=,0.01,True,robustness floor,0.012992286231022214,True
+performance,q1_positive_slice_detection_pct,>=,35.0,True,frozen validation floor using train-only edge,50.0,True
+performance,positive_predicted_empty_pct,<=,35.0,True,frozen validation ceiling,9.859154929577464,True
+performance,empty_slice_false_positive_pct,<=,20.0,True,frozen validation ceiling,11.574279379157428,True
+reporting,all_20_patient_rows_saved,>=,1.0,True,Step15 reporting,1.0,True
+reporting,burden_and_negative_subgroups_saved,>=,1.0,True,Step15 reporting,1.0,True

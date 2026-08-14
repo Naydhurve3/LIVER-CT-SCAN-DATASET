@@ -1,0 +1,57 @@
+{
+  "all_mandatory_targets_passed": true,
+  "decision": "PASS_FREEZE_DATA_CARD_AND_PROCEED_TO_FUSION_CONFIRMATION",
+  "input_artifact_hashes": {
+    "mark_4d_gate": "4bf8621b9cb6dc08921f1de72cbbac930347b34bf524d532a37fdff49cea9907",
+    "mark_4e_gate": "31f952a32623d3578232572b203d2e6d4bffc2eff9cc85ae862f20a250ec4241",
+    "mark_4e_patient_metrics": "592db46fbaeb14918447fc6ea4df0fb4684d4f9fe529d20dddc1ff9d642e6fab",
+    "train_roi_manifest": "990882d81d79064f286ce1dc56811cf9609a8f8ea51cf5c8ac2fefab38dc02b0",
+    "validation_roi_manifest": "95927515e3e6c34b161c31f217a0b784ecfb64d2ae543f3c9d7a9435a9a4d297"
+  },
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "next_step": "step_02_fusion_freeze_confirmation",
+  "result_level": "DIAGNOSTIC_COMPLETE",
+  "selected_configuration": {
+    "connectivity": 6,
+    "outlier_rule": "train 1.5xIQR",
+    "sampling_policy": "uniform_patient_aware_existing_sampler_no_change"
+  },
+  "selected_metrics": {
+    "critical_geometry_failures": 0,
+    "critical_integrity_failures": 0,
+    "critical_label_failures": 0,
+    "critical_roi_failures": 0,
+    "train_val_rows": 51352,
+    "train_val_volumes": 117
+  },
+  "status": "pretraining_dataset_audit_complete",
+  "target_passes": {
+    "focus_v104_v116_present": true,
+    "frozen_roi_coverage": true,
+    "geometry_affine": true,
+    "geometry_profile_complete": true,
+    "hu_profile_complete": true,
+    "label_semantics_containment": true,
+    "manifest_identity": true,
+    "morphology_profile_complete": true,
+    "sampling_policy_train_only": true,
+    "test_images_accessed_false": true,
+    "train_derived_bins_saved": true,
+    "train_validation_leakage": true
+  },
+  "targets": {
+    "focus_v104_v116_present": "pass",
+    "frozen_roi_coverage": "pass",
+    "geometry_affine": "pass",
+    "geometry_profile_complete": "pass",
+    "hu_profile_complete": "pass",
+    "label_semantics_containment": "pass",
+    "manifest_identity": "pass",
+    "morphology_profile_complete": "pass",
+    "sampling_policy_train_only": "pass",
+    "test_images_accessed_false": "pass",
+    "train_derived_bins_saved": "pass",
+    "train_validation_leakage": "pass"
+  },
+  "test_images_accessed": false
+}

@@ -1,0 +1,8 @@
+check,passed,actual
+step13_source_gate_pass,True,EXTERNAL_SOURCE_INGESTION_QC_PASS
+manifest_hash_match,True,575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889
+archive_set_hash_match,True,55cd6722da6c02f8365ab566603db116128e0d854782d2a174b85056f4a5ba96
+patient_count_20,True,20
+all_step13_signed_artifacts_match,True,16
+model_inference_disabled,True,False
+local_lits_test_access_disabled,True,False

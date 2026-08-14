@@ -1,0 +1,12 @@
+requirement,expected,actual,passed
+step07_verified,True,True,True
+official_source_snapshot_saved,True,True,True
+weights_sum_to_one,True,True,True
+scores_bounded,True,True,True
+shortlist_saved,True,True,True
+owner_intake_saved,True,True,True
+requirements_crosswalk_saved,True,True,True
+submission_gate_fail_closed,True,True,True
+formal_failure_preserved,True,True,True
+test_inference_rerun_false,True,True,True
+test_source_files_reopened_false,True,True,True

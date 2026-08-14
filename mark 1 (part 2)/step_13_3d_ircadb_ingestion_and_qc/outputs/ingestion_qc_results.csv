@@ -1,0 +1,13 @@
+check,stage,passed,evidence_or_required_action
+terms_and_attribution,preflight,True,official CC BY-NC-ND 4.0 terms and citation recorded
+step12_source_selection,preflight,True,Step 12 source decision and signatures verified
+download_authorization,acquisition,True,requires explicit user terms acceptance and DOWNLOAD_ENABLED
+archive_size_and_zip,acquisition,True,official archive expected near 782 MB and valid ZIP
+safe_extraction,acquisition,True,ZIP traversal check and extraction marker required
+patient_folder_count,source QC,True,expected 20; observed 20
+dicom_header_readability,source QC,True,each patient must have readable headers
+sop_uid_uniqueness,source QC,True,no duplicated SOP Instance UIDs per patient
+liver_label_availability,source QC,True,liver mask required for all patients
+tumour_label_availability,source QC,True,official description reports tumours in 75% of 20 cases
+conversion_parity,future conversion,False,not evaluated until a separate normalized conversion is created
+frozen_external_evaluation_contract,future evaluation,False,must be declared after source and conversion QC pass

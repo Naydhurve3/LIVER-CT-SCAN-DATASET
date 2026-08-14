@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-08-05T16:05:21.201758+00:00",
+  "inference_performed": false,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "phase": "step_19_external_evidence_manuscript_integration",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+  "step05_gate_sha256": "3d3921fd3447312d82fefc3ecd3cee8436109faa5e24b0f878f15bc401de7d6e",
+  "step07_signature_sha256": "6a5303f99239b72546e8b91b1c1ed77437cf44ad822a9b6067a10c6363f04856",
+  "step16_signature_sha256": "6fd0390b310254c911f2ed6c3d91aadc4d2482e7fa5162e0fe171eff0686bb73",
+  "step17_signature_sha256": "b73deaeac42005a8b2ab0fc4dbccfc0efa6999b2b6a7b04aecbfac5f0cdc5da4",
+  "step18_signature_sha256": "0d84915d3ef9d53a0d31aa19cabf628a30b102101f09994adcc43d22cfaebbd2",
+  "submission_action_performed": false,
+  "test_source_files_reopened": false
+}

@@ -1,0 +1,118 @@
+split,volume_id,source_labels,labels_valid_0_1_2,tumour_containment_fraction,components_6conn,components_26conn,tiny_components_under_0_001_ml,max_consecutive_centroid_jump_vox,max_consecutive_area_ratio,shape_match,raw_affine_match,effective_affine_match_after_transform,affine_alignment_resolved,affine_resolution,roi_tumour_pixel_containment
+train,0,"[0, 1, 2]",True,1.000000,11,11,0,114.469608,16.666667,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,1,"[0, 1, 2]",True,1.000000,12,12,0,142.566703,12.818182,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,2,"[0, 1, 2]",True,1.000000,1,1,0,3.204781,3.470588,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,3,"[0, 1, 2]",True,1.000000,1,1,0,3.063692,2.116279,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,4,"[0, 1, 2]",True,1.000000,34,5,23,4.230906,2.761905,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,5,"[0, 1, 2]",True,1.000000,1,1,0,2.675718,3.454545,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,6,"[0, 1, 2]",True,1.000000,7,7,0,47.051656,12.000000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,7,"[0, 1, 2]",True,1.000000,6,6,0,30.665653,37.750000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,8,"[0, 1, 2]",True,1.000000,7,6,1,35.368282,16.833333,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,9,"[0, 1, 2]",True,1.000000,6,6,0,11.694052,7.166667,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,10,"[0, 1, 2]",True,1.000000,6,6,0,13.835335,15.750000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,11,"[0, 1, 2]",True,1.000000,5,5,0,6.808391,3.461538,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,12,"[0, 1, 2]",True,1.000000,1,1,0,1.020136,1.408451,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,13,"[0, 1, 2]",True,1.000000,9,9,0,41.453834,3.090909,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,14,"[0, 1, 2]",True,1.000000,2,1,1,5.077856,2.928571,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,15,"[0, 1, 2]",True,1.000000,6,5,0,7.030102,7.250000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,16,"[0, 1, 2]",True,1.000000,13,10,1,21.560071,16.500000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,17,"[0, 1, 2]",True,1.000000,6,5,1,15.505375,18.400000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,18,"[0, 1, 2]",True,1.000000,5,4,1,40.138647,2.411765,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,19,"[0, 1, 2]",True,1.000000,7,6,1,21.669709,5.600000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,20,"[0, 1, 2]",True,1.000000,6,3,1,25.323161,33.000000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,21,"[0, 1, 2]",True,1.000000,5,5,0,26.415567,4.888889,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,22,"[0, 1, 2]",True,1.000000,1,1,0,6.083188,7.736842,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,23,"[0, 1, 2]",True,1.000000,1,1,0,9.781774,4.000000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,24,"[0, 1, 2]",True,1.000000,1,1,0,1.610995,2.987342,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,25,"[0, 1, 2]",True,1.000000,1,1,0,6.462104,4.714286,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,26,"[0, 1, 2]",True,1.000000,9,7,1,11.985211,3.804348,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,27,"[0, 1, 2]",True,1.000000,12,11,1,25.883236,3.000000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,28,"[0, 1, 2]",True,1.000000,7,7,0,40.533731,5.217949,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,29,"[0, 1, 2]",True,1.000000,1,1,0,3.937751,2.373333,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,30,"[0, 1, 2]",True,1.000000,1,1,0,6.788240,1.913043,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,31,"[0, 1, 2]",True,1.000000,8,8,0,66.632585,4.200000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,32,"[0, 1]",True,,0,0,0,,,True,True,True,True,numeric_match_after_approved_transform,
+train,33,"[0, 1, 2]",True,1.000000,15,15,0,16.369033,4.015957,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,34,"[0, 1]",True,,0,0,0,,,True,True,True,True,numeric_match_after_approved_transform,
+train,35,"[0, 1, 2]",True,1.000000,4,3,0,63.670752,4.103448,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,36,"[0, 1, 2]",True,1.000000,2,2,0,5.272054,1.922330,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,37,"[0, 1, 2]",True,1.000000,8,8,0,86.166391,4.785714,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,38,"[0, 1]",True,,0,0,0,,,True,True,True,True,numeric_match_after_approved_transform,
+train,39,"[0, 1, 2]",True,1.000000,1,1,0,5.879152,2.184874,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,40,"[0, 1, 2]",True,1.000000,18,17,0,58.222470,2.433333,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,41,"[0, 1]",True,,0,0,0,,,True,True,True,True,numeric_match_after_approved_transform,
+train,42,"[0, 1, 2]",True,1.000000,2,2,0,15.998365,1.707965,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,43,"[0, 1, 2]",True,1.000000,1,1,0,3.546497,7.700000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,44,"[0, 1, 2]",True,1.000000,2,2,0,27.029719,4.508333,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,45,"[0, 1, 2]",True,1.000000,1,1,0,4.816747,4.090909,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,46,"[0, 1, 2]",True,1.000000,50,48,0,40.634743,2.664671,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,47,"[0, 1]",True,,0,0,0,,,True,True,True,True,numeric_match_after_approved_transform,
+train,48,"[0, 1, 2]",True,1.000000,4,4,0,5.100765,1.615523,True,False,False,True,manual_spatial_approval_header_mismatch,1.000000
+train,49,"[0, 1, 2]",True,1.000000,22,22,0,76.617729,5.787879,True,False,False,True,manual_spatial_approval_header_mismatch,1.000000
+train,50,"[0, 1, 2]",True,1.000000,1,1,0,4.382739,1.008493,True,False,False,True,manual_spatial_approval_header_mismatch,1.000000
+train,51,"[0, 1, 2]",True,1.000000,11,10,0,31.072406,5.489474,True,False,False,True,manual_spatial_approval_header_mismatch,1.000000
+train,52,"[0, 1, 2]",True,1.000000,2,2,0,8.122637,3.728155,True,False,False,True,manual_spatial_approval_header_mismatch,1.000000
+train,53,"[0, 1, 2]",True,1.000000,2,2,0,6.423739,2.526786,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,54,"[0, 1, 2]",True,1.000000,1,1,0,1.921730,1.544000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,55,"[0, 1, 2]",True,1.000000,1,1,0,8.010224,4.405594,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,56,"[0, 1, 2]",True,1.000000,2,2,0,31.464552,43.700000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,57,"[0, 1, 2]",True,1.000000,2,2,0,2.206176,35.500000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,58,"[0, 1, 2]",True,1.000000,5,5,0,28.113276,9.181818,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,59,"[0, 1, 2]",True,1.000000,1,1,0,2.738975,1.418033,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,60,"[0, 1, 2]",True,1.000000,1,1,0,2.687843,3.280000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,61,"[0, 1, 2]",True,1.000000,2,2,0,4.405000,1.554795,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,62,"[0, 1, 2]",True,1.000000,2,2,0,5.336349,2.888889,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,63,"[0, 1, 2]",True,1.000000,5,5,0,32.326769,4.218182,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,64,"[0, 1, 2]",True,1.000000,1,1,0,2.435833,1.559939,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,65,"[0, 1, 2]",True,1.000000,1,1,0,1.184091,1.752294,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,66,"[0, 1, 2]",True,1.000000,5,5,0,47.699037,2.638889,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,67,"[0, 1, 2]",True,1.000000,1,1,0,2.230879,2.150000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,68,"[0, 1, 2]",True,1.000000,1,1,0,6.319969,8.400000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,69,"[0, 1, 2]",True,1.000000,1,1,0,2.685887,2.000000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,70,"[0, 1, 2]",True,1.000000,3,3,0,31.505648,2.390244,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,71,"[0, 1, 2]",True,1.000000,7,7,0,112.845370,1.700413,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,72,"[0, 1, 2]",True,1.000000,4,4,0,13.273857,1.652135,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,73,"[0, 1, 2]",True,1.000000,1,1,0,6.439114,3.491803,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,74,"[0, 1, 2]",True,1.000000,2,2,0,10.851314,2.072056,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,75,"[0, 1, 2]",True,1.000000,4,4,0,4.397162,3.226667,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,76,"[0, 1, 2]",True,1.000000,10,10,0,34.094941,8.300000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,77,"[0, 1, 2]",True,1.000000,2,2,0,7.767520,2.056548,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,78,"[0, 1, 2]",True,1.000000,14,14,0,110.749092,7.385542,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,79,"[0, 1, 2]",True,1.000000,10,10,0,59.686645,4.373016,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,80,"[0, 1, 2]",True,1.000000,2,2,0,4.895708,3.351145,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,81,"[0, 1, 2]",True,1.000000,1,1,0,3.461092,1.659574,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,82,"[0, 1, 2]",True,1.000000,1,1,0,11.662935,2.682540,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,83,"[0, 1, 2]",True,1.000000,1,1,0,1.016599,1.411765,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,84,"[0, 1, 2]",True,1.000000,14,11,3,54.822214,18.500000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,85,"[0, 1, 2]",True,1.000000,2,2,0,3.322102,1.394531,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,86,"[0, 1, 2]",True,1.000000,2,2,0,1.313958,20.500000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,87,"[0, 1]",True,,0,0,0,,,True,False,True,True,numeric_match_after_approved_transform,
+train,88,"[0, 1, 2]",True,1.000000,7,6,1,73.395993,2.615385,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,89,"[0, 1]",True,,0,0,0,,,True,False,True,True,numeric_match_after_approved_transform,
+train,90,"[0, 1, 2]",True,1.000000,8,7,1,53.184551,6.580645,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,91,"[0, 1]",True,,0,0,0,,,True,False,True,True,numeric_match_after_approved_transform,
+train,92,"[0, 1, 2]",True,1.000000,9,9,0,67.252203,3.600000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,93,"[0, 1, 2]",True,1.000000,30,30,0,80.918562,3.106667,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,94,"[0, 1, 2]",True,1.000000,14,14,0,34.731259,4.333333,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,95,"[0, 1, 2]",True,1.000000,6,3,4,4.916614,22.000000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,96,"[0, 1, 2]",True,1.000000,29,23,6,119.324592,10.500000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,97,"[0, 1, 2]",True,1.000000,13,12,0,17.852198,1.761062,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,98,"[0, 1, 2]",True,1.000000,17,17,0,23.096242,20.000000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,99,"[0, 1, 2]",True,1.000000,13,13,0,69.562566,17.250000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,100,"[0, 1, 2]",True,1.000000,11,11,0,69.857261,26.750000,True,True,True,True,numeric_match_after_approved_transform,1.000000
+train,101,"[0, 1, 2]",True,1.000000,20,17,10,29.235951,229.000000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,102,"[0, 1, 2]",True,1.000000,1,1,0,3.285459,3.925926,True,False,True,True,numeric_match_after_approved_transform,1.000000
+train,103,"[0, 1, 2]",True,1.000000,2,2,0,15.483164,6.761905,True,False,True,True,numeric_match_after_approved_transform,1.000000
+val,104,"[0, 1, 2]",True,1.000000,10,6,2,28.817705,1.909091,True,False,True,True,numeric_match_after_approved_transform,1.000000
+val,105,"[0, 1]",True,,0,0,0,,,True,False,True,True,numeric_match_after_approved_transform,
+val,106,"[0, 1]",True,,0,0,0,,,True,False,True,True,numeric_match_after_approved_transform,
+val,107,"[0, 1, 2]",True,1.000000,4,4,0,19.528643,4.000000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+val,108,"[0, 1, 2]",True,1.000000,70,66,4,20.298598,17.000000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+val,109,"[0, 1, 2]",True,1.000000,30,28,0,126.632170,2.500000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+val,110,"[0, 1, 2]",True,1.000000,17,17,0,33.901345,1.719298,True,False,True,True,numeric_match_after_approved_transform,1.000000
+val,111,"[0, 1, 2]",True,1.000000,7,6,1,146.859308,18.000000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+val,112,"[0, 1, 2]",True,1.000000,4,4,0,1.568050,27.000000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+val,113,"[0, 1, 2]",True,1.000000,65,29,40,27.579906,14.500000,True,False,True,True,numeric_match_after_approved_transform,1.000000
+val,114,"[0, 1]",True,,0,0,0,,,True,False,True,True,numeric_match_after_approved_transform,
+val,115,"[0, 1]",True,,0,0,0,,,True,False,True,True,numeric_match_after_approved_transform,
+val,116,"[0, 1, 2]",True,1.000000,1,1,0,2.779328,1.105871,True,False,True,True,numeric_match_after_approved_transform,1.000000

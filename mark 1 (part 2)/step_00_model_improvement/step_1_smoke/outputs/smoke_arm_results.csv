@@ -1,0 +1,5 @@
+arm,epochs,steps_per_epoch,hard_micro_dice,loss_name
+control,60,4,0.0706,FocalDiceLoss
+c1_roi_highres,60,4,0.1544,FocalDiceLoss
+c2_analog_sampler,60,16,0.0915,FocalDiceLoss
+c3_recall_capped,60,4,0.0615,StabilityBoundedRecallLoss

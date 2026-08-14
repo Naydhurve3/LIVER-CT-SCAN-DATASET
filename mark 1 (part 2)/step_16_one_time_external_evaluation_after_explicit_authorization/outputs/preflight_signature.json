@@ -1,0 +1,15 @@
+{
+  "algorithm": "SHA-256",
+  "created_utc": "2026-08-05T14:47:43.059768+00:00",
+  "inference_performed": false,
+  "local_lits_test_accessed": false,
+  "result_level": "EXTERNAL_EVALUATION_AUTHORIZATION_REQUIRED",
+  "signed_artifacts": {
+    "authorization_state.json": "835f08725f2630a934a4a33eafb9a3b200929eb6755c2b5809e8f5927ff12c8d",
+    "checkpoint_verification.csv": "14f7106e236c07651135aadcc8ac4f83af8ca3a508acb31cb931802a9a742de1",
+    "gate_result.json": "ca996225afc4f9d87e07e028651a3420941e6a64a7054338ae0e5ff480e4df7b",
+    "normalized_path_verification.csv": "cbc1b341bd586a4e4ceace39e4f77df73623624516cf5c6e4f2ac4bada19af6f",
+    "preflight_checks.csv": "f48822971eb7040f9b42433f31a308c3c8f8e1aad37a076e03a0ce2dcc9138a6",
+    "step_15_signature_verification.csv": "3b264605529ad98f24ada10ae4541083db2a6f9bc1f4b29cbb019c1048ade9fc"
+  }
+}

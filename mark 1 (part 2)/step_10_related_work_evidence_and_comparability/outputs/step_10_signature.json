@@ -1,0 +1,28 @@
+{
+  "algorithm": "SHA-256",
+  "combined_sha256": "f3277c31c84d1706ae0a15f780303f62259f196e6e71d355578667f098f41c19",
+  "created_utc": "2026-08-05T12:58:34.392394+00:00",
+  "formal_model_acceptance_passed": false,
+  "result_level": "RELATED_WORK_EVIDENCE_COMPLETE",
+  "signed_artifacts": {
+    "step_10_related_work_evidence_and_comparability/outputs/COMPARABILITY_AND_CLAIM_BOUNDARIES.md": "c34db383a3b532f3292d5082167f84e83168c9aa08d0952a15d19b91ddf5d9f9",
+    "step_10_related_work_evidence_and_comparability/outputs/PAPER_DRAFT_WITH_EXPANDED_RELATED_WORK.md": "9fdb27e48e1e041c82bc3ea44cbdf28791109411d8999db6f707cf4d684d2e80",
+    "step_10_related_work_evidence_and_comparability/outputs/RELATED_WORK_DRAFT.md": "a0c82c9274e2f5998b9c29279de7d85ea77660459f6c2108eb565ff0fe4929fb",
+    "step_10_related_work_evidence_and_comparability/outputs/citation_insertion_plan.csv": "5eccdca44ee17236a3d54f08878375a38154c73a9a260201215d11a5159a53c7",
+    "step_10_related_work_evidence_and_comparability/outputs/comparability_audit.csv": "26511f89ba487eb0065b927d7cd9bcc3beb32ee48619e8a41670936fc498ad2e",
+    "step_10_related_work_evidence_and_comparability/outputs/configuration.json": "5344b51ffc5a7792ff29fb071af73c46dbb691a6a917a681e7cb7e2ded5c4d53",
+    "step_10_related_work_evidence_and_comparability/outputs/expanded_references.bib": "0774e5f2a085f9ffb7ffbdc70dae2b0ea1fcd711ca58563522283f7b99328f93",
+    "step_10_related_work_evidence_and_comparability/outputs/expected_vs_actual.csv": "30091e7442767c74f577b9669d7e1fd382c24cf73a6f9463deb5fd9996709780",
+    "step_10_related_work_evidence_and_comparability/outputs/gate_result.json": "1ce2fb1db620c3ef9b984c451fcc276e4ea1f331510606067247671d0d518d8e",
+    "step_10_related_work_evidence_and_comparability/outputs/literature_comparison_matrix.csv": "01990aaff25a7fdf7b6de58864bebfcd91301d3aff6e904e59482b2fe6d88358",
+    "step_10_related_work_evidence_and_comparability/outputs/literature_evidence_map.png": "dba6ad0d7a2432ca6e0d96a91ca104caaabe0e828fa56700463c98ae300da0b6",
+    "step_10_related_work_evidence_and_comparability/outputs/primary_literature_evidence.csv": "b45f2cacbc31a7f3550613da78aa97d7d305f93665889608d9ddd453a27929c6",
+    "step_10_related_work_evidence_and_comparability/outputs/provenance.json": "2182cb312b98c52ff3decd2bc34d3ae603d3ad81995588d88096d4ca254e502d",
+    "step_10_related_work_evidence_and_comparability/outputs/related_work_theme_matrix.csv": "8366ca8cb657865428103f5c136a92578e2f862277595d25159b19f196322e3a",
+    "step_10_related_work_evidence_and_comparability/outputs/search_provenance.md": "a0dbdcf893731e71183e88498b1aba8296921205951d3274093dc57818e49fab",
+    "step_10_related_work_evidence_and_comparability/outputs/source_snapshot.json": "ba798c47591a0a08aafcb37c8624c6e827d594d93e23d834d64a445d35e39e3a"
+  },
+  "submission_ready": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false
+}

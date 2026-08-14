@@ -1,0 +1,5 @@
+size_stratum,components,detected_pct,median_component_pixels,median_overlap_fraction
+validation_component_q1,46,13.04347826,1.00000000,0.00000000
+validation_component_q2,46,76.08695652,64.00000000,0.49285714
+validation_component_q3,46,91.30434783,258.00000000,0.60749336
+validation_component_q4,46,100.00000000,2828.50000000,0.74729399

@@ -1,0 +1,4 @@
+split,slices,volumes,tumour_positive_slices,tumour_pixels
+train,40667,104,4930.000000,2589463.000000
+val,10685,13,1042.000000,659487.000000
+test_locked_metadata_only,7286,14,,

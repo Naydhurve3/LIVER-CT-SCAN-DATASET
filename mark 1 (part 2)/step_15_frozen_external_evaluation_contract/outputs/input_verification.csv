@@ -1,0 +1,13 @@
+check,passed
+step01_train_derived_bins_ready,True
+step02_validation_freeze_pass,True
+step03_policy_freeze_pass,True
+step03_policy_hash_matches_signature,True
+step14_conversion_gate_pass,True
+step14_archive_identity,True
+step14_signed_artifacts_match,True
+all_three_checkpoint_hashes_match,True
+manifest_identity_preserved,True
+model_source_present,True
+external_inference_not_authorized,True
+local_lits_test_access_disabled,True

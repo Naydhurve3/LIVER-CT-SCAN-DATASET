@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "epochs_completed": 5,
+  "best_epoch": 5,
+  "best_val_micro_dice_at_0_50": 0.4616128514604625,
+  "best_val_positive_slice_recall": 0.5604606525911708,
+  "best_val_positive_predicted_empty_pct": 27.735124760076776,
+  "best_val_empty_slice_false_positive_pct": 14.424971481903972,
+  "loss_finite": true,
+  "train_loss_decreased": true,
+  "test_images_accessed": false,
+  "decision": "PASS: inspect size-stratified and threshold diagnostics, then authorize a longer baseline only if small-lesion and false-positive behavior are acceptable."
+}

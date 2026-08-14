@@ -1,0 +1,22 @@
+{
+  "aspirational_targets_are_mandatory": false,
+  "authorization_semantics": "The project owner's explicit one-time test authorization also accepts this predeclared table unless they revise it before any test access.",
+  "declared_before_test_access": true,
+  "failure_action": "Report FINAL_TEST_COMPLETE with failed acceptance; do not tune, retrain, or rerun based on test results.",
+  "historical_aspirational_targets": {
+    "empty_slice_false_positive_pct": 15.0,
+    "mean_positive_patient_dice": 0.406915,
+    "positive_predicted_empty_pct": 20.0,
+    "q1_detection_pct": 45.0,
+    "volume_104_dice_validation_only": 0.5,
+    "volume_116_dice_validation_only": 0.05
+  },
+  "interpretation": "All mandatory final_test and final_test_integrity rows define formal minimum final acceptance. Validation prerequisite rows must remain passed.",
+  "metric_definitions": {
+    "q1_positive_slice_detection_pct_train_edges": "percentage of positive test slices with any true-positive predicted pixel among slices having 1 to 51 tumour pixels; 51 is the frozen train-only 25th percentile"
+  },
+  "schema_version": "1.0",
+  "status": "FROZEN_PENDING_OWNER_AUTHORIZATION",
+  "table_file": "final_acceptance_table.csv",
+  "test_images_accessed": false
+}

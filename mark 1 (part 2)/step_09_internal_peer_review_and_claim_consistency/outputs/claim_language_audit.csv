@@ -1,0 +1,13 @@
+phrase,severity,occurrences,risk,replacement,resolved_in_revised_copy
+generalized well in aggregate,medium,1,Overstates external generalization from one internal held-out LiTS subset,achieved strong aggregate overlap on the one-time held-out LiTS test subset,True
+transferred from validation to strong aggregate test performance,medium,1,Implies broader transfer than the evidence supports,produced strong aggregate overlap on the one-time held-out evaluation,True
+exceeded the cohort-applicable historical aspirational values,medium,1,Historical aspirational comparisons can distract from failed formal acceptance,met the aggregate cohort targets while failing the patient-level guardrail,True
+can support quantitative oncology workflows,low,1,Potential-use language needs clinical-context citation and should remain non-clinical,is studied as a component of quantitative oncology research workflows,True
+projected to a padded bounding box,medium,1,The source draft omits the frozen padding magnitude,projected to a bounding box padded by 16 pixels,True
+â€“,high,0,Mojibake encoding artifact,–,True
+Ã—,high,0,Mojibake encoding artifact,×,True
+state-of-the-art,high,0,Unsupported strong claim,remove or support,True
+clinically validated,high,0,Unsupported strong claim,remove or support,True
+clinically safe,high,0,Unsupported strong claim,remove or support,True
+ready for deployment,high,0,Unsupported strong claim,remove or support,True
+superior to all,high,0,Unsupported strong claim,remove or support,True

@@ -1,0 +1,53 @@
+{
+  "status": "mark_4_smoke_fail",
+  "best_epoch": 5,
+  "best_metrics": {
+    "mean_patient_dice": 0.3638655124,
+    "volume_104_dice": 0.0671871818,
+    "volume_116_dice": 0.0107802775,
+    "q1_detected_pct": 42.5855513308,
+    "positive_predicted_empty_pct": 36.8522072937,
+    "empty_slice_false_positive_pct": 3.4221715234
+  },
+  "continuation_targets": {
+    "mean_patient_dice": 0.3329,
+    "volume_104_dice": 0.05,
+    "volume_116_dice": 0.01,
+    "q1_detected_pct": 35.0,
+    "positive_predicted_empty_pct": 35.0,
+    "empty_slice_false_positive_pct": 20.0
+  },
+  "continuation_passes": {
+    "mean_patient_dice": true,
+    "volume_104_dice": true,
+    "volume_116_dice": true,
+    "q1_detected_pct": true,
+    "positive_predicted_empty_pct": false,
+    "empty_slice_false_positive_pct": true,
+    "gradients_finite": true
+  },
+  "continuation_gate_passed": false,
+  "final_validation_targets": {
+    "mean_patient_dice": 0.406915,
+    "volume_104_dice": 0.5,
+    "volume_116_dice": 0.05,
+    "q1_detected_pct": 45.0,
+    "positive_predicted_empty_pct": 20.0,
+    "empty_slice_false_positive_pct": 15.0
+  },
+  "final_targets_passed": {
+    "mean_patient_dice": false,
+    "volume_104_dice": false,
+    "volume_116_dice": false,
+    "q1_detected_pct": false,
+    "positive_predicted_empty_pct": false,
+    "empty_slice_false_positive_pct": true
+  },
+  "all_final_targets_passed": false,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "source_checkpoint_sha256": "9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223",
+  "overfit_checkpoint_used_for_initialization": false,
+  "test_images_accessed": false,
+  "decision": "STOP_AND_DIAGNOSE_TWO_STAGE_SMOKE_FAILURE",
+  "next_notebook": "mark_4_failure_diagnostics"
+}

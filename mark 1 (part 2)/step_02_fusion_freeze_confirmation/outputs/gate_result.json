@@ -1,0 +1,54 @@
+{
+  "all_mandatory_targets_passed": true,
+  "decision": "FREEZE_INFERENCE_POLICY_AND_REQUEST_FINAL_TEST_AUTHORIZATION",
+  "input_artifact_hashes": {
+    "mark4e_gate": "31f952a32623d3578232572b203d2e6d4bffc2eff9cc85ae862f20a250ec4241",
+    "step01_gate": "fcc1f735a1f10e7c9ac5c94029b513ab498be6f39cf243fa36f4562d358266cb",
+    "validation_roi_manifest": "95927515e3e6c34b161c31f217a0b784ecfb64d2ae543f3c9d7a9435a9a4d297"
+  },
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "next_step": "step_03_final_inference_policy_freeze",
+  "result_level": "VALIDATION_FREEZE_PASS",
+  "selected_configuration": {
+    "control_checkpoint_sha256": "9b0c7749af66b0fc3808f6757d0d90af01384e06afe02090361b220df48b6e8b",
+    "policy": "maximum",
+    "recall_checkpoint_sha256": "c01eb4b81e4e7f1d84c7966aca56e738d87d06d404907f0bcc7c67a79ed4ec4d",
+    "threshold": 0.7
+  },
+  "selected_metrics": {
+    "empty_slice_false_positive_pct": 5.548065954578451,
+    "mean_patient_dice": 0.3770605982242971,
+    "positive_predicted_empty_pct": 27.447216890595012,
+    "q1_detected_pct": 50.57034220532319,
+    "volume_104_dice": 0.11647368422215168,
+    "volume_116_dice": 0.010473419058478897
+  },
+  "status": "fusion_confirmation_pass",
+  "target_passes": {
+    "empty_slice_false_positive_pct": true,
+    "mean_patient_dice": true,
+    "positive_predicted_empty_pct": true,
+    "q1_detected_pct": true,
+    "volume_104_dice": true,
+    "volume_116_dice": true
+  },
+  "targets": {
+    "empty_slice_false_positive_pct": 20.0,
+    "mean_patient_dice": 0.3329,
+    "positive_predicted_empty_pct": 35.0,
+    "q1_detected_pct": 35.0,
+    "volume_104_dice": 0.05,
+    "volume_116_dice": 0.01
+  },
+  "test_images_accessed": false,
+  "uncertainty": {
+    "mean_patient_dice": {
+      "ci_lower_2_5": 0.197929871077172,
+      "ci_upper_97_5": 0.5542092886036671,
+      "estimate": 0.3770605982242971,
+      "iterations": 10000,
+      "resampling_unit": "tumour_positive_validation_patient",
+      "seed": 42
+    }
+  }
+}

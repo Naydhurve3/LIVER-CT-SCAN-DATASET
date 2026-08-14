@@ -1,0 +1,8 @@
+gate,passed,observed,expected,severity
+Expected slice rows,True,58638,58638,critical
+Expected volumes,True,131,131,critical
+Unique canonical keys,True,0,0,critical
+Complete transform map,True,0,0,critical
+Automatic integrity,True,0,0,critical
+All derived files exist,True,0,0,critical
+Volume-wise split counts,True,"{'test': 14, 'train': 104, 'val': 13}","{'train': 104, 'val': 13, 'test': 14}",critical

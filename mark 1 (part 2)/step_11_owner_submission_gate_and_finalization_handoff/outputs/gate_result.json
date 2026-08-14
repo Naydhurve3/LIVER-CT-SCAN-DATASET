@@ -1,0 +1,32 @@
+{
+  "all_phase_integrity_targets_passed": true,
+  "decision": "OWNER_COMPLETE_REQUIRED_FIELDS",
+  "formal_model_acceptance_failure": "minimum_positive_patient_dice",
+  "formal_model_acceptance_passed": false,
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "next_step": "edit_owner_inputs_and_rerun_step_11",
+  "owner_fields_complete": 0,
+  "owner_fields_total": 14,
+  "owner_gate_passed": false,
+  "payment_action_authorized": false,
+  "result_level": "OWNER_INPUT_REQUIRED",
+  "source_test_run_id": "871d289b-bf6b-4346-978f-2df02ade26ab",
+  "status": "owner_input_required",
+  "submission_action_authorized": false,
+  "submission_ready": false,
+  "targets": {
+    "formal model failure preserved": true,
+    "manual action pack saved": true,
+    "owner blockers saved": true,
+    "owner input fields represented": true,
+    "sealed input checks": true,
+    "test inference reruns": true,
+    "test source files reopened": true
+  },
+  "test_images_accessed": false,
+  "test_inference_rerun": false,
+  "test_source_files_reopened": false,
+  "unresolved_owner_fields": 14,
+  "venue_finalization_ready": false,
+  "venue_selected": null
+}

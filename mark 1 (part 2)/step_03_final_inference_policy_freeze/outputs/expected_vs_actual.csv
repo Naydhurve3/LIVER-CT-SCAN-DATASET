@@ -1,0 +1,11 @@
+requirement,expected,actual,passed
+step01_gate_passed,True,True,True
+step02_validation_freeze_passed,True,True,True
+all_six_validation_targets_passed,True,True,True
+immutable_hashes_verified,True,True,True
+roi_generator_fully_frozen,True,True,True
+artifact_inventory_complete,True,True,True
+probability_cache_inventory_complete,True,True,True
+freeze_fields_identical,True,True,True
+final_acceptance_declared_before_test,True,True,True
+test_lock_intact,True,True,True

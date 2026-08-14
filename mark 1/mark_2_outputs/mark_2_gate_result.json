@@ -1,0 +1,40 @@
+{
+  "status": "mark_2_feasibility_complete",
+  "roi_hard_containment_gate_passed": true,
+  "roi_efficiency_gate_passed": true,
+  "selected_roi_configuration": {
+    "liver_threshold": 0.5,
+    "padding": 16,
+    "component_mode": "largest_3d",
+    "volume_104_tumor_containment": 1.0,
+    "volume_116_tumor_containment": 1.0,
+    "minimum_positive_patient_containment": 1.0,
+    "mean_positive_patient_containment": 1.0,
+    "minimum_positive_slice_containment": 1.0,
+    "median_crop_area_ratio": 0.427001953125,
+    "maximum_crop_area_ratio": 0.533203125,
+    "empty_patient_rois": 0,
+    "hard_containment_gate_passed": true,
+    "efficient_roi_gate_passed": true
+  },
+  "fixed_windows": {
+    "broad_abdominal": [
+      -160.0,
+      240.0
+    ],
+    "liver_soft_tissue": [
+      -20.0,
+      140.0
+    ],
+    "narrow_lesion": [
+      20.0,
+      120.0
+    ]
+  },
+  "decision": "PROCEED_TO_GATED_TWO_STAGE_MULTIWINDOW_OVERFIT",
+  "next_notebook": "mark_3_two_stage_multiwindow_overfit",
+  "manifest_sha256": "575a6fc391d63dc9bbbbb3317efe4d0f65edd57457ae63c1bfc6c2c615861889",
+  "mark1_checkpoint_sha256": "9c4160bbd68891f9dc4e5f04ceca4391f38c5869b3f81c72b95d4639e0572223",
+  "roi_uses_ground_truth": false,
+  "test_images_accessed": false
+}
