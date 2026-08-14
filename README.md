@@ -13,23 +13,71 @@
 
 ---
 
+## 0.5 Versioned Project History
+
+This repository tracks the project as **versioned milestones** — each version has a rich hub page (goal, what we did, what we got, notebook/doc/figure links, key images) so you can see progress at a glance:
+
+| Version | Focus | Status | Hub |
+|---|---|---|---|
+| **v1 — Phase 1 Research** | EDA, spatial forensics, patient splits, Mark 1 → 4E checkpoint fusion | ✅ Complete | [versions/v1/VERSION.md](versions/v1/VERSION.md) |
+| **v2 — Phase 2** | Reproducible Evaluation suite, part-2 steps 00–21, 3D-IRCADb external validation, storage recovery | 🟢 Active | [versions/v2/VERSION.md](versions/v2/VERSION.md) |
+
+> **[📄 VERSION_HISTORY.md](VERSION_HISTORY.md)** links the full v1 → v2 progress story.
+
+---
+
+## 0. Start Here — Project Status & Progress Record
+
+> **[📄 PROGRESS.md](PROGRESS.md)** is the **single source of truth** for everything achieved so far:
+> every milestone (Mark 1 → Mark 4E), the formal test result (Dice 0.767696), the external
+> IRCADb evaluation (Dice 0.847977), part-2 pipeline status, and the full backup inventory.
+> Read it first before starting any new work.
+
+**Organization at a glance (after the 2026-08 reorganization pass):**
+
+```
+Liver CT Platform Root/
+├── 📁 [Evaluation/](Evaluation/README.md)                 <- THE research hub: runnable notebooks 00–12 + canonical output/
+├── 📁 [mark 1/](mark%201/README.md)                       <- Phase 1 Research (frozen; Mark 1 -> Mark 4E)
+├── 📁 [mark 1 (part 2)/](mark%201%20(part%202)/README.md)  <- Phase 2 pipeline (Steps 00–21, frozen)
+├── 📁 [Practice/](Practice/README.md)                     <- Historical ablations (frozen reference)
+├── 📁 [src/](src/README.md)                               <- Framework + legacy source code
+├── 📁 [docs/](docs/README.md)                             <- Documentation hub (7 topics)
+├── 📁 [versions/](versions/v1/VERSION.md)                  <- Versioned history: v1 (Phase 1) & v2 (Phase 2) hubs + assets
+├── 📁 [data/](data/README.md)                             <- Data configs, splits (external dataset under data/external/)
+├── 📁 backup/                                             <- 🔒 Compressed snapshot of ALL outputs/code/notebooks/docs
+│                                                              (git-ignored; see backup inventory in PROGRESS.md §9)
+├── 📁 archive/                                            <- Dead/superseded runtime files (execution logs, PID)
+├── 📁 [scripts/](scripts/README.md)                       <- Dataset arrangement & doc generation
+├── 📁 [configs/](configs/README.md)                       <- YAML configs & split definitions
+├── 📁 [app/](app/README.md)                               <- Interactive Streamlit dashboard
+└── 📁 tools/ tests/ experiments/ models/ results/ figures/ studies/ notebooks/ tasks/ deployment/ research/ papers/ tracking/
+```
+
+---
+
 ## 1. Complete Project Navigation Tree
 
 Click on any folder below to navigate directly to its dedicated documentation, process workflow, notebook index, and output directories:
 
 ```
 Liver CT Platform Root/
+├── 📁 [Evaluation/](Evaluation/README.md)                   <- Phase 1 Research Reproduction Hub (00–12 + output/)
 ├── 📁 [mark 1/](mark%201/README.md)                           <- Phase 1 Research (Mark 1 -> Mark 4E Checkpoint Fusion)
 ├── 📁 [mark 1 (part 2)/](mark%201%20(part%202)/README.md)       <- Phase 2 Pretraining Characterization & Step 00-21 Roadmap
 ├── 📁 [Practice/](Practice/README.md)                         <- Historical EDA, 47-Volume Flip Forensics & 2.5D Ablations
 ├── 📁 [notebooks/](notebooks/README.md)                       <- Master Consolidated Executable Notebooks (01 to 04)
-├── 📁 [docs/](docs/README.md)                                 <- Interactive Documentation Hub (7 Detailed Topics)
-├── 📁 [understanding the project/](understanding%20the%20project/README.md) <- Core Design Docs & Architecture Knowledge Base
+├── 📁 [docs/](docs/README.md)                                 <- Interactive Documentation Hub (7 Detailed Topics) + Design Docs & Architecture Knowledge Base (`understanding the project/`)
 ├── 📁 [scripts/](scripts/README.md)                           <- Dataset Arrangement & Document Generation Scripts
 ├── 📁 [src/](src/README.md)                                   <- Framework Source Code (Loaders, Samplers, UNets, Losses)
 ├── 📁 [configs/](configs/README.md)                           <- YAML Dataset Configurations & Split Definitions
 └── 📁 [app/](app/README.md)                                   <- Interactive Clinical Streamlit Analytics Dashboard
 ```
+
+> **🔒 Backup safety net**: every notebook (112), source file (212), doc (181), model weight (80),
+> probability cache (216), Evaluation output (194), legacy/mirror output (527), and part-2 output
+> (454) is compressed into `backup/*.zip` with a full SHA-256 manifest (`backup/MANIFEST.json`).
+> See [PROGRESS.md §9](PROGRESS.md).
 
 ---
 

@@ -26,6 +26,14 @@ Then use **Restart Kernel and Run All**. The combined archive is approximately 7
 
 This phase performs ingestion QC only. It does not convert the dataset to the LiTS schema, run inference, tune parameters, train models, or access the sealed local test split.
 
+## Storage note — raw extraction archived to keep this phase lean (13 August 2026)
+
+- The raw extracted DICOM tree (`outputs/extracted/`, 34,322 files / ~10.8 GB) was **removed** after the ingestion QC passed and step_14 consumed it. It is fully reproducible offline from the 20 verified patient ZIP archives kept in `outputs/raw_downloads/` (782 MB, all sha-256 recorded in `outputs/download_manifest.csv`).
+- A stale partial download `3Dircadb1.zip.part` (820 MB, not in the manifest) was also removed.
+- Downstream steps 15–21 read only **step_14's normalized `.nii.gz`** volumes, not the raw extracted DICOM, so nothing later depends on `outputs/extracted/`.
+- The full source evidence (file inventory, sha-256, header profiles, QC/gate/signature records) remains in `outputs/` (~2 MB of csv/json/png).
+- **To re-extract if ever needed**: open `step_13.ipynb`, ensure `DOWNLOAD_ENABLED = False` and `EXTRACT_ENABLED = True` (zips already present), then **Restart Kernel and Run All**. Extraction is deterministic and verified against `extracted_file_inventory.csv`.
+
 ## Verified safe preflight — 5 August 2026
 
 - Result level: `EXTERNAL_DOWNLOAD_AUTHORIZATION_REQUIRED`; this is the expected successful preflight state.

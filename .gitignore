@@ -63,3 +63,5 @@ outputs/**
 # Research runtime artifacts
 experiments/research_validation/
 models/research_validation/
+
+backup/
